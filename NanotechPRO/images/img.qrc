@@ -1,0 +1,54 @@
+<RCC>
+    <qresource prefix="/menu">
+        <file>acid.png</file>
+        <file>alkali.png</file>
+        <file>copy1.png</file>
+        <file>copy1-hover.png</file>
+        <file>costs.png</file>
+        <file>costs2.png</file>
+        <file>delete1.png</file>
+        <file>delete1-hover.png</file>
+        <file>feedwater.png</file>
+        <file>help.png</file>
+        <file>help-hover.png</file>
+        <file>print-native.png</file>
+        <file>print-native-hover.png</file>
+        <file>print-pdf.png</file>
+        <file>print-pdf-hover.png</file>
+        <file>project-info.png</file>
+        <file>project-info-hover.png</file>
+        <file>project-new.png</file>
+        <file>project-new-hover.png</file>
+        <file>project-open.png</file>
+        <file>project-open-hover.png</file>
+        <file>project-save.png</file>
+        <file>project-save-as.png</file>
+        <file>project-save-as-hover.png</file>
+        <file>project-save-hover.png</file>
+        <file>recycle-max.png</file>
+        <file>reset.png</file>
+        <file>results-done.png</file>
+        <file>results-errors.png</file>
+        <file>results-ready.png</file>
+        <file>spinbox_down.png</file>
+        <file>system.png</file>
+        <file>warning_caution.png</file>
+        <file>warning_caution1.png</file>
+        <file>warning_critical.png</file>
+        <file>warning_critical1.png</file>
+        <file>warning_info.png</file>
+        <file>warning_info1.png</file>
+    </qresource>
+    <qresource prefix="/logotip">
+        <file>logo.png</file>
+        <file>nanoteh_logo_EN_horizontal.png</file>
+        <file>nanoteh_logo_RU_horizontal.png</file>
+    </qresource>
+    <qresource prefix="/other">
+        <file>scheme_stage_normal.png</file>
+        <file>scheme_stage_selected.png</file>
+        <file>warning_caution.png</file>
+        <file>warning_critical.png</file>
+        <file>warning_info.png</file>
+    </qresource>
+</RCC>

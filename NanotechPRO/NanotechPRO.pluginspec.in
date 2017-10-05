@@ -1,0 +1,9 @@
+<plugin name=\"NanotechPRO\" version=\"0.0.1\" compatVersion=\"0.0.1\">
+    <vendor>Nanotech</vendor>
+    <copyright>(C) Nanotech</copyright>
+    <license></license>
+    <description></description>
+    <url>https://membranium.com</url>
+    $$dependencyList
+</plugin>
+
