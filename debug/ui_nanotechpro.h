@@ -229,7 +229,7 @@ public:
 
         la_version_1 = new QLabel(frame);
         la_version_1->setObjectName(QStringLiteral("la_version_1"));
-        la_version_1->setFrameShape(QFrame::Box);
+        la_version_1->setFrameShape(QFrame::NoFrame);
 
         gridLayout_5->addWidget(la_version_1, 3, 0, 1, 1);
 
