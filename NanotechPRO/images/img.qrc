@@ -43,6 +43,7 @@
         <file>logo.png</file>
         <file>nanoteh_logo_EN_horizontal.png</file>
         <file>nanoteh_logo_RU_horizontal.png</file>
+        <file>logo1.png</file>
     </qresource>
     <qresource prefix="/other">
         <file>scheme_stage_normal.png</file>

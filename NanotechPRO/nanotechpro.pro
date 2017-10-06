@@ -19,11 +19,13 @@ unix{
 
 SOURCES += \
     nanotechpro.cpp \
-    main.cpp
+    main.cpp \
+    loading/doprogress.cpp
 
 HEADERS += \
     nanotechpro.h \
-    Version/version.h
+    Version/version.h \
+    loading/doprogress.h
 
 
 FORMS += \
