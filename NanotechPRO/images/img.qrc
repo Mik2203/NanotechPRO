@@ -31,19 +31,26 @@
         <file>results-errors.png</file>
         <file>results-ready.png</file>
         <file>spinbox_down.png</file>
-        <file>system.png</file>
         <file>warning_caution.png</file>
         <file>warning_caution1.png</file>
         <file>warning_critical.png</file>
         <file>warning_critical1.png</file>
         <file>warning_info.png</file>
         <file>warning_info1.png</file>
+        <file>feedwater_0.png</file>
+        <file>feedwater_1.png</file>
+        <file>warning_0.png</file>
+        <file>warning_1.png</file>
+        <file>costs_0.png</file>
+        <file>costs_1.png</file>
+        <file>system_1.png</file>
+        <file>system_0.png</file>
     </qresource>
     <qresource prefix="/logotip">
         <file>logo.png</file>
-        <file>nanoteh_logo_EN_horizontal.png</file>
-        <file>nanoteh_logo_RU_horizontal.png</file>
         <file>logo1.png</file>
+        <file>Membranium_logo_eng.jpg</file>
+        <file>Membranium_logo_rus.jpg</file>
     </qresource>
     <qresource prefix="/other">
         <file>scheme_stage_normal.png</file>

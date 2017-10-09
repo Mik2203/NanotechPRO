@@ -63,6 +63,8 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     ui->pBar_1->setVisible(false);
     // Логотип
     ui->laLogo_1->setVisible(false);
+    // Панель инструментов
+    ui->fr_menu_0->setVisible(false);
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -149,7 +151,7 @@ void NanotechPRO::slotVerSize()
 //================== (Новый проект)
 //-----------------------------------------------------------//
 void NanotechPRO::on_pushB_new_pro_0_clicked()
-{
+{   
     TimerLoading = new QTimer(this);
     connect(TimerLoading, SIGNAL(timeout()), this, SLOT(slotTimerLoading()));
     TimerLoading->start(30);//40
@@ -231,6 +233,9 @@ void NanotechPRO::slotTimerLoading()
         {
          qApp->processEvents();
         }
+
+        // Панель инструментов
+        ui->fr_menu_0->setVisible(true);
 
         ui->menubar->setHidden(false);
         ui->statusbar->setHidden(false);
