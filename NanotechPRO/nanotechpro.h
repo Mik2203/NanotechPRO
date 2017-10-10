@@ -50,6 +50,8 @@ public:
 
     // ints создания страниц
     int int_add_page_0, int_add_page_1, int_add_page_2, int_add_page_3;
+    // ints удаления страниц
+    int int_del_page_0, int_del_page_1, int_del_page_2, int_del_page_3;
 
 public slots:
     // Слот версии программы
@@ -69,6 +71,12 @@ public slots:
     void slot_pushB_add_page_2();
     void slot_pushB_add_page_3();
 
+    // слоты удаления страниц
+    void slot_pushB_del_page_0();
+    void slot_pushB_del_page_1();
+    void slot_pushB_del_page_2();
+    void slot_pushB_del_page_3();
+
     // слоты переключение по страницам
     void slot_pushB_page_0();
     void slot_pushB_page_1();
@@ -76,7 +84,10 @@ public slots:
     void slot_pushB_page_3();
 
     // функция добавления страниц
-    void slot_function_page(int index);
+    void slot_function_add_page(int index);
+
+    // функция добавления страниц
+    void slot_function_del_page(int index);
 
 private slots:
     void on_pushB_new_pro_0_clicked();
