@@ -399,15 +399,10 @@ void NanotechPRO::slot_function_add_page(int index)
     switch (index)
     {
     case 0:
-
-
         ui->fr_list_1->setVisible(true);
         break;
     case 1:
-
-
         ui->pushB_del_page_0->setVisible(true);
-
         ui->fr_list_2->setVisible(true);
         break;
     case 2:
