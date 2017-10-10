@@ -118,8 +118,10 @@ compiler_rcc_clean:
 release/qrc_img.cpp: ../NanotechPRO/images/img.qrc \
 		../NanotechPRO/images/acid.png \
 		../NanotechPRO/images/copy1-hover.png \
+		../NanotechPRO/images/menu_0.png \
 		../NanotechPRO/images/print-pdf.png \
 		../NanotechPRO/images/warning_caution.png \
+		../NanotechPRO/images/menu_0_1.png \
 		../NanotechPRO/images/results-errors.png \
 		../NanotechPRO/images/warning_critical1.png \
 		../NanotechPRO/images/warning_info.png \
@@ -127,21 +129,29 @@ release/qrc_img.cpp: ../NanotechPRO/images/img.qrc \
 		../NanotechPRO/images/spinbox_down.png \
 		../NanotechPRO/images/help-hover.png \
 		../NanotechPRO/images/project-new-hover.png \
+		../NanotechPRO/images/menu_1_1.png \
 		../NanotechPRO/images/print-native-hover.png \
+		../NanotechPRO/images/costs_1.png \
 		../NanotechPRO/images/costs.png \
 		../NanotechPRO/images/delete1-hover.png \
 		../NanotechPRO/images/warning_critical.png \
-		../NanotechPRO/images/system.png \
+		../NanotechPRO/images/costs_0.png \
 		../NanotechPRO/images/feedwater.png \
 		../NanotechPRO/images/project-info.png \
 		../NanotechPRO/images/project-save.png \
+		../NanotechPRO/images/system_1.png \
 		../NanotechPRO/images/alkali.png \
 		../NanotechPRO/images/project-info-hover.png \
+		../NanotechPRO/images/system_0.png \
 		../NanotechPRO/images/warning_caution1.png \
 		../NanotechPRO/images/help.png \
 		../NanotechPRO/images/recycle-max.png \
+		../NanotechPRO/images/feedwater_1.png \
+		../NanotechPRO/images/warning_1.png \
 		../NanotechPRO/images/project-save-as.png \
 		../NanotechPRO/images/results-done.png \
+		../NanotechPRO/images/feedwater_0.png \
+		../NanotechPRO/images/warning_0.png \
 		../NanotechPRO/images/costs2.png \
 		../NanotechPRO/images/project-save-as-hover.png \
 		../NanotechPRO/images/project-save-hover.png \
@@ -151,17 +161,24 @@ release/qrc_img.cpp: ../NanotechPRO/images/img.qrc \
 		../NanotechPRO/images/project-new.png \
 		../NanotechPRO/images/print-native.png \
 		../NanotechPRO/images/reset.png \
+		../NanotechPRO/images/menu_1.png \
 		../NanotechPRO/images/delete1.png \
 		../NanotechPRO/images/results-ready.png \
 		../NanotechPRO/images/warning_info1.png \
+		../NanotechPRO/images/page/del_page_1.png \
+		../NanotechPRO/images/page/add_list_1.png \
+		../NanotechPRO/images/page/push_geniral_1.png \
+		../NanotechPRO/images/page/del_page_0.png \
+		../NanotechPRO/images/page/add_list_0.png \
+		../NanotechPRO/images/page/push_geniral_0.png \
 		../NanotechPRO/images/scheme_stage_normal.png \
 		../NanotechPRO/images/warning_info.png \
 		../NanotechPRO/images/warning_critical.png \
 		../NanotechPRO/images/scheme_stage_selected.png \
 		../NanotechPRO/images/warning_caution.png \
-		../NanotechPRO/images/nanoteh_logo_RU_horizontal.png \
+		../NanotechPRO/images/Membranium_logo_rus.jpg \
 		../NanotechPRO/images/logo.png \
-		../NanotechPRO/images/nanoteh_logo_EN_horizontal.png \
+		../NanotechPRO/images/Membranium_logo_eng.jpg \
 		../NanotechPRO/images/logo1.png
 	C:\Mik\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\bin\rcc.exe -name img ..\NanotechPRO\images\img.qrc -o release\qrc_img.cpp
 
@@ -925,8 +942,18 @@ release/nanotechpro.o: ../NanotechPRO/nanotechpro.cpp ../NanotechPRO/nanotechpro
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qactiongroup.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QButtonGroup \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QFrame \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QComboBox \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qcombobox.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qstyleoption.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractspinbox.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qslider.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qstyle.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qtabbar.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qrubberband.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qframe.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QFrame \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QGridLayout \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qgridlayout.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qlayout.h \
@@ -937,14 +964,6 @@ release/nanotechpro.o: ../NanotechPRO/nanotechpro.cpp ../NanotechPRO/nanotechpro
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qheaderview.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractitemview.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractscrollarea.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractitemdelegate.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qstyleoption.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractspinbox.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qslider.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qstyle.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qtabbar.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qrubberband.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QLabel \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qlabel.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QLineEdit \
@@ -963,6 +982,7 @@ release/nanotechpro.o: ../NanotechPRO/nanotechpro.cpp ../NanotechPRO/nanotechpro
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qstackedwidget.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QStatusBar \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qstatusbar.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QVBoxLayout \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\nanotechpro.o ..\NanotechPRO\nanotechpro.cpp
 
@@ -1293,8 +1313,7 @@ release/main.o: ../NanotechPRO/main.cpp ../../../../Qt_Installers/Qt5/5.3.1/5.3/
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qgridlayout.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QPushButton \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qpushbutton.h \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractbutton.h \
-		../NanotechPRO/loading/doprogress.h
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\NanotechPRO\main.cpp
 
 release/doprogress.o: ../NanotechPRO/loading/doprogress.cpp ../NanotechPRO/loading/doprogress.h \

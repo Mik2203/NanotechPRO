@@ -45,6 +45,18 @@
         <file>costs_1.png</file>
         <file>system_1.png</file>
         <file>system_0.png</file>
+        <file>menu_0.png</file>
+        <file>menu_1.png</file>
+        <file>menu_0_1.png</file>
+        <file>menu_1_1.png</file>
+        <file>page/del_page_0.png</file>
+        <file>page/del_page_1.png</file>
+        <file>page/add_list_0.png</file>
+        <file>page/add_list_1.png</file>
+        <file>page/push_geniral_0.png</file>
+        <file>page/push_geniral_1.png</file>
+        <file>page/push_korr_0.png</file>
+        <file>page/push_korr_1.png</file>
     </qresource>
     <qresource prefix="/logotip">
         <file>logo.png</file>

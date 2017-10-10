@@ -65,6 +65,11 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     ui->laLogo_1->setVisible(false);
     // Панель инструментов
     ui->fr_menu_0->setVisible(false);
+    //скрыть страницы ионов
+    ui->fr_list_1->setVisible(false);
+    ui->fr_list_2->setVisible(false);
+    ui->fr_list_3->setVisible(false);
+    ui->pushB_del_page_0->setVisible(false);
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -73,6 +78,22 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     slotVerSize();
     //-----------------------------------------------------------------//
 
+    //-----------------------------------------------------------------//
+    //****** [Слоты]
+    //-----------------------------------------------------------------//
+    // слоты создания страниц
+    connect(ui->pushB_add_page_0, SIGNAL(clicked()), this, SLOT(slot_pushB_add_page_0()));
+    connect(ui->pushB_add_page_1, SIGNAL(clicked()), this, SLOT(slot_pushB_add_page_1()));
+    connect(ui->pushB_add_page_2, SIGNAL(clicked()), this, SLOT(slot_pushB_add_page_2()));
+    connect(ui->pushB_add_page_3, SIGNAL(clicked()), this, SLOT(slot_pushB_add_page_3()));
+
+    // слоты переключение по страницам
+    connect(ui->pushB_page_0, SIGNAL(clicked()), this, SLOT(slot_pushB_page_0()));
+    connect(ui->pushB_page_1, SIGNAL(clicked()), this, SLOT(slot_pushB_page_1()));
+    connect(ui->pushB_page_2, SIGNAL(clicked()), this, SLOT(slot_pushB_page_2()));
+    connect(ui->pushB_page_3, SIGNAL(clicked()), this, SLOT(slot_pushB_page_3()));
+
+    //-----------------------------------------------------------------//
 
 
     //-----------------------------------------------------------------//
@@ -245,6 +266,9 @@ void NanotechPRO::slotTimerLoading()
 }
 //-----------------------------------------------------------//
 
+//-----------------------------------------------------------//
+//================== (Создание меню)
+//-----------------------------------------------------------//
 void NanotechPRO::slot_ac_menu_1()
 {
       NanotechPRO::setWindowFlags(Qt::Window);
@@ -264,3 +288,132 @@ void NanotechPRO::slot_ac_menu_3()
 {
     exit(0);
 }
+//-----------------------------------------------------------//
+
+//-----------------------------------------------------------//
+//================== (кнопки переключения, панели меню)
+//-----------------------------------------------------------//
+void NanotechPRO::on_panel_menu_0_clicked()
+{
+    ui->stackedW_panel_0->setCurrentIndex(0);
+}
+
+void NanotechPRO::on_panel_menu_1_clicked()
+{
+    ui->stackedW_panel_0->setCurrentIndex(1);
+}
+//-----------------------------------------------------------//
+
+//-----------------------------------------------------------//
+//================== (слоты создания страниц)
+//-----------------------------------------------------------//
+void NanotechPRO::slot_pushB_add_page_0()
+{
+    int_add_page_1 = 1;
+    slot_function_page(int_add_page_1);
+}
+
+void NanotechPRO::slot_pushB_add_page_1()
+{
+    int_add_page_2 = 2;
+    slot_function_page(int_add_page_2);
+}
+
+void NanotechPRO::slot_pushB_add_page_2()
+{
+    int_add_page_3 = 3;
+    slot_function_page(int_add_page_3);
+}
+
+void NanotechPRO::slot_pushB_add_page_3()
+{
+    int_add_page_3 = 0;
+    slot_function_page(int_add_page_0);
+}
+//-----------------------------------------------------------//
+
+
+//-----------------------------------------------------------//
+//================== (слоты переключение по страницам)
+//-----------------------------------------------------------//
+void NanotechPRO::slot_pushB_page_0()
+{
+    ui->stackedW_page_0->setCurrentIndex(0);
+}
+
+void NanotechPRO::slot_pushB_page_1()
+{
+    ui->stackedW_page_0->setCurrentIndex(1);
+}
+
+void NanotechPRO::slot_pushB_page_2()
+{
+    ui->stackedW_page_0->setCurrentIndex(2);
+}
+
+void NanotechPRO::slot_pushB_page_3()
+{
+    ui->stackedW_page_0->setCurrentIndex(3);
+}
+//-----------------------------------------------------------//
+
+//-----------------------------------------------------------//
+//================== (функция добавления страниц)
+//-----------------------------------------------------------//
+void NanotechPRO::slot_function_page(int index)
+{
+
+    switch (index)
+    {
+    case 0:
+        ui->pushB_add_page_0->setVisible(true);
+        ui->pushB_add_page_1->setVisible(true);
+        ui->pushB_add_page_2->setVisible(true);
+        ui->pushB_add_page_3->setVisible(true);
+
+        ui->fr_list_1->setVisible(true);
+        break;
+    case 1:
+        ui->pushB_add_page_0->setVisible(true);
+        ui->pushB_add_page_1->setVisible(true);
+        ui->pushB_add_page_2->setVisible(true);
+        ui->pushB_add_page_3->setVisible(true);
+
+        ui->pushB_del_page_0->setVisible(true);
+
+        ui->fr_list_2->setVisible(true);
+        break;
+    case 2:
+        ui->pushB_add_page_0->setVisible(true);
+        ui->pushB_add_page_1->setVisible(true);
+        ui->pushB_add_page_2->setVisible(true);
+        ui->pushB_add_page_3->setVisible(true);
+
+        ui->fr_list_0->setVisible(true);
+        break;
+    case 3:
+        ui->pushB_add_page_0->setVisible(false);
+        ui->pushB_add_page_1->setVisible(false);
+        ui->pushB_add_page_2->setVisible(false);
+        ui->pushB_add_page_3->setVisible(false);
+
+
+        break;
+    default:
+        qDebug() << "данных нету!" ;
+        break;
+    }
+}
+//-----------------------------------------------------------//
+
+//-----------------------------------------------------------//
+//================== (Добавить страницы)
+//-----------------------------------------------------------//
+void NanotechPRO::on_pushB_page_4_clicked()
+{
+    //показать страницы ионов
+    ui->fr_list_1->setVisible(true);
+    ui->fr_list_2->setVisible(true);
+    ui->fr_list_3->setVisible(true);
+}
+//-----------------------------------------------------------//

@@ -48,17 +48,43 @@ public:
     QSignalTransition *transition_02;
     // ********************************************************//
 
+    // ints создания страниц
+    int int_add_page_0, int_add_page_1, int_add_page_2, int_add_page_3;
+
 public slots:
-    void slotVerSize(); // Слот версии программы
+    // Слот версии программы
+    void slotVerSize();
 
-    void slotTimerLoading(); // Создание нового окна проекта
+    // Создание нового окна проекта
+    void slotTimerLoading();
 
+    // Меню TO DO
     void slot_ac_menu_1();
     void slot_ac_menu_2();
     void slot_ac_menu_3();
 
+    // слоты создания страниц
+    void slot_pushB_add_page_0();
+    void slot_pushB_add_page_1();
+    void slot_pushB_add_page_2();
+    void slot_pushB_add_page_3();
+
+    // слоты переключение по страницам
+    void slot_pushB_page_0();
+    void slot_pushB_page_1();
+    void slot_pushB_page_2();
+    void slot_pushB_page_3();
+
+    // функция добавления страниц
+    void slot_function_page(int index);
+
 private slots:
     void on_pushB_new_pro_0_clicked();
+
+    void on_panel_menu_0_clicked();
+    void on_panel_menu_1_clicked();
+
+    void on_pushB_page_4_clicked();
 
 private:
     Ui::NanotechPRO *ui;
