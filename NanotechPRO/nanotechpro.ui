@@ -4783,7 +4783,7 @@
                    <set>Qt::AlignCenter</set>
                   </property>
                  </widget>
-                 <widget class="QPushButton" name="pushB_page_4">
+                 <widget class="QPushButton" name="add_page_0">
                   <property name="geometry">
                    <rect>
                     <x>10</x>
@@ -5177,7 +5177,7 @@ QPushButton:pressed
                    </size>
                   </property>
                   <property name="text">
-                   <string>1.00</string>
+                   <string>3.00</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -5406,7 +5406,7 @@ QPushButton:pressed
                    </size>
                   </property>
                   <property name="text">
-                   <string>1.00</string>
+                   <string>4.00</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -5635,7 +5635,7 @@ QPushButton:pressed
                    </size>
                   </property>
                   <property name="text">
-                   <string>1.00</string>
+                   <string>2.00</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -5830,7 +5830,7 @@ QPushButton:pressed
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>999</width>
+                   <width>0</width>
                    <height>23</height>
                   </size>
                  </property>
@@ -5854,7 +5854,7 @@ QPushButton:pressed
                   </size>
                  </property>
                  <property name="checkable">
-                  <bool>false</bool>
+                  <bool>true</bool>
                  </property>
                  <property name="checked">
                   <bool>false</bool>
@@ -5939,6 +5939,19 @@ QPushButton:pressed
              </widget>
             </item>
            </layout>
+          </widget>
+          <widget class="QPushButton" name="pushB_2">
+           <property name="geometry">
+            <rect>
+             <x>690</x>
+             <y>240</y>
+             <width>181</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
           </widget>
          </widget>
         </item>

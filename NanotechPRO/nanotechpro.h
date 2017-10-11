@@ -9,6 +9,7 @@
 #include "QFileInfo"
 #include "QTimer"
 #include "QTime"
+#include "QIcon"
 
 #include "QStateMachine"
 #include "QPropertyAnimation"
@@ -52,6 +53,10 @@ public:
     int int_add_page_0, int_add_page_1, int_add_page_2, int_add_page_3;
     // ints удаления страниц
     int int_del_page_0, int_del_page_1, int_del_page_2, int_del_page_3;
+    // index stackedW_page_0
+    int int_stackedW_page_0, int_stackedW_page_1, int_stackedW_page_2, int_stackedW_page_3;
+    // int_hidden_show страницы
+    int int_hidden_show_1, int_hidden_show_2, int_hidden_show_3, int_hidden_show_4;
 
 public slots:
     // Слот версии программы
@@ -83,6 +88,15 @@ public slots:
     void slot_pushB_page_2();
     void slot_pushB_page_3();
 
+    // Кнопка общий расчет
+    void slot_pushB_page_general_0();
+
+    // Кнопка общая коррекция
+    void slot_pushB_page_korr_0();
+
+    // слоты переключение по страницам
+    void on_add_page_0_clicked();
+
     // функция добавления страниц
     void slot_function_add_page(int index);
 
@@ -95,7 +109,8 @@ private slots:
     void on_panel_menu_0_clicked();
     void on_panel_menu_1_clicked();
 
-    void on_pushB_page_4_clicked();
+
+    void on_pushB_page_general_0_toggled(bool checked);
 
 private:
     Ui::NanotechPRO *ui;

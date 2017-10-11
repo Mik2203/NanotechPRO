@@ -362,7 +362,7 @@ public:
     QGridLayout *gridLayout_15;
     QFrame *fr_add_pages_0;
     QLabel *la_add_pages_0;
-    QPushButton *pushB_page_4;
+    QPushButton *add_page_0;
     QSpacerItem *horizontalSpacer_8;
     QFrame *fr_list_0;
     QPushButton *pushB_page_0;
@@ -391,6 +391,7 @@ public:
     QSpacerItem *verticalSpacer_16;
     QPushButton *pushB_page_korr_0;
     QFrame *line_6;
+    QPushButton *pushB_2;
     QWidget *page_3;
     QFrame *fr_menu_0;
     QGridLayout *gridLayout_7;
@@ -2393,12 +2394,12 @@ public:
         la_add_pages_0->setMaximumSize(QSize(40, 23));
         la_add_pages_0->setFont(font4);
         la_add_pages_0->setAlignment(Qt::AlignCenter);
-        pushB_page_4 = new QPushButton(fr_add_pages_0);
-        pushB_page_4->setObjectName(QStringLiteral("pushB_page_4"));
-        pushB_page_4->setGeometry(QRect(10, 24, 23, 23));
-        pushB_page_4->setMinimumSize(QSize(23, 23));
-        pushB_page_4->setMaximumSize(QSize(23, 23));
-        pushB_page_4->setStyleSheet(QLatin1String("QPushButton\n"
+        add_page_0 = new QPushButton(fr_add_pages_0);
+        add_page_0->setObjectName(QStringLiteral("add_page_0"));
+        add_page_0->setGeometry(QRect(10, 24, 23, 23));
+        add_page_0->setMinimumSize(QSize(23, 23));
+        add_page_0->setMaximumSize(QSize(23, 23));
+        add_page_0->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
@@ -2966,7 +2967,7 @@ public:
         pushB_page_general_0 = new QPushButton(fr_genirals_0);
         pushB_page_general_0->setObjectName(QStringLiteral("pushB_page_general_0"));
         pushB_page_general_0->setMinimumSize(QSize(244, 23));
-        pushB_page_general_0->setMaximumSize(QSize(999, 23));
+        pushB_page_general_0->setMaximumSize(QSize(0, 23));
         pushB_page_general_0->setStyleSheet(QStringLiteral(""));
         QIcon icon;
         QString iconThemeName = QStringLiteral("push");
@@ -2980,7 +2981,7 @@ public:
         }
         pushB_page_general_0->setIcon(icon);
         pushB_page_general_0->setIconSize(QSize(19, 19));
-        pushB_page_general_0->setCheckable(false);
+        pushB_page_general_0->setCheckable(true);
         pushB_page_general_0->setChecked(false);
 
         gridLayout_16->addWidget(pushB_page_general_0, 1, 0, 1, 1);
@@ -3023,6 +3024,9 @@ public:
 
         gridLayout_17->addWidget(line_6, 1, 0, 1, 2);
 
+        pushB_2 = new QPushButton(fr_page_1);
+        pushB_2->setObjectName(QStringLiteral("pushB_2"));
+        pushB_2->setGeometry(QRect(690, 240, 181, 23));
 
         gridLayout_2->addWidget(fr_page_1, 0, 0, 1, 1);
 
@@ -3664,25 +3668,26 @@ public:
         label_8->setText(QApplication::translate("NanotechPRO", "\320\241\321\202\321\200\320\260\320\275\320\270\321\206\320\260 3", 0));
         label_5->setText(QApplication::translate("NanotechPRO", "\320\242\320\270\320\277 \320\262\320\276\320\264\321\213", 0));
         la_add_pages_0->setText(QApplication::translate("NanotechPRO", "\321\207\320\260\321\201\321\202\321\214", 0));
-        pushB_page_4->setText(QString());
+        add_page_0->setText(QString());
         pushB_page_0->setText(QApplication::translate("NanotechPRO", "1", 0));
         lineE_page_0->setText(QApplication::translate("NanotechPRO", "1.00", 0));
         pushB_add_page_0->setText(QString());
         pushB_del_page_0->setText(QString());
         pushB_page_2->setText(QApplication::translate("NanotechPRO", "3", 0));
-        lineE_page_2->setText(QApplication::translate("NanotechPRO", "1.00", 0));
+        lineE_page_2->setText(QApplication::translate("NanotechPRO", "3.00", 0));
         pushB_add_page_2->setText(QString());
         pushB_del_page_2->setText(QString());
         pushB_page_3->setText(QApplication::translate("NanotechPRO", "4", 0));
-        lineE_page_3->setText(QApplication::translate("NanotechPRO", "1.00", 0));
+        lineE_page_3->setText(QApplication::translate("NanotechPRO", "4.00", 0));
         pushB_add_page_3->setText(QString());
         pushB_del_page_3->setText(QString());
         pushB_page_1->setText(QApplication::translate("NanotechPRO", "2", 0));
-        lineE_page_1->setText(QApplication::translate("NanotechPRO", "1.00", 0));
+        lineE_page_1->setText(QApplication::translate("NanotechPRO", "2.00", 0));
         pushB_add_page_1->setText(QString());
         pushB_del_page_1->setText(QString());
         pushB_page_general_0->setText(QApplication::translate("NanotechPRO", "\320\236\320\261\321\211\320\270\320\271", 0));
         pushB_page_korr_0->setText(QApplication::translate("NanotechPRO", "\320\232\320\276\321\200\321\200.  ", 0));
+        pushB_2->setText(QApplication::translate("NanotechPRO", "PushButton", 0));
         panel_menu_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
         pushB_page_wother->setToolTip(QApplication::translate("NanotechPRO", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\320\222\321\205\320\276\320\264\320\275\320\260\321\217 \320\262\320\276\320\264\320\260</span></p></body></html>", 0));
