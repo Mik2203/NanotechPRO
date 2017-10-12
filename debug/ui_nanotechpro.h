@@ -2466,7 +2466,7 @@ public:
         pushB_page_0->setMaximumSize(QSize(55, 23));
         lineE_page_0 = new QLineEdit(fr_list_0);
         lineE_page_0->setObjectName(QStringLiteral("lineE_page_0"));
-        lineE_page_0->setGeometry(QRect(2, 2, 55, 21));
+        lineE_page_0->setGeometry(QRect(2, 3, 55, 21));
         sizePolicy3.setHeightForWidth(lineE_page_0->sizePolicy().hasHeightForWidth());
         lineE_page_0->setSizePolicy(sizePolicy3);
         lineE_page_0->setMinimumSize(QSize(55, 21));
@@ -2590,7 +2590,7 @@ public:
         pushB_page_2->setMaximumSize(QSize(55, 23));
         lineE_page_2 = new QLineEdit(fr_list_2);
         lineE_page_2->setObjectName(QStringLiteral("lineE_page_2"));
-        lineE_page_2->setGeometry(QRect(2, 2, 55, 21));
+        lineE_page_2->setGeometry(QRect(2, 3, 55, 21));
         sizePolicy3.setHeightForWidth(lineE_page_2->sizePolicy().hasHeightForWidth());
         lineE_page_2->setSizePolicy(sizePolicy3);
         lineE_page_2->setMinimumSize(QSize(55, 21));
@@ -2714,7 +2714,7 @@ public:
         pushB_page_3->setMaximumSize(QSize(55, 23));
         lineE_page_3 = new QLineEdit(fr_list_3);
         lineE_page_3->setObjectName(QStringLiteral("lineE_page_3"));
-        lineE_page_3->setGeometry(QRect(2, 2, 55, 21));
+        lineE_page_3->setGeometry(QRect(2, 3, 55, 21));
         sizePolicy3.setHeightForWidth(lineE_page_3->sizePolicy().hasHeightForWidth());
         lineE_page_3->setSizePolicy(sizePolicy3);
         lineE_page_3->setMinimumSize(QSize(55, 21));
@@ -2838,7 +2838,7 @@ public:
         pushB_page_1->setMaximumSize(QSize(55, 23));
         lineE_page_1 = new QLineEdit(fr_list_1);
         lineE_page_1->setObjectName(QStringLiteral("lineE_page_1"));
-        lineE_page_1->setGeometry(QRect(2, 2, 55, 21));
+        lineE_page_1->setGeometry(QRect(2, 3, 55, 21));
         sizePolicy3.setHeightForWidth(lineE_page_1->sizePolicy().hasHeightForWidth());
         lineE_page_1->setSizePolicy(sizePolicy3);
         lineE_page_1->setMinimumSize(QSize(55, 21));
@@ -3026,7 +3026,17 @@ public:
 
         pushB_2 = new QPushButton(fr_page_1);
         pushB_2->setObjectName(QStringLiteral("pushB_2"));
-        pushB_2->setGeometry(QRect(690, 240, 181, 23));
+        pushB_2->setGeometry(QRect(690, 240, 91, 23));
+        pushB_2->setStyleSheet(QLatin1String("QPushButton {\n"
+"             color: grey;\n"
+"			  background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+" stop: 0 #dae2ec, stop: 0.4 #d6dde7,\n"
+" stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);\n"
+"             border-top: 3px transparent;\n"
+"             border-bottom: 3px transparent;\n"
+"             border-right: 10px transparent;\n"
+"             border-left: 10px transparent;\n"
+"         }"));
 
         gridLayout_2->addWidget(fr_page_1, 0, 0, 1, 1);
 

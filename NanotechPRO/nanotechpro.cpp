@@ -428,7 +428,7 @@ void NanotechPRO::slot_function_add_page(int index)
 //                                                    ui->pushB_page_general_0->height()));
         ui->pushB_page_general_0->setIconSize(QSize(19,19));
 
-        ui->pushB_page_korr_0->setFixedSize(244, 23); //размер картинки
+        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
         ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
         ui->pushB_page_korr_0->setIconSize(QSize(19,19));
     }
@@ -441,7 +441,7 @@ void NanotechPRO::slot_function_add_page(int index)
 //            ui->pushB_add_page_1->setEnabled(false);
             ui->pushB_del_page_0->setEnabled(false);
 
-            qDebug() << "hidden_show_3_add" << int_hidden_show_3;
+            //qDebug() << "hidden_show_3_add" << int_hidden_show_3;
             if(int_hidden_show_3 == 0)
             {
                 int_hidden_show_3 = 1;
@@ -453,7 +453,7 @@ void NanotechPRO::slot_function_add_page(int index)
                 ui->fr_list_2->setVisible(true);
 
                 qDebug() << "index2: " << index;
-                qDebug() << "pushB_page_2" << ui->pushB_page_2->text();
+                //qDebug() << "pushB_page_2" << ui->pushB_page_2->text();
             }
 
             int_stackedW_page_1 = 1;
@@ -478,7 +478,7 @@ void NanotechPRO::slot_function_add_page(int index)
                 //ui->pushB_add_page_2->setEnabled(false);
                 //ui->pushB_del_page_1->setEnabled(false);
 
-                qDebug() << "hidden_show_4_add" << int_hidden_show_4;
+                //qDebug() << "hidden_show_4_add" << int_hidden_show_4;
                 if(int_hidden_show_4 == 0)
                 {
                     int_hidden_show_4 = 1;
@@ -490,24 +490,26 @@ void NanotechPRO::slot_function_add_page(int index)
 
                     ui->pushB_add_page_3->setVisible(false); // Показать добавить страницу
 
-                    qDebug() << "index2: " << index;
-                    qDebug() << "pushB_page_3" << ui->pushB_page_3->text();
+                    qDebug() << "index3: " << index;
+                    //qDebug() << "pushB_page_3" << ui->pushB_page_3->text();
                 }
-                else
+
+                int_stackedW_page_2 = 2;
+                int_stackedW_page_3 = 3;
+
+                int_hidden_show_4 = 1;
+
+                ui->pushB_add_page_3->setVisible(false); // Скрыть добавить страницу
+
+                if(ui->fr_list_2->isVisible() == true)
                 {
-                    int_stackedW_page_2 = 2;
-                    int_stackedW_page_3 = 3;
-
-                    int_hidden_show_4 = 1;
-
-                    ui->pushB_add_page_3->setVisible(false); // Скрыть добавить страницу
-
                     ui->pushB_page_general_0->setFixedSize(244, 23); //размер картинки
                     ui->pushB_page_korr_0->setFixedSize(244, 23); //размер картинки
-
-                    ui->fr_list_3->setVisible(true);
-                    qDebug() << "index2: " << index;
                 }
+
+
+                ui->fr_list_3->setVisible(true);
+                qDebug() << "index2: " << index;
             }
             else
             {
@@ -540,13 +542,24 @@ void NanotechPRO::slot_function_del_page(int index)
         ui->pushB_add_page_0->setEnabled(true);
         ui->pushB_del_page_0->setEnabled(true);
 
-        ui->fr_list_1->setVisible(false); // скрыть блок 2 страницы страницу
         ui->pushB_del_page_0->setVisible(false); // скрыть кнопку удалить страницу
 
         ui->pushB_add_page_0->setVisible(true);
         ui->pushB_add_page_1->setVisible(true);
         ui->pushB_add_page_2->setVisible(true);
-//        ui->pushB_add_page_3->setVisible(true);
+
+        qDebug() << "del_index1: " << index;
+
+        if(ui->fr_list_2->isVisible() == false)
+        {
+            ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
+            ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
+
+            ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
+            ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
+        }
+
+        ui->fr_list_1->setVisible(false); // скрыть блок 2 страницы страницу
     }
     else
     {
@@ -555,7 +568,7 @@ void NanotechPRO::slot_function_del_page(int index)
 
             int_hidden_show_2 = 0;
 
-            qDebug() << "hidden_show_3_del" << int_hidden_show_3;
+            //qDebug() << "hidden_show_3_del" << int_hidden_show_3;
             if(int_hidden_show_3 == 1)
             {
                 int_hidden_show_3 = 0;
@@ -574,32 +587,48 @@ void NanotechPRO::slot_function_del_page(int index)
             ui->pushB_add_page_0->setEnabled(true);
             ui->pushB_del_page_0->setEnabled(true);
 
-            if(ui->fr_list_1->isVisible() == true)
-            {
-                ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
-                ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
-
-                ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
-                ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
-            }
-            else
-            {
-                ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
-                ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
-
-                ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
-                ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
-            }
-
-
-
             ui->pushB_add_page_0->setVisible(true); // показать кнопку добавить страницу
             ui->pushB_del_page_0->setVisible(false); // скрыть кнопку удалить страницу
 
-            ui->pushB_add_page_0->setVisible(true);
             ui->pushB_add_page_1->setVisible(true);
             ui->pushB_add_page_2->setVisible(true);
-//            ui->pushB_add_page_3->setVisible(true);
+
+            qDebug() << "del_index2: " << index;
+
+            if(ui->fr_list_0->isVisible() == true)
+            {
+                ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
+                ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
+
+                ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
+                ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
+
+                if(ui->fr_list_3->isVisible() == false)
+                {
+                    ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
+                    ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
+
+                    ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
+                    ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
+                }
+
+                if(ui->fr_list_2->isVisible() == false)
+                {
+                    ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
+                    ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
+
+                    ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
+                    ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
+                }
+                else
+                {
+                    ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
+                    ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
+
+                    ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+                    ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
+                }
+            }
 
             ui->fr_list_1->setVisible(false); // скрыть блок 2 страницы страницу
         }
@@ -609,7 +638,7 @@ void NanotechPRO::slot_function_del_page(int index)
             {
                 int_hidden_show_3 = 0;
 
-                qDebug() << "hidden_show_4_del" << int_hidden_show_4;
+                //qDebug() << "hidden_show_4_del" << int_hidden_show_4;
                 if(int_hidden_show_4 == 1)
                 {
                     int_hidden_show_4 = 0;
@@ -627,15 +656,24 @@ void NanotechPRO::slot_function_del_page(int index)
                 ui->pushB_add_page_1->setEnabled(true);
                 ui->pushB_del_page_1->setEnabled(true);
 
-                ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
-                ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
-
                 ui->pushB_add_page_0->setVisible(true);
                 ui->pushB_add_page_1->setVisible(true);
                 ui->pushB_add_page_2->setVisible(true);
-//                ui->pushB_add_page_3->setVisible(false);
 
                 ui->fr_list_2->setVisible(false); // скрыть блок 3 страницы страницу
+
+                qDebug() << "del_index3: " << index;
+                if(ui->fr_list_1->isVisible() == true)
+                {
+                    ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
+                    ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+
+                    if(ui->fr_list_3->isVisible() == false)
+                    {
+                        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
+                        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
+                    }
+                }
             }
             else
             {
@@ -646,15 +684,19 @@ void NanotechPRO::slot_function_del_page(int index)
                     ui->pushB_add_page_2->setEnabled(true);
                     ui->pushB_del_page_2->setEnabled(true);
 
-                    ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
-                    ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
-
                     ui->pushB_add_page_0->setVisible(true);
                     ui->pushB_add_page_1->setVisible(true);
                     ui->pushB_add_page_2->setVisible(true);
-//                    ui->pushB_add_page_3->setVisible(true);
 
                     ui->fr_list_3->setVisible(false); // скрыть блок 4 страницы страницу
+
+                    qDebug() << "del_index4: " << index;
+
+                    if(ui->fr_list_1->isVisible() == true)
+                    {
+                        ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
+                        ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+                    }
                 }
             }
         }

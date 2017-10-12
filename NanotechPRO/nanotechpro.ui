@@ -4924,7 +4924,7 @@ QPushButton:pressed
                   <property name="geometry">
                    <rect>
                     <x>2</x>
-                    <y>2</y>
+                    <y>3</y>
                     <width>55</width>
                     <height>21</height>
                    </rect>
@@ -5153,7 +5153,7 @@ QPushButton:pressed
                   <property name="geometry">
                    <rect>
                     <x>2</x>
-                    <y>2</y>
+                    <y>3</y>
                     <width>55</width>
                     <height>21</height>
                    </rect>
@@ -5382,7 +5382,7 @@ QPushButton:pressed
                   <property name="geometry">
                    <rect>
                     <x>2</x>
-                    <y>2</y>
+                    <y>3</y>
                     <width>55</width>
                     <height>21</height>
                    </rect>
@@ -5611,7 +5611,7 @@ QPushButton:pressed
                   <property name="geometry">
                    <rect>
                     <x>2</x>
-                    <y>2</y>
+                    <y>3</y>
                     <width>55</width>
                     <height>21</height>
                    </rect>
@@ -5945,9 +5945,21 @@ QPushButton:pressed
             <rect>
              <x>690</x>
              <y>240</y>
-             <width>181</width>
+             <width>91</width>
              <height>23</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+             color: grey;
+			  background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+ stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+             border-top: 3px transparent;
+             border-bottom: 3px transparent;
+             border-right: 10px transparent;
+             border-left: 10px transparent;
+         }</string>
            </property>
            <property name="text">
             <string>PushButton</string>
