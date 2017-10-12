@@ -20,16 +20,19 @@ unix{
 SOURCES += \
     nanotechpro.cpp \
     main.cpp \
-    loading/doprogress.cpp
+    loading/doprogress.cpp \
+    widget/pages_list/widget_pages_list.cpp
 
 HEADERS += \
     nanotechpro.h \
     Version/version.h \
-    loading/doprogress.h
+    loading/doprogress.h \
+    widget/pages_list/widget_pages_list.h
 
 
 FORMS += \
-    nanotechpro.ui
+    nanotechpro.ui \
+    widget/pages_list/widget_pages_list.ui
 
 QT+= core gui widgets
 
