@@ -1,0 +1,13 @@
+INPUT(
+./debug\nanotechpro.o
+./debug\main.o
+./debug\doprogress.o
+./debug\widget_pages_list.o
+./debug\styleloader.o
+./debug\qrc_img.o
+./debug\qrc_stylesheet.o
+./debug\moc_nanotechpro.o
+./debug\moc_doprogress.o
+./debug\moc_widget_pages_list.o
+./debug\moc_styleloader.o
+);

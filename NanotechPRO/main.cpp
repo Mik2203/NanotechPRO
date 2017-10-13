@@ -11,7 +11,7 @@
 #include <QProgressBar>
 #include <QHBoxLayout>
 #include <QPushButton>
-//#include "loading/doprogress.h"
+#include "style/styleloader.h"
 
 int main(int argc, char *argv[])
 {
@@ -54,13 +54,25 @@ int main(int argc, char *argv[])
 //    window->setLayout(vlayout);
 //    window->show();
 
+//********************************************************//
+//    QFile styleF;
+
+//    styleF.setFileName(":/css/stylesheet.css");
+//    styleF.open(QFile::ReadOnly);
+//    QString qssStr = styleF.readAll();
+
+//    qApp->setStyleSheet(qssStr);
+
     NanotechPRO w;
-//    w.setWindowFlags(Qt::Tool
-//                     | Qt::WindowTitleHint
-//                     | Qt::CustomizeWindowHint);
+
+    QString save_file = w.spthApp + "NanotechPRO/style/css/stylesheet.css";
+
+    qDebug() << "Путик: " << save_file;
+
+    // F6 обновляет css и вывод на экран
+    StyleLoader::attach(save_file, QKeySequence("F6")); // Запуск css файла
+
     w.setWindowFlags(Qt::Window);
-
     w.show();
-
     return a.exec();
 }

@@ -118,29 +118,29 @@ void widget_pages_list::slot_pushB_del_page_3()
 }
 //-----------------------------------------------------------//
 
-////-----------------------------------------------------------//
-////================== (слоты переключение по страницам)
-////-----------------------------------------------------------//
-//void widget_pages_list::slot_pushB_page_0()
-//{
-//    ui->stackedW_page_0->setCurrentIndex(int_stackedW_page_0);
-//}
+//-----------------------------------------------------------//
+//================== (слоты переключение по страницам)
+//-----------------------------------------------------------//
+void widget_pages_list::slot_pushB_page_0()
+{
+    emit signal_pushB_page_0(int_stackedW_page_0);
+}
 
-//void widget_pages_list::slot_pushB_page_1()
-//{
-//    ui->stackedW_page_0->setCurrentIndex(int_stackedW_page_1);
-//}
+void widget_pages_list::slot_pushB_page_1()
+{
+    emit signal_pushB_page_1(int_stackedW_page_1);
+}
 
-//void widget_pages_list::slot_pushB_page_2()
-//{
-//    ui->stackedW_page_0->setCurrentIndex(int_stackedW_page_2);
-//}
+void widget_pages_list::slot_pushB_page_2()
+{
+    emit signal_pushB_page_2(int_stackedW_page_2);
+}
 
-//void widget_pages_list::slot_pushB_page_3()
-//{
-//    ui->stackedW_page_0->setCurrentIndex(int_stackedW_page_3);
-//}
-////-----------------------------------------------------------//
+void widget_pages_list::slot_pushB_page_3()
+{
+    emit signal_pushB_page_3(int_stackedW_page_3);
+}
+//-----------------------------------------------------------//
 
 //-----------------------------------------------------------//
 //================== (функция добавления страниц)

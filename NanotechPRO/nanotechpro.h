@@ -10,11 +10,15 @@
 #include "QTimer"
 #include "QTime"
 #include "QIcon"
+#include "QDate"
 
 #include "QStateMachine"
 #include "QPropertyAnimation"
 #include "QState"
 #include "QSignalTransition"
+
+#include "QSettings"
+#include "QStringList"
 
 #include "widget/pages_list/widget_pages_list.h"
 
@@ -33,6 +37,11 @@ public:
     explicit NanotechPRO(QWidget *parent = 0);
     ~NanotechPRO();
 
+    QSettings *sett_nano;
+
+    // Глобальные пути
+    QString spthApp, pathPro, proSize;
+
     QTimer *TimerLoading;
     QTimer *TimerPause;
 
@@ -50,18 +59,29 @@ public:
     // ********************************************************//
     widget_pages_list *Widget_pages_list;
 
+    // По версии программы
+    QString allText, st_date, st_size, st_ver, st_verDate, str2;
+
 
 public slots:
     // Слот версии программы
     void slotVerSize();
+    void slotVerReset();
 
     // Создание нового окна проекта
     void slotTimerLoading();
 
     // Меню TO DO
+    void slot_ac_menu_new();
     void slot_ac_menu_1();
     void slot_ac_menu_2();
-    void slot_ac_menu_3();
+    void slot_ac_menu_exit();
+
+    // слоты-сыгналы переключение по страницам
+    void slotSignal_pushB_page_0(int int_page);
+//    void slotSignal_pushB_page_1();
+//    void slotSignal_pushB_page_2();
+//    void slotSignal_pushB_page_3();
 
 
 

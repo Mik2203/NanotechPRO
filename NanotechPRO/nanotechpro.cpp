@@ -12,13 +12,46 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //-----------------------------------------------------------------//
     Widget_pages_list = new widget_pages_list;
     Widget_pages_list->setParent(ui->fr_pages_list_0);
-        ui->fr_pages_list_0->layout()->addWidget(Widget_pages_list);
-        Widget_pages_list->show();
+    ui->fr_pages_list_0->layout()->addWidget(Widget_pages_list);
+    Widget_pages_list->show();
+    //-----------------------------------------------------------------//
+
+    //-----------------------------------------------------------------//
+    //****** [Подключение для классов (СИГНАЛ/СЛОТ)]
+    //-----------------------------------------------------------------//
+    connect(Widget_pages_list, SIGNAL(signal_pushB_page_0(int)), this, SLOT(slotSignal_pushB_page_0(int)));
+    connect(Widget_pages_list, SIGNAL(signal_pushB_page_1(int)), this, SLOT(slotSignal_pushB_page_0(int)));
+    connect(Widget_pages_list, SIGNAL(signal_pushB_page_2(int)), this, SLOT(slotSignal_pushB_page_0(int)));
+    connect(Widget_pages_list, SIGNAL(signal_pushB_page_3(int)), this, SLOT(slotSignal_pushB_page_0(int)));
+    //-----------------------------------------------------------------//
+
+    //-----------------------------------------------------------------//
+    //****** [Глобальные пути]
+    //-----------------------------------------------------------------//
+    qint64 sys_dss = 0;
+    spthApp = QApplication::applicationDirPath(); //путь
+    proSize = spthApp;
+    spthApp = spthApp.left(spthApp.lastIndexOf("/exe") + 1);
+    pathPro = spthApp;
+
+    //qDebug() << "ProSize: " << proSize ;
+    QFileInfo fiSi(proSize + "/nanotechpro.exe");
+    sys_dss = fiSi.size();
+    st_size = fileSize(sys_dss);
+
+    sett_nano = new QSettings(pathPro += "/NanotechPRO/core/settings/options.ntpt", QSettings::IniFormat);
+    qDebug() << "QSettings: " << pathPro;
+    qDebug() << "Версия: " << sett_nano->value("Version/ver").toString();
+    //sett_nano->setValue("Version/ver", 0);
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
     //****** [Меню]
     //-----------------------------------------------------------------//
+    ui->ac_new->setShortcut(tr("Ctrl+N"));
+    ui->ac_new->setStatusTip("Новый проект расчета");
+    connect(ui->ac_new, SIGNAL(triggered()), this, SLOT(slot_ac_menu_new()));
+
     ui->ac_1->setShortcut(tr("Ctrl+W"));
     ui->ac_1->setStatusTip("Открыть проект");
     connect(ui->ac_1, SIGNAL(triggered()), this, SLOT(slot_ac_menu_1()));
@@ -27,9 +60,9 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     ui->ac_2->setStatusTip("Сохранить проект");
     connect(ui->ac_2, SIGNAL(triggered()), this, SLOT(slot_ac_menu_2()));
 
-    ui->ac_3->setShortcut(tr("Ctrl+Q"));
-    ui->ac_3->setStatusTip("Закрыть программу");
-    connect(ui->ac_3, SIGNAL(triggered()), this, SLOT(slot_ac_menu_3()));
+    ui->ac_exit->setShortcut(tr("Ctrl+Q"));
+    ui->ac_exit->setStatusTip("Закрыть программу");
+    connect(ui->ac_exit, SIGNAL(triggered()), this, SLOT(slot_ac_menu_exit()));
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -63,18 +96,29 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //                   | Qt::WindowTitleHint
     //                   | Qt::CustomizeWindowHint);
     //show();
+    //-----------------------------------------------------------------//
 
+    //-----------------------------------------------------------------//
+    //****** [Статус/положение окон]
+    //-----------------------------------------------------------------//
+    // показать панель меню
     ui->menubar->setHidden(true);
     ui->statusbar->setHidden(true);
+
     // кнопка для анимации (постоянно скрыта - только для теста)
     ui->pushB_1->setVisible(false);
+
     // процесс создания проекта
     ui->pBar_1->setVisible(false);
+
     // Логотип
     ui->laLogo_1->setVisible(false);
+
     // Панель инструментов
     ui->fr_menu_0->setVisible(false);
 
+    // Старт проекта
+    ui->stackedW_0->setCurrentIndex(0);
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -98,9 +142,17 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     ui->pBar_1->setValue(0);
     //-----------------------------------------------------------------//
 
+    //-----------------------------------------------------------------//
+    //****** [ Запуск переменных ]
+    //-----------------------------------------------------------------//
 
-    // Переменные
+    //-----------------------------------------------------------------//
 
+    //-----------------------------------------------------------------//
+    //****** [  ]
+    //-----------------------------------------------------------------//
+
+    //-----------------------------------------------------------------//
 
 }
 
@@ -132,40 +184,119 @@ QString fileSize(qint64 nSize)
 //-----------------------------------------------------------//
 void NanotechPRO::slotVerSize()
 {
-    QString ver(VER_PRODUCTVERSION_STR);
-    int verr, verr2;
-    verr = VER_PRODUCTVERSION;
-    //verr2 = VER_PRODUCTVERSION_STR;
-    ui->la_version_1->setText("Версия: " + /*ver.number(verr)*/ ver);
-    qDebug() << "Версия программы " << VER_PRODUCTVERSION << verr2;
-    qDebug() << path_size_file_1;
+    qint64 dss_int = 0;
+    qint64 cpp_int = 0;
+    qint64 rezult = 0;
 
-    path_size_file_1 =  path_size_file_1.left(path_size_file_1.lastIndexOf("/exe")+1);
-    path_size_file_2 =  path_size_file_2.left(path_size_file_2.lastIndexOf("/exe")+1);
+    st_ver = sett_nano->value("Version/ver").toString();
+    st_verDate = "    [" + sett_nano->value("Sys_date/date").toString() + "]";
 
-    QSettings settings_V("Version");
-    QCoreApplication::setOrganizationName("Version");
+    QFileInfo dss_info(proSize + "/nanotechpro.exe");
+    dss_int = dss_info.size();
 
-    QFile fileVer_1, fileVer_2;
+    QFileInfo cpp_info(pathPro + "/NanotechPRO/nanotechpro.cpp");
+    cpp_int = cpp_info.size();
 
-    fileVer_1.setFileName(path_dir_1 + "/NanotechPRO/nanotechpro.cpp");
-    fileVer_2.setFileName(path_dir_1 + "/NanotechPRO/nanotechpro.h");
+    st_date = QDate::currentDate().toString("dd.MM.yyyy");
 
+    rezult = dss_int + cpp_int;
 
-    QFileInfo fiVer(fileVer_1);
-    QString size_file_1 = fiVer.absoluteFilePath();
-    qDebug() << "[ ИМЯ nanotechpro.cpp ] " << size_file_1;
+    qDebug() << "Size: " <<  fileSize(rezult) << st_size;
+    if(((sett_nano->value("Sys_date/date").toString() != st_date)
+        && (sett_nano->value("Sys_size/size").toString() != fileSize(dss_int))))
+    {
+        int i, num[4];
 
-    QFileInfo fiVer2(fileVer_2);
-    QString size_file_2 = fiVer2.absoluteFilePath();
-    qDebug() << "[ ИМЯ nanotechpro.h ] " << size_file_2;
+        allText = sett_nano->value("Version/ver", "").toString();
+        if(allText == "")
+        {
+            allText = "0.0.0.0";
+        }
+        QStringList skList;
+        skList = allText.split(".");
 
-    settings_V.setValue("Size/nanotechpro.cpp", fileSize(fiVer.size()));
-    settings_V.setValue("Size/nanotechpro.h", fileSize(fiVer2.size()));
+        num[0] = skList.at(0).toInt(); //num[0] = str1.section(",",0,0).toInt();
+        num[1] = skList.at(1).toInt(); //num[1] = str1.section(",",1,1).toInt();
+        num[2] = skList.at(2).toInt(); //num[2] = str1.section(",",2,2).toInt();
+        num[3] = skList.at(3).toInt(); //num[3] = str1.section(",",3,3).toInt();
 
-    qDebug() << "[ Size - nanotechpro.cpp / h ] " << settings_V.value("Size/nanotechpro.cpp").toString()
-             << " " << settings_V.value("Size/nanotechpro.h").toString();
+        for(i = 3; i >= 0; --i)
+        {
+            num[i]++;
+            if((num[i] < 10) || (i == 0))
+                break;
+            else
+                num[i] = 0;
+        }
+
+        str2 = QString("%1.%2.%3.%4").arg(num[0]).arg(num[1]).arg(num[2]).arg(num[3]);
+
+        allText =  str2;
+        qDebug() << "Версия: " << allText;
+
+        st_ver = sett_nano->value("Version/ver").toString();
+        st_verDate = "    [" + sett_nano->value("Sys_date/date").toString() + "]";
+
+        sett_nano->setValue("Version/ver",allText);
+        sett_nano->setValue("Sys_date/date", st_date);
+        sett_nano->setValue("Sys_size/size", fileSize(dss_int));
+    }
+    slotVerReset();
 }
+
+// Обновить версию проекта сразу
+void NanotechPRO::slotVerReset()
+{
+    return ui->la_version_1->setText("Версия: " + st_ver);
+
+//    QStringList list;
+//    list << ui->lineE_blok_1_1_1->text() << ui->lineE_blok_1_1_2->text();
+
+//    //QString obj = sender()->objectName();
+//    QString obj_name;
+//    QString ob_name = "0.00";
+
+//    for(int i = 0; i < list.count(); ++i)
+//    {
+//        if(list.at(i) == NULL)
+//        {
+//            // Блок 1
+//            ui->lineE_blok_1_1_1->setText(ob_name);
+//            ui->lineE_blok_1_1_2->setText(ob_name);
+//            ui->lineE_blok_1_1_3->setText(ob_name);
+//            ui->lineE_blok_1_1_4->setText(ob_name);
+//            ui->lineE_blok_1_1_5->setText(ob_name);
+//            ui->lineE_blok_1_1_6->setText(ob_name);
+//            ui->lineE_blok_1_1_7->setText(ob_name);
+//            ui->lineE_blok_1_1_8->setText(ob_name);
+//            ui->lineE_blok_1_1_9->setText(ob_name);
+
+//            ui->lineE_blok_1_2_1->setText(ob_name);
+//            ui->lineE_blok_1_2_2->setText(ob_name);
+//            ui->lineE_blok_1_2_3->setText(ob_name);
+//            ui->lineE_blok_1_2_4->setText(ob_name);
+//            ui->lineE_blok_1_2_5->setText(ob_name);
+//            ui->lineE_blok_1_2_6->setText(ob_name);
+//            ui->lineE_blok_1_2_7->setText(ob_name);
+//            ui->lineE_blok_1_2_8->setText(ob_name);
+//            ui->lineE_blok_1_2_9->setText(ob_name);
+
+//            // Блок 2
+//            ui->lineE_blok_1_1_1->setText(ob_name);
+//            ui->lineE_blok_1_1_2->setText(ob_name);
+//            ui->lineE_blok_1_1_3->setText(ob_name);
+//            ui->lineE_blok_1_1_4->setText(ob_name);
+//            ui->lineE_blok_1_1_5->setText(ob_name);
+//            ui->lineE_blok_1_1_6->setText(ob_name);
+//            ui->lineE_blok_1_1_7->setText(ob_name);
+//        }
+//        else
+//        {
+//            qDebug() << "Беда";
+//        }
+//    }
+}
+
 //-----------------------------------------------------------//
 
 //-----------------------------------------------------------//
@@ -271,22 +402,25 @@ void NanotechPRO::slotTimerLoading()
 //-----------------------------------------------------------//
 void NanotechPRO::slot_ac_menu_1()
 {
-    NanotechPRO::setWindowFlags(Qt::Window);
-    //    Qt::WindowFlags flags = windowFlags();
-    //    setWindowFlags(flags
-    //                   | Qt::Window
-    //                   | Qt::WindowShadeButtonHint);
-    //window->show();
+    // Открыть сохраненный файл <name>.ntp
 }
 
 void NanotechPRO::slot_ac_menu_2()
 {
     exit(0);
+    // Сохранить файл <name>.ntp
 }
 
-void NanotechPRO::slot_ac_menu_3()
+void NanotechPRO::slot_ac_menu_exit()
 {
     exit(0);
+}
+
+// Новый
+void NanotechPRO::slot_ac_menu_new()
+{
+    ui->stackedW_0->setCurrentIndex(0);
+    // Задать впорос, вы хотите сохранить изменения проекта
 }
 //-----------------------------------------------------------//
 
@@ -307,23 +441,26 @@ void NanotechPRO::on_panel_menu_1_clicked()
 //-----------------------------------------------------------//
 //================== (слоты переключение по страницам)
 //-----------------------------------------------------------//
-void NanotechPRO::slot_pushB_page_0()
+void NanotechPRO::slotSignal_pushB_page_0(int int_page)
 {
-    ui->stackedW_page_0->setCurrentIndex();// тут вставить сигнал
-}
-
-void widget_pages_list::slot_pushB_page_1()
-{
-    //ui->stackedW_page_0->setCurrentIndex(widget_pages_list.int_stackedW_page_1);
-}
-
-void widget_pages_list::slot_pushB_page_2()
-{
-    //ui->stackedW_page_0->setCurrentIndex(widget_pages_list.int_stackedW_page_2);
-}
-
-void widget_pages_list::slot_pushB_page_3()
-{
-    //ui->stackedW_page_0->setCurrentIndex(widget_pages_list.int_stackedW_page_3);
+    switch(int_page)
+    {
+    case 0:
+        ui->stackedW_page_0->setCurrentIndex(int_page); // прием int сигнала
+        qDebug() << "int" << int_page;
+        break;
+    case 1:
+        ui->stackedW_page_0->setCurrentIndex(int_page); // прием int сигнала
+        qDebug() << "int1" << int_page;
+        break;
+    case 2:
+        ui->stackedW_page_0->setCurrentIndex(int_page); // прием int сигнала
+        qDebug() << "int2" << int_page;
+        break;
+    case 3:
+        ui->stackedW_page_0->setCurrentIndex(int_page); // прием int сигнала
+        qDebug() << "int3" << int_page;
+        break;
+    }
 }
 //-----------------------------------------------------------//

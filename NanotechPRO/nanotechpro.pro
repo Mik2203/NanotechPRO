@@ -21,13 +21,15 @@ SOURCES += \
     nanotechpro.cpp \
     main.cpp \
     loading/doprogress.cpp \
-    widget/pages_list/widget_pages_list.cpp
+    widget/pages_list/widget_pages_list.cpp \
+    style/styleloader.cpp
 
 HEADERS += \
     nanotechpro.h \
     Version/version.h \
     loading/doprogress.h \
-    widget/pages_list/widget_pages_list.h
+    widget/pages_list/widget_pages_list.h \
+    style/styleloader.h
 
 
 FORMS += \
@@ -37,6 +39,7 @@ FORMS += \
 QT+= core gui widgets
 
 RESOURCES += \
-    images/img.qrc
+    images/img.qrc \
+    style/stylesheet.qrc
 
 RC_FILE = myapp.rc

@@ -77,6 +77,12 @@ public slots:
     void on_pushB_page_general_0_toggled(bool general);
     void on_pushB_page_korr_0_toggled(bool korr);
 
+signals:
+    void signal_pushB_page_0(int page_0);
+    void signal_pushB_page_1(int page_1);
+    void signal_pushB_page_2(int page_2);
+    void signal_pushB_page_3(int page_3);
+
 private:
     Ui::widget_pages_list *ui;
 };
