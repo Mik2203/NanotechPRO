@@ -14,6 +14,17 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     Widget_pages_list->setParent(ui->fr_pages_list_0);
     ui->fr_pages_list_0->layout()->addWidget(Widget_pages_list);
     Widget_pages_list->show();
+
+
+    Widget_stream_data = new widget_stream_data;
+    Widget_stream_data->setParent(ui->fr_stackedW_page_0);
+    ui->fr_stackedW_page_0->layout()->addWidget(Widget_stream_data);
+    Widget_stream_data->show();
+
+//    Widget_stream_data->StackedW_data_0()->setCurrentIndex(0);
+//    ui->stackedW_page_0->insertWidget(0, Widget_stream_data);
+//    ui->stackedW_page_0->insertWidget(1, Widget_stream_data);
+
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -248,53 +259,6 @@ void NanotechPRO::slotVerSize()
 void NanotechPRO::slotVerReset()
 {
     return ui->la_version_1->setText("Версия: " + st_ver);
-
-//    QStringList list;
-//    list << ui->lineE_blok_1_1_1->text() << ui->lineE_blok_1_1_2->text();
-
-//    //QString obj = sender()->objectName();
-//    QString obj_name;
-//    QString ob_name = "0.00";
-
-//    for(int i = 0; i < list.count(); ++i)
-//    {
-//        if(list.at(i) == NULL)
-//        {
-//            // Блок 1
-//            ui->lineE_blok_1_1_1->setText(ob_name);
-//            ui->lineE_blok_1_1_2->setText(ob_name);
-//            ui->lineE_blok_1_1_3->setText(ob_name);
-//            ui->lineE_blok_1_1_4->setText(ob_name);
-//            ui->lineE_blok_1_1_5->setText(ob_name);
-//            ui->lineE_blok_1_1_6->setText(ob_name);
-//            ui->lineE_blok_1_1_7->setText(ob_name);
-//            ui->lineE_blok_1_1_8->setText(ob_name);
-//            ui->lineE_blok_1_1_9->setText(ob_name);
-
-//            ui->lineE_blok_1_2_1->setText(ob_name);
-//            ui->lineE_blok_1_2_2->setText(ob_name);
-//            ui->lineE_blok_1_2_3->setText(ob_name);
-//            ui->lineE_blok_1_2_4->setText(ob_name);
-//            ui->lineE_blok_1_2_5->setText(ob_name);
-//            ui->lineE_blok_1_2_6->setText(ob_name);
-//            ui->lineE_blok_1_2_7->setText(ob_name);
-//            ui->lineE_blok_1_2_8->setText(ob_name);
-//            ui->lineE_blok_1_2_9->setText(ob_name);
-
-//            // Блок 2
-//            ui->lineE_blok_1_1_1->setText(ob_name);
-//            ui->lineE_blok_1_1_2->setText(ob_name);
-//            ui->lineE_blok_1_1_3->setText(ob_name);
-//            ui->lineE_blok_1_1_4->setText(ob_name);
-//            ui->lineE_blok_1_1_5->setText(ob_name);
-//            ui->lineE_blok_1_1_6->setText(ob_name);
-//            ui->lineE_blok_1_1_7->setText(ob_name);
-//        }
-//        else
-//        {
-//            qDebug() << "Беда";
-//        }
-//    }
 }
 
 //-----------------------------------------------------------//
@@ -392,6 +356,8 @@ void NanotechPRO::slotTimerLoading()
         ui->menubar->setHidden(false);
         ui->statusbar->setHidden(false);
 
+        ui->pBar_1->setValue(0);
+
         ui->pushB_1->click();
     }
 }
@@ -446,19 +412,20 @@ void NanotechPRO::slotSignal_pushB_page_0(int int_page)
     switch(int_page)
     {
     case 0:
-        ui->stackedW_page_0->setCurrentIndex(int_page); // прием int сигнала
+//        ui->stackedW_page_0->setCurrentIndex(int_page);
         qDebug() << "int" << int_page;
+        Widget_stream_data->StackedW_data_0()->setCurrentIndex(int_page); // прием int сигнала
         break;
     case 1:
-        ui->stackedW_page_0->setCurrentIndex(int_page); // прием int сигнала
         qDebug() << "int1" << int_page;
+        Widget_stream_data->StackedW_data_0()->setCurrentIndex(int_page); // прием int сигнала
         break;
     case 2:
-        ui->stackedW_page_0->setCurrentIndex(int_page); // прием int сигнала
+        Widget_stream_data->StackedW_data_0()->setCurrentIndex(int_page); // прием int сигнала
         qDebug() << "int2" << int_page;
         break;
     case 3:
-        ui->stackedW_page_0->setCurrentIndex(int_page); // прием int сигнала
+        Widget_stream_data->StackedW_data_0()->setCurrentIndex(int_page); // прием int сигнала
         qDebug() << "int3" << int_page;
         break;
     }

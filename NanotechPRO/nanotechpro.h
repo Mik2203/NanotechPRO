@@ -21,6 +21,7 @@
 #include "QStringList"
 
 #include "widget/pages_list/widget_pages_list.h"
+#include "widget/stream_data/widget_stream_data.h"
 
 namespace Ui {
 class NanotechPRO;
@@ -56,11 +57,22 @@ public:
     QPropertyAnimation *animation_01;
     QSignalTransition *transition_01;
     QSignalTransition *transition_02;
-    // ********************************************************//
-    widget_pages_list *Widget_pages_list;
+    //*********************************************************//
+
+
+
+
 
     // По версии программы
     QString allText, st_date, st_size, st_ver, st_verDate, str2;
+
+
+    // ========================================================//
+    // -- [ КЛАССЫ ]
+    // ========================================================//
+    widget_pages_list *Widget_pages_list;
+    widget_stream_data *Widget_stream_data;
+    //*********************************************************//
 
 
 public slots:
@@ -83,7 +95,7 @@ public slots:
 //    void slotSignal_pushB_page_2();
 //    void slotSignal_pushB_page_3();
 
-
+//    void slot_StackedW_data_0();
 
 private slots:
     void on_pushB_new_pro_0_clicked();

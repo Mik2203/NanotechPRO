@@ -16,6 +16,8 @@
 
 #include "QStackedWidget"
 
+#include "widget/stream_data/widget_stream_data.h"
+
 namespace Ui {
 class widget_pages_list;
 }

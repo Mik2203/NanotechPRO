@@ -36,7 +36,6 @@ public:
     QPushButton *pushB_page_general_0;
     QSpacerItem *horizontalSpacer_9;
     QPushButton *pushB_page_korr_0;
-    QFrame *line_6;
     QFrame *fr_pages_0;
     QGridLayout *gridLayout_15;
     QFrame *fr_add_pages_0;
@@ -156,15 +155,7 @@ public:
         gridLayout_16->addWidget(pushB_page_korr_0, 2, 0, 1, 1);
 
 
-        gridLayout_17->addWidget(fr_genirals_0, 2, 0, 1, 2);
-
-        line_6 = new QFrame(fr_add_list_0);
-        line_6->setObjectName(QStringLiteral("line_6"));
-        line_6->setMinimumSize(QSize(0, 2));
-        line_6->setFrameShape(QFrame::HLine);
-        line_6->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_17->addWidget(line_6, 1, 0, 1, 2);
+        gridLayout_17->addWidget(fr_genirals_0, 1, 0, 1, 2);
 
         fr_pages_0 = new QFrame(fr_add_list_0);
         fr_pages_0->setObjectName(QStringLiteral("fr_pages_0"));

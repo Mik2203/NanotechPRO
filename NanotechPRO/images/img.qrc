@@ -63,6 +63,8 @@
         <file>logo1.png</file>
         <file>Membranium_logo_eng.jpg</file>
         <file>Membranium_logo_rus.jpg</file>
+        <file>Membranium_logo_eng.png</file>
+        <file>Membranium_logo_rus.png</file>
     </qresource>
     <qresource prefix="/other">
         <file>scheme_stage_normal.png</file>

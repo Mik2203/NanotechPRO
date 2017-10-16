@@ -30,6 +30,35 @@ QLineEdit:focus
 	stop:1 rgba(80, 132, 245, 0));
 }
 
+QPushButton {
+    /*border: 1px solid #3873d9;*/
+	border-top-left-radius: 4px;
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);
+	
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+	stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+	stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+ }
+ 
+QPushButton:hover {
+	 color: #111;
+    /*border: 1px solid #a2d4d3;*/
+    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, 
+	stop:0 rgba(80, 130, 245, 0), 
+	stop:0.0852273 rgba(80, 130, 245, 28), 
+	stop:0.323864 rgba(80, 130, 245, 0), 
+	stop:0.6875 rgba(80, 131, 245, 0), 
+	stop:0.926136 rgba(80, 132, 245, 28), 
+	stop:1 rgba(80, 132, 245, 0));
+ }
+ 
+QPushButton:pressed {
+	 color: #5d4ee8;
+    /*border: 1px solid #3873d9;*/
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+	stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+	stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+ }
 
 QPushButton#pushB_new_pro_0 {
     padding:0px 0px;
@@ -49,7 +78,9 @@ QPushButton#pushB_new_pro_0 {
 /*padding-right: 100px;	*/
  }
  
- QPushButton#pushB_new_pro_0:hover {
+ /*QPushButton#pushB_new_pro_0:hover,
+ QPushButton#pushB_page_general_0:hover*/
+QPushButton#pushB_new_pro_0:hover {
     image: url(:/menu/page/push_geniral_1.png);
 }
 

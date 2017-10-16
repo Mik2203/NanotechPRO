@@ -571,6 +571,18 @@ void widget_pages_list::on_add_page_0_clicked()
     ui->fr_list_1->setVisible(true);
     ui->fr_list_2->setVisible(true);
     ui->fr_list_3->setVisible(true);
+    int_stackedW_page_0 = 0;
+    int_stackedW_page_1 = 1;
+    int_stackedW_page_2 = 2;
+    int_stackedW_page_3 = 3;
+
+    ui->pushB_add_page_0->setVisible(false);
+    ui->pushB_add_page_1->setVisible(false);
+    ui->pushB_add_page_2->setVisible(false);
+
+    ui->pushB_del_page_0->setEnabled(false);
+    ui->pushB_del_page_1->setEnabled(false);
+    ui->pushB_del_page_2->setEnabled(false);
 }
 //-----------------------------------------------------------//
 

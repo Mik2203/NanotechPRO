@@ -22,19 +22,25 @@ SOURCES += \
     main.cpp \
     loading/doprogress.cpp \
     widget/pages_list/widget_pages_list.cpp \
-    style/styleloader.cpp
+    style/styleloader.cpp \
+    widget/stream_data/widget_stream_data.cpp \
+    widget/sedimentation/widget_sedimentation.cpp
 
 HEADERS += \
     nanotechpro.h \
     Version/version.h \
     loading/doprogress.h \
     widget/pages_list/widget_pages_list.h \
-    style/styleloader.h
+    style/styleloader.h \
+    widget/stream_data/widget_stream_data.h \
+    widget/sedimentation/widget_sedimentation.h
 
 
 FORMS += \
     nanotechpro.ui \
-    widget/pages_list/widget_pages_list.ui
+    widget/pages_list/widget_pages_list.ui \
+    widget/stream_data/widget_stream_data.ui \
+    widget/sedimentation/widget_sedimentation.ui
 
 QT+= core gui widgets
 
