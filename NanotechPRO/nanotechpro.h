@@ -22,6 +22,7 @@
 
 #include "widget/pages_list/widget_pages_list.h"
 #include "widget/stream_data/widget_stream_data.h"
+#include "widget/sedimentation/widget_sedimentation.h"
 
 namespace Ui {
 class NanotechPRO;
@@ -72,6 +73,7 @@ public:
     // ========================================================//
     widget_pages_list *Widget_pages_list;
     widget_stream_data *Widget_stream_data;
+    widget_sedimentation *Widget_sedimentation;
     //*********************************************************//
 
 
@@ -95,7 +97,12 @@ public slots:
 //    void slotSignal_pushB_page_2();
 //    void slotSignal_pushB_page_3();
 
-//    void slot_StackedW_data_0();
+    // осадкообразование
+    void slot_pushB_changes_0(bool pb1);
+    void slot_pushB_softener_0(bool pb2);
+    void slot_pushB_correction_0(bool pb3);
+
+    void slot_pushB_all(int pb);
 
 private slots:
     void on_pushB_new_pro_0_clicked();

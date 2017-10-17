@@ -259,6 +259,7 @@ public:
         pushB_page_1->setGeometry(QRect(2, 20, 55, 23));
         pushB_page_1->setMinimumSize(QSize(55, 23));
         pushB_page_1->setMaximumSize(QSize(55, 23));
+        pushB_page_1->setCheckable(false);
         lineE_page_1 = new QLineEdit(fr_list_1);
         lineE_page_1->setObjectName(QStringLiteral("lineE_page_1"));
         lineE_page_1->setGeometry(QRect(2, 3, 55, 16));
@@ -383,6 +384,7 @@ public:
         pushB_page_2->setGeometry(QRect(2, 20, 55, 23));
         pushB_page_2->setMinimumSize(QSize(55, 23));
         pushB_page_2->setMaximumSize(QSize(55, 23));
+        pushB_page_2->setCheckable(false);
         lineE_page_2 = new QLineEdit(fr_list_2);
         lineE_page_2->setObjectName(QStringLiteral("lineE_page_2"));
         lineE_page_2->setGeometry(QRect(2, 3, 55, 16));
@@ -507,6 +509,7 @@ public:
         pushB_page_3->setGeometry(QRect(2, 20, 55, 23));
         pushB_page_3->setMinimumSize(QSize(55, 23));
         pushB_page_3->setMaximumSize(QSize(55, 23));
+        pushB_page_3->setCheckable(false);
         lineE_page_3 = new QLineEdit(fr_list_3);
         lineE_page_3->setObjectName(QStringLiteral("lineE_page_3"));
         lineE_page_3->setGeometry(QRect(2, 3, 55, 16));
@@ -631,6 +634,7 @@ public:
         pushB_page_0->setGeometry(QRect(2, 20, 55, 23));
         pushB_page_0->setMinimumSize(QSize(55, 23));
         pushB_page_0->setMaximumSize(QSize(55, 23));
+        pushB_page_0->setCheckable(false);
         lineE_page_0 = new QLineEdit(fr_list_0);
         lineE_page_0->setObjectName(QStringLiteral("lineE_page_0"));
         lineE_page_0->setGeometry(QRect(2, 3, 55, 16));

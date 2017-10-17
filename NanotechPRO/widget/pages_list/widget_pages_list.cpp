@@ -7,35 +7,41 @@ widget_pages_list::widget_pages_list(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+
     //скрыть страницы ионов
     ui->fr_list_1->setVisible(false);
     ui->fr_list_2->setVisible(false);
     ui->fr_list_3->setVisible(false);
     ui->pushB_del_page_0->setVisible(false);
 
+    ui->pushB_page_korr_0->setVisible(false);
+
     ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
+
+    slot_pushB_alls(01);
 
 
     //-----------------------------------------------------------------//
     //****** [Слоты]
     //-----------------------------------------------------------------//
     // слоты создания страниц
-    connect(ui->pushB_add_page_0, SIGNAL(clicked()), this, SLOT(slot_pushB_add_page_0()));
-    connect(ui->pushB_add_page_1, SIGNAL(clicked()), this, SLOT(slot_pushB_add_page_1()));
-    connect(ui->pushB_add_page_2, SIGNAL(clicked()), this, SLOT(slot_pushB_add_page_2()));
-    connect(ui->pushB_add_page_3, SIGNAL(clicked()), this, SLOT(slot_pushB_add_page_3()));
+    connect(ui->pushB_add_page_0, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_add_page_0(bool)));
+    connect(ui->pushB_add_page_1, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_add_page_1(bool)));
+    connect(ui->pushB_add_page_2, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_add_page_2(bool)));
+    connect(ui->pushB_add_page_3, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_add_page_3(bool)));
 
     // слоты удаления страниц
-    connect(ui->pushB_del_page_0, SIGNAL(clicked()), this, SLOT(slot_pushB_del_page_0()));
-    connect(ui->pushB_del_page_1, SIGNAL(clicked()), this, SLOT(slot_pushB_del_page_1()));
-    connect(ui->pushB_del_page_2, SIGNAL(clicked()), this, SLOT(slot_pushB_del_page_2()));
-    connect(ui->pushB_del_page_3, SIGNAL(clicked()), this, SLOT(slot_pushB_del_page_3()));
+    connect(ui->pushB_del_page_0, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_del_page_0(bool)));
+    connect(ui->pushB_del_page_1, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_del_page_1(bool)));
+    connect(ui->pushB_del_page_2, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_del_page_2(bool)));
+    connect(ui->pushB_del_page_3, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_del_page_3(bool)));
 
     // слоты переключение по страницам
-    connect(ui->pushB_page_0, SIGNAL(clicked()), this, SLOT(slot_pushB_page_0()));
-    connect(ui->pushB_page_1, SIGNAL(clicked()), this, SLOT(slot_pushB_page_1()));
-    connect(ui->pushB_page_2, SIGNAL(clicked()), this, SLOT(slot_pushB_page_2()));
-    connect(ui->pushB_page_3, SIGNAL(clicked()), this, SLOT(slot_pushB_page_3()));
+    connect(ui->pushB_page_0, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_page_0(bool)));
+    connect(ui->pushB_page_1, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_page_1(bool)));
+    connect(ui->pushB_page_2, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_page_2(bool)));
+    connect(ui->pushB_page_3, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_page_3(bool)));
 
     // Слот кнопки общего расчета
     connect(ui->pushB_page_general_0, SIGNAL(clicked()), this, SLOT(slot_pushB_page_general_0()));
@@ -63,82 +69,181 @@ widget_pages_list::~widget_pages_list()
 }
 
 //-----------------------------------------------------------//
+//================== (унаследовать компонент)
+//-----------------------------------------------------------//
+QPushButton *widget_pages_list::pushB_1()
+{
+    return ui->pushB_page_korr_0;
+}
+//-----------------------------------------------------------//
+
+//-----------------------------------------------------------//
 //================== (слоты создания страниц)
 //-----------------------------------------------------------//
-void widget_pages_list::slot_pushB_add_page_0()
+void widget_pages_list::slot_pushB_add_page_0(bool page_0)
 {
-    int_add_page_0 = ui->pushB_page_0->text().toInt(0);
-    slot_function_add_page(int_add_page_0);
+    if(ui->pushB_add_page_0->isCheckable() == page_0)
+    {
+        int_add_page_0 = ui->pushB_page_0->text().toInt(0);
+        slot_function_add_page(int_add_page_0);
+    }
+    else
+    {
+
+    }
 }
 
-void widget_pages_list::slot_pushB_add_page_1()
+void widget_pages_list::slot_pushB_add_page_1(bool page_1)
 {
-    int_add_page_0 = ui->pushB_page_1->text().toInt(0);
-    slot_function_add_page(int_add_page_0);
+    if(ui->pushB_add_page_1->isCheckable() == page_1)
+    {
+        int_add_page_0 = ui->pushB_page_1->text().toInt(0);
+        slot_function_add_page(int_add_page_0);
+    }
+    else
+    {
+
+    }
 }
 
-void widget_pages_list::slot_pushB_add_page_2()
+void widget_pages_list::slot_pushB_add_page_2(bool page_2)
 {
-    int_add_page_0 = ui->pushB_page_2->text().toInt(0);
-    slot_function_add_page(int_add_page_0);
+    if(ui->pushB_add_page_2->isCheckable() == page_2)
+    {
+        int_add_page_0 = ui->pushB_page_2->text().toInt(0);
+        slot_function_add_page(int_add_page_0);
+    }
+    else
+    {
+
+    }
 }
 
-void widget_pages_list::slot_pushB_add_page_3()
+void widget_pages_list::slot_pushB_add_page_3(bool page_3)
 {
-    int_add_page_0 = ui->pushB_page_3->text().toInt(0);
-    slot_function_add_page(int_add_page_0);
+    if(ui->pushB_add_page_3->isCheckable() == page_3)
+    {
+        int_add_page_0 = ui->pushB_page_3->text().toInt(0);
+        slot_function_add_page(int_add_page_0);
+    }
+    else
+    {
+
+    }
 }
 //-----------------------------------------------------------//
 
 //-----------------------------------------------------------//
 //================== (слоты удаления страниц)
 //-----------------------------------------------------------//
-void widget_pages_list::slot_pushB_del_page_0()
+void widget_pages_list::slot_pushB_del_page_0(bool page_0)
 {
-    int_del_page_0 = ui->pushB_page_0->text().toInt(0);
-    slot_function_del_page(int_del_page_0);
+    if(ui->pushB_del_page_0->isCheckable() == page_0)
+    {
+        int_del_page_0 = ui->pushB_page_0->text().toInt(0);
+        slot_function_del_page(int_del_page_0);
+    }
+    else
+    {
+
+    }
+
 }
 
-void widget_pages_list::slot_pushB_del_page_1()
+void widget_pages_list::slot_pushB_del_page_1(bool page_1)
 {
-    int_del_page_1 = ui->pushB_page_1->text().toInt(0);
-    slot_function_del_page(int_del_page_1);
+    if(ui->pushB_del_page_1->isCheckable() == page_1)
+    {
+        int_del_page_1 = ui->pushB_page_1->text().toInt(0);
+        slot_function_del_page(int_del_page_1);
+    }
+    else
+    {
+
+    }
 }
 
-void widget_pages_list::slot_pushB_del_page_2()
+void widget_pages_list::slot_pushB_del_page_2(bool page_2)
 {
-    int_del_page_2 = ui->pushB_page_2->text().toInt(0);
-    slot_function_del_page(int_del_page_2);
+    if(ui->pushB_del_page_2->isCheckable() == page_2)
+    {
+        int_del_page_2 = ui->pushB_page_2->text().toInt(0);
+        slot_function_del_page(int_del_page_2);
+    }
+    else
+    {
+
+    }
 }
 
-void widget_pages_list::slot_pushB_del_page_3()
+void widget_pages_list::slot_pushB_del_page_3(bool page_3)
 {
-    int_del_page_3 = ui->pushB_page_3->text().toInt(0);
-    slot_function_del_page(int_del_page_3);
+    if(ui->pushB_del_page_3->isCheckable() == page_3)
+    {
+        int_del_page_3 = ui->pushB_page_3->text().toInt(0);
+        slot_function_del_page(int_del_page_3);
+    }
+    else
+    {
+
+    }
 }
 //-----------------------------------------------------------//
 
 //-----------------------------------------------------------//
 //================== (слоты переключение по страницам)
 //-----------------------------------------------------------//
-void widget_pages_list::slot_pushB_page_0()
+void widget_pages_list::slot_pushB_page_0(bool pb1)
 {
-    emit signal_pushB_page_0(int_stackedW_page_0);
+    if(ui->pushB_page_0->isCheckable() == pb1)
+    {
+        emit signal_pushB_page_0(int_stackedW_page_0);
+        slot_pushB_alls(01);
+    }
+    else
+    {
+
+    }
+
 }
 
-void widget_pages_list::slot_pushB_page_1()
+void widget_pages_list::slot_pushB_page_1(bool pb2)
 {
-    emit signal_pushB_page_1(int_stackedW_page_1);
+    if(ui->pushB_page_1->isCheckable() == pb2)
+    {
+        emit signal_pushB_page_1(int_stackedW_page_1);
+        slot_pushB_alls(02);
+    }
+    else
+    {
+
+    }
 }
 
-void widget_pages_list::slot_pushB_page_2()
+void widget_pages_list::slot_pushB_page_2(bool pb3)
 {
-    emit signal_pushB_page_2(int_stackedW_page_2);
+    if(ui->pushB_page_2->isCheckable() == pb3)
+    {
+        emit signal_pushB_page_2(int_stackedW_page_2);
+        slot_pushB_alls(03);
+    }
+    else
+    {
+
+    }
 }
 
-void widget_pages_list::slot_pushB_page_3()
+void widget_pages_list::slot_pushB_page_3(bool pb4)
 {
-    emit signal_pushB_page_3(int_stackedW_page_3);
+    if(ui->pushB_page_3->isCheckable() == pb4)
+    {
+        emit signal_pushB_page_3(int_stackedW_page_3);
+        slot_pushB_alls(04);
+    }
+    else
+    {
+
+    }
 }
 //-----------------------------------------------------------//
 
@@ -147,159 +252,216 @@ void widget_pages_list::slot_pushB_page_3()
 //-----------------------------------------------------------//
 void widget_pages_list::slot_function_add_page(int index)
 {
-    if(index == 1)
+//    if(index == 1)
+//    {
+//        int_stackedW_page_0 = 0;
+//        int_stackedW_page_1 = 1;
+//        qDebug() << "index1: " << index;
+
+//        ui->fr_list_1->setVisible(true);
+//        ui->pushB_del_page_0->setVisible(true);
+
+//        ui->pushB_add_page_3->setVisible(false); // Скрыть добавить страницу
+
+//        ui->pushB_add_page_0->setEnabled(false);
+
+//        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
+//        ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
+//        //        ui->pushB_page_general_0->setIconSize(QSize(ui->pushB_page_general_0->width(),
+//        //                                                    ui->pushB_page_general_0->height()));
+//        ui->pushB_page_general_0->setIconSize(QSize(19,19));
+
+//        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
+//        ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
+//        ui->pushB_page_korr_0->setIconSize(QSize(19,19));
+//    }
+//    else
+//    {
+//        if(index == 2)
+//        {
+//            int_stackedW_page_1 = 1;
+//            int_stackedW_page_2 = 2;
+
+//            ui->pushB_add_page_1->setEnabled(false);
+//            ui->pushB_del_page_0->setEnabled(false);
+
+//            if(ui->fr_list_3->isVisible() == true)
+//            {
+//                qDebug() << "Проверка 1 до: " << ui->fr_list_2->isVisible()
+//                         << ui->fr_list_3->isVisible();
+
+//                if(ui->fr_list_1->isVisible() == false)
+//                {
+//                    ui->fr_list_1->setVisible(true);
+//                }
+
+//                ui->pushB_page_2->setText("3");
+//                ui->fr_list_2->setVisible(true);
+
+//                ui->pushB_page_3->setText("4");
+//                ui->fr_list_3->setVisible(true);
+//                int_stackedW_page_3 = 3;
+
+//                ui->pushB_page_general_0->setFixedSize(244, 23); //размер картинки
+//                ui->pushB_page_korr_0->setFixedSize(244, 23); //размер картинки
+
+//                qDebug() << "Проверка 1 после: " << ui->fr_list_2->isVisible()
+//                         << ui->fr_list_3->isVisible();
+//            }
+//            else
+//            {
+//                qDebug() << "Проверка 2 до: " << ui->fr_list_2->isVisible()
+//                         << ui->fr_list_3->isVisible();
+
+//                ui->pushB_page_2->setText("3");
+//                ui->fr_list_2->setVisible(true);
+//                ui->fr_list_1->setVisible(true);
+
+//                ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
+//                ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+
+//                qDebug() << "Проверка 2 после: " << ui->fr_list_2->isVisible()
+//                         << ui->fr_list_3->isVisible();
+//            }
+
+//            qDebug() << "page_2: " << ui->pushB_page_2->text();
+//            qDebug() << "index2: " << index;
+//        }
+//        else
+//        {
+//            if(index == 3)
+//            {
+//                int_stackedW_page_2 = 2;
+
+//                ui->pushB_add_page_3->setVisible(false); // Скрыть добавить страницу
+
+//                if(ui->fr_list_0->isVisible() == true
+//                        && ui->fr_list_2->isVisible() == true
+//                        && ui->fr_list_3->isVisible() == true)
+//                {
+//                    ui->pushB_add_page_0->setEnabled(true);
+//                }
+
+//                if(ui->fr_list_2->isVisible() == true)
+//                {
+//                    ui->pushB_page_general_0->setFixedSize(244, 23); //размер картинки
+//                    ui->pushB_page_korr_0->setFixedSize(244, 23); //размер картинки
+//                    ui->fr_list_3->setVisible(true);
+//                    int_stackedW_page_3 = 3;
+//                    ui->pushB_page_3->setText("4");
+
+//                    // Скрыть кнопки добавить страницу
+//                    ui->pushB_add_page_0->setVisible(false);
+//                    ui->pushB_add_page_1->setVisible(false);
+//                    ui->pushB_add_page_2->setVisible(false);
+//                }
+//                else
+//                {
+//                    ui->pushB_page_general_0->setFixedSize(244, 23); //размер картинки
+//                    ui->pushB_page_korr_0->setFixedSize(244, 23); //размер картинки
+
+//                    ui->pushB_page_3->setText("4");
+//                    int_stackedW_page_3 = 3;
+
+//                    qDebug() << "page_2->page_3: " << ui->pushB_page_3->text();
+
+//                    ui->fr_list_2->setVisible(true);
+//                    ui->fr_list_3->setVisible(true);
+
+//                    // Скрыть кнопки добавить страницу
+//                    ui->pushB_add_page_0->setVisible(false);
+//                    ui->pushB_add_page_1->setVisible(false);
+//                    ui->pushB_add_page_2->setVisible(false);
+//                    ui->pushB_add_page_3->setVisible(false);
+//                }
+//                qDebug() << "index3: " << index;
+//            }
+//            else
+//            {
+//                if(index == 4)
+//                {
+//                    int_stackedW_page_3 = 3;
+
+//                    if(ui->fr_list_0->isVisible() == true
+//                            && ui->fr_list_2->isVisible() == true
+//                            && ui->fr_list_3->isVisible() == true)
+//                    {
+//                        ui->fr_list_1->setVisible(true);
+//                        ui->pushB_page_1->setText("2");
+
+//                        ui->pushB_page_2->setText("3");
+
+//                        ui->pushB_page_3->setText("4");
+
+//                        ui->pushB_add_page_3->setVisible(false);
+
+//                    }
+
+//                    ui->pushB_add_page_3->setEnabled(false);
+//                    ui->pushB_del_page_2->setEnabled(false);
+
+//                    qDebug() << "index4: " << index;
+//                    ui->fr_list_0->setVisible(true);
+//                }
+//            }
+//        }
+//    }
+
+    switch (index)
     {
-        int_stackedW_page_0 = 0;
-        int_stackedW_page_1 = 1;
-        qDebug() << "index1: " << index;
+    case 1: /*Add_01*/
 
-        ui->fr_list_1->setVisible(true);
-        ui->pushB_del_page_0->setVisible(true);
+        if(ui->fr_list_0->isVisible() == true)
+        {
+            int_stackedW_page_0 = 0;
+            int_stackedW_page_1 = 1;
+            ui->fr_list_1->setVisible(true);
+        }
+        break;
+    case 2: /*Add_02*/
 
-        ui->pushB_add_page_3->setVisible(false); // Скрыть добавить страницу
-
-        ui->pushB_add_page_0->setEnabled(false);
-
-        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
-        ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
-        //        ui->pushB_page_general_0->setIconSize(QSize(ui->pushB_page_general_0->width(),
-        //                                                    ui->pushB_page_general_0->height()));
-        ui->pushB_page_general_0->setIconSize(QSize(19,19));
-
-        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
-        ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
-        ui->pushB_page_korr_0->setIconSize(QSize(19,19));
-    }
-    else
-    {
-        if(index == 2)
+        if(ui->pushB_page_1->text() == "2")
         {
             int_stackedW_page_1 = 1;
             int_stackedW_page_2 = 2;
+            ui->fr_list_2->setVisible(true);
 
-            ui->pushB_add_page_1->setEnabled(false);
-            ui->pushB_del_page_0->setEnabled(false);
-
-            if(ui->fr_list_3->isVisible() == true)
-            {
-                qDebug() << "Проверка 1 до: " << ui->fr_list_2->isVisible()
-                         << ui->fr_list_3->isVisible();
-
-                if(ui->fr_list_1->isVisible() == false)
-                {
-                    ui->fr_list_1->setVisible(true);
-                }
-
-                ui->pushB_page_2->setText("3");
-                ui->fr_list_2->setVisible(true);
-
-                ui->pushB_page_3->setText("4");
-                ui->fr_list_3->setVisible(true);
-                int_stackedW_page_3 = 3;
-
-                ui->pushB_page_general_0->setFixedSize(244, 23); //размер картинки
-                ui->pushB_page_korr_0->setFixedSize(244, 23); //размер картинки
-
-                qDebug() << "Проверка 1 после: " << ui->fr_list_2->isVisible()
-                         << ui->fr_list_3->isVisible();
-            }
-            else
-            {
-                qDebug() << "Проверка 2 до: " << ui->fr_list_2->isVisible()
-                         << ui->fr_list_3->isVisible();
-
-                ui->pushB_page_2->setText("3");
-                ui->fr_list_2->setVisible(true);
-                ui->fr_list_1->setVisible(true);
-
-                ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
-                ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
-
-                qDebug() << "Проверка 2 после: " << ui->fr_list_2->isVisible()
-                         << ui->fr_list_3->isVisible();
-            }
-
-            qDebug() << "page_2: " << ui->pushB_page_2->text();
-            qDebug() << "index2: " << index;
+            ui->pushB_page_2->setText("3");
         }
         else
         {
-            if(index == 3)
+
+        }
+
+        break;
+    case 3: /*Add_03*/
+
+        if(ui->fr_list_2->isVisible() == true)
+        {
+            int_stackedW_page_2 = 2;
+            int_stackedW_page_3 = 3;
+            ui->fr_list_3->setVisible(true);
+
+            if(ui->fr_list_3->isVisible() == true)
             {
-                int_stackedW_page_2 = 2;
+                int_stackedW_page_3 = 3;
+                ui->pushB_page_3->setText("4");
 
-                ui->pushB_add_page_3->setVisible(false); // Скрыть добавить страницу
-
-                if(ui->fr_list_0->isVisible() == true
-                        && ui->fr_list_2->isVisible() == true
-                        && ui->fr_list_3->isVisible() == true)
-                {
-                    ui->pushB_add_page_0->setEnabled(true);
-                }
-
-                if(ui->fr_list_2->isVisible() == true)
-                {
-                    ui->pushB_page_general_0->setFixedSize(244, 23); //размер картинки
-                    ui->pushB_page_korr_0->setFixedSize(244, 23); //размер картинки
-                    ui->fr_list_3->setVisible(true);
-                    int_stackedW_page_3 = 3;
-                    ui->pushB_page_3->setText("4");
-
-                    // Скрыть кнопки добавить страницу
-                    ui->pushB_add_page_0->setVisible(false);
-                    ui->pushB_add_page_1->setVisible(false);
-                    ui->pushB_add_page_2->setVisible(false);
-                }
-                else
-                {
-                    ui->pushB_page_general_0->setFixedSize(244, 23); //размер картинки
-                    ui->pushB_page_korr_0->setFixedSize(244, 23); //размер картинки
-
-                    ui->pushB_page_3->setText("4");
-                    int_stackedW_page_3 = 3;
-
-                    qDebug() << "page_2->page_3: " << ui->pushB_page_3->text();
-
-                    ui->fr_list_2->setVisible(true);
-                    ui->fr_list_3->setVisible(true);
-
-                    // Скрыть кнопки добавить страницу
-                    ui->pushB_add_page_0->setVisible(false);
-                    ui->pushB_add_page_1->setVisible(false);
-                    ui->pushB_add_page_2->setVisible(false);
-                    ui->pushB_add_page_3->setVisible(false);
-                }
-                qDebug() << "index3: " << index;
-            }
-            else
-            {
-                if(index == 4)
-                {
-                    int_stackedW_page_3 = 3;
-
-                    if(ui->fr_list_0->isVisible() == true
-                            && ui->fr_list_2->isVisible() == true
-                            && ui->fr_list_3->isVisible() == true)
-                    {
-                        ui->fr_list_1->setVisible(true);
-                        ui->pushB_page_1->setText("2");
-
-                        ui->pushB_page_2->setText("3");
-
-                        ui->pushB_page_3->setText("4");
-
-                        ui->pushB_add_page_3->setVisible(false);
-
-                    }
-
-                    ui->pushB_add_page_3->setEnabled(false);
-                    ui->pushB_del_page_2->setEnabled(false);
-
-                    qDebug() << "index4: " << index;
-                    ui->fr_list_0->setVisible(true);
-                }
+                ui->pushB_add_page_0->setVisible(true);
+                ui->pushB_add_page_1->setVisible(true);
+                ui->pushB_add_page_2->setVisible(true);
             }
         }
+
+
+
+
+        break;
+    case 4: /*Add_04*/
+        int_stackedW_page_0 = 0;
+        break;
+    default:
+        break;
     }
 
 }
@@ -308,256 +470,374 @@ void widget_pages_list::slot_function_add_page(int index)
 //-----------------------------------------------------------//
 //================== (функция удаления страниц)
 //-----------------------------------------------------------//
-void widget_pages_list::slot_function_del_page(int index)
+void widget_pages_list::slot_function_del_page(int index_del)
 {
-    if(index == 1)
+//    if(index_del == 1)
+//    {
+//        int_hidden_show_1 = 0;
+
+//        ui->pushB_add_page_0->setEnabled(true);
+//        ui->pushB_del_page_0->setEnabled(true);
+
+//        ui->pushB_del_page_0->setVisible(false); // скрыть кнопку удалить страницу
+
+//        ui->pushB_add_page_0->setVisible(true);
+//        ui->pushB_add_page_1->setVisible(true);
+//        ui->pushB_add_page_2->setVisible(true);
+
+//        qDebug() << "del_index1: " << index;
+
+//        if(ui->fr_list_2->isVisible() == false)
+//        {
+//            ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
+//            ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
+
+//            ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
+//            ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
+//        }
+
+//        ui->fr_list_1->setVisible(false); // скрыть блок 2 страницы страницу
+//    }
+//    else
+//    {
+//        if(index_del == 2)
+//        {
+
+//            int_hidden_show_2 = 0;
+
+//            ui->pushB_add_page_0->setEnabled(true);
+//            ui->pushB_del_page_0->setEnabled(true);
+
+//            ui->pushB_add_page_0->setVisible(true); // показать кнопку добавить страницу
+//            ui->pushB_del_page_0->setVisible(false); // скрыть кнопку удалить страницу
+
+//            ui->pushB_add_page_1->setVisible(true);
+//            ui->pushB_add_page_2->setVisible(true);
+
+//            qDebug() << "del_index2: " << index;
+
+//            if(ui->fr_list_1->isVisible() == true)
+//            {
+//                qDebug() << "изменилось что-то: ";
+
+//                //ui->pushB_page_3->setText("3");
+//                //int_stackedW_page_3 = 2;
+
+//                if(ui->fr_list_1->isVisible() == true
+//                        && ui->fr_list_2->isVisible() == true)
+//                {
+//                    qDebug() << "Все хорошо: ";
+//                    ui->fr_list_1->setVisible(false); // скрыть блок 2 страницы страницу
+
+//                    ui->pushB_page_2->setText("2");
+//                    int_stackedW_page_2 = 1;
+
+//                    ui->pushB_page_3->setText("3");
+//                    int_stackedW_page_3 = 2;
+
+//                    ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
+//                    ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
+
+//                    ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+//                    ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
+
+//                    if(ui->fr_list_0->isVisible() == true
+//                            && ui->fr_list_2->isVisible() == true)
+//                    {
+//                        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
+//                        ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
+
+//                        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
+//                        ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
+//                    }
+
+//                    if(ui->fr_list_0->isVisible() == true
+//                            && ui->fr_list_3->isVisible() == true)
+//                    {
+//                        ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
+//                        ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
+
+//                        ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+//                        ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
+//                    }
+
+//                    if(ui->fr_list_0->isVisible() == true
+//                            && ui->fr_list_2->isVisible() == true
+//                            && ui->fr_list_3->isVisible() == true)
+//                    {
+//                        ui->pushB_add_page_0->setEnabled(false);
+//                        ui->pushB_add_page_3->setVisible(true);
+//                    }
+//                }
+//                else
+//                {
+//                    ui->fr_list_1->setVisible(false); // скрыть блок 2 страницы страницу
+
+//                    //ui->fr_list_2->setVisible(true);
+//                    ui->pushB_page_2->setText("2");
+//                    int_stackedW_page_2 = 1;
+
+//                    //ui->fr_list_3->setVisible(true);
+//                    ui->pushB_page_3->setText("2");
+//                    int_stackedW_page_3 = 1;
+
+//                    qDebug() << "изменилась page_2: " << ui->pushB_page_2->text()
+//                             << " изменилась page_3: " << ui->pushB_page_3->text();
+
+//                    ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
+//                    ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
+
+//                    ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
+//                    ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
+//                }
+
+//                if(ui->fr_list_2->isVisible() == false
+//                        && ui->fr_list_3->isVisible() == false)
+//                {
+//                    qDebug() << "изменилась page_3--- скрыта: ";
+//                    ui->fr_list_3->setVisible(false);
+
+//                    ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
+//                    ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
+
+//                    ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
+//                    ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
+//                }
+
+//            }
+//            else
+//            {
+//                if(ui->fr_list_3->isVisible() == true)
+//                {
+//                    ui->fr_list_3->setVisible(false);
+
+//                    ui->pushB_page_3->setText("2");
+//                    int_stackedW_page_3 = 1;
+
+//                    qDebug() << "изменилась page_2 скрыта: "
+//                             << " изменилась page_3: " << ui->pushB_page_3->text();
+
+//                    ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
+//                    ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
+
+//                    ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
+//                    ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
+//                }
+//                else
+//                {
+//                    qDebug() << "изменилась page_3 скрыта: ";
+//                    ui->fr_list_2->setVisible(false);
+//                    ui->fr_list_3->setVisible(false);
+
+
+
+//                    ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
+//                    ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
+
+//                    ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
+//                    ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
+//                }
+//            }
+
+//        }
+//        else
+//        {
+//            if(index_del == 3)
+//            {
+//                int_hidden_show_3 = 0;
+
+//                ui->pushB_add_page_1->setEnabled(true);
+//                ui->pushB_del_page_1->setEnabled(true);
+
+//                // Показать кнопки добавить страницу
+//                ui->pushB_add_page_0->setVisible(true);
+//                ui->pushB_add_page_1->setVisible(true);
+//                ui->pushB_add_page_2->setVisible(true);
+
+//                //ui->fr_list_2->setVisible(false); // скрыть блок 3 страницы страницу
+
+//                qDebug() << "del_index3: " << index;
+//                if((ui->fr_list_2->isVisible() == true && ui->fr_list_3->isVisible() == true))
+//                {
+//                    ui->pushB_page_3->setText("3");
+//                    int_stackedW_page_3 = 2;
+//                    ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
+//                    ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+
+//                    qDebug() << "скрыть page_2: "
+//                             << " изменилась page_3: " << ui->pushB_page_3->text();
+
+//                    ui->fr_list_2->setVisible(false);
+//                    ui->fr_list_3->setVisible(true);
+
+//                    ui->pushB_add_page_3->setVisible(true); // Показать добавить страницу
+//                }
+//                else
+//                {
+//                    qDebug() << "ui->fr_list_3->isVisible() == false";
+//                    if(ui->fr_list_3->isVisible() == false)
+//                    {
+//                        qDebug() << "скрыть page_3: ";
+//                        ui->fr_list_3->setVisible(false);
+//                        ui->fr_list_2->setVisible(false);
+
+//                        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
+//                        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
+//                    }
+//                    else
+//                    {
+//                        qDebug() << "drewrewrewr43534545";
+//                        ui->fr_list_3->setVisible(false);
+//                        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
+//                        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
+//                    }
+//                }
+//            }
+//            else
+//            {
+//                if(index_del == 4)
+//                {
+//                    int_hidden_show_4 = 0;
+
+//                    ui->pushB_add_page_1->setEnabled(false);
+//                    ui->pushB_add_page_2->setEnabled(true);
+//                    ui->pushB_del_page_2->setEnabled(true);
+
+//                    // Показать кнопки добавить страницу
+//                    ui->pushB_add_page_0->setVisible(true);
+//                    ui->pushB_add_page_1->setVisible(true);
+//                    ui->pushB_add_page_2->setVisible(true);
+
+//                    ui->fr_list_3->setVisible(false); // скрыть блок 4 страницы страницу
+
+//                    qDebug() << "del_index4: " << index;
+
+//                    if(ui->fr_list_2->isVisible() == true)
+//                    {
+//                        ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
+//                        ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+//                    }
+//                }
+//            }
+//        }
+//    }
+
+    switch (index_del)
     {
-        int_hidden_show_1 = 0;
-
-        ui->pushB_add_page_0->setEnabled(true);
-        ui->pushB_del_page_0->setEnabled(true);
-
-        ui->pushB_del_page_0->setVisible(false); // скрыть кнопку удалить страницу
-
-        ui->pushB_add_page_0->setVisible(true);
-        ui->pushB_add_page_1->setVisible(true);
-        ui->pushB_add_page_2->setVisible(true);
-
-        qDebug() << "del_index1: " << index;
-
-        if(ui->fr_list_2->isVisible() == false)
+    case 1:
+        if(ui->fr_list_0->isVisible() == true)
         {
-            ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
-            ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
-
-            ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
-            ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
+            ui->fr_list_1->setVisible(false);
         }
+        break;
+    case 2:
+//        if(ui->fr_list_2->isVisible() == true
+//                && ui->fr_list_3->isVisible() == true)
+//        {
+//            ui->fr_list_1->setVisible(false);
+//            int_stackedW_page_2 = 1;
+//            ui->pushB_page_2->setText("2");
 
-        ui->fr_list_1->setVisible(false); // скрыть блок 2 страницы страницу
-    }
-    else
-    {
-        if(index == 2)
+//            ui->fr_list_3->setVisible(true);
+//            int_stackedW_page_3 = 2;
+//            ui->pushB_page_3->setText("3");
+
+//        }
+//        else
+//        {
+//            ui->fr_list_1->setVisible(false);
+//        }
+
+//        if(ui->fr_list_2->isVisible() == true)
+//        {
+//            ui->fr_list_2->setVisible(false);
+//            int_stackedW_page_3 = 1;
+//            ui->pushB_page_3->setText("2");
+//        }
+
+//        if(ui->fr_list_3->isVisible() == true)
+//        {
+//            ui->fr_list_3->setVisible(false);
+//        }
+
+
+
+        if(ui->pushB_page_1->text() == "2")
         {
+            ui->fr_list_1->setVisible(false);
 
-            int_hidden_show_2 = 0;
-
-            ui->pushB_add_page_0->setEnabled(true);
-            ui->pushB_del_page_0->setEnabled(true);
-
-            ui->pushB_add_page_0->setVisible(true); // показать кнопку добавить страницу
-            ui->pushB_del_page_0->setVisible(false); // скрыть кнопку удалить страницу
-
-            ui->pushB_add_page_1->setVisible(true);
-            ui->pushB_add_page_2->setVisible(true);
-
-            qDebug() << "del_index2: " << index;
-
-            if(ui->fr_list_1->isVisible() == true)
+            if(ui->pushB_page_2->text() == "2")
             {
-                qDebug() << "изменилось что-то: ";
-
-                //ui->pushB_page_3->setText("3");
-                //int_stackedW_page_3 = 2;
-
-                if(ui->fr_list_1->isVisible() == true
-                        && ui->fr_list_2->isVisible() == true)
-                {
-                    qDebug() << "Все хорошо: ";
-                    ui->fr_list_1->setVisible(false); // скрыть блок 2 страницы страницу
-
-                    ui->pushB_page_2->setText("2");
-                    int_stackedW_page_2 = 1;
-
-                    ui->pushB_page_3->setText("3");
-                    int_stackedW_page_3 = 2;
-
-                    ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
-                    ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
-
-                    ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
-                    ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
-
-                    if(ui->fr_list_0->isVisible() == true
-                            && ui->fr_list_2->isVisible() == true)
-                    {
-                        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
-                        ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
-
-                        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
-                        ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
-                    }
-
-                    if(ui->fr_list_0->isVisible() == true
-                            && ui->fr_list_3->isVisible() == true)
-                    {
-                        ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
-                        ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
-
-                        ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
-                        ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
-                    }
-
-                    if(ui->fr_list_0->isVisible() == true
-                            && ui->fr_list_2->isVisible() == true
-                            && ui->fr_list_3->isVisible() == true)
-                    {
-                        ui->pushB_add_page_0->setEnabled(false);
-                        ui->pushB_add_page_3->setVisible(true);
-                    }
-                }
-                else
-                {
-                    ui->fr_list_1->setVisible(false); // скрыть блок 2 страницы страницу
-
-                    //ui->fr_list_2->setVisible(true);
-                    ui->pushB_page_2->setText("2");
-                    int_stackedW_page_2 = 1;
-
-                    //ui->fr_list_3->setVisible(true);
-                    ui->pushB_page_3->setText("2");
-                    int_stackedW_page_3 = 1;
-
-                    qDebug() << "изменилась page_2: " << ui->pushB_page_2->text()
-                             << " изменилась page_3: " << ui->pushB_page_3->text();
-
-                    ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
-                    ui->pushB_page_general_0->setIcon(QIcon(":/menu/page/push_geniral_0.png"));
-
-                    ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
-                    ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
-                }
-
-                if(ui->fr_list_2->isVisible() == false
-                        && ui->fr_list_3->isVisible() == false)
-                {
-                    qDebug() << "изменилась page_3--- скрыта: ";
-                    ui->fr_list_3->setVisible(false);
-
-                    ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
-                    ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
-
-                    ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
-                    ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
-                }
-
+                ui->fr_list_2->setVisible(false);
             }
             else
             {
-                if(ui->fr_list_3->isVisible() == true)
-                {
-                    ui->fr_list_3->setVisible(false);
-
-                    ui->pushB_page_3->setText("2");
-                    int_stackedW_page_3 = 1;
-
-                    qDebug() << "изменилась page_2 скрыта: "
-                             << " изменилась page_3: " << ui->pushB_page_3->text();
-
-                    ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
-                    ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
-
-                    ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
-                    ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
-                }
-                else
-                {
-                    qDebug() << "изменилась page_3 скрыта: ";
-                    ui->fr_list_2->setVisible(false);
-                    ui->fr_list_3->setVisible(false);
-
-
-
-                    ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
-                    ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
-
-                    ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
-                    ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
-                }
+                int_stackedW_page_2 = 2;
+                ui->pushB_page_2->setText("3");
             }
+
+            if(ui->pushB_page_3->text() == "2")
+            {
+                ui->fr_list_3->setVisible(false);
+            }
+            else
+            {
+                int_stackedW_page_3 = 3;
+                ui->pushB_page_3->setText("4");
+            }
+        }
+
+
+
+
+        break;
+    case 3:
+//        if(ui->fr_list_3->isVisible() == true)
+//        {
+//            int_stackedW_page_3 = 2;
+//            ui->fr_list_3->setVisible(false);
+//            ui->pushB_page_3->setText("3");
+//        }
+//        else
+//        {
+//            ui->fr_list_2->setVisible(false);
+//        }
+
+        if(ui->pushB_page_3->text() == "4")
+        {
+            ui->fr_list_2->setVisible(false);
+            qDebug() << "Удалил: " << "ui->fr_list_2";
+            int_stackedW_page_2 = 1;
+            int_stackedW_page_3 = 2;
+            ui->fr_list_3->setVisible(true);
+
+            ui->pushB_page_2->setText("2"); // 3
+            ui->pushB_page_3->setText("3"); // 4
+
 
         }
         else
         {
-            if(index == 3)
+            if(ui->pushB_page_3->text() == "3")
             {
-                int_hidden_show_3 = 0;
-
-                ui->pushB_add_page_1->setEnabled(true);
-                ui->pushB_del_page_1->setEnabled(true);
-
-                // Показать кнопки добавить страницу
-                ui->pushB_add_page_0->setVisible(true);
-                ui->pushB_add_page_1->setVisible(true);
-                ui->pushB_add_page_2->setVisible(true);
-
-                //ui->fr_list_2->setVisible(false); // скрыть блок 3 страницы страницу
-
-                qDebug() << "del_index3: " << index;
-                if((ui->fr_list_2->isVisible() == true && ui->fr_list_3->isVisible() == true))
-                {
-                    ui->pushB_page_3->setText("3");
-                    int_stackedW_page_3 = 2;
-                    ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
-                    ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
-
-                    qDebug() << "скрыть page_2: "
-                             << " изменилась page_3: " << ui->pushB_page_3->text();
-
-                    ui->fr_list_2->setVisible(false);
-                    ui->fr_list_3->setVisible(true);
-
-                    ui->pushB_add_page_3->setVisible(true); // Показать добавить страницу
-                }
-                else
-                {
-                    qDebug() << "ui->fr_list_3->isVisible() == false";
-                    if(ui->fr_list_3->isVisible() == false)
-                    {
-                        qDebug() << "скрыть page_3: ";
-                        ui->fr_list_3->setVisible(false);
-                        ui->fr_list_2->setVisible(false);
-
-                        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
-                        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
-                    }
-                    else
-                    {
-                        qDebug() << "drewrewrewr43534545";
-                        ui->fr_list_3->setVisible(false);
-                        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
-                        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
-                    }
-                }
-            }
-            else
-            {
-                if(index == 4)
-                {
-                    int_hidden_show_4 = 0;
-
-                    ui->pushB_add_page_1->setEnabled(false);
-                    ui->pushB_add_page_2->setEnabled(true);
-                    ui->pushB_del_page_2->setEnabled(true);
-
-                    // Показать кнопки добавить страницу
-                    ui->pushB_add_page_0->setVisible(true);
-                    ui->pushB_add_page_1->setVisible(true);
-                    ui->pushB_add_page_2->setVisible(true);
-
-                    ui->fr_list_3->setVisible(false); // скрыть блок 4 страницы страницу
-
-                    qDebug() << "del_index4: " << index;
-
-                    if(ui->fr_list_2->isVisible() == true)
-                    {
-                        ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
-                        ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
-                    }
-                }
+                ui->fr_list_3->setVisible(false);
             }
         }
+
+        if(ui->pushB_page_2->text() == "3")
+        {
+            ui->fr_list_2->setVisible(false);
+        }
+        break;
+    case 4:
+        if(ui->fr_list_2->isVisible() == true)
+        {
+            ui->fr_list_3->setVisible(false);
+        }
+        break;
+    default:
+        qDebug() << "нет такого индекса!";
+        break;
     }
 }
 //-----------------------------------------------------------//
@@ -727,3 +1007,138 @@ void widget_pages_list::on_pushB_page_korr_0_toggled(bool korr)
     }
 }
 //-----------------------------------------------------------//
+
+
+void widget_pages_list::slot_pushB_alls(int index)
+{
+    switch (index) {
+    case 01:
+        ui->pushB_page_0->setFont(QFont("Arial", 10, QFont::Bold));
+        ui->pushB_page_1->setFont(QFont("Arial", 9, QFont::Normal));
+        ui->pushB_page_2->setFont(QFont("Arial", 9, QFont::Normal));
+        ui->pushB_page_3->setFont(QFont("Arial", 9, QFont::Normal));
+
+        if(ui->fr_list_3->isVisible() == true)
+        {
+            ui->pushB_add_page_0->setVisible(false);
+            ui->pushB_add_page_1->setVisible(false);
+            ui->pushB_add_page_2->setVisible(false);
+            ui->pushB_add_page_3->setVisible(false);
+
+            ui->pushB_del_page_0->setVisible(true);
+            ui->pushB_del_page_1->setVisible(false);
+            ui->pushB_del_page_2->setVisible(false);
+            ui->pushB_del_page_3->setVisible(false);
+        }
+        else
+        {
+            ui->pushB_add_page_0->setVisible(true);
+            ui->pushB_add_page_1->setVisible(false);
+            ui->pushB_add_page_2->setVisible(false);
+            ui->pushB_add_page_3->setVisible(false);
+
+            ui->pushB_del_page_0->setVisible(true);
+            ui->pushB_del_page_1->setVisible(false);
+            ui->pushB_del_page_2->setVisible(false);
+            ui->pushB_del_page_3->setVisible(false);
+        }
+        break;
+    case 02:
+        ui->pushB_page_0->setFont(QFont("Arial", 9, QFont::Normal));
+        ui->pushB_page_1->setFont(QFont("Arial", 10, QFont::Bold));
+        ui->pushB_page_2->setFont(QFont("Arial", 9, QFont::Normal));
+        ui->pushB_page_3->setFont(QFont("Arial", 9, QFont::Normal));
+
+        if(ui->fr_list_3->isVisible() == true)
+        {
+            ui->pushB_add_page_0->setVisible(false);
+            ui->pushB_add_page_1->setVisible(false);
+            ui->pushB_add_page_2->setVisible(false);
+            ui->pushB_add_page_3->setVisible(false);
+
+            ui->pushB_del_page_0->setVisible(false);
+            ui->pushB_del_page_1->setVisible(true);
+            ui->pushB_del_page_2->setVisible(false);
+            ui->pushB_del_page_3->setVisible(false);
+        }
+        else
+        {
+            ui->pushB_add_page_0->setVisible(false);
+            ui->pushB_add_page_1->setVisible(true);
+            ui->pushB_add_page_2->setVisible(false);
+            ui->pushB_add_page_3->setVisible(false);
+
+            ui->pushB_del_page_0->setVisible(false);
+            ui->pushB_del_page_1->setVisible(true);
+            ui->pushB_del_page_2->setVisible(false);
+            ui->pushB_del_page_3->setVisible(false);
+        }
+        break;
+    case 03:
+        ui->pushB_page_0->setFont(QFont("Arial", 9, QFont::Normal));
+        ui->pushB_page_1->setFont(QFont("Arial", 9, QFont::Normal));
+        ui->pushB_page_2->setFont(QFont("Arial", 10, QFont::Bold));
+        ui->pushB_page_3->setFont(QFont("Arial", 9, QFont::Normal));
+
+        if(ui->fr_list_3->isVisible() == true)
+        {
+            ui->pushB_add_page_0->setVisible(false);
+            ui->pushB_add_page_1->setVisible(false);
+            ui->pushB_add_page_2->setVisible(false);
+            ui->pushB_add_page_3->setVisible(false);
+
+            ui->pushB_del_page_0->setVisible(false);
+            ui->pushB_del_page_1->setVisible(false);
+            ui->pushB_del_page_2->setVisible(true);
+            ui->pushB_del_page_3->setVisible(false);
+        }
+        else
+        {
+            ui->pushB_add_page_0->setVisible(false);
+            ui->pushB_add_page_1->setVisible(false);
+            ui->pushB_add_page_2->setVisible(true);
+            ui->pushB_add_page_3->setVisible(false);
+
+            ui->pushB_del_page_0->setVisible(false);
+            ui->pushB_del_page_1->setVisible(false);
+            ui->pushB_del_page_2->setVisible(true);
+            ui->pushB_del_page_3->setVisible(false);
+        }
+        break;
+    case 04:
+        ui->pushB_page_0->setFont(QFont("Arial", 9, QFont::Normal));
+        ui->pushB_page_1->setFont(QFont("Arial", 9, QFont::Normal));
+        ui->pushB_page_2->setFont(QFont("Arial", 9, QFont::Normal));
+        ui->pushB_page_3->setFont(QFont("Arial", 10, QFont::Bold));
+
+
+        if(ui->fr_list_3->isVisible() == true)
+        {
+            ui->pushB_add_page_0->setVisible(false);
+            ui->pushB_add_page_1->setVisible(false);
+            ui->pushB_add_page_2->setVisible(false);
+            ui->pushB_add_page_3->setVisible(false);
+
+            ui->pushB_del_page_0->setVisible(false);
+            ui->pushB_del_page_1->setVisible(false);
+            ui->pushB_del_page_2->setVisible(false);
+            ui->pushB_del_page_3->setVisible(true);
+        }
+        else
+        {
+            ui->pushB_add_page_0->setVisible(false);
+            ui->pushB_add_page_1->setVisible(false);
+            ui->pushB_add_page_2->setVisible(false);
+            ui->pushB_add_page_3->setVisible(true);
+
+            ui->pushB_del_page_0->setVisible(false);
+            ui->pushB_del_page_1->setVisible(false);
+            ui->pushB_del_page_2->setVisible(false);
+            ui->pushB_del_page_3->setVisible(true);
+        }
+        break;
+    default:
+        qDebug() << "Такого индекса нету!";
+        break;
+    }
+}

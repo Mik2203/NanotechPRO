@@ -15,6 +15,7 @@
 #include "QSignalTransition"
 
 #include "QStackedWidget"
+#include "QPushButton"
 
 #include "widget/stream_data/widget_stream_data.h"
 
@@ -31,6 +32,7 @@ public:
     ~widget_pages_list();
 
     QStackedWidget *stackedW_pades_list();
+    QPushButton *pushB_1();
 
     // ints создания страниц
     int int_add_page_0, int_add_page_1, int_add_page_2, int_add_page_3;
@@ -44,22 +46,24 @@ public:
 public slots:
 
     // слоты создания страниц
-    void slot_pushB_add_page_0();
-    void slot_pushB_add_page_1();
-    void slot_pushB_add_page_2();
-    void slot_pushB_add_page_3();
+    void slot_pushB_add_page_0(bool page_0);
+    void slot_pushB_add_page_1(bool page_1);
+    void slot_pushB_add_page_2(bool page_2);
+    void slot_pushB_add_page_3(bool page_3);
 
     // слоты удаления страниц
-    void slot_pushB_del_page_0();
-    void slot_pushB_del_page_1();
-    void slot_pushB_del_page_2();
-    void slot_pushB_del_page_3();
+    void slot_pushB_del_page_0(bool page_0);
+    void slot_pushB_del_page_1(bool page_1);
+    void slot_pushB_del_page_2(bool page_2);
+    void slot_pushB_del_page_3(bool page_3);
 
     // слоты переключение по страницам
-    void slot_pushB_page_0();
-    void slot_pushB_page_1();
-    void slot_pushB_page_2();
-    void slot_pushB_page_3();
+    void slot_pushB_page_0(bool pb1);
+    void slot_pushB_page_1(bool pb2);
+    void slot_pushB_page_2(bool pb3);
+    void slot_pushB_page_3(bool pb4);
+
+    void slot_pushB_alls(int index);
 
     // Кнопка общий расчет
     void slot_pushB_page_general_0();
@@ -74,7 +78,7 @@ public slots:
     void slot_function_add_page(int index);
 
     // функция добавления страниц
-    void slot_function_del_page(int index);
+    void slot_function_del_page(int index_del);
 
     void on_pushB_page_general_0_toggled(bool general);
     void on_pushB_page_korr_0_toggled(bool korr);

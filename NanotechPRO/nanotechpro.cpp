@@ -15,16 +15,15 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     ui->fr_pages_list_0->layout()->addWidget(Widget_pages_list);
     Widget_pages_list->show();
 
-
     Widget_stream_data = new widget_stream_data;
     Widget_stream_data->setParent(ui->fr_stackedW_page_0);
     ui->fr_stackedW_page_0->layout()->addWidget(Widget_stream_data);
     Widget_stream_data->show();
 
-//    Widget_stream_data->StackedW_data_0()->setCurrentIndex(0);
-//    ui->stackedW_page_0->insertWidget(0, Widget_stream_data);
-//    ui->stackedW_page_0->insertWidget(1, Widget_stream_data);
-
+    Widget_sedimentation = new widget_sedimentation;
+    Widget_sedimentation->setParent(ui->fr_sedimentation_0);
+    ui->fr_sedimentation_0->layout()->addWidget(Widget_sedimentation);
+    Widget_sedimentation->show();
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -141,8 +140,10 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //-----------------------------------------------------------------//
     //****** [Слоты]
     //-----------------------------------------------------------------//
-
-
+    // осадкообразование
+    connect(ui->pushB_changes_0, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_changes_0(bool)));
+    connect(ui->pushB_softener_0, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_softener_0(bool)));
+    connect(ui->pushB_correction_0, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_correction_0(bool)));
     //-----------------------------------------------------------------//
 
 
@@ -156,7 +157,7 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //-----------------------------------------------------------------//
     //****** [ Запуск переменных ]
     //-----------------------------------------------------------------//
-
+    slot_pushB_all(01);
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -387,6 +388,12 @@ void NanotechPRO::slot_ac_menu_new()
 {
     ui->stackedW_0->setCurrentIndex(0);
     // Задать впорос, вы хотите сохранить изменения проекта
+
+    ui->menubar->setHidden(true);
+    ui->statusbar->setHidden(true);
+
+    // Панель инструментов
+    ui->fr_menu_0->setVisible(false);
 }
 //-----------------------------------------------------------//
 
@@ -431,3 +438,100 @@ void NanotechPRO::slotSignal_pushB_page_0(int int_page)
     }
 }
 //-----------------------------------------------------------//
+
+//-----------------------------------------------------------//
+//=== (осадкообразование [без изменений])
+//-----------------------------------------------------------//
+void NanotechPRO::slot_pushB_changes_0(bool pb1)
+{
+    if(ui->pushB_changes_0->isCheckable() == pb1)
+    {
+        //qDebug() << "true pb1";
+        slot_pushB_all(01);
+    }
+    else
+    {
+        //qDebug() << "false pb1";
+    }
+}
+//-----------------------------------------------------------//
+
+//-----------------------------------------------------------//
+//=== (осадкообразование [умягчитель])
+//-----------------------------------------------------------//
+void NanotechPRO::slot_pushB_softener_0(bool pb2)
+{
+    if(ui->pushB_softener_0->isCheckable() == pb2)
+    {
+        //qDebug() << "true pb2";
+        slot_pushB_all(02);
+    }
+    else
+    {
+        //qDebug() << "false pb2";
+    }
+}
+//-----------------------------------------------------------//
+
+//-----------------------------------------------------------//
+//=== (осадкообразование [коррекция pH])
+//-----------------------------------------------------------//
+void NanotechPRO::slot_pushB_correction_0(bool pb3)
+{
+    if(ui->pushB_correction_0->isCheckable() == pb3)
+    {
+        //qDebug() << "true pb3";
+        slot_pushB_all(03);
+    }
+    else
+    {
+        //qDebug() << "false pb3";
+    }
+}
+//-----------------------------------------------------------//
+
+void NanotechPRO::slot_pushB_all(int pb)
+{
+    switch (pb)
+    {
+    case 01:
+        Widget_sedimentation->st_Widget_sedimentation_list()->setCurrentIndex(0);
+        Widget_pages_list->pushB_1()->setVisible(false);
+
+        ui->pushB_changes_0->setFont(QFont("Arial", 9, QFont::Bold));
+        ui->pushB_softener_0->setFont(QFont("Arial", 8, QFont::Normal));
+        ui->pushB_correction_0->setFont(QFont("Arial", 8, QFont::Normal));
+
+        ui->pushB_changes_0->setCheckable(true);
+        ui->pushB_softener_0->setCheckable(false);
+        ui->pushB_correction_0->setCheckable(false);
+        break;
+    case 02:
+        Widget_sedimentation->st_Widget_sedimentation_list()->setCurrentIndex(1);
+        Widget_pages_list->pushB_1()->setVisible(true);
+
+        ui->pushB_changes_0->setFont(QFont("Arial", 8, QFont::Normal));
+        ui->pushB_softener_0->setFont(QFont("Arial", 9, QFont::Bold));
+        ui->pushB_correction_0->setFont(QFont("Arial", 8, QFont::Normal));
+
+        ui->pushB_changes_0->setCheckable(false);
+        ui->pushB_softener_0->setCheckable(true);
+        ui->pushB_correction_0->setCheckable(false);
+        break;
+    case 03:
+        Widget_sedimentation->st_Widget_sedimentation_list()->setCurrentIndex(2);
+        Widget_pages_list->pushB_1()->setVisible(true);
+
+        ui->pushB_changes_0->setFont(QFont("Arial", 8, QFont::Normal));
+        ui->pushB_softener_0->setFont(QFont("Arial", 8, QFont::Normal));
+        ui->pushB_correction_0->setFont(QFont("Arial", 9, QFont::Bold));
+
+        ui->pushB_changes_0->setCheckable(false);
+        ui->pushB_softener_0->setCheckable(false);
+        ui->pushB_correction_0->setCheckable(true);
+        break;
+    default:
+        qDebug() << "нет таких данных!";
+        break;
+    }
+}

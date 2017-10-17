@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_widget_pages_list_t {
-    QByteArrayData data[32];
-    char stringdata[572];
+    QByteArrayData data[38];
+    char stringdata[614];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -48,19 +48,25 @@ QT_MOC_LITERAL(15, 237, 21),
 QT_MOC_LITERAL(16, 259, 21),
 QT_MOC_LITERAL(17, 281, 21),
 QT_MOC_LITERAL(18, 303, 17),
-QT_MOC_LITERAL(19, 321, 17),
-QT_MOC_LITERAL(20, 339, 17),
-QT_MOC_LITERAL(21, 357, 17),
-QT_MOC_LITERAL(22, 375, 25),
-QT_MOC_LITERAL(23, 401, 22),
-QT_MOC_LITERAL(24, 424, 21),
-QT_MOC_LITERAL(25, 446, 22),
-QT_MOC_LITERAL(26, 469, 5),
-QT_MOC_LITERAL(27, 475, 22),
-QT_MOC_LITERAL(28, 498, 31),
-QT_MOC_LITERAL(29, 530, 7),
-QT_MOC_LITERAL(30, 538, 28),
-QT_MOC_LITERAL(31, 567, 4)
+QT_MOC_LITERAL(19, 321, 3),
+QT_MOC_LITERAL(20, 325, 17),
+QT_MOC_LITERAL(21, 343, 3),
+QT_MOC_LITERAL(22, 347, 17),
+QT_MOC_LITERAL(23, 365, 3),
+QT_MOC_LITERAL(24, 369, 17),
+QT_MOC_LITERAL(25, 387, 3),
+QT_MOC_LITERAL(26, 391, 15),
+QT_MOC_LITERAL(27, 407, 5),
+QT_MOC_LITERAL(28, 413, 25),
+QT_MOC_LITERAL(29, 439, 22),
+QT_MOC_LITERAL(30, 462, 21),
+QT_MOC_LITERAL(31, 484, 22),
+QT_MOC_LITERAL(32, 507, 22),
+QT_MOC_LITERAL(33, 530, 9),
+QT_MOC_LITERAL(34, 540, 31),
+QT_MOC_LITERAL(35, 572, 7),
+QT_MOC_LITERAL(36, 580, 28),
+QT_MOC_LITERAL(37, 609, 4)
     },
     "widget_pages_list\0signal_pushB_page_0\0"
     "\0page_0\0signal_pushB_page_1\0page_1\0"
@@ -70,14 +76,15 @@ QT_MOC_LITERAL(31, 567, 4)
     "slot_pushB_add_page_2\0slot_pushB_add_page_3\0"
     "slot_pushB_del_page_0\0slot_pushB_del_page_1\0"
     "slot_pushB_del_page_2\0slot_pushB_del_page_3\0"
-    "slot_pushB_page_0\0slot_pushB_page_1\0"
-    "slot_pushB_page_2\0slot_pushB_page_3\0"
+    "slot_pushB_page_0\0pb1\0slot_pushB_page_1\0"
+    "pb2\0slot_pushB_page_2\0pb3\0slot_pushB_page_3\0"
+    "pb4\0slot_pushB_alls\0index\0"
     "slot_pushB_page_general_0\0"
     "slot_pushB_page_korr_0\0on_add_page_0_clicked\0"
-    "slot_function_add_page\0index\0"
-    "slot_function_del_page\0"
-    "on_pushB_page_general_0_toggled\0general\0"
-    "on_pushB_page_korr_0_toggled\0korr"
+    "slot_function_add_page\0slot_function_del_page\0"
+    "index_del\0on_pushB_page_general_0_toggled\0"
+    "general\0on_pushB_page_korr_0_toggled\0"
+    "korr"
 };
 #undef QT_MOC_LITERAL
 
@@ -87,7 +94,7 @@ static const uint qt_meta_data_widget_pages_list[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      23,   14, // methods
+      24,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -95,31 +102,32 @@ static const uint qt_meta_data_widget_pages_list[] = {
        4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,  129,    2, 0x06 /* Public */,
-       4,    1,  132,    2, 0x06 /* Public */,
-       6,    1,  135,    2, 0x06 /* Public */,
-       8,    1,  138,    2, 0x06 /* Public */,
+       1,    1,  134,    2, 0x06 /* Public */,
+       4,    1,  137,    2, 0x06 /* Public */,
+       6,    1,  140,    2, 0x06 /* Public */,
+       8,    1,  143,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      10,    0,  141,    2, 0x0a /* Public */,
-      11,    0,  142,    2, 0x0a /* Public */,
-      12,    0,  143,    2, 0x0a /* Public */,
-      13,    0,  144,    2, 0x0a /* Public */,
-      14,    0,  145,    2, 0x0a /* Public */,
-      15,    0,  146,    2, 0x0a /* Public */,
-      16,    0,  147,    2, 0x0a /* Public */,
-      17,    0,  148,    2, 0x0a /* Public */,
-      18,    0,  149,    2, 0x0a /* Public */,
-      19,    0,  150,    2, 0x0a /* Public */,
-      20,    0,  151,    2, 0x0a /* Public */,
-      21,    0,  152,    2, 0x0a /* Public */,
-      22,    0,  153,    2, 0x0a /* Public */,
-      23,    0,  154,    2, 0x0a /* Public */,
-      24,    0,  155,    2, 0x0a /* Public */,
-      25,    1,  156,    2, 0x0a /* Public */,
-      27,    1,  159,    2, 0x0a /* Public */,
-      28,    1,  162,    2, 0x0a /* Public */,
-      30,    1,  165,    2, 0x0a /* Public */,
+      10,    1,  146,    2, 0x0a /* Public */,
+      11,    1,  149,    2, 0x0a /* Public */,
+      12,    1,  152,    2, 0x0a /* Public */,
+      13,    1,  155,    2, 0x0a /* Public */,
+      14,    1,  158,    2, 0x0a /* Public */,
+      15,    1,  161,    2, 0x0a /* Public */,
+      16,    1,  164,    2, 0x0a /* Public */,
+      17,    1,  167,    2, 0x0a /* Public */,
+      18,    1,  170,    2, 0x0a /* Public */,
+      20,    1,  173,    2, 0x0a /* Public */,
+      22,    1,  176,    2, 0x0a /* Public */,
+      24,    1,  179,    2, 0x0a /* Public */,
+      26,    1,  182,    2, 0x0a /* Public */,
+      28,    0,  185,    2, 0x0a /* Public */,
+      29,    0,  186,    2, 0x0a /* Public */,
+      30,    0,  187,    2, 0x0a /* Public */,
+      31,    1,  188,    2, 0x0a /* Public */,
+      32,    1,  191,    2, 0x0a /* Public */,
+      34,    1,  194,    2, 0x0a /* Public */,
+      36,    1,  197,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    3,
@@ -128,25 +136,26 @@ static const uint qt_meta_data_widget_pages_list[] = {
     QMetaType::Void, QMetaType::Int,    9,
 
  // slots: parameters
+    QMetaType::Void, QMetaType::Bool,    3,
+    QMetaType::Void, QMetaType::Bool,    5,
+    QMetaType::Void, QMetaType::Bool,    7,
+    QMetaType::Void, QMetaType::Bool,    9,
+    QMetaType::Void, QMetaType::Bool,    3,
+    QMetaType::Void, QMetaType::Bool,    5,
+    QMetaType::Void, QMetaType::Bool,    7,
+    QMetaType::Void, QMetaType::Bool,    9,
+    QMetaType::Void, QMetaType::Bool,   19,
+    QMetaType::Void, QMetaType::Bool,   21,
+    QMetaType::Void, QMetaType::Bool,   23,
+    QMetaType::Void, QMetaType::Bool,   25,
+    QMetaType::Void, QMetaType::Int,   27,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   26,
-    QMetaType::Void, QMetaType::Int,   26,
-    QMetaType::Void, QMetaType::Bool,   29,
-    QMetaType::Void, QMetaType::Bool,   31,
+    QMetaType::Void, QMetaType::Int,   27,
+    QMetaType::Void, QMetaType::Int,   33,
+    QMetaType::Void, QMetaType::Bool,   35,
+    QMetaType::Void, QMetaType::Bool,   37,
 
        0        // eod
 };
@@ -160,25 +169,26 @@ void widget_pages_list::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         case 1: _t->signal_pushB_page_1((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 2: _t->signal_pushB_page_2((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: _t->signal_pushB_page_3((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->slot_pushB_add_page_0(); break;
-        case 5: _t->slot_pushB_add_page_1(); break;
-        case 6: _t->slot_pushB_add_page_2(); break;
-        case 7: _t->slot_pushB_add_page_3(); break;
-        case 8: _t->slot_pushB_del_page_0(); break;
-        case 9: _t->slot_pushB_del_page_1(); break;
-        case 10: _t->slot_pushB_del_page_2(); break;
-        case 11: _t->slot_pushB_del_page_3(); break;
-        case 12: _t->slot_pushB_page_0(); break;
-        case 13: _t->slot_pushB_page_1(); break;
-        case 14: _t->slot_pushB_page_2(); break;
-        case 15: _t->slot_pushB_page_3(); break;
-        case 16: _t->slot_pushB_page_general_0(); break;
-        case 17: _t->slot_pushB_page_korr_0(); break;
-        case 18: _t->on_add_page_0_clicked(); break;
-        case 19: _t->slot_function_add_page((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 20: _t->slot_function_del_page((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 21: _t->on_pushB_page_general_0_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 22: _t->on_pushB_page_korr_0_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 4: _t->slot_pushB_add_page_0((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 5: _t->slot_pushB_add_page_1((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 6: _t->slot_pushB_add_page_2((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 7: _t->slot_pushB_add_page_3((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 8: _t->slot_pushB_del_page_0((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 9: _t->slot_pushB_del_page_1((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 10: _t->slot_pushB_del_page_2((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 11: _t->slot_pushB_del_page_3((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 12: _t->slot_pushB_page_0((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 13: _t->slot_pushB_page_1((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 14: _t->slot_pushB_page_2((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 15: _t->slot_pushB_page_3((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 16: _t->slot_pushB_alls((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 17: _t->slot_pushB_page_general_0(); break;
+        case 18: _t->slot_pushB_page_korr_0(); break;
+        case 19: _t->on_add_page_0_clicked(); break;
+        case 20: _t->slot_function_add_page((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 21: _t->slot_function_del_page((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 22: _t->on_pushB_page_general_0_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 23: _t->on_pushB_page_korr_0_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -236,13 +246,13 @@ int widget_pages_list::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 23)
+        if (_id < 24)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 23;
+        _id -= 24;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 23)
+        if (_id < 24)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 23;
+        _id -= 24;
     }
     return _id;
 }

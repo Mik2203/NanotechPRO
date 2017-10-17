@@ -12,3 +12,8 @@ widget_sedimentation::~widget_sedimentation()
 {
     delete ui;
 }
+
+QStackedWidget *widget_sedimentation::st_Widget_sedimentation_list()
+{
+    return ui->stW_sedimentation_list_0;
+}

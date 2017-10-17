@@ -468,6 +468,9 @@ QPushButton:pressed
             <property name="text">
              <string>2</string>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
            </widget>
            <widget class="QLineEdit" name="lineE_page_1">
             <property name="geometry">
@@ -696,6 +699,9 @@ QPushButton:pressed
             </property>
             <property name="text">
              <string>3</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
             </property>
            </widget>
            <widget class="QLineEdit" name="lineE_page_2">
@@ -926,6 +932,9 @@ QPushButton:pressed
             <property name="text">
              <string>4</string>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
            </widget>
            <widget class="QLineEdit" name="lineE_page_3">
             <property name="geometry">
@@ -1154,6 +1163,9 @@ QPushButton:pressed
             </property>
             <property name="text">
              <string>1</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
             </property>
            </widget>
            <widget class="QLineEdit" name="lineE_page_0">

@@ -105,9 +105,11 @@ public:
     QPushButton *pushB_changes_0;
     QPushButton *pushB_softener_0;
     QPushButton *pushB_correction_0;
-    QStackedWidget *stackedWidget;
+    QStackedWidget *stackedW_sedimentation_0;
     QWidget *page_10;
-    QLabel *label_9;
+    QGridLayout *gridLayout_11;
+    QFrame *fr_sedimentation_0;
+    QGridLayout *gridLayout_12;
     QWidget *page_11;
     QLabel *label_46;
     QWidget *page_12;
@@ -482,7 +484,7 @@ public:
         gridLayout_8->setContentsMargins(0, 0, 0, 0);
         fr_stackedW_page_0 = new QFrame(page_6);
         fr_stackedW_page_0->setObjectName(QStringLiteral("fr_stackedW_page_0"));
-        fr_stackedW_page_0->setFrameShape(QFrame::StyledPanel);
+        fr_stackedW_page_0->setFrameShape(QFrame::NoFrame);
         fr_stackedW_page_0->setFrameShadow(QFrame::Raised);
         gridLayout_9 = new QGridLayout(fr_stackedW_page_0);
         gridLayout_9->setSpacing(2);
@@ -497,7 +499,7 @@ public:
 
         groupBox_2 = new QGroupBox(fr_page_1);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(640, 0, 581, 681));
+        groupBox_2->setGeometry(QRect(640, 0, 621, 681));
         QSizePolicy sizePolicy6(QSizePolicy::Expanding, QSizePolicy::Preferred);
         sizePolicy6.setHorizontalStretch(0);
         sizePolicy6.setVerticalStretch(0);
@@ -520,42 +522,55 @@ public:
         font2.setBold(false);
         font2.setWeight(50);
         pushB_changes_0->setFont(font2);
+        pushB_changes_0->setCheckable(true);
         pushB_softener_0 = new QPushButton(frame_3);
         pushB_softener_0->setObjectName(QStringLiteral("pushB_softener_0"));
-        pushB_softener_0->setGeometry(QRect(100, 0, 100, 23));
+        pushB_softener_0->setGeometry(QRect(104, 0, 100, 23));
         pushB_softener_0->setMinimumSize(QSize(100, 0));
         pushB_softener_0->setFont(font2);
+        pushB_softener_0->setCheckable(true);
         pushB_correction_0 = new QPushButton(frame_3);
         pushB_correction_0->setObjectName(QStringLiteral("pushB_correction_0"));
-        pushB_correction_0->setGeometry(QRect(197, 0, 100, 23));
+        pushB_correction_0->setGeometry(QRect(205, 0, 100, 23));
         pushB_correction_0->setMinimumSize(QSize(100, 0));
         pushB_correction_0->setFont(font2);
+        pushB_correction_0->setCheckable(true);
 
         gridLayout_10->addWidget(frame_3, 0, 0, 1, 1);
 
-        stackedWidget = new QStackedWidget(groupBox_2);
-        stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
-        stackedWidget->setFrameShape(QFrame::Box);
+        stackedW_sedimentation_0 = new QStackedWidget(groupBox_2);
+        stackedW_sedimentation_0->setObjectName(QStringLiteral("stackedW_sedimentation_0"));
+        stackedW_sedimentation_0->setFrameShape(QFrame::NoFrame);
         page_10 = new QWidget();
         page_10->setObjectName(QStringLiteral("page_10"));
-        label_9 = new QLabel(page_10);
-        label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setGeometry(QRect(270, 240, 46, 16));
-        stackedWidget->addWidget(page_10);
+        gridLayout_11 = new QGridLayout(page_10);
+        gridLayout_11->setSpacing(1);
+        gridLayout_11->setObjectName(QStringLiteral("gridLayout_11"));
+        gridLayout_11->setContentsMargins(1, 1, 1, 1);
+        fr_sedimentation_0 = new QFrame(page_10);
+        fr_sedimentation_0->setObjectName(QStringLiteral("fr_sedimentation_0"));
+        fr_sedimentation_0->setFrameShape(QFrame::NoFrame);
+        fr_sedimentation_0->setFrameShadow(QFrame::Raised);
+        gridLayout_12 = new QGridLayout(fr_sedimentation_0);
+        gridLayout_12->setObjectName(QStringLiteral("gridLayout_12"));
+
+        gridLayout_11->addWidget(fr_sedimentation_0, 0, 0, 1, 1);
+
+        stackedW_sedimentation_0->addWidget(page_10);
         page_11 = new QWidget();
         page_11->setObjectName(QStringLiteral("page_11"));
         label_46 = new QLabel(page_11);
         label_46->setObjectName(QStringLiteral("label_46"));
         label_46->setGeometry(QRect(260, 250, 46, 13));
-        stackedWidget->addWidget(page_11);
+        stackedW_sedimentation_0->addWidget(page_11);
         page_12 = new QWidget();
         page_12->setObjectName(QStringLiteral("page_12"));
         label_52 = new QLabel(page_12);
         label_52->setObjectName(QStringLiteral("label_52"));
         label_52->setGeometry(QRect(250, 250, 46, 13));
-        stackedWidget->addWidget(page_12);
+        stackedW_sedimentation_0->addWidget(page_12);
 
-        gridLayout_10->addWidget(stackedWidget, 1, 0, 1, 1);
+        gridLayout_10->addWidget(stackedW_sedimentation_0, 1, 0, 1, 1);
 
 
         gridLayout_2->addWidget(fr_page_1, 0, 0, 1, 1);
@@ -1139,7 +1154,7 @@ public:
 
         stackedW_0->setCurrentIndex(1);
         stackedW_page_0->setCurrentIndex(0);
-        stackedWidget->setCurrentIndex(0);
+        stackedW_sedimentation_0->setCurrentIndex(0);
         stackedW_panel_0->setCurrentIndex(0);
 
 
@@ -1176,7 +1191,6 @@ public:
         pushB_changes_0->setText(QApplication::translate("NanotechPRO", "\320\221\320\265\320\267 \320\270\320\267\320\274\320\265\320\275\320\265\320\275\320\270\320\265\320\271", 0));
         pushB_softener_0->setText(QApplication::translate("NanotechPRO", "\320\243\320\274\321\217\320\263\321\207\320\270\321\202\320\265\320\273\321\214", 0));
         pushB_correction_0->setText(QApplication::translate("NanotechPRO", "\320\232\320\276\321\200\321\200\320\265\320\272\321\206\320\270\321\217 pH", 0));
-        label_9->setText(QApplication::translate("NanotechPRO", "1", 0));
         label_46->setText(QApplication::translate("NanotechPRO", "2", 0));
         label_52->setText(QApplication::translate("NanotechPRO", "3", 0));
         panel_menu_0->setText(QString());

@@ -31,18 +31,21 @@ QLineEdit:focus
 }
 
 QPushButton {
-    /*border: 1px solid #3873d9;*/
+    border: 1px solid #8f8f91;
 	border-top-left-radius: 4px;
-	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);
+	/*background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);
 	
 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
 	stop: 0 #dae2ec, stop: 0.4 #d6dde7,
-	stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+	stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);*/
+	
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
  }
  
 QPushButton:hover {
 	 color: #111;
-    /*border: 1px solid #a2d4d3;*/
+    border: 1px solid #3873d9;
     background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, 
 	stop:0 rgba(80, 130, 245, 0), 
 	stop:0.0852273 rgba(80, 130, 245, 28), 
