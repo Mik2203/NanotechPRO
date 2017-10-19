@@ -8,6 +8,7 @@ INPUT(
 ./release\widget_sedimentation.o
 ./release\qrc_img.o
 ./release\qrc_stylesheet.o
+./release\qrc_font.o
 ./release\moc_nanotechpro.o
 ./release\moc_doprogress.o
 ./release\moc_widget_pages_list.o

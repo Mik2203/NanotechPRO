@@ -8,6 +8,7 @@ INPUT(
 ./debug\widget_sedimentation.o
 ./debug\qrc_img.o
 ./debug\qrc_stylesheet.o
+./debug\qrc_font.o
 ./debug\moc_nanotechpro.o
 ./debug\moc_doprogress.o
 ./debug\moc_widget_pages_list.o

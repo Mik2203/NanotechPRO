@@ -28,6 +28,11 @@
     <height>108</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -353,6 +358,11 @@
               <height>23</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
 {
@@ -527,6 +537,11 @@ QPushButton:pressed
               <height>16</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
 {
@@ -597,6 +612,11 @@ QPushButton:pressed
               <width>16</width>
               <height>16</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -759,6 +779,11 @@ QPushButton:pressed
               <height>16</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
 {
@@ -829,6 +854,11 @@ QPushButton:pressed
               <width>16</width>
               <height>16</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -991,6 +1021,11 @@ QPushButton:pressed
               <height>16</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
 {
@@ -1061,6 +1096,11 @@ QPushButton:pressed
               <width>16</width>
               <height>16</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -1223,6 +1263,11 @@ QPushButton:pressed
               <height>16</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
 {
@@ -1293,6 +1338,11 @@ QPushButton:pressed
               <width>16</width>
               <height>16</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton

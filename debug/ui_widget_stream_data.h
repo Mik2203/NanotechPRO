@@ -40,6 +40,12 @@ public:
     QLabel *la_block_1_0_page_0;
     QFrame *fr_block_1_1_page_0;
     QGridLayout *gridLayout_4;
+    QFrame *frame_56;
+    QVBoxLayout *verticalLayout_3;
+    QFrame *fr_column_0_43;
+    QHBoxLayout *horizontalLayout_310;
+    QLabel *label_48;
+    QSpacerItem *verticalSpacer_47;
     QFrame *frame_6;
     QVBoxLayout *verticalLayout;
     QFrame *fr_column_0_42;
@@ -52,12 +58,6 @@ public:
     QHBoxLayout *horizontalLayout_8;
     QLabel *la_elem_block_1_1_page_0;
     QSpacerItem *verticalSpacer_46;
-    QFrame *frame_56;
-    QVBoxLayout *verticalLayout_3;
-    QFrame *fr_column_0_43;
-    QHBoxLayout *horizontalLayout_310;
-    QLabel *label_48;
-    QSpacerItem *verticalSpacer_47;
     QFrame *frame_57;
     QVBoxLayout *verticalLayout_2;
     QFrame *fr_column_0_15;
@@ -1237,6 +1237,9 @@ public:
         if (widget_stream_data->objectName().isEmpty())
             widget_stream_data->setObjectName(QStringLiteral("widget_stream_data"));
         widget_stream_data->resize(632, 562);
+        QFont font;
+        font.setFamily(QStringLiteral("Arial"));
+        widget_stream_data->setFont(font);
         gridLayout_19 = new QGridLayout(widget_stream_data);
         gridLayout_19->setSpacing(2);
         gridLayout_19->setObjectName(QStringLiteral("gridLayout_19"));
@@ -1279,13 +1282,13 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(la_block_1_0_page_0->sizePolicy().hasHeightForWidth());
         la_block_1_0_page_0->setSizePolicy(sizePolicy1);
-        QFont font;
-        font.setFamily(QStringLiteral("MS Shell Dlg 2"));
-        font.setPointSize(10);
-        font.setBold(true);
-        font.setItalic(false);
-        font.setWeight(75);
-        la_block_1_0_page_0->setFont(font);
+        QFont font1;
+        font1.setFamily(QStringLiteral("MS Shell Dlg 2"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setItalic(false);
+        font1.setWeight(75);
+        la_block_1_0_page_0->setFont(font1);
         la_block_1_0_page_0->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_38->addWidget(la_block_1_0_page_0, 1, 0, 1, 1);
@@ -1298,13 +1301,64 @@ public:
         gridLayout_4->setSpacing(1);
         gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
         gridLayout_4->setContentsMargins(1, 1, 1, 1);
-        frame_6 = new QFrame(fr_block_1_1_page_0);
-        frame_6->setObjectName(QStringLiteral("frame_6"));
-        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        frame_56 = new QFrame(fr_block_1_1_page_0);
+        frame_56->setObjectName(QStringLiteral("frame_56"));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(frame_6->sizePolicy().hasHeightForWidth());
-        frame_6->setSizePolicy(sizePolicy2);
+        sizePolicy2.setHeightForWidth(frame_56->sizePolicy().hasHeightForWidth());
+        frame_56->setSizePolicy(sizePolicy2);
+        frame_56->setMinimumSize(QSize(98, 0));
+        frame_56->setFrameShape(QFrame::NoFrame);
+        frame_56->setFrameShadow(QFrame::Raised);
+        verticalLayout_3 = new QVBoxLayout(frame_56);
+        verticalLayout_3->setSpacing(2);
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(1, 1, 1, 1);
+        fr_column_0_43 = new QFrame(frame_56);
+        fr_column_0_43->setObjectName(QStringLiteral("fr_column_0_43"));
+        sizePolicy1.setHeightForWidth(fr_column_0_43->sizePolicy().hasHeightForWidth());
+        fr_column_0_43->setSizePolicy(sizePolicy1);
+        fr_column_0_43->setMinimumSize(QSize(0, 0));
+        fr_column_0_43->setMaximumSize(QSize(16777215, 999));
+        fr_column_0_43->setFrameShape(QFrame::StyledPanel);
+        fr_column_0_43->setFrameShadow(QFrame::Raised);
+        horizontalLayout_310 = new QHBoxLayout(fr_column_0_43);
+        horizontalLayout_310->setSpacing(1);
+        horizontalLayout_310->setObjectName(QStringLiteral("horizontalLayout_310"));
+        horizontalLayout_310->setContentsMargins(1, 1, 1, 1);
+        label_48 = new QLabel(fr_column_0_43);
+        label_48->setObjectName(QStringLiteral("label_48"));
+        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label_48->sizePolicy().hasHeightForWidth());
+        label_48->setSizePolicy(sizePolicy3);
+        label_48->setMinimumSize(QSize(30, 15));
+        QFont font2;
+        font2.setPointSize(10);
+        font2.setBold(true);
+        font2.setItalic(true);
+        font2.setWeight(75);
+        label_48->setFont(font2);
+        label_48->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_310->addWidget(label_48);
+
+
+        verticalLayout_3->addWidget(fr_column_0_43);
+
+        verticalSpacer_47 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer_47);
+
+
+        gridLayout_4->addWidget(frame_56, 0, 1, 1, 1);
+
+        frame_6 = new QFrame(fr_block_1_1_page_0);
+        frame_6->setObjectName(QStringLiteral("frame_6"));
+        sizePolicy3.setHeightForWidth(frame_6->sizePolicy().hasHeightForWidth());
+        frame_6->setSizePolicy(sizePolicy3);
         frame_6->setMinimumSize(QSize(107, 0));
         frame_6->setFrameShape(QFrame::NoFrame);
         frame_6->setFrameShadow(QFrame::Raised);
@@ -1326,18 +1380,13 @@ public:
         horizontalLayout_309->setContentsMargins(1, 1, 1, 1);
         label_47 = new QLabel(fr_column_0_42);
         label_47->setObjectName(QStringLiteral("label_47"));
-        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(label_47->sizePolicy().hasHeightForWidth());
-        label_47->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(label_47->sizePolicy().hasHeightForWidth());
+        label_47->setSizePolicy(sizePolicy4);
         label_47->setMinimumSize(QSize(30, 15));
-        QFont font1;
-        font1.setPointSize(10);
-        font1.setBold(true);
-        font1.setItalic(true);
-        font1.setWeight(75);
-        label_47->setFont(font1);
+        label_47->setFont(font2);
 
         horizontalLayout_309->addWidget(label_47);
 
@@ -1389,56 +1438,10 @@ public:
 
         gridLayout_4->addWidget(frame_6, 0, 0, 1, 1);
 
-        frame_56 = new QFrame(fr_block_1_1_page_0);
-        frame_56->setObjectName(QStringLiteral("frame_56"));
-        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(frame_56->sizePolicy().hasHeightForWidth());
-        frame_56->setSizePolicy(sizePolicy4);
-        frame_56->setMinimumSize(QSize(98, 0));
-        frame_56->setFrameShape(QFrame::NoFrame);
-        frame_56->setFrameShadow(QFrame::Raised);
-        verticalLayout_3 = new QVBoxLayout(frame_56);
-        verticalLayout_3->setSpacing(2);
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        verticalLayout_3->setContentsMargins(1, 1, 1, 1);
-        fr_column_0_43 = new QFrame(frame_56);
-        fr_column_0_43->setObjectName(QStringLiteral("fr_column_0_43"));
-        sizePolicy1.setHeightForWidth(fr_column_0_43->sizePolicy().hasHeightForWidth());
-        fr_column_0_43->setSizePolicy(sizePolicy1);
-        fr_column_0_43->setMinimumSize(QSize(0, 0));
-        fr_column_0_43->setMaximumSize(QSize(16777215, 999));
-        fr_column_0_43->setFrameShape(QFrame::StyledPanel);
-        fr_column_0_43->setFrameShadow(QFrame::Raised);
-        horizontalLayout_310 = new QHBoxLayout(fr_column_0_43);
-        horizontalLayout_310->setSpacing(1);
-        horizontalLayout_310->setObjectName(QStringLiteral("horizontalLayout_310"));
-        horizontalLayout_310->setContentsMargins(1, 1, 1, 1);
-        label_48 = new QLabel(fr_column_0_43);
-        label_48->setObjectName(QStringLiteral("label_48"));
-        sizePolicy2.setHeightForWidth(label_48->sizePolicy().hasHeightForWidth());
-        label_48->setSizePolicy(sizePolicy2);
-        label_48->setMinimumSize(QSize(30, 15));
-        label_48->setFont(font1);
-        label_48->setAlignment(Qt::AlignCenter);
-
-        horizontalLayout_310->addWidget(label_48);
-
-
-        verticalLayout_3->addWidget(fr_column_0_43);
-
-        verticalSpacer_47 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_47);
-
-
-        gridLayout_4->addWidget(frame_56, 0, 1, 1, 1);
-
         frame_57 = new QFrame(fr_block_1_1_page_0);
         frame_57->setObjectName(QStringLiteral("frame_57"));
-        sizePolicy4.setHeightForWidth(frame_57->sizePolicy().hasHeightForWidth());
-        frame_57->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_57->sizePolicy().hasHeightForWidth());
+        frame_57->setSizePolicy(sizePolicy2);
         frame_57->setFrameShape(QFrame::NoFrame);
         frame_57->setFrameShadow(QFrame::Raised);
         verticalLayout_2 = new QVBoxLayout(frame_57);
@@ -1460,7 +1463,7 @@ public:
         label_19 = new QLabel(fr_column_0_15);
         label_19->setObjectName(QStringLiteral("label_19"));
         label_19->setMinimumSize(QSize(30, 15));
-        label_19->setFont(font1);
+        label_19->setFont(font2);
         label_19->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_70->addWidget(label_19);
@@ -1496,8 +1499,8 @@ public:
 
         label_51 = new QLabel(frame_59);
         label_51->setObjectName(QStringLiteral("label_51"));
-        sizePolicy4.setHeightForWidth(label_51->sizePolicy().hasHeightForWidth());
-        label_51->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(label_51->sizePolicy().hasHeightForWidth());
+        label_51->setSizePolicy(sizePolicy2);
         label_51->setMinimumSize(QSize(14, 16));
 
         horizontalLayout_6->addWidget(label_51);
@@ -1527,13 +1530,13 @@ public:
 
         la_elem_block_1_2_page_0 = new QLabel(frame_60);
         la_elem_block_1_2_page_0->setObjectName(QStringLiteral("la_elem_block_1_2_page_0"));
-        sizePolicy4.setHeightForWidth(la_elem_block_1_2_page_0->sizePolicy().hasHeightForWidth());
-        la_elem_block_1_2_page_0->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(la_elem_block_1_2_page_0->sizePolicy().hasHeightForWidth());
+        la_elem_block_1_2_page_0->setSizePolicy(sizePolicy2);
         la_elem_block_1_2_page_0->setMinimumSize(QSize(14, 16));
-        QFont font2;
-        font2.setBold(true);
-        font2.setWeight(75);
-        la_elem_block_1_2_page_0->setFont(font2);
+        QFont font3;
+        font3.setBold(true);
+        font3.setWeight(75);
+        la_elem_block_1_2_page_0->setFont(font3);
 
         horizontalLayout_9->addWidget(la_elem_block_1_2_page_0);
 
@@ -1572,8 +1575,8 @@ public:
         gridLayout_2->setContentsMargins(1, 1, 1, 1);
         frame_7 = new QFrame(fr_block_1_1_1_page_0);
         frame_7->setObjectName(QStringLiteral("frame_7"));
-        sizePolicy2.setHeightForWidth(frame_7->sizePolicy().hasHeightForWidth());
-        frame_7->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_7->sizePolicy().hasHeightForWidth());
+        frame_7->setSizePolicy(sizePolicy3);
         frame_7->setFrameShape(QFrame::NoFrame);
         frame_7->setFrameShadow(QFrame::Raised);
         verticalLayout_4 = new QVBoxLayout(frame_7);
@@ -1597,11 +1600,11 @@ public:
         horizontalLayout_21->setContentsMargins(1, 1, 1, 1);
         label_11 = new QLabel(fr_column_0_7);
         label_11->setObjectName(QStringLiteral("label_11"));
-        sizePolicy3.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
-        label_11->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
+        label_11->setSizePolicy(sizePolicy4);
         label_11->setMinimumSize(QSize(100, 15));
         label_11->setMaximumSize(QSize(16777215, 15));
-        label_11->setFont(font1);
+        label_11->setFont(font2);
 
         horizontalLayout_21->addWidget(label_11);
 
@@ -1735,7 +1738,7 @@ public:
         la_elem_block_2_6_page_0->setObjectName(QStringLiteral("la_elem_block_2_6_page_0"));
         la_elem_block_2_6_page_0->setMinimumSize(QSize(120, 16));
         la_elem_block_2_6_page_0->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_2_6_page_0->setFont(font2);
+        la_elem_block_2_6_page_0->setFont(font3);
 
         horizontalLayout_92->addWidget(la_elem_block_2_6_page_0);
 
@@ -1751,8 +1754,8 @@ public:
 
         frame_8 = new QFrame(fr_block_1_1_1_page_0);
         frame_8->setObjectName(QStringLiteral("frame_8"));
-        sizePolicy4.setHeightForWidth(frame_8->sizePolicy().hasHeightForWidth());
-        frame_8->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_8->sizePolicy().hasHeightForWidth());
+        frame_8->setSizePolicy(sizePolicy2);
         frame_8->setFrameShape(QFrame::NoFrame);
         frame_8->setFrameShadow(QFrame::Raised);
         verticalLayout_5 = new QVBoxLayout(frame_8);
@@ -1774,7 +1777,7 @@ public:
         label_12 = new QLabel(fr_column_0_8);
         label_12->setObjectName(QStringLiteral("label_12"));
         label_12->setMinimumSize(QSize(0, 15));
-        label_12->setFont(font1);
+        label_12->setFont(font2);
         label_12->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_22->addWidget(label_12);
@@ -1929,11 +1932,11 @@ public:
         lineE_elem_block_2_6_page_0->setSizePolicy(sizePolicy5);
         lineE_elem_block_2_6_page_0->setMinimumSize(QSize(50, 16));
         lineE_elem_block_2_6_page_0->setMaximumSize(QSize(60, 16));
-        QFont font3;
-        font3.setPointSize(9);
-        font3.setBold(true);
-        font3.setWeight(75);
-        lineE_elem_block_2_6_page_0->setFont(font3);
+        QFont font4;
+        font4.setPointSize(9);
+        font4.setBold(true);
+        font4.setWeight(75);
+        lineE_elem_block_2_6_page_0->setFont(font4);
         lineE_elem_block_2_6_page_0->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_93->addWidget(lineE_elem_block_2_6_page_0);
@@ -1950,8 +1953,8 @@ public:
 
         frame_10 = new QFrame(fr_block_1_1_1_page_0);
         frame_10->setObjectName(QStringLiteral("frame_10"));
-        sizePolicy4.setHeightForWidth(frame_10->sizePolicy().hasHeightForWidth());
-        frame_10->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_10->sizePolicy().hasHeightForWidth());
+        frame_10->setSizePolicy(sizePolicy2);
         frame_10->setFrameShape(QFrame::NoFrame);
         frame_10->setFrameShadow(QFrame::Raised);
         verticalLayout_6 = new QVBoxLayout(frame_10);
@@ -1973,7 +1976,7 @@ public:
         label_10 = new QLabel(fr_column_0_6);
         label_10->setObjectName(QStringLiteral("label_10"));
         label_10->setMinimumSize(QSize(0, 15));
-        label_10->setFont(font1);
+        label_10->setFont(font2);
         label_10->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_20->addWidget(label_10);
@@ -2128,7 +2131,7 @@ public:
         lineE_elem_block_2_13_page_0->setSizePolicy(sizePolicy5);
         lineE_elem_block_2_13_page_0->setMinimumSize(QSize(50, 16));
         lineE_elem_block_2_13_page_0->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_2_13_page_0->setFont(font3);
+        lineE_elem_block_2_13_page_0->setFont(font4);
         lineE_elem_block_2_13_page_0->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_94->addWidget(lineE_elem_block_2_13_page_0);
@@ -2150,7 +2153,7 @@ public:
         la_block_1_1_page_0->setObjectName(QStringLiteral("la_block_1_1_page_0"));
         sizePolicy1.setHeightForWidth(la_block_1_1_page_0->sizePolicy().hasHeightForWidth());
         la_block_1_1_page_0->setSizePolicy(sizePolicy1);
-        la_block_1_1_page_0->setFont(font);
+        la_block_1_1_page_0->setFont(font1);
         la_block_1_1_page_0->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_8->addWidget(la_block_1_1_page_0, 0, 0, 1, 1);
@@ -2171,7 +2174,7 @@ public:
         la_block_1_2_page_0->setObjectName(QStringLiteral("la_block_1_2_page_0"));
         sizePolicy1.setHeightForWidth(la_block_1_2_page_0->sizePolicy().hasHeightForWidth());
         la_block_1_2_page_0->setSizePolicy(sizePolicy1);
-        la_block_1_2_page_0->setFont(font);
+        la_block_1_2_page_0->setFont(font1);
         la_block_1_2_page_0->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_9->addWidget(la_block_1_2_page_0, 0, 0, 1, 1);
@@ -2186,8 +2189,8 @@ public:
         gridLayout->setContentsMargins(1, 1, 1, 1);
         frame_12 = new QFrame(fr_block_1_2_1_page_0);
         frame_12->setObjectName(QStringLiteral("frame_12"));
-        sizePolicy2.setHeightForWidth(frame_12->sizePolicy().hasHeightForWidth());
-        frame_12->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_12->sizePolicy().hasHeightForWidth());
+        frame_12->setSizePolicy(sizePolicy3);
         frame_12->setFrameShape(QFrame::NoFrame);
         frame_12->setFrameShadow(QFrame::Raised);
         verticalLayout_7 = new QVBoxLayout(frame_12);
@@ -2208,10 +2211,10 @@ public:
         horizontalLayout_43->setContentsMargins(1, 1, 1, 1);
         label_13 = new QLabel(fr_column_0_9);
         label_13->setObjectName(QStringLiteral("label_13"));
-        sizePolicy3.setHeightForWidth(label_13->sizePolicy().hasHeightForWidth());
-        label_13->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_13->sizePolicy().hasHeightForWidth());
+        label_13->setSizePolicy(sizePolicy4);
         label_13->setMinimumSize(QSize(100, 15));
-        label_13->setFont(font1);
+        label_13->setFont(font2);
 
         horizontalLayout_43->addWidget(label_13);
 
@@ -2381,7 +2384,7 @@ public:
         la_elem_block_3_8_page_0->setObjectName(QStringLiteral("la_elem_block_3_8_page_0"));
         la_elem_block_3_8_page_0->setMinimumSize(QSize(100, 16));
         la_elem_block_3_8_page_0->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_3_8_page_0->setFont(font2);
+        la_elem_block_3_8_page_0->setFont(font3);
 
         horizontalLayout_85->addWidget(la_elem_block_3_8_page_0);
 
@@ -2397,8 +2400,8 @@ public:
 
         frame_13 = new QFrame(fr_block_1_2_1_page_0);
         frame_13->setObjectName(QStringLiteral("frame_13"));
-        sizePolicy4.setHeightForWidth(frame_13->sizePolicy().hasHeightForWidth());
-        frame_13->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_13->sizePolicy().hasHeightForWidth());
+        frame_13->setSizePolicy(sizePolicy2);
         frame_13->setFrameShape(QFrame::NoFrame);
         frame_13->setFrameShadow(QFrame::Raised);
         verticalLayout_8 = new QVBoxLayout(frame_13);
@@ -2420,7 +2423,7 @@ public:
         label_14 = new QLabel(fr_column_0_10);
         label_14->setObjectName(QStringLiteral("label_14"));
         label_14->setMinimumSize(QSize(0, 15));
-        label_14->setFont(font1);
+        label_14->setFont(font2);
         label_14->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_44->addWidget(label_14);
@@ -2617,7 +2620,7 @@ public:
         lineE_elem_block_3_8_page_0->setSizePolicy(sizePolicy5);
         lineE_elem_block_3_8_page_0->setMinimumSize(QSize(50, 16));
         lineE_elem_block_3_8_page_0->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_3_8_page_0->setFont(font3);
+        lineE_elem_block_3_8_page_0->setFont(font4);
         lineE_elem_block_3_8_page_0->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_90->addWidget(lineE_elem_block_3_8_page_0);
@@ -2634,8 +2637,8 @@ public:
 
         frame_14 = new QFrame(fr_block_1_2_1_page_0);
         frame_14->setObjectName(QStringLiteral("frame_14"));
-        sizePolicy4.setHeightForWidth(frame_14->sizePolicy().hasHeightForWidth());
-        frame_14->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_14->sizePolicy().hasHeightForWidth());
+        frame_14->setSizePolicy(sizePolicy2);
         frame_14->setFrameShape(QFrame::NoFrame);
         frame_14->setFrameShadow(QFrame::Raised);
         verticalLayout_9 = new QVBoxLayout(frame_14);
@@ -2657,7 +2660,7 @@ public:
         label_15 = new QLabel(fr_column_0_11);
         label_15->setObjectName(QStringLiteral("label_15"));
         label_15->setMinimumSize(QSize(0, 15));
-        label_15->setFont(font1);
+        label_15->setFont(font2);
         label_15->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_45->addWidget(label_15);
@@ -2855,7 +2858,7 @@ public:
         lineE_elem_block_3_17_page_0->setSizePolicy(sizePolicy5);
         lineE_elem_block_3_17_page_0->setMinimumSize(QSize(50, 16));
         lineE_elem_block_3_17_page_0->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_3_17_page_0->setFont(font3);
+        lineE_elem_block_3_17_page_0->setFont(font4);
         lineE_elem_block_3_17_page_0->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_91->addWidget(lineE_elem_block_3_17_page_0);
@@ -2889,7 +2892,7 @@ public:
         la_block_1_3_page_0->setObjectName(QStringLiteral("la_block_1_3_page_0"));
         sizePolicy1.setHeightForWidth(la_block_1_3_page_0->sizePolicy().hasHeightForWidth());
         la_block_1_3_page_0->setSizePolicy(sizePolicy1);
-        la_block_1_3_page_0->setFont(font);
+        la_block_1_3_page_0->setFont(font1);
         la_block_1_3_page_0->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_10->addWidget(la_block_1_3_page_0, 0, 0, 1, 1);
@@ -2904,8 +2907,8 @@ public:
         gridLayout_3->setContentsMargins(1, 1, 1, 1);
         frame_16 = new QFrame(fr_block_1_3_1_page_0);
         frame_16->setObjectName(QStringLiteral("frame_16"));
-        sizePolicy2.setHeightForWidth(frame_16->sizePolicy().hasHeightForWidth());
-        frame_16->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_16->sizePolicy().hasHeightForWidth());
+        frame_16->setSizePolicy(sizePolicy3);
         frame_16->setFrameShape(QFrame::NoFrame);
         frame_16->setFrameShadow(QFrame::Raised);
         verticalLayout_10 = new QVBoxLayout(frame_16);
@@ -2926,11 +2929,11 @@ public:
         horizontalLayout_71->setContentsMargins(1, 1, 1, 1);
         label_16 = new QLabel(fr_column_0_12);
         label_16->setObjectName(QStringLiteral("label_16"));
-        sizePolicy2.setHeightForWidth(label_16->sizePolicy().hasHeightForWidth());
-        label_16->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_16->sizePolicy().hasHeightForWidth());
+        label_16->setSizePolicy(sizePolicy3);
         label_16->setMinimumSize(QSize(100, 15));
         label_16->setMaximumSize(QSize(999, 15));
-        label_16->setFont(font1);
+        label_16->setFont(font2);
 
         horizontalLayout_71->addWidget(label_16);
 
@@ -3010,7 +3013,7 @@ public:
         la_elem_block_4_3_page_0->setObjectName(QStringLiteral("la_elem_block_4_3_page_0"));
         la_elem_block_4_3_page_0->setMinimumSize(QSize(120, 16));
         la_elem_block_4_3_page_0->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_4_3_page_0->setFont(font2);
+        la_elem_block_4_3_page_0->setFont(font3);
 
         horizontalLayout_77->addWidget(la_elem_block_4_3_page_0);
 
@@ -3026,8 +3029,8 @@ public:
 
         frame_17 = new QFrame(fr_block_1_3_1_page_0);
         frame_17->setObjectName(QStringLiteral("frame_17"));
-        sizePolicy4.setHeightForWidth(frame_17->sizePolicy().hasHeightForWidth());
-        frame_17->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_17->sizePolicy().hasHeightForWidth());
+        frame_17->setSizePolicy(sizePolicy2);
         frame_17->setFrameShape(QFrame::NoFrame);
         frame_17->setFrameShadow(QFrame::Raised);
         verticalLayout_11 = new QVBoxLayout(frame_17);
@@ -3048,10 +3051,10 @@ public:
         horizontalLayout_72->setContentsMargins(1, 1, 1, 1);
         label_17 = new QLabel(fr_column_0_13);
         label_17->setObjectName(QStringLiteral("label_17"));
-        sizePolicy2.setHeightForWidth(label_17->sizePolicy().hasHeightForWidth());
-        label_17->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_17->sizePolicy().hasHeightForWidth());
+        label_17->setSizePolicy(sizePolicy3);
         label_17->setMinimumSize(QSize(0, 15));
-        label_17->setFont(font1);
+        label_17->setFont(font2);
         label_17->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_72->addWidget(label_17);
@@ -3143,7 +3146,7 @@ public:
         lineE_elem_block_4_3_page_0->setSizePolicy(sizePolicy);
         lineE_elem_block_4_3_page_0->setMinimumSize(QSize(50, 16));
         lineE_elem_block_4_3_page_0->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_4_3_page_0->setFont(font3);
+        lineE_elem_block_4_3_page_0->setFont(font4);
         lineE_elem_block_4_3_page_0->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_83->addWidget(lineE_elem_block_4_3_page_0);
@@ -3160,8 +3163,8 @@ public:
 
         frame_18 = new QFrame(fr_block_1_3_1_page_0);
         frame_18->setObjectName(QStringLiteral("frame_18"));
-        sizePolicy4.setHeightForWidth(frame_18->sizePolicy().hasHeightForWidth());
-        frame_18->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_18->sizePolicy().hasHeightForWidth());
+        frame_18->setSizePolicy(sizePolicy2);
         frame_18->setFrameShape(QFrame::NoFrame);
         frame_18->setFrameShadow(QFrame::Raised);
         verticalLayout_12 = new QVBoxLayout(frame_18);
@@ -3182,10 +3185,10 @@ public:
         horizontalLayout_73->setContentsMargins(1, 1, 1, 1);
         label_18 = new QLabel(fr_column_0_14);
         label_18->setObjectName(QStringLiteral("label_18"));
-        sizePolicy3.setHeightForWidth(label_18->sizePolicy().hasHeightForWidth());
-        label_18->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_18->sizePolicy().hasHeightForWidth());
+        label_18->setSizePolicy(sizePolicy4);
         label_18->setMinimumSize(QSize(0, 15));
-        label_18->setFont(font1);
+        label_18->setFont(font2);
         label_18->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_73->addWidget(label_18);
@@ -3277,7 +3280,7 @@ public:
         lineE_elem_block_4_7_page_0->setSizePolicy(sizePolicy5);
         lineE_elem_block_4_7_page_0->setMinimumSize(QSize(50, 16));
         lineE_elem_block_4_7_page_0->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_4_7_page_0->setFont(font3);
+        lineE_elem_block_4_7_page_0->setFont(font4);
         lineE_elem_block_4_7_page_0->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_89->addWidget(lineE_elem_block_4_7_page_0);
@@ -3332,7 +3335,7 @@ public:
         la_block_1_0_page_1->setObjectName(QStringLiteral("la_block_1_0_page_1"));
         sizePolicy1.setHeightForWidth(la_block_1_0_page_1->sizePolicy().hasHeightForWidth());
         la_block_1_0_page_1->setSizePolicy(sizePolicy1);
-        la_block_1_0_page_1->setFont(font);
+        la_block_1_0_page_1->setFont(font1);
         la_block_1_0_page_1->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_39->addWidget(la_block_1_0_page_1, 1, 0, 1, 1);
@@ -3347,8 +3350,8 @@ public:
         gridLayout_11->setContentsMargins(1, 1, 1, 1);
         frame_9 = new QFrame(fr_block_1_1_page_2);
         frame_9->setObjectName(QStringLiteral("frame_9"));
-        sizePolicy2.setHeightForWidth(frame_9->sizePolicy().hasHeightForWidth());
-        frame_9->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_9->sizePolicy().hasHeightForWidth());
+        frame_9->setSizePolicy(sizePolicy3);
         frame_9->setMinimumSize(QSize(107, 0));
         frame_9->setFrameShape(QFrame::NoFrame);
         frame_9->setFrameShadow(QFrame::Raised);
@@ -3370,10 +3373,10 @@ public:
         horizontalLayout_311->setContentsMargins(1, 1, 1, 1);
         label_49 = new QLabel(fr_column_0_44);
         label_49->setObjectName(QStringLiteral("label_49"));
-        sizePolicy3.setHeightForWidth(label_49->sizePolicy().hasHeightForWidth());
-        label_49->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_49->sizePolicy().hasHeightForWidth());
+        label_49->setSizePolicy(sizePolicy4);
         label_49->setMinimumSize(QSize(30, 15));
-        label_49->setFont(font1);
+        label_49->setFont(font2);
 
         horizontalLayout_311->addWidget(label_49);
 
@@ -3427,8 +3430,8 @@ public:
 
         frame_62 = new QFrame(fr_block_1_1_page_2);
         frame_62->setObjectName(QStringLiteral("frame_62"));
-        sizePolicy4.setHeightForWidth(frame_62->sizePolicy().hasHeightForWidth());
-        frame_62->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_62->sizePolicy().hasHeightForWidth());
+        frame_62->setSizePolicy(sizePolicy2);
         frame_62->setMinimumSize(QSize(98, 0));
         frame_62->setFrameShape(QFrame::NoFrame);
         frame_62->setFrameShadow(QFrame::Raised);
@@ -3450,10 +3453,10 @@ public:
         horizontalLayout_312->setContentsMargins(1, 1, 1, 1);
         label_50 = new QLabel(fr_column_0_45);
         label_50->setObjectName(QStringLiteral("label_50"));
-        sizePolicy2.setHeightForWidth(label_50->sizePolicy().hasHeightForWidth());
-        label_50->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_50->sizePolicy().hasHeightForWidth());
+        label_50->setSizePolicy(sizePolicy3);
         label_50->setMinimumSize(QSize(30, 15));
-        label_50->setFont(font1);
+        label_50->setFont(font2);
         label_50->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_312->addWidget(label_50);
@@ -3470,8 +3473,8 @@ public:
 
         frame_63 = new QFrame(fr_block_1_1_page_2);
         frame_63->setObjectName(QStringLiteral("frame_63"));
-        sizePolicy4.setHeightForWidth(frame_63->sizePolicy().hasHeightForWidth());
-        frame_63->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_63->sizePolicy().hasHeightForWidth());
+        frame_63->setSizePolicy(sizePolicy2);
         frame_63->setFrameShape(QFrame::NoFrame);
         frame_63->setFrameShadow(QFrame::Raised);
         verticalLayout_15 = new QVBoxLayout(frame_63);
@@ -3493,7 +3496,7 @@ public:
         label_20 = new QLabel(fr_column_0_16);
         label_20->setObjectName(QStringLiteral("label_20"));
         label_20->setMinimumSize(QSize(30, 15));
-        label_20->setFont(font1);
+        label_20->setFont(font2);
         label_20->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_78->addWidget(label_20);
@@ -3529,8 +3532,8 @@ public:
 
         label_52 = new QLabel(frame_64);
         label_52->setObjectName(QStringLiteral("label_52"));
-        sizePolicy4.setHeightForWidth(label_52->sizePolicy().hasHeightForWidth());
-        label_52->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(label_52->sizePolicy().hasHeightForWidth());
+        label_52->setSizePolicy(sizePolicy2);
         label_52->setMinimumSize(QSize(14, 16));
 
         horizontalLayout_11->addWidget(label_52);
@@ -3560,10 +3563,10 @@ public:
 
         la_elem_block_1_2_page_1 = new QLabel(frame_65);
         la_elem_block_1_2_page_1->setObjectName(QStringLiteral("la_elem_block_1_2_page_1"));
-        sizePolicy4.setHeightForWidth(la_elem_block_1_2_page_1->sizePolicy().hasHeightForWidth());
-        la_elem_block_1_2_page_1->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(la_elem_block_1_2_page_1->sizePolicy().hasHeightForWidth());
+        la_elem_block_1_2_page_1->setSizePolicy(sizePolicy2);
         la_elem_block_1_2_page_1->setMinimumSize(QSize(14, 16));
-        la_elem_block_1_2_page_1->setFont(font2);
+        la_elem_block_1_2_page_1->setFont(font3);
 
         horizontalLayout_12->addWidget(la_elem_block_1_2_page_1);
 
@@ -3602,8 +3605,8 @@ public:
         gridLayout_13->setContentsMargins(1, 1, 1, 1);
         frame_11 = new QFrame(fr_block_1_1_1_page_1);
         frame_11->setObjectName(QStringLiteral("frame_11"));
-        sizePolicy2.setHeightForWidth(frame_11->sizePolicy().hasHeightForWidth());
-        frame_11->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_11->sizePolicy().hasHeightForWidth());
+        frame_11->setSizePolicy(sizePolicy3);
         frame_11->setFrameShape(QFrame::NoFrame);
         frame_11->setFrameShadow(QFrame::Raised);
         verticalLayout_16 = new QVBoxLayout(frame_11);
@@ -3624,11 +3627,11 @@ public:
         horizontalLayout_31->setContentsMargins(1, 1, 1, 1);
         label_21 = new QLabel(fr_column_0_17);
         label_21->setObjectName(QStringLiteral("label_21"));
-        sizePolicy3.setHeightForWidth(label_21->sizePolicy().hasHeightForWidth());
-        label_21->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_21->sizePolicy().hasHeightForWidth());
+        label_21->setSizePolicy(sizePolicy4);
         label_21->setMinimumSize(QSize(100, 15));
         label_21->setMaximumSize(QSize(16777215, 15));
-        label_21->setFont(font1);
+        label_21->setFont(font2);
 
         horizontalLayout_31->addWidget(label_21);
 
@@ -3762,7 +3765,7 @@ public:
         la_elem_block_2_6_page_1->setObjectName(QStringLiteral("la_elem_block_2_6_page_1"));
         la_elem_block_2_6_page_1->setMinimumSize(QSize(120, 16));
         la_elem_block_2_6_page_1->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_2_6_page_1->setFont(font2);
+        la_elem_block_2_6_page_1->setFont(font3);
 
         horizontalLayout_98->addWidget(la_elem_block_2_6_page_1);
 
@@ -3778,8 +3781,8 @@ public:
 
         frame_15 = new QFrame(fr_block_1_1_1_page_1);
         frame_15->setObjectName(QStringLiteral("frame_15"));
-        sizePolicy4.setHeightForWidth(frame_15->sizePolicy().hasHeightForWidth());
-        frame_15->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_15->sizePolicy().hasHeightForWidth());
+        frame_15->setSizePolicy(sizePolicy2);
         frame_15->setFrameShape(QFrame::NoFrame);
         frame_15->setFrameShadow(QFrame::Raised);
         verticalLayout_17 = new QVBoxLayout(frame_15);
@@ -3801,7 +3804,7 @@ public:
         label_22 = new QLabel(fr_column_0_18);
         label_22->setObjectName(QStringLiteral("label_22"));
         label_22->setMinimumSize(QSize(0, 15));
-        label_22->setFont(font1);
+        label_22->setFont(font2);
         label_22->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_99->addWidget(label_22);
@@ -3956,7 +3959,7 @@ public:
         lineE_elem_block_2_6_page_1->setSizePolicy(sizePolicy5);
         lineE_elem_block_2_6_page_1->setMinimumSize(QSize(50, 16));
         lineE_elem_block_2_6_page_1->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_2_6_page_1->setFont(font3);
+        lineE_elem_block_2_6_page_1->setFont(font4);
         lineE_elem_block_2_6_page_1->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_106->addWidget(lineE_elem_block_2_6_page_1);
@@ -3973,8 +3976,8 @@ public:
 
         frame_19 = new QFrame(fr_block_1_1_1_page_1);
         frame_19->setObjectName(QStringLiteral("frame_19"));
-        sizePolicy4.setHeightForWidth(frame_19->sizePolicy().hasHeightForWidth());
-        frame_19->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_19->sizePolicy().hasHeightForWidth());
+        frame_19->setSizePolicy(sizePolicy2);
         frame_19->setFrameShape(QFrame::NoFrame);
         frame_19->setFrameShadow(QFrame::Raised);
         verticalLayout_18 = new QVBoxLayout(frame_19);
@@ -3996,7 +3999,7 @@ public:
         label_23 = new QLabel(fr_column_0_19);
         label_23->setObjectName(QStringLiteral("label_23"));
         label_23->setMinimumSize(QSize(0, 15));
-        label_23->setFont(font1);
+        label_23->setFont(font2);
         label_23->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_107->addWidget(label_23);
@@ -4151,7 +4154,7 @@ public:
         lineE_elem_block_2_13_page_1->setSizePolicy(sizePolicy5);
         lineE_elem_block_2_13_page_1->setMinimumSize(QSize(50, 16));
         lineE_elem_block_2_13_page_1->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_2_13_page_1->setFont(font3);
+        lineE_elem_block_2_13_page_1->setFont(font4);
         lineE_elem_block_2_13_page_1->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_114->addWidget(lineE_elem_block_2_13_page_1);
@@ -4173,7 +4176,7 @@ public:
         la_block_1_1_page_1->setObjectName(QStringLiteral("la_block_1_1_page_1"));
         sizePolicy1.setHeightForWidth(la_block_1_1_page_1->sizePolicy().hasHeightForWidth());
         la_block_1_1_page_1->setSizePolicy(sizePolicy1);
-        la_block_1_1_page_1->setFont(font);
+        la_block_1_1_page_1->setFont(font1);
         la_block_1_1_page_1->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_12->addWidget(la_block_1_1_page_1, 0, 0, 1, 1);
@@ -4194,7 +4197,7 @@ public:
         la_block_1_2_page_1->setObjectName(QStringLiteral("la_block_1_2_page_1"));
         sizePolicy1.setHeightForWidth(la_block_1_2_page_1->sizePolicy().hasHeightForWidth());
         la_block_1_2_page_1->setSizePolicy(sizePolicy1);
-        la_block_1_2_page_1->setFont(font);
+        la_block_1_2_page_1->setFont(font1);
         la_block_1_2_page_1->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_14->addWidget(la_block_1_2_page_1, 0, 0, 1, 1);
@@ -4209,8 +4212,8 @@ public:
         gridLayout_15->setContentsMargins(1, 1, 1, 1);
         frame_20 = new QFrame(fr_block_1_2_1_page_1);
         frame_20->setObjectName(QStringLiteral("frame_20"));
-        sizePolicy2.setHeightForWidth(frame_20->sizePolicy().hasHeightForWidth());
-        frame_20->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_20->sizePolicy().hasHeightForWidth());
+        frame_20->setSizePolicy(sizePolicy3);
         frame_20->setFrameShape(QFrame::NoFrame);
         frame_20->setFrameShadow(QFrame::Raised);
         verticalLayout_19 = new QVBoxLayout(frame_20);
@@ -4231,10 +4234,10 @@ public:
         horizontalLayout_115->setContentsMargins(1, 1, 1, 1);
         label_24 = new QLabel(fr_column_0_20);
         label_24->setObjectName(QStringLiteral("label_24"));
-        sizePolicy3.setHeightForWidth(label_24->sizePolicy().hasHeightForWidth());
-        label_24->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_24->sizePolicy().hasHeightForWidth());
+        label_24->setSizePolicy(sizePolicy4);
         label_24->setMinimumSize(QSize(100, 15));
-        label_24->setFont(font1);
+        label_24->setFont(font2);
 
         horizontalLayout_115->addWidget(label_24);
 
@@ -4404,7 +4407,7 @@ public:
         la_elem_block_3_8_page_1->setObjectName(QStringLiteral("la_elem_block_3_8_page_1"));
         la_elem_block_3_8_page_1->setMinimumSize(QSize(100, 16));
         la_elem_block_3_8_page_1->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_3_8_page_1->setFont(font2);
+        la_elem_block_3_8_page_1->setFont(font3);
 
         horizontalLayout_124->addWidget(la_elem_block_3_8_page_1);
 
@@ -4420,8 +4423,8 @@ public:
 
         frame_21 = new QFrame(fr_block_1_2_1_page_1);
         frame_21->setObjectName(QStringLiteral("frame_21"));
-        sizePolicy4.setHeightForWidth(frame_21->sizePolicy().hasHeightForWidth());
-        frame_21->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_21->sizePolicy().hasHeightForWidth());
+        frame_21->setSizePolicy(sizePolicy2);
         frame_21->setFrameShape(QFrame::NoFrame);
         frame_21->setFrameShadow(QFrame::Raised);
         verticalLayout_20 = new QVBoxLayout(frame_21);
@@ -4443,7 +4446,7 @@ public:
         label_25 = new QLabel(fr_column_0_21);
         label_25->setObjectName(QStringLiteral("label_25"));
         label_25->setMinimumSize(QSize(0, 15));
-        label_25->setFont(font1);
+        label_25->setFont(font2);
         label_25->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_125->addWidget(label_25);
@@ -4640,7 +4643,7 @@ public:
         lineE_elem_block_3_8_page_1->setSizePolicy(sizePolicy5);
         lineE_elem_block_3_8_page_1->setMinimumSize(QSize(50, 16));
         lineE_elem_block_3_8_page_1->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_3_8_page_1->setFont(font3);
+        lineE_elem_block_3_8_page_1->setFont(font4);
         lineE_elem_block_3_8_page_1->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_134->addWidget(lineE_elem_block_3_8_page_1);
@@ -4657,8 +4660,8 @@ public:
 
         frame_22 = new QFrame(fr_block_1_2_1_page_1);
         frame_22->setObjectName(QStringLiteral("frame_22"));
-        sizePolicy4.setHeightForWidth(frame_22->sizePolicy().hasHeightForWidth());
-        frame_22->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_22->sizePolicy().hasHeightForWidth());
+        frame_22->setSizePolicy(sizePolicy2);
         frame_22->setFrameShape(QFrame::NoFrame);
         frame_22->setFrameShadow(QFrame::Raised);
         verticalLayout_21 = new QVBoxLayout(frame_22);
@@ -4680,7 +4683,7 @@ public:
         label_26 = new QLabel(fr_column_0_22);
         label_26->setObjectName(QStringLiteral("label_26"));
         label_26->setMinimumSize(QSize(0, 15));
-        label_26->setFont(font1);
+        label_26->setFont(font2);
         label_26->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_135->addWidget(label_26);
@@ -4878,7 +4881,7 @@ public:
         lineE_elem_block_3_17_page_1->setSizePolicy(sizePolicy5);
         lineE_elem_block_3_17_page_1->setMinimumSize(QSize(50, 16));
         lineE_elem_block_3_17_page_1->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_3_17_page_1->setFont(font3);
+        lineE_elem_block_3_17_page_1->setFont(font4);
         lineE_elem_block_3_17_page_1->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_144->addWidget(lineE_elem_block_3_17_page_1);
@@ -4912,7 +4915,7 @@ public:
         la_block_1_3_page_1->setObjectName(QStringLiteral("la_block_1_3_page_1"));
         sizePolicy1.setHeightForWidth(la_block_1_3_page_1->sizePolicy().hasHeightForWidth());
         la_block_1_3_page_1->setSizePolicy(sizePolicy1);
-        la_block_1_3_page_1->setFont(font);
+        la_block_1_3_page_1->setFont(font1);
         la_block_1_3_page_1->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_16->addWidget(la_block_1_3_page_1, 0, 0, 1, 1);
@@ -4927,8 +4930,8 @@ public:
         gridLayout_17->setContentsMargins(1, 1, 1, 1);
         frame_23 = new QFrame(fr_block_1_3_1_page_1);
         frame_23->setObjectName(QStringLiteral("frame_23"));
-        sizePolicy2.setHeightForWidth(frame_23->sizePolicy().hasHeightForWidth());
-        frame_23->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_23->sizePolicy().hasHeightForWidth());
+        frame_23->setSizePolicy(sizePolicy3);
         frame_23->setFrameShape(QFrame::NoFrame);
         frame_23->setFrameShadow(QFrame::Raised);
         verticalLayout_22 = new QVBoxLayout(frame_23);
@@ -4949,11 +4952,11 @@ public:
         horizontalLayout_145->setContentsMargins(1, 1, 1, 1);
         label_27 = new QLabel(fr_column_0_23);
         label_27->setObjectName(QStringLiteral("label_27"));
-        sizePolicy2.setHeightForWidth(label_27->sizePolicy().hasHeightForWidth());
-        label_27->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_27->sizePolicy().hasHeightForWidth());
+        label_27->setSizePolicy(sizePolicy3);
         label_27->setMinimumSize(QSize(100, 15));
         label_27->setMaximumSize(QSize(999, 15));
-        label_27->setFont(font1);
+        label_27->setFont(font2);
 
         horizontalLayout_145->addWidget(label_27);
 
@@ -5033,7 +5036,7 @@ public:
         la_elem_block_4_3_page_1->setObjectName(QStringLiteral("la_elem_block_4_3_page_1"));
         la_elem_block_4_3_page_1->setMinimumSize(QSize(120, 16));
         la_elem_block_4_3_page_1->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_4_3_page_1->setFont(font2);
+        la_elem_block_4_3_page_1->setFont(font3);
 
         horizontalLayout_149->addWidget(la_elem_block_4_3_page_1);
 
@@ -5049,8 +5052,8 @@ public:
 
         frame_24 = new QFrame(fr_block_1_3_1_page_1);
         frame_24->setObjectName(QStringLiteral("frame_24"));
-        sizePolicy4.setHeightForWidth(frame_24->sizePolicy().hasHeightForWidth());
-        frame_24->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_24->sizePolicy().hasHeightForWidth());
+        frame_24->setSizePolicy(sizePolicy2);
         frame_24->setFrameShape(QFrame::NoFrame);
         frame_24->setFrameShadow(QFrame::Raised);
         verticalLayout_23 = new QVBoxLayout(frame_24);
@@ -5071,10 +5074,10 @@ public:
         horizontalLayout_150->setContentsMargins(1, 1, 1, 1);
         label_28 = new QLabel(fr_column_0_24);
         label_28->setObjectName(QStringLiteral("label_28"));
-        sizePolicy2.setHeightForWidth(label_28->sizePolicy().hasHeightForWidth());
-        label_28->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_28->sizePolicy().hasHeightForWidth());
+        label_28->setSizePolicy(sizePolicy3);
         label_28->setMinimumSize(QSize(0, 15));
-        label_28->setFont(font1);
+        label_28->setFont(font2);
         label_28->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_150->addWidget(label_28);
@@ -5166,7 +5169,7 @@ public:
         lineE_elem_block_4_3_page_1->setSizePolicy(sizePolicy);
         lineE_elem_block_4_3_page_1->setMinimumSize(QSize(50, 16));
         lineE_elem_block_4_3_page_1->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_4_3_page_1->setFont(font3);
+        lineE_elem_block_4_3_page_1->setFont(font4);
         lineE_elem_block_4_3_page_1->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_154->addWidget(lineE_elem_block_4_3_page_1);
@@ -5183,8 +5186,8 @@ public:
 
         frame_25 = new QFrame(fr_block_1_3_1_page_1);
         frame_25->setObjectName(QStringLiteral("frame_25"));
-        sizePolicy4.setHeightForWidth(frame_25->sizePolicy().hasHeightForWidth());
-        frame_25->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_25->sizePolicy().hasHeightForWidth());
+        frame_25->setSizePolicy(sizePolicy2);
         frame_25->setFrameShape(QFrame::NoFrame);
         frame_25->setFrameShadow(QFrame::Raised);
         verticalLayout_24 = new QVBoxLayout(frame_25);
@@ -5205,10 +5208,10 @@ public:
         horizontalLayout_155->setContentsMargins(1, 1, 1, 1);
         label_29 = new QLabel(fr_column_0_25);
         label_29->setObjectName(QStringLiteral("label_29"));
-        sizePolicy3.setHeightForWidth(label_29->sizePolicy().hasHeightForWidth());
-        label_29->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_29->sizePolicy().hasHeightForWidth());
+        label_29->setSizePolicy(sizePolicy4);
         label_29->setMinimumSize(QSize(0, 15));
-        label_29->setFont(font1);
+        label_29->setFont(font2);
         label_29->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_155->addWidget(label_29);
@@ -5300,7 +5303,7 @@ public:
         lineE_elem_block_4_7_page_1->setSizePolicy(sizePolicy5);
         lineE_elem_block_4_7_page_1->setMinimumSize(QSize(50, 16));
         lineE_elem_block_4_7_page_1->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_4_7_page_1->setFont(font3);
+        lineE_elem_block_4_7_page_1->setFont(font4);
         lineE_elem_block_4_7_page_1->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_159->addWidget(lineE_elem_block_4_7_page_1);
@@ -5355,7 +5358,7 @@ public:
         la_block_1_0_page_2->setObjectName(QStringLiteral("la_block_1_0_page_2"));
         sizePolicy1.setHeightForWidth(la_block_1_0_page_2->sizePolicy().hasHeightForWidth());
         la_block_1_0_page_2->setSizePolicy(sizePolicy1);
-        la_block_1_0_page_2->setFont(font);
+        la_block_1_0_page_2->setFont(font1);
         la_block_1_0_page_2->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_40->addWidget(la_block_1_0_page_2, 1, 0, 1, 1);
@@ -5370,8 +5373,8 @@ public:
         gridLayout_21->setContentsMargins(1, 1, 1, 1);
         frame_26 = new QFrame(fr_block_1_1_page_4);
         frame_26->setObjectName(QStringLiteral("frame_26"));
-        sizePolicy2.setHeightForWidth(frame_26->sizePolicy().hasHeightForWidth());
-        frame_26->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_26->sizePolicy().hasHeightForWidth());
+        frame_26->setSizePolicy(sizePolicy3);
         frame_26->setMinimumSize(QSize(107, 0));
         frame_26->setFrameShape(QFrame::NoFrame);
         frame_26->setFrameShadow(QFrame::Raised);
@@ -5393,10 +5396,10 @@ public:
         horizontalLayout_313->setContentsMargins(1, 1, 1, 1);
         label_53 = new QLabel(fr_column_0_46);
         label_53->setObjectName(QStringLiteral("label_53"));
-        sizePolicy3.setHeightForWidth(label_53->sizePolicy().hasHeightForWidth());
-        label_53->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_53->sizePolicy().hasHeightForWidth());
+        label_53->setSizePolicy(sizePolicy4);
         label_53->setMinimumSize(QSize(30, 15));
-        label_53->setFont(font1);
+        label_53->setFont(font2);
 
         horizontalLayout_313->addWidget(label_53);
 
@@ -5450,8 +5453,8 @@ public:
 
         frame_67 = new QFrame(fr_block_1_1_page_4);
         frame_67->setObjectName(QStringLiteral("frame_67"));
-        sizePolicy4.setHeightForWidth(frame_67->sizePolicy().hasHeightForWidth());
-        frame_67->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_67->sizePolicy().hasHeightForWidth());
+        frame_67->setSizePolicy(sizePolicy2);
         frame_67->setMinimumSize(QSize(98, 0));
         frame_67->setFrameShape(QFrame::NoFrame);
         frame_67->setFrameShadow(QFrame::Raised);
@@ -5473,10 +5476,10 @@ public:
         horizontalLayout_314->setContentsMargins(1, 1, 1, 1);
         label_54 = new QLabel(fr_column_0_47);
         label_54->setObjectName(QStringLiteral("label_54"));
-        sizePolicy2.setHeightForWidth(label_54->sizePolicy().hasHeightForWidth());
-        label_54->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_54->sizePolicy().hasHeightForWidth());
+        label_54->setSizePolicy(sizePolicy3);
         label_54->setMinimumSize(QSize(30, 15));
-        label_54->setFont(font1);
+        label_54->setFont(font2);
         label_54->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_314->addWidget(label_54);
@@ -5493,8 +5496,8 @@ public:
 
         frame_68 = new QFrame(fr_block_1_1_page_4);
         frame_68->setObjectName(QStringLiteral("frame_68"));
-        sizePolicy4.setHeightForWidth(frame_68->sizePolicy().hasHeightForWidth());
-        frame_68->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_68->sizePolicy().hasHeightForWidth());
+        frame_68->setSizePolicy(sizePolicy2);
         frame_68->setFrameShape(QFrame::NoFrame);
         frame_68->setFrameShadow(QFrame::Raised);
         verticalLayout_27 = new QVBoxLayout(frame_68);
@@ -5516,7 +5519,7 @@ public:
         label_30 = new QLabel(fr_column_0_26);
         label_30->setObjectName(QStringLiteral("label_30"));
         label_30->setMinimumSize(QSize(30, 15));
-        label_30->setFont(font1);
+        label_30->setFont(font2);
         label_30->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_160->addWidget(label_30);
@@ -5552,8 +5555,8 @@ public:
 
         label_55 = new QLabel(frame_69);
         label_55->setObjectName(QStringLiteral("label_55"));
-        sizePolicy4.setHeightForWidth(label_55->sizePolicy().hasHeightForWidth());
-        label_55->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(label_55->sizePolicy().hasHeightForWidth());
+        label_55->setSizePolicy(sizePolicy2);
         label_55->setMinimumSize(QSize(14, 16));
 
         horizontalLayout_15->addWidget(label_55);
@@ -5583,10 +5586,10 @@ public:
 
         la_elem_block_1_2_page_2 = new QLabel(frame_70);
         la_elem_block_1_2_page_2->setObjectName(QStringLiteral("la_elem_block_1_2_page_2"));
-        sizePolicy4.setHeightForWidth(la_elem_block_1_2_page_2->sizePolicy().hasHeightForWidth());
-        la_elem_block_1_2_page_2->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(la_elem_block_1_2_page_2->sizePolicy().hasHeightForWidth());
+        la_elem_block_1_2_page_2->setSizePolicy(sizePolicy2);
         la_elem_block_1_2_page_2->setMinimumSize(QSize(14, 16));
-        la_elem_block_1_2_page_2->setFont(font2);
+        la_elem_block_1_2_page_2->setFont(font3);
 
         horizontalLayout_16->addWidget(la_elem_block_1_2_page_2);
 
@@ -5625,8 +5628,8 @@ public:
         gridLayout_23->setContentsMargins(1, 1, 1, 1);
         frame_27 = new QFrame(fr_block_1_1_1_page_2);
         frame_27->setObjectName(QStringLiteral("frame_27"));
-        sizePolicy2.setHeightForWidth(frame_27->sizePolicy().hasHeightForWidth());
-        frame_27->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_27->sizePolicy().hasHeightForWidth());
+        frame_27->setSizePolicy(sizePolicy3);
         frame_27->setFrameShape(QFrame::NoFrame);
         frame_27->setFrameShadow(QFrame::Raised);
         verticalLayout_28 = new QVBoxLayout(frame_27);
@@ -5647,11 +5650,11 @@ public:
         horizontalLayout_161->setContentsMargins(1, 1, 1, 1);
         label_31 = new QLabel(fr_column_0_27);
         label_31->setObjectName(QStringLiteral("label_31"));
-        sizePolicy3.setHeightForWidth(label_31->sizePolicy().hasHeightForWidth());
-        label_31->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_31->sizePolicy().hasHeightForWidth());
+        label_31->setSizePolicy(sizePolicy4);
         label_31->setMinimumSize(QSize(100, 15));
         label_31->setMaximumSize(QSize(16777215, 15));
-        label_31->setFont(font1);
+        label_31->setFont(font2);
 
         horizontalLayout_161->addWidget(label_31);
 
@@ -5785,7 +5788,7 @@ public:
         la_elem_block_2_6_page_2->setObjectName(QStringLiteral("la_elem_block_2_6_page_2"));
         la_elem_block_2_6_page_2->setMinimumSize(QSize(120, 16));
         la_elem_block_2_6_page_2->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_2_6_page_2->setFont(font2);
+        la_elem_block_2_6_page_2->setFont(font3);
 
         horizontalLayout_168->addWidget(la_elem_block_2_6_page_2);
 
@@ -5801,8 +5804,8 @@ public:
 
         frame_28 = new QFrame(fr_block_1_1_1_page_2);
         frame_28->setObjectName(QStringLiteral("frame_28"));
-        sizePolicy4.setHeightForWidth(frame_28->sizePolicy().hasHeightForWidth());
-        frame_28->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_28->sizePolicy().hasHeightForWidth());
+        frame_28->setSizePolicy(sizePolicy2);
         frame_28->setFrameShape(QFrame::NoFrame);
         frame_28->setFrameShadow(QFrame::Raised);
         verticalLayout_29 = new QVBoxLayout(frame_28);
@@ -5824,7 +5827,7 @@ public:
         label_32 = new QLabel(fr_column_0_28);
         label_32->setObjectName(QStringLiteral("label_32"));
         label_32->setMinimumSize(QSize(0, 15));
-        label_32->setFont(font1);
+        label_32->setFont(font2);
         label_32->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_169->addWidget(label_32);
@@ -5979,7 +5982,7 @@ public:
         lineE_elem_block_2_6_page_2->setSizePolicy(sizePolicy5);
         lineE_elem_block_2_6_page_2->setMinimumSize(QSize(50, 16));
         lineE_elem_block_2_6_page_2->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_2_6_page_2->setFont(font3);
+        lineE_elem_block_2_6_page_2->setFont(font4);
         lineE_elem_block_2_6_page_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_176->addWidget(lineE_elem_block_2_6_page_2);
@@ -5996,8 +5999,8 @@ public:
 
         frame_29 = new QFrame(fr_block_1_1_1_page_2);
         frame_29->setObjectName(QStringLiteral("frame_29"));
-        sizePolicy4.setHeightForWidth(frame_29->sizePolicy().hasHeightForWidth());
-        frame_29->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_29->sizePolicy().hasHeightForWidth());
+        frame_29->setSizePolicy(sizePolicy2);
         frame_29->setFrameShape(QFrame::NoFrame);
         frame_29->setFrameShadow(QFrame::Raised);
         verticalLayout_30 = new QVBoxLayout(frame_29);
@@ -6019,7 +6022,7 @@ public:
         label_33 = new QLabel(fr_column_0_29);
         label_33->setObjectName(QStringLiteral("label_33"));
         label_33->setMinimumSize(QSize(0, 15));
-        label_33->setFont(font1);
+        label_33->setFont(font2);
         label_33->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_177->addWidget(label_33);
@@ -6174,7 +6177,7 @@ public:
         lineE_elem_block_2_13_page_2->setSizePolicy(sizePolicy5);
         lineE_elem_block_2_13_page_2->setMinimumSize(QSize(50, 16));
         lineE_elem_block_2_13_page_2->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_2_13_page_2->setFont(font3);
+        lineE_elem_block_2_13_page_2->setFont(font4);
         lineE_elem_block_2_13_page_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_184->addWidget(lineE_elem_block_2_13_page_2);
@@ -6196,7 +6199,7 @@ public:
         la_block_1_1_page_2->setObjectName(QStringLiteral("la_block_1_1_page_2"));
         sizePolicy1.setHeightForWidth(la_block_1_1_page_2->sizePolicy().hasHeightForWidth());
         la_block_1_1_page_2->setSizePolicy(sizePolicy1);
-        la_block_1_1_page_2->setFont(font);
+        la_block_1_1_page_2->setFont(font1);
         la_block_1_1_page_2->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_22->addWidget(la_block_1_1_page_2, 0, 0, 1, 1);
@@ -6217,7 +6220,7 @@ public:
         la_block_1_2_page_2->setObjectName(QStringLiteral("la_block_1_2_page_2"));
         sizePolicy1.setHeightForWidth(la_block_1_2_page_2->sizePolicy().hasHeightForWidth());
         la_block_1_2_page_2->setSizePolicy(sizePolicy1);
-        la_block_1_2_page_2->setFont(font);
+        la_block_1_2_page_2->setFont(font1);
         la_block_1_2_page_2->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_24->addWidget(la_block_1_2_page_2, 0, 0, 1, 1);
@@ -6232,8 +6235,8 @@ public:
         gridLayout_25->setContentsMargins(1, 1, 1, 1);
         frame_30 = new QFrame(fr_block_1_2_1_page_2);
         frame_30->setObjectName(QStringLiteral("frame_30"));
-        sizePolicy2.setHeightForWidth(frame_30->sizePolicy().hasHeightForWidth());
-        frame_30->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_30->sizePolicy().hasHeightForWidth());
+        frame_30->setSizePolicy(sizePolicy3);
         frame_30->setFrameShape(QFrame::NoFrame);
         frame_30->setFrameShadow(QFrame::Raised);
         verticalLayout_31 = new QVBoxLayout(frame_30);
@@ -6254,10 +6257,10 @@ public:
         horizontalLayout_185->setContentsMargins(1, 1, 1, 1);
         label_34 = new QLabel(fr_column_0_30);
         label_34->setObjectName(QStringLiteral("label_34"));
-        sizePolicy3.setHeightForWidth(label_34->sizePolicy().hasHeightForWidth());
-        label_34->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_34->sizePolicy().hasHeightForWidth());
+        label_34->setSizePolicy(sizePolicy4);
         label_34->setMinimumSize(QSize(100, 15));
-        label_34->setFont(font1);
+        label_34->setFont(font2);
 
         horizontalLayout_185->addWidget(label_34);
 
@@ -6427,7 +6430,7 @@ public:
         la_elem_block_3_8_page_2->setObjectName(QStringLiteral("la_elem_block_3_8_page_2"));
         la_elem_block_3_8_page_2->setMinimumSize(QSize(100, 16));
         la_elem_block_3_8_page_2->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_3_8_page_2->setFont(font2);
+        la_elem_block_3_8_page_2->setFont(font3);
 
         horizontalLayout_194->addWidget(la_elem_block_3_8_page_2);
 
@@ -6443,8 +6446,8 @@ public:
 
         frame_31 = new QFrame(fr_block_1_2_1_page_2);
         frame_31->setObjectName(QStringLiteral("frame_31"));
-        sizePolicy4.setHeightForWidth(frame_31->sizePolicy().hasHeightForWidth());
-        frame_31->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_31->sizePolicy().hasHeightForWidth());
+        frame_31->setSizePolicy(sizePolicy2);
         frame_31->setFrameShape(QFrame::NoFrame);
         frame_31->setFrameShadow(QFrame::Raised);
         verticalLayout_32 = new QVBoxLayout(frame_31);
@@ -6466,7 +6469,7 @@ public:
         label_35 = new QLabel(fr_column_0_31);
         label_35->setObjectName(QStringLiteral("label_35"));
         label_35->setMinimumSize(QSize(0, 15));
-        label_35->setFont(font1);
+        label_35->setFont(font2);
         label_35->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_195->addWidget(label_35);
@@ -6663,7 +6666,7 @@ public:
         lineE_elem_block_3_8_page_2->setSizePolicy(sizePolicy5);
         lineE_elem_block_3_8_page_2->setMinimumSize(QSize(50, 16));
         lineE_elem_block_3_8_page_2->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_3_8_page_2->setFont(font3);
+        lineE_elem_block_3_8_page_2->setFont(font4);
         lineE_elem_block_3_8_page_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_204->addWidget(lineE_elem_block_3_8_page_2);
@@ -6680,8 +6683,8 @@ public:
 
         frame_32 = new QFrame(fr_block_1_2_1_page_2);
         frame_32->setObjectName(QStringLiteral("frame_32"));
-        sizePolicy4.setHeightForWidth(frame_32->sizePolicy().hasHeightForWidth());
-        frame_32->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_32->sizePolicy().hasHeightForWidth());
+        frame_32->setSizePolicy(sizePolicy2);
         frame_32->setFrameShape(QFrame::NoFrame);
         frame_32->setFrameShadow(QFrame::Raised);
         verticalLayout_33 = new QVBoxLayout(frame_32);
@@ -6703,7 +6706,7 @@ public:
         label_36 = new QLabel(fr_column_0_32);
         label_36->setObjectName(QStringLiteral("label_36"));
         label_36->setMinimumSize(QSize(0, 15));
-        label_36->setFont(font1);
+        label_36->setFont(font2);
         label_36->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_205->addWidget(label_36);
@@ -6901,7 +6904,7 @@ public:
         lineE_elem_block_3_17_page_2->setSizePolicy(sizePolicy5);
         lineE_elem_block_3_17_page_2->setMinimumSize(QSize(50, 16));
         lineE_elem_block_3_17_page_2->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_3_17_page_2->setFont(font3);
+        lineE_elem_block_3_17_page_2->setFont(font4);
         lineE_elem_block_3_17_page_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_214->addWidget(lineE_elem_block_3_17_page_2);
@@ -6935,7 +6938,7 @@ public:
         la_block_1_3_page_2->setObjectName(QStringLiteral("la_block_1_3_page_2"));
         sizePolicy1.setHeightForWidth(la_block_1_3_page_2->sizePolicy().hasHeightForWidth());
         la_block_1_3_page_2->setSizePolicy(sizePolicy1);
-        la_block_1_3_page_2->setFont(font);
+        la_block_1_3_page_2->setFont(font1);
         la_block_1_3_page_2->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_26->addWidget(la_block_1_3_page_2, 0, 0, 1, 1);
@@ -6950,8 +6953,8 @@ public:
         gridLayout_27->setContentsMargins(1, 1, 1, 1);
         frame_33 = new QFrame(fr_block_1_3_1_page_2);
         frame_33->setObjectName(QStringLiteral("frame_33"));
-        sizePolicy2.setHeightForWidth(frame_33->sizePolicy().hasHeightForWidth());
-        frame_33->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_33->sizePolicy().hasHeightForWidth());
+        frame_33->setSizePolicy(sizePolicy3);
         frame_33->setFrameShape(QFrame::NoFrame);
         frame_33->setFrameShadow(QFrame::Raised);
         verticalLayout_34 = new QVBoxLayout(frame_33);
@@ -6972,11 +6975,11 @@ public:
         horizontalLayout_215->setContentsMargins(1, 1, 1, 1);
         label_37 = new QLabel(fr_column_0_33);
         label_37->setObjectName(QStringLiteral("label_37"));
-        sizePolicy2.setHeightForWidth(label_37->sizePolicy().hasHeightForWidth());
-        label_37->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_37->sizePolicy().hasHeightForWidth());
+        label_37->setSizePolicy(sizePolicy3);
         label_37->setMinimumSize(QSize(100, 15));
         label_37->setMaximumSize(QSize(999, 15));
-        label_37->setFont(font1);
+        label_37->setFont(font2);
 
         horizontalLayout_215->addWidget(label_37);
 
@@ -7056,7 +7059,7 @@ public:
         la_elem_block_4_3_page_2->setObjectName(QStringLiteral("la_elem_block_4_3_page_2"));
         la_elem_block_4_3_page_2->setMinimumSize(QSize(120, 16));
         la_elem_block_4_3_page_2->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_4_3_page_2->setFont(font2);
+        la_elem_block_4_3_page_2->setFont(font3);
 
         horizontalLayout_219->addWidget(la_elem_block_4_3_page_2);
 
@@ -7072,8 +7075,8 @@ public:
 
         frame_34 = new QFrame(fr_block_1_3_1_page_2);
         frame_34->setObjectName(QStringLiteral("frame_34"));
-        sizePolicy4.setHeightForWidth(frame_34->sizePolicy().hasHeightForWidth());
-        frame_34->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_34->sizePolicy().hasHeightForWidth());
+        frame_34->setSizePolicy(sizePolicy2);
         frame_34->setFrameShape(QFrame::NoFrame);
         frame_34->setFrameShadow(QFrame::Raised);
         verticalLayout_35 = new QVBoxLayout(frame_34);
@@ -7094,10 +7097,10 @@ public:
         horizontalLayout_220->setContentsMargins(1, 1, 1, 1);
         label_38 = new QLabel(fr_column_0_34);
         label_38->setObjectName(QStringLiteral("label_38"));
-        sizePolicy2.setHeightForWidth(label_38->sizePolicy().hasHeightForWidth());
-        label_38->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_38->sizePolicy().hasHeightForWidth());
+        label_38->setSizePolicy(sizePolicy3);
         label_38->setMinimumSize(QSize(0, 15));
-        label_38->setFont(font1);
+        label_38->setFont(font2);
         label_38->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_220->addWidget(label_38);
@@ -7189,7 +7192,7 @@ public:
         lineE_elem_block_4_3_page_2->setSizePolicy(sizePolicy);
         lineE_elem_block_4_3_page_2->setMinimumSize(QSize(50, 16));
         lineE_elem_block_4_3_page_2->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_4_3_page_2->setFont(font3);
+        lineE_elem_block_4_3_page_2->setFont(font4);
         lineE_elem_block_4_3_page_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_224->addWidget(lineE_elem_block_4_3_page_2);
@@ -7206,8 +7209,8 @@ public:
 
         frame_35 = new QFrame(fr_block_1_3_1_page_2);
         frame_35->setObjectName(QStringLiteral("frame_35"));
-        sizePolicy4.setHeightForWidth(frame_35->sizePolicy().hasHeightForWidth());
-        frame_35->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_35->sizePolicy().hasHeightForWidth());
+        frame_35->setSizePolicy(sizePolicy2);
         frame_35->setFrameShape(QFrame::NoFrame);
         frame_35->setFrameShadow(QFrame::Raised);
         verticalLayout_36 = new QVBoxLayout(frame_35);
@@ -7228,10 +7231,10 @@ public:
         horizontalLayout_225->setContentsMargins(1, 1, 1, 1);
         label_39 = new QLabel(fr_column_0_35);
         label_39->setObjectName(QStringLiteral("label_39"));
-        sizePolicy3.setHeightForWidth(label_39->sizePolicy().hasHeightForWidth());
-        label_39->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_39->sizePolicy().hasHeightForWidth());
+        label_39->setSizePolicy(sizePolicy4);
         label_39->setMinimumSize(QSize(0, 15));
-        label_39->setFont(font1);
+        label_39->setFont(font2);
         label_39->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_225->addWidget(label_39);
@@ -7323,7 +7326,7 @@ public:
         lineE_elem_block_4_7_page_2->setSizePolicy(sizePolicy5);
         lineE_elem_block_4_7_page_2->setMinimumSize(QSize(50, 16));
         lineE_elem_block_4_7_page_2->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_4_7_page_2->setFont(font3);
+        lineE_elem_block_4_7_page_2->setFont(font4);
         lineE_elem_block_4_7_page_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_229->addWidget(lineE_elem_block_4_7_page_2);
@@ -7378,7 +7381,13 @@ public:
         la_block_1_0_page_3->setObjectName(QStringLiteral("la_block_1_0_page_3"));
         sizePolicy1.setHeightForWidth(la_block_1_0_page_3->sizePolicy().hasHeightForWidth());
         la_block_1_0_page_3->setSizePolicy(sizePolicy1);
-        la_block_1_0_page_3->setFont(font);
+        QFont font5;
+        font5.setFamily(QStringLiteral("Arial"));
+        font5.setPointSize(10);
+        font5.setBold(true);
+        font5.setItalic(false);
+        font5.setWeight(75);
+        la_block_1_0_page_3->setFont(font5);
         la_block_1_0_page_3->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_41->addWidget(la_block_1_0_page_3, 1, 0, 1, 1);
@@ -7393,8 +7402,8 @@ public:
         gridLayout_30->setContentsMargins(1, 1, 1, 1);
         frame_36 = new QFrame(fr_block_1_1_page_6);
         frame_36->setObjectName(QStringLiteral("frame_36"));
-        sizePolicy2.setHeightForWidth(frame_36->sizePolicy().hasHeightForWidth());
-        frame_36->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_36->sizePolicy().hasHeightForWidth());
+        frame_36->setSizePolicy(sizePolicy3);
         frame_36->setMinimumSize(QSize(107, 0));
         frame_36->setFrameShape(QFrame::NoFrame);
         frame_36->setFrameShadow(QFrame::Raised);
@@ -7416,10 +7425,10 @@ public:
         horizontalLayout_315->setContentsMargins(1, 1, 1, 1);
         label_56 = new QLabel(fr_column_0_48);
         label_56->setObjectName(QStringLiteral("label_56"));
-        sizePolicy3.setHeightForWidth(label_56->sizePolicy().hasHeightForWidth());
-        label_56->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_56->sizePolicy().hasHeightForWidth());
+        label_56->setSizePolicy(sizePolicy4);
         label_56->setMinimumSize(QSize(30, 15));
-        label_56->setFont(font1);
+        label_56->setFont(font2);
 
         horizontalLayout_315->addWidget(label_56);
 
@@ -7473,8 +7482,8 @@ public:
 
         frame_72 = new QFrame(fr_block_1_1_page_6);
         frame_72->setObjectName(QStringLiteral("frame_72"));
-        sizePolicy4.setHeightForWidth(frame_72->sizePolicy().hasHeightForWidth());
-        frame_72->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_72->sizePolicy().hasHeightForWidth());
+        frame_72->setSizePolicy(sizePolicy2);
         frame_72->setMinimumSize(QSize(98, 0));
         frame_72->setFrameShape(QFrame::NoFrame);
         frame_72->setFrameShadow(QFrame::Raised);
@@ -7496,10 +7505,10 @@ public:
         horizontalLayout_316->setContentsMargins(1, 1, 1, 1);
         label_57 = new QLabel(fr_column_0_49);
         label_57->setObjectName(QStringLiteral("label_57"));
-        sizePolicy2.setHeightForWidth(label_57->sizePolicy().hasHeightForWidth());
-        label_57->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_57->sizePolicy().hasHeightForWidth());
+        label_57->setSizePolicy(sizePolicy3);
         label_57->setMinimumSize(QSize(30, 15));
-        label_57->setFont(font1);
+        label_57->setFont(font2);
         label_57->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_316->addWidget(label_57);
@@ -7516,8 +7525,8 @@ public:
 
         frame_73 = new QFrame(fr_block_1_1_page_6);
         frame_73->setObjectName(QStringLiteral("frame_73"));
-        sizePolicy4.setHeightForWidth(frame_73->sizePolicy().hasHeightForWidth());
-        frame_73->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_73->sizePolicy().hasHeightForWidth());
+        frame_73->setSizePolicy(sizePolicy2);
         frame_73->setFrameShape(QFrame::NoFrame);
         frame_73->setFrameShadow(QFrame::Raised);
         verticalLayout_39 = new QVBoxLayout(frame_73);
@@ -7539,7 +7548,7 @@ public:
         label_40 = new QLabel(fr_column_0_36);
         label_40->setObjectName(QStringLiteral("label_40"));
         label_40->setMinimumSize(QSize(30, 15));
-        label_40->setFont(font1);
+        label_40->setFont(font2);
         label_40->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_230->addWidget(label_40);
@@ -7575,8 +7584,8 @@ public:
 
         label_58 = new QLabel(frame_74);
         label_58->setObjectName(QStringLiteral("label_58"));
-        sizePolicy4.setHeightForWidth(label_58->sizePolicy().hasHeightForWidth());
-        label_58->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(label_58->sizePolicy().hasHeightForWidth());
+        label_58->setSizePolicy(sizePolicy2);
         label_58->setMinimumSize(QSize(14, 16));
 
         horizontalLayout_19->addWidget(label_58);
@@ -7606,10 +7615,10 @@ public:
 
         la_elem_block_1_2_page_3 = new QLabel(frame_75);
         la_elem_block_1_2_page_3->setObjectName(QStringLiteral("la_elem_block_1_2_page_3"));
-        sizePolicy4.setHeightForWidth(la_elem_block_1_2_page_3->sizePolicy().hasHeightForWidth());
-        la_elem_block_1_2_page_3->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(la_elem_block_1_2_page_3->sizePolicy().hasHeightForWidth());
+        la_elem_block_1_2_page_3->setSizePolicy(sizePolicy2);
         la_elem_block_1_2_page_3->setMinimumSize(QSize(14, 16));
-        la_elem_block_1_2_page_3->setFont(font2);
+        la_elem_block_1_2_page_3->setFont(font3);
 
         horizontalLayout_231->addWidget(la_elem_block_1_2_page_3);
 
@@ -7648,8 +7657,8 @@ public:
         gridLayout_32->setContentsMargins(1, 1, 1, 1);
         frame_38 = new QFrame(fr_block_1_1_1_page_3);
         frame_38->setObjectName(QStringLiteral("frame_38"));
-        sizePolicy2.setHeightForWidth(frame_38->sizePolicy().hasHeightForWidth());
-        frame_38->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_38->sizePolicy().hasHeightForWidth());
+        frame_38->setSizePolicy(sizePolicy3);
         frame_38->setFrameShape(QFrame::NoFrame);
         frame_38->setFrameShadow(QFrame::Raised);
         verticalLayout_40 = new QVBoxLayout(frame_38);
@@ -7670,11 +7679,11 @@ public:
         horizontalLayout_232->setContentsMargins(1, 1, 1, 1);
         label_41 = new QLabel(fr_column_0_37);
         label_41->setObjectName(QStringLiteral("label_41"));
-        sizePolicy3.setHeightForWidth(label_41->sizePolicy().hasHeightForWidth());
-        label_41->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_41->sizePolicy().hasHeightForWidth());
+        label_41->setSizePolicy(sizePolicy4);
         label_41->setMinimumSize(QSize(100, 15));
         label_41->setMaximumSize(QSize(16777215, 15));
-        label_41->setFont(font1);
+        label_41->setFont(font2);
 
         horizontalLayout_232->addWidget(label_41);
 
@@ -7808,7 +7817,7 @@ public:
         la_elem_block_2_6_page_3->setObjectName(QStringLiteral("la_elem_block_2_6_page_3"));
         la_elem_block_2_6_page_3->setMinimumSize(QSize(120, 16));
         la_elem_block_2_6_page_3->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_2_6_page_3->setFont(font2);
+        la_elem_block_2_6_page_3->setFont(font3);
 
         horizontalLayout_239->addWidget(la_elem_block_2_6_page_3);
 
@@ -7824,8 +7833,8 @@ public:
 
         frame_39 = new QFrame(fr_block_1_1_1_page_3);
         frame_39->setObjectName(QStringLiteral("frame_39"));
-        sizePolicy4.setHeightForWidth(frame_39->sizePolicy().hasHeightForWidth());
-        frame_39->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_39->sizePolicy().hasHeightForWidth());
+        frame_39->setSizePolicy(sizePolicy2);
         frame_39->setFrameShape(QFrame::NoFrame);
         frame_39->setFrameShadow(QFrame::Raised);
         verticalLayout_41 = new QVBoxLayout(frame_39);
@@ -7847,7 +7856,7 @@ public:
         label_42 = new QLabel(fr_column_0_38);
         label_42->setObjectName(QStringLiteral("label_42"));
         label_42->setMinimumSize(QSize(0, 15));
-        label_42->setFont(font1);
+        label_42->setFont(font2);
         label_42->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_240->addWidget(label_42);
@@ -8002,7 +8011,7 @@ public:
         lineE_elem_block_2_6_page_3->setSizePolicy(sizePolicy5);
         lineE_elem_block_2_6_page_3->setMinimumSize(QSize(50, 16));
         lineE_elem_block_2_6_page_3->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_2_6_page_3->setFont(font3);
+        lineE_elem_block_2_6_page_3->setFont(font4);
         lineE_elem_block_2_6_page_3->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_247->addWidget(lineE_elem_block_2_6_page_3);
@@ -8019,8 +8028,8 @@ public:
 
         frame_40 = new QFrame(fr_block_1_1_1_page_3);
         frame_40->setObjectName(QStringLiteral("frame_40"));
-        sizePolicy4.setHeightForWidth(frame_40->sizePolicy().hasHeightForWidth());
-        frame_40->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_40->sizePolicy().hasHeightForWidth());
+        frame_40->setSizePolicy(sizePolicy2);
         frame_40->setFrameShape(QFrame::NoFrame);
         frame_40->setFrameShadow(QFrame::Raised);
         verticalLayout_42 = new QVBoxLayout(frame_40);
@@ -8042,7 +8051,7 @@ public:
         label_43 = new QLabel(fr_column_0_39);
         label_43->setObjectName(QStringLiteral("label_43"));
         label_43->setMinimumSize(QSize(0, 15));
-        label_43->setFont(font1);
+        label_43->setFont(font2);
         label_43->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_248->addWidget(label_43);
@@ -8197,7 +8206,7 @@ public:
         lineE_elem_block_2_13_page_3->setSizePolicy(sizePolicy5);
         lineE_elem_block_2_13_page_3->setMinimumSize(QSize(50, 16));
         lineE_elem_block_2_13_page_3->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_2_13_page_3->setFont(font3);
+        lineE_elem_block_2_13_page_3->setFont(font4);
         lineE_elem_block_2_13_page_3->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_255->addWidget(lineE_elem_block_2_13_page_3);
@@ -8219,7 +8228,7 @@ public:
         la_block_1_1_page_3->setObjectName(QStringLiteral("la_block_1_1_page_3"));
         sizePolicy1.setHeightForWidth(la_block_1_1_page_3->sizePolicy().hasHeightForWidth());
         la_block_1_1_page_3->setSizePolicy(sizePolicy1);
-        la_block_1_1_page_3->setFont(font);
+        la_block_1_1_page_3->setFont(font1);
         la_block_1_1_page_3->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_31->addWidget(la_block_1_1_page_3, 0, 0, 1, 1);
@@ -8240,7 +8249,7 @@ public:
         la_block_1_2_page_3->setObjectName(QStringLiteral("la_block_1_2_page_3"));
         sizePolicy1.setHeightForWidth(la_block_1_2_page_3->sizePolicy().hasHeightForWidth());
         la_block_1_2_page_3->setSizePolicy(sizePolicy1);
-        la_block_1_2_page_3->setFont(font);
+        la_block_1_2_page_3->setFont(font1);
         la_block_1_2_page_3->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_33->addWidget(la_block_1_2_page_3, 0, 0, 1, 1);
@@ -8255,8 +8264,8 @@ public:
         gridLayout_34->setContentsMargins(1, 1, 1, 1);
         frame_41 = new QFrame(fr_block_1_2_1_page_3);
         frame_41->setObjectName(QStringLiteral("frame_41"));
-        sizePolicy2.setHeightForWidth(frame_41->sizePolicy().hasHeightForWidth());
-        frame_41->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_41->sizePolicy().hasHeightForWidth());
+        frame_41->setSizePolicy(sizePolicy3);
         frame_41->setFrameShape(QFrame::NoFrame);
         frame_41->setFrameShadow(QFrame::Raised);
         verticalLayout_43 = new QVBoxLayout(frame_41);
@@ -8277,10 +8286,10 @@ public:
         horizontalLayout_256->setContentsMargins(1, 1, 1, 1);
         label_44 = new QLabel(fr_column_0_40);
         label_44->setObjectName(QStringLiteral("label_44"));
-        sizePolicy3.setHeightForWidth(label_44->sizePolicy().hasHeightForWidth());
-        label_44->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_44->sizePolicy().hasHeightForWidth());
+        label_44->setSizePolicy(sizePolicy4);
         label_44->setMinimumSize(QSize(100, 15));
-        label_44->setFont(font1);
+        label_44->setFont(font2);
 
         horizontalLayout_256->addWidget(label_44);
 
@@ -8450,7 +8459,7 @@ public:
         la_elem_block_3_8_page_3->setObjectName(QStringLiteral("la_elem_block_3_8_page_3"));
         la_elem_block_3_8_page_3->setMinimumSize(QSize(100, 16));
         la_elem_block_3_8_page_3->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_3_8_page_3->setFont(font2);
+        la_elem_block_3_8_page_3->setFont(font3);
 
         horizontalLayout_265->addWidget(la_elem_block_3_8_page_3);
 
@@ -8466,8 +8475,8 @@ public:
 
         frame_42 = new QFrame(fr_block_1_2_1_page_3);
         frame_42->setObjectName(QStringLiteral("frame_42"));
-        sizePolicy4.setHeightForWidth(frame_42->sizePolicy().hasHeightForWidth());
-        frame_42->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_42->sizePolicy().hasHeightForWidth());
+        frame_42->setSizePolicy(sizePolicy2);
         frame_42->setFrameShape(QFrame::NoFrame);
         frame_42->setFrameShadow(QFrame::Raised);
         verticalLayout_44 = new QVBoxLayout(frame_42);
@@ -8489,7 +8498,7 @@ public:
         label_45 = new QLabel(fr_column_0_41);
         label_45->setObjectName(QStringLiteral("label_45"));
         label_45->setMinimumSize(QSize(0, 15));
-        label_45->setFont(font1);
+        label_45->setFont(font2);
         label_45->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_266->addWidget(label_45);
@@ -8686,7 +8695,7 @@ public:
         lineE_elem_block_3_8_page_3->setSizePolicy(sizePolicy5);
         lineE_elem_block_3_8_page_3->setMinimumSize(QSize(50, 16));
         lineE_elem_block_3_8_page_3->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_3_8_page_3->setFont(font3);
+        lineE_elem_block_3_8_page_3->setFont(font4);
         lineE_elem_block_3_8_page_3->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_275->addWidget(lineE_elem_block_3_8_page_3);
@@ -8703,8 +8712,8 @@ public:
 
         frame_43 = new QFrame(fr_block_1_2_1_page_3);
         frame_43->setObjectName(QStringLiteral("frame_43"));
-        sizePolicy4.setHeightForWidth(frame_43->sizePolicy().hasHeightForWidth());
-        frame_43->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_43->sizePolicy().hasHeightForWidth());
+        frame_43->setSizePolicy(sizePolicy2);
         frame_43->setFrameShape(QFrame::NoFrame);
         frame_43->setFrameShadow(QFrame::Raised);
         verticalLayout_45 = new QVBoxLayout(frame_43);
@@ -8726,7 +8735,7 @@ public:
         label_46 = new QLabel(fr_column_0_50);
         label_46->setObjectName(QStringLiteral("label_46"));
         label_46->setMinimumSize(QSize(0, 15));
-        label_46->setFont(font1);
+        label_46->setFont(font2);
         label_46->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_276->addWidget(label_46);
@@ -8924,7 +8933,7 @@ public:
         lineE_elem_block_3_17_page_3->setSizePolicy(sizePolicy5);
         lineE_elem_block_3_17_page_3->setMinimumSize(QSize(50, 16));
         lineE_elem_block_3_17_page_3->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_3_17_page_3->setFont(font3);
+        lineE_elem_block_3_17_page_3->setFont(font4);
         lineE_elem_block_3_17_page_3->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_285->addWidget(lineE_elem_block_3_17_page_3);
@@ -8958,7 +8967,7 @@ public:
         la_block_1_3_page_3->setObjectName(QStringLiteral("la_block_1_3_page_3"));
         sizePolicy1.setHeightForWidth(la_block_1_3_page_3->sizePolicy().hasHeightForWidth());
         la_block_1_3_page_3->setSizePolicy(sizePolicy1);
-        la_block_1_3_page_3->setFont(font);
+        la_block_1_3_page_3->setFont(font1);
         la_block_1_3_page_3->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
 
         gridLayout_35->addWidget(la_block_1_3_page_3, 0, 0, 1, 1);
@@ -8973,8 +8982,8 @@ public:
         gridLayout_36->setContentsMargins(1, 1, 1, 1);
         frame_44 = new QFrame(fr_block_1_3_1_page_3);
         frame_44->setObjectName(QStringLiteral("frame_44"));
-        sizePolicy2.setHeightForWidth(frame_44->sizePolicy().hasHeightForWidth());
-        frame_44->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(frame_44->sizePolicy().hasHeightForWidth());
+        frame_44->setSizePolicy(sizePolicy3);
         frame_44->setFrameShape(QFrame::NoFrame);
         frame_44->setFrameShadow(QFrame::Raised);
         verticalLayout_46 = new QVBoxLayout(frame_44);
@@ -8995,11 +9004,11 @@ public:
         horizontalLayout_286->setContentsMargins(1, 1, 1, 1);
         label_59 = new QLabel(fr_column_0_51);
         label_59->setObjectName(QStringLiteral("label_59"));
-        sizePolicy2.setHeightForWidth(label_59->sizePolicy().hasHeightForWidth());
-        label_59->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_59->sizePolicy().hasHeightForWidth());
+        label_59->setSizePolicy(sizePolicy3);
         label_59->setMinimumSize(QSize(100, 15));
         label_59->setMaximumSize(QSize(999, 15));
-        label_59->setFont(font1);
+        label_59->setFont(font2);
 
         horizontalLayout_286->addWidget(label_59);
 
@@ -9079,7 +9088,7 @@ public:
         la_elem_block_4_3_page_3->setObjectName(QStringLiteral("la_elem_block_4_3_page_3"));
         la_elem_block_4_3_page_3->setMinimumSize(QSize(120, 16));
         la_elem_block_4_3_page_3->setMaximumSize(QSize(16777215, 16));
-        la_elem_block_4_3_page_3->setFont(font2);
+        la_elem_block_4_3_page_3->setFont(font3);
 
         horizontalLayout_290->addWidget(la_elem_block_4_3_page_3);
 
@@ -9095,8 +9104,8 @@ public:
 
         frame_45 = new QFrame(fr_block_1_3_1_page_3);
         frame_45->setObjectName(QStringLiteral("frame_45"));
-        sizePolicy4.setHeightForWidth(frame_45->sizePolicy().hasHeightForWidth());
-        frame_45->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_45->sizePolicy().hasHeightForWidth());
+        frame_45->setSizePolicy(sizePolicy2);
         frame_45->setFrameShape(QFrame::NoFrame);
         frame_45->setFrameShadow(QFrame::Raised);
         verticalLayout_47 = new QVBoxLayout(frame_45);
@@ -9117,10 +9126,10 @@ public:
         horizontalLayout_291->setContentsMargins(1, 1, 1, 1);
         label_60 = new QLabel(fr_column_0_52);
         label_60->setObjectName(QStringLiteral("label_60"));
-        sizePolicy2.setHeightForWidth(label_60->sizePolicy().hasHeightForWidth());
-        label_60->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(label_60->sizePolicy().hasHeightForWidth());
+        label_60->setSizePolicy(sizePolicy3);
         label_60->setMinimumSize(QSize(0, 15));
-        label_60->setFont(font1);
+        label_60->setFont(font2);
         label_60->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_291->addWidget(label_60);
@@ -9212,7 +9221,7 @@ public:
         lineE_elem_block_4_3_page_3->setSizePolicy(sizePolicy);
         lineE_elem_block_4_3_page_3->setMinimumSize(QSize(50, 16));
         lineE_elem_block_4_3_page_3->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_4_3_page_3->setFont(font3);
+        lineE_elem_block_4_3_page_3->setFont(font4);
         lineE_elem_block_4_3_page_3->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_295->addWidget(lineE_elem_block_4_3_page_3);
@@ -9229,8 +9238,8 @@ public:
 
         frame_46 = new QFrame(fr_block_1_3_1_page_3);
         frame_46->setObjectName(QStringLiteral("frame_46"));
-        sizePolicy4.setHeightForWidth(frame_46->sizePolicy().hasHeightForWidth());
-        frame_46->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(frame_46->sizePolicy().hasHeightForWidth());
+        frame_46->setSizePolicy(sizePolicy2);
         frame_46->setFrameShape(QFrame::NoFrame);
         frame_46->setFrameShadow(QFrame::Raised);
         verticalLayout_48 = new QVBoxLayout(frame_46);
@@ -9251,10 +9260,10 @@ public:
         horizontalLayout_296->setContentsMargins(1, 1, 1, 1);
         label_61 = new QLabel(fr_column_0_53);
         label_61->setObjectName(QStringLiteral("label_61"));
-        sizePolicy3.setHeightForWidth(label_61->sizePolicy().hasHeightForWidth());
-        label_61->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(label_61->sizePolicy().hasHeightForWidth());
+        label_61->setSizePolicy(sizePolicy4);
         label_61->setMinimumSize(QSize(0, 15));
-        label_61->setFont(font1);
+        label_61->setFont(font2);
         label_61->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_296->addWidget(label_61);
@@ -9346,7 +9355,7 @@ public:
         lineE_elem_block_4_7_page_3->setSizePolicy(sizePolicy5);
         lineE_elem_block_4_7_page_3->setMinimumSize(QSize(50, 16));
         lineE_elem_block_4_7_page_3->setMaximumSize(QSize(60, 16));
-        lineE_elem_block_4_7_page_3->setFont(font3);
+        lineE_elem_block_4_7_page_3->setFont(font4);
         lineE_elem_block_4_7_page_3->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_300->addWidget(lineE_elem_block_4_7_page_3);
@@ -9387,10 +9396,10 @@ public:
     {
         widget_stream_data->setWindowTitle(QApplication::translate("widget_stream_data", "Form", 0));
         la_block_1_0_page_0->setText(QApplication::translate("widget_stream_data", "pH", 0));
+        label_48->setText(QString());
         label_47->setText(QString());
         la_elem_block_1_0_page_0->setText(QApplication::translate("widget_stream_data", " pH:", 0));
         la_elem_block_1_1_page_0->setText(QApplication::translate("widget_stream_data", " \320\242\320\265\320\274\320\277\320\265\321\200\320\260\321\202\321\203\321\200\320\260:", 0));
-        label_48->setText(QString());
         label_19->setText(QApplication::translate("widget_stream_data", "\320\274\321\215\320\272\320\262/\320\273", 0));
         lineE_pH_0_page_0->setText(QApplication::translate("widget_stream_data", "7.60", 0));
         label_51->setText(QString());

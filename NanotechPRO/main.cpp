@@ -13,12 +13,76 @@
 #include <QPushButton>
 #include "style/styleloader.h"
 
+#include "QFontDatabase"
+#include "QFont"
+#include "QTreeWidget"
+#include "QTreeWidgetItem"
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     //QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
     QTextCodec *codec = QTextCodec::codecForName("Windows-1251");
     QTextCodec::setCodecForLocale(codec); // error
+
+//    int id = -1;
+//            id = QFontDatabase::addApplicationFont(":/font/arial/arial.ttf"); //путь к шрифту
+//    QString family = QFontDatabase::applicationFontFamilies(id).at(0); //имя шрифта
+//    QFont f(family);  // QFont c вашим шрифтом
+
+//    QFontDatabase database;
+//        QTreeWidget fontTree;
+//        fontTree.setColumnCount(2);
+//        fontTree.setHeaderLabels(QStringList() << "Font" << "Smooth Sizes");
+
+//        QString sizes;
+//        QString st_nameFont, st_styleFont;
+//        QString st_numberFont;
+
+//        QStringList nameFont;
+//        QStringList styleFont;
+
+//        foreach (const QString &family, database.families())
+//        {
+//            if (family.contains("Arial"))
+//            {
+//                nameFont += family;
+//            }
+
+////            st_nameFont = nameFont.at(0);
+//            //qDebug() << "Имя Шрифта: " << family;
+
+//            foreach (const QString &style, database.styles(family))
+//            {
+//                if (style.contains("Normal"))
+//                {
+//                    styleFont += style;
+//                }
+
+//                //qDebug() << "Нормальный, жирный... " << style;
+//                //st_styleFont += styleFont.at(0);
+
+//                foreach (int points, database.smoothSizes(family, style))
+//                    sizes += QString::number(points) + ' ';
+
+////                if (points.contains("Normal"))
+////                {
+////                    sizes += QString::number(points) + ' ';
+////                }
+
+////                st_numberFont += sizes;
+
+//                //qDebug() << "Размер шрифта " << sizes;
+
+//                //styleItem->setText(2, sizes.trimmed());
+//            }
+//        }
+
+//    qApp->setFont(QFont(nameFont.at(0), 12, styleFont));
+
+
+
+
 
 
 //    QWidget* window = new QWidget;
@@ -63,8 +127,8 @@ int main(int argc, char *argv[])
 
 //    qApp->setStyleSheet(qssStr);
 
-    NanotechPRO w;
 
+    NanotechPRO w;
     QString save_file = w.spthApp + "NanotechPRO/style/css/stylesheet.css";
 
     qDebug() << "Путик: " << save_file;

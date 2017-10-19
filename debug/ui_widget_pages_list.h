@@ -75,6 +75,9 @@ public:
         widget_pages_list->setSizePolicy(sizePolicy);
         widget_pages_list->setMinimumSize(QSize(301, 100));
         widget_pages_list->setMaximumSize(QSize(16777215, 108));
+        QFont font;
+        font.setFamily(QStringLiteral("Arial"));
+        widget_pages_list->setFont(font);
         gridLayout = new QGridLayout(widget_pages_list);
         gridLayout->setSpacing(2);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
@@ -184,16 +187,17 @@ public:
         la_add_pages_0->setGeometry(QRect(2, 2, 40, 16));
         la_add_pages_0->setMinimumSize(QSize(40, 16));
         la_add_pages_0->setMaximumSize(QSize(40, 16));
-        QFont font;
-        font.setBold(true);
-        font.setWeight(75);
-        la_add_pages_0->setFont(font);
+        QFont font1;
+        font1.setBold(true);
+        font1.setWeight(75);
+        la_add_pages_0->setFont(font1);
         la_add_pages_0->setAlignment(Qt::AlignCenter);
         add_page_0 = new QPushButton(fr_add_pages_0);
         add_page_0->setObjectName(QStringLiteral("add_page_0"));
         add_page_0->setGeometry(QRect(10, 20, 23, 23));
         add_page_0->setMinimumSize(QSize(23, 23));
         add_page_0->setMaximumSize(QSize(23, 23));
+        add_page_0->setFont(font);
         add_page_0->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
@@ -273,6 +277,7 @@ public:
         pushB_add_page_1->setGeometry(QRect(4, 23, 16, 16));
         pushB_add_page_1->setMinimumSize(QSize(16, 16));
         pushB_add_page_1->setMaximumSize(QSize(16, 16));
+        pushB_add_page_1->setFont(font);
         pushB_add_page_1->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
@@ -323,6 +328,7 @@ public:
         pushB_del_page_1->setGeometry(QRect(39, 23, 16, 16));
         pushB_del_page_1->setMinimumSize(QSize(16, 16));
         pushB_del_page_1->setMaximumSize(QSize(16, 16));
+        pushB_del_page_1->setFont(font);
         pushB_del_page_1->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
@@ -398,6 +404,7 @@ public:
         pushB_add_page_2->setGeometry(QRect(4, 23, 16, 16));
         pushB_add_page_2->setMinimumSize(QSize(16, 16));
         pushB_add_page_2->setMaximumSize(QSize(16, 16));
+        pushB_add_page_2->setFont(font);
         pushB_add_page_2->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
@@ -448,6 +455,7 @@ public:
         pushB_del_page_2->setGeometry(QRect(39, 23, 16, 16));
         pushB_del_page_2->setMinimumSize(QSize(16, 16));
         pushB_del_page_2->setMaximumSize(QSize(16, 16));
+        pushB_del_page_2->setFont(font);
         pushB_del_page_2->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
@@ -523,6 +531,7 @@ public:
         pushB_add_page_3->setGeometry(QRect(4, 23, 16, 16));
         pushB_add_page_3->setMinimumSize(QSize(16, 16));
         pushB_add_page_3->setMaximumSize(QSize(16, 16));
+        pushB_add_page_3->setFont(font);
         pushB_add_page_3->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
@@ -573,6 +582,7 @@ public:
         pushB_del_page_3->setGeometry(QRect(39, 23, 16, 16));
         pushB_del_page_3->setMinimumSize(QSize(16, 16));
         pushB_del_page_3->setMaximumSize(QSize(16, 16));
+        pushB_del_page_3->setFont(font);
         pushB_del_page_3->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
@@ -648,6 +658,7 @@ public:
         pushB_add_page_0->setGeometry(QRect(4, 23, 16, 16));
         pushB_add_page_0->setMinimumSize(QSize(16, 16));
         pushB_add_page_0->setMaximumSize(QSize(16, 16));
+        pushB_add_page_0->setFont(font);
         pushB_add_page_0->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
@@ -698,6 +709,7 @@ public:
         pushB_del_page_0->setGeometry(QRect(39, 23, 16, 16));
         pushB_del_page_0->setMinimumSize(QSize(16, 16));
         pushB_del_page_0->setMaximumSize(QSize(16, 16));
+        pushB_del_page_0->setFont(font);
         pushB_del_page_0->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 " 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"

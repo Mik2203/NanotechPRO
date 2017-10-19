@@ -46,6 +46,7 @@ QT+= core gui widgets
 
 RESOURCES += \
     images/img.qrc \
-    style/stylesheet.qrc
+    style/stylesheet.qrc \
+    fonts/font.qrc
 
 RC_FILE = myapp.rc
