@@ -103,6 +103,7 @@ public:
     QSpacerItem *verticalSpacer_6;
     QFrame *frame_61;
     QHBoxLayout *horizontalLayout_10;
+    QSpacerItem *horizontalSpacer_10;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
     QSpacerItem *horizontalSpacer_12;
@@ -119,6 +120,7 @@ public:
     QFrame *fr_pages_list_0;
     QGridLayout *gridLayout_15;
     QSpacerItem *verticalSpacer_48;
+    QSpacerItem *horizontalSpacer_9;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_10;
     QFrame *frame_3;
@@ -442,7 +444,12 @@ public:
 
         frame_5 = new QFrame(groupBox);
         frame_5->setObjectName(QStringLiteral("frame_5"));
-        frame_5->setMinimumSize(QSize(0, 80));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(frame_5->sizePolicy().hasHeightForWidth());
+        frame_5->setSizePolicy(sizePolicy2);
+        frame_5->setMinimumSize(QSize(307, 80));
         frame_5->setFrameShape(QFrame::StyledPanel);
         frame_5->setFrameShadow(QFrame::Raised);
         gridLayout_17 = new QGridLayout(frame_5);
@@ -489,11 +496,11 @@ public:
 
         comboBox = new QComboBox(frame_5);
         comboBox->setObjectName(QStringLiteral("comboBox"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
-        comboBox->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
+        comboBox->setSizePolicy(sizePolicy3);
         comboBox->setMinimumSize(QSize(50, 18));
         comboBox->setMaximumSize(QSize(60, 18));
         QFont font4;
@@ -521,8 +528,8 @@ public:
 
         comboBox_3 = new QComboBox(frame_5);
         comboBox_3->setObjectName(QStringLiteral("comboBox_3"));
-        sizePolicy2.setHeightForWidth(comboBox_3->sizePolicy().hasHeightForWidth());
-        comboBox_3->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(comboBox_3->sizePolicy().hasHeightForWidth());
+        comboBox_3->setSizePolicy(sizePolicy3);
         comboBox_3->setMinimumSize(QSize(50, 18));
         comboBox_3->setMaximumSize(QSize(60, 18));
         comboBox_3->setFont(font3);
@@ -539,8 +546,8 @@ public:
 
         comboBox_4 = new QComboBox(frame_5);
         comboBox_4->setObjectName(QStringLiteral("comboBox_4"));
-        sizePolicy2.setHeightForWidth(comboBox_4->sizePolicy().hasHeightForWidth());
-        comboBox_4->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(comboBox_4->sizePolicy().hasHeightForWidth());
+        comboBox_4->setSizePolicy(sizePolicy3);
         comboBox_4->setMinimumSize(QSize(50, 18));
         comboBox_4->setMaximumSize(QSize(60, 18));
         comboBox_4->setFont(font3);
@@ -559,11 +566,11 @@ public:
 
         frame_61 = new QFrame(groupBox);
         frame_61->setObjectName(QStringLiteral("frame_61"));
-        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(frame_61->sizePolicy().hasHeightForWidth());
-        frame_61->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(frame_61->sizePolicy().hasHeightForWidth());
+        frame_61->setSizePolicy(sizePolicy4);
         frame_61->setMinimumSize(QSize(301, 24));
         frame_61->setFrameShape(QFrame::StyledPanel);
         frame_61->setFrameShadow(QFrame::Raised);
@@ -571,18 +578,22 @@ public:
         horizontalLayout_10->setSpacing(2);
         horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
         horizontalLayout_10->setContentsMargins(1, 1, 1, 1);
+        horizontalSpacer_10 = new QSpacerItem(11, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_10);
+
         pushButton_5 = new QPushButton(frame_61);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        sizePolicy2.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
-        pushButton_5->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
+        pushButton_5->setSizePolicy(sizePolicy3);
         pushButton_5->setMinimumSize(QSize(100, 20));
 
         horizontalLayout_10->addWidget(pushButton_5);
 
         pushButton_6 = new QPushButton(frame_61);
         pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
-        sizePolicy2.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
-        pushButton_6->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
+        pushButton_6->setSizePolicy(sizePolicy3);
         pushButton_6->setMinimumSize(QSize(100, 20));
         pushButton_6->setStyleSheet(QStringLiteral(""));
 
@@ -597,7 +608,9 @@ public:
 
         frame_4 = new QFrame(groupBox);
         frame_4->setObjectName(QStringLiteral("frame_4"));
-        frame_4->setMinimumSize(QSize(301, 25));
+        sizePolicy2.setHeightForWidth(frame_4->sizePolicy().hasHeightForWidth());
+        frame_4->setSizePolicy(sizePolicy2);
+        frame_4->setMinimumSize(QSize(307, 25));
         frame_4->setFrameShape(QFrame::StyledPanel);
         frame_4->setFrameShadow(QFrame::Raised);
         horizontalLayout_7 = new QHBoxLayout(frame_4);
@@ -610,11 +623,8 @@ public:
         horizontalLayout_4->setContentsMargins(1, 1, 1, 1);
         label_5 = new QLabel(frame_4);
         label_5->setObjectName(QStringLiteral("label_5"));
-        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
-        label_5->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
+        label_5->setSizePolicy(sizePolicy2);
 
         horizontalLayout_4->addWidget(label_5);
 
@@ -673,6 +683,10 @@ public:
         verticalSpacer_48 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         gridLayout_39->addItem(verticalSpacer_48, 4, 0, 1, 5);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_39->addItem(horizontalSpacer_9, 2, 2, 1, 1);
 
 
         gridLayout_18->addWidget(groupBox, 0, 0, 1, 1);
@@ -797,8 +811,8 @@ public:
         gridLayout_7->setContentsMargins(0, 0, 0, 0);
         panel_menu_0 = new QPushButton(fr_menu_0);
         panel_menu_0->setObjectName(QStringLiteral("panel_menu_0"));
-        sizePolicy2.setHeightForWidth(panel_menu_0->sizePolicy().hasHeightForWidth());
-        panel_menu_0->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(panel_menu_0->sizePolicy().hasHeightForWidth());
+        panel_menu_0->setSizePolicy(sizePolicy3);
         panel_menu_0->setMinimumSize(QSize(24, 24));
         panel_menu_0->setMaximumSize(QSize(24, 24));
         panel_menu_0->setFont(font);
@@ -898,8 +912,8 @@ public:
 
         comboBox_5 = new QComboBox(page_4);
         comboBox_5->setObjectName(QStringLiteral("comboBox_5"));
-        sizePolicy2.setHeightForWidth(comboBox_5->sizePolicy().hasHeightForWidth());
-        comboBox_5->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(comboBox_5->sizePolicy().hasHeightForWidth());
+        comboBox_5->setSizePolicy(sizePolicy3);
 
         gridLayout_14->addWidget(comboBox_5, 0, 7, 1, 1);
 
@@ -935,8 +949,8 @@ public:
 
         pushB_page_wother = new QPushButton(page_4);
         pushB_page_wother->setObjectName(QStringLiteral("pushB_page_wother"));
-        sizePolicy2.setHeightForWidth(pushB_page_wother->sizePolicy().hasHeightForWidth());
-        pushB_page_wother->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(pushB_page_wother->sizePolicy().hasHeightForWidth());
+        pushB_page_wother->setSizePolicy(sizePolicy3);
         pushB_page_wother->setMinimumSize(QSize(42, 42));
         pushB_page_wother->setFont(font6);
         pushB_page_wother->setStyleSheet(QStringLiteral(""));
@@ -966,8 +980,8 @@ public:
 
         pushButton_7 = new QPushButton(page_4);
         pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
-        sizePolicy2.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
-        pushButton_7->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
+        pushButton_7->setSizePolicy(sizePolicy3);
         pushButton_7->setMinimumSize(QSize(100, 42));
         QFont font7;
         font7.setPointSize(11);
@@ -990,8 +1004,8 @@ public:
 
         panel_menu_1 = new QPushButton(fr_menu_0);
         panel_menu_1->setObjectName(QStringLiteral("panel_menu_1"));
-        sizePolicy2.setHeightForWidth(panel_menu_1->sizePolicy().hasHeightForWidth());
-        panel_menu_1->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(panel_menu_1->sizePolicy().hasHeightForWidth());
+        panel_menu_1->setSizePolicy(sizePolicy3);
         panel_menu_1->setMinimumSize(QSize(24, 24));
         panel_menu_1->setMaximumSize(QSize(24, 24));
         panel_menu_1->setFont(font);

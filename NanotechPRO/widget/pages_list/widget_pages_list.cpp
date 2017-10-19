@@ -428,6 +428,10 @@ void widget_pages_list::slot_function_add_page(int index)
             ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
             ui->pushB_page_korr_0->setIcon(QIcon(":/menu/page/push_korr_0.png"));
             ui->pushB_page_korr_0->setIconSize(QSize(19,19));
+
+            ui->pushB_page_1->setText("2");
+            ui->pushB_page_2->setText("3");
+            ui->pushB_page_3->setText("4");
         }
         break;
     case 2: /*Add_02*/
@@ -918,26 +922,55 @@ void widget_pages_list::slot_function_del_page(int index_del)
 
                 if(ui->fr_list_2->isVisible() == true)
                 {
-                    ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
-                    ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
+                    if(ui->pushB_page_3->text() != "3")
+                    {
+                        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
+                        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
 
-                    qDebug() << "-+- del: case 02_1";
+                        qDebug() << "-+- del: case 02_1_1--";
+                        // Очищать ui->fr_list_3->isVisible() другой номер
+                    }
 
-                    if(ui->pushB_page_3->text() == "3")
+                    if(ui->pushB_page_2->text() == "2"
+                            && ui->pushB_page_3->text() == "3")
                     {
                         ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
                         ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
 
-                        qDebug() << "-+- del: case 02_1/////";
-                        // Очищать ui->fr_list_3->isVisible() другой номер
+                        qDebug() << "-+- del: case 02_1_1-+-";
                     }
+
+                    if(ui->fr_list_2->isVisible() == true
+                            && ui->pushB_page_3->text() == "3")
+                    {
+                        ui->pushB_page_general_0->setFixedSize(118, 23); //размер картинки
+                        ui->pushB_page_korr_0->setFixedSize(118, 23); //размер картинки
+
+                        qDebug() << "-+- del: case 02_1_1-++-";
+                    }
+
+
                 }
                 else
                 {
-                    ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
-                    ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+                    ui->pushB_page_general_0->setFixedSize(56, 23); //размер картинки
+                    ui->pushB_page_general_0->setIcon(QIcon(":/1.png"));
 
-                    qDebug() << "-+- del: case 02_1----";
+                    ui->pushB_page_korr_0->setFixedSize(56, 23); //размер картинки
+                    ui->pushB_page_korr_0->setIcon(QIcon(":/1.png"));
+                    qDebug() << "-+- del: case 02_1_+";
+
+                    if(ui->fr_list_2->isVisible() == true
+                            && ui->pushB_page_3->text() == "3")
+                    {
+                        int_stackedW_page_3 = 2;
+                        ui->pushB_page_3->setText("2");
+
+                        ui->pushB_page_general_0->setFixedSize(181, 23); //размер картинки
+                        ui->pushB_page_korr_0->setFixedSize(181, 23); //размер картинки
+
+                        qDebug() << "-+- del: case 02_1_++";
+                    }
                 }
 
             }
