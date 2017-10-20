@@ -49,7 +49,8 @@ SOURCES       = ..\NanotechPRO\nanotechpro.cpp \
 		..\NanotechPRO\widget\pages_list\widget_pages_list.cpp \
 		..\NanotechPRO\style\styleloader.cpp \
 		..\NanotechPRO\widget\stream_data\widget_stream_data.cpp \
-		..\NanotechPRO\widget\sedimentation\widget_sedimentation.cpp debug\qrc_img.cpp \
+		..\NanotechPRO\widget\sedimentation\widget_sedimentation.cpp \
+		..\NanotechPRO\widget\sys_stage\widget_sys_stage.cpp debug\qrc_img.cpp \
 		debug\qrc_stylesheet.cpp \
 		debug\qrc_font.cpp \
 		debug\moc_nanotechpro.cpp \
@@ -57,7 +58,8 @@ SOURCES       = ..\NanotechPRO\nanotechpro.cpp \
 		debug\moc_widget_pages_list.cpp \
 		debug\moc_styleloader.cpp \
 		debug\moc_widget_stream_data.cpp \
-		debug\moc_widget_sedimentation.cpp
+		debug\moc_widget_sedimentation.cpp \
+		debug\moc_widget_sys_stage.cpp
 OBJECTS       = debug/nanotechpro.o \
 		debug/main.o \
 		debug/doprogress.o \
@@ -65,6 +67,7 @@ OBJECTS       = debug/nanotechpro.o \
 		debug/styleloader.o \
 		debug/widget_stream_data.o \
 		debug/widget_sedimentation.o \
+		debug/widget_sys_stage.o \
 		debug/qrc_img.o \
 		debug/qrc_stylesheet.o \
 		debug/qrc_font.o \
@@ -73,7 +76,8 @@ OBJECTS       = debug/nanotechpro.o \
 		debug/moc_widget_pages_list.o \
 		debug/moc_styleloader.o \
 		debug/moc_widget_stream_data.o \
-		debug/moc_widget_sedimentation.o
+		debug/moc_widget_sedimentation.o \
+		debug/moc_widget_sys_stage.o
 
 DIST          = 
 QMAKE_TARGET  = nanotechpro
@@ -102,7 +106,7 @@ DESTDIR_TARGET = ..\exe\nanotechpro.exe
 first: all
 all: Makefile.Debug  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ui_nanotechpro.h ui_widget_pages_list.h ui_widget_stream_data.h ui_widget_sedimentation.h $(OBJECTS) debug/myapp_res.o
+$(DESTDIR_TARGET): ui_nanotechpro.h ui_widget_pages_list.h ui_widget_stream_data.h ui_widget_sedimentation.h ui_widget_sys_stage.h $(OBJECTS) debug/myapp_res.o
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.nanotechpro.Debug  $(LIBS)
 
 debug/myapp_res.o: ..\NanotechPRO\myapp.rc
@@ -117,7 +121,7 @@ dist:
 	$(ZIP) nanotechpro.zip $(SOURCES) $(DIST) ..\NanotechPRO\nanotechpro.pro ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\spec_pre.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\qdevice.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\device_config.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\common\shell-win32.conf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\qconfig.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axbase.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axserver.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_clucene_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_core.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_core_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_declarative.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_declarative_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_designer.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_enginio.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_enginio_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_gui.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_help.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_help_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_network.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_network_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_nfc.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_opengl.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_platformsupport_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_positioning.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qml.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quick.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_script.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_script_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_scripttools.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_sensors.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_serialport.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_sql.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_svg.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_testlib.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_uitools.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_webkit.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_webkit_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_webkitwidgets.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_webkitwidgets_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_websockets.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_widgets.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_winextras.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_xml.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\qt_functions.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\qt_config.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\win32\qt_config.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\win32-g++\qmake.conf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\spec_post.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\exclusive_builds.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\default_pre.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\win32\default_pre.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\resolve_config.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\exclusive_builds_post.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\default_post.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\build_pass.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\win32\rtti.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\precompile_header.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\warn_on.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\qt.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\resources.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\moc.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\win32\opengl.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\uic.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\win32\windows.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\testcase_targets.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\exceptions.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\yacc.prf ..\..\..\..\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\mkspecs\features\lex.prf ..\NanotechPRO\nanotechpro.pro ..\NanotechPRO\images\img.qrc ..\NanotechPRO\style\stylesheet.qrc ..\NanotechPRO\fonts\font.qrc C:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/lib/qtmaind.prl C:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/lib/Qt5Cored.prl C:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/lib/Qt5Widgetsd.prl C:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/lib/Qt5Guid.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\nanotechpro.o debug\main.o debug\doprogress.o debug\widget_pages_list.o debug\styleloader.o debug\widget_stream_data.o debug\widget_sedimentation.o debug\qrc_img.o debug\qrc_stylesheet.o debug\qrc_font.o debug\moc_nanotechpro.o debug\moc_doprogress.o debug\moc_widget_pages_list.o debug\moc_styleloader.o debug\moc_widget_stream_data.o debug\moc_widget_sedimentation.o
+	-$(DEL_FILE) debug\nanotechpro.o debug\main.o debug\doprogress.o debug\widget_pages_list.o debug\styleloader.o debug\widget_stream_data.o debug\widget_sedimentation.o debug\widget_sys_stage.o debug\qrc_img.o debug\qrc_stylesheet.o debug\qrc_font.o debug\moc_nanotechpro.o debug\moc_doprogress.o debug\moc_widget_pages_list.o debug\moc_styleloader.o debug\moc_widget_stream_data.o debug\moc_widget_sedimentation.o debug\moc_widget_sys_stage.o
 	-$(DEL_FILE) debug\myapp_res.o
 
 distclean: clean 
@@ -218,9 +222,9 @@ debug/qrc_font.cpp: ../NanotechPRO/fonts/font.qrc \
 		../NanotechPRO/fonts/ariali.ttf
 	C:\Mik\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\bin\rcc.exe -name font ..\NanotechPRO\fonts\font.qrc -o debug\qrc_font.cpp
 
-compiler_moc_header_make_all: debug/moc_nanotechpro.cpp debug/moc_doprogress.cpp debug/moc_widget_pages_list.cpp debug/moc_styleloader.cpp debug/moc_widget_stream_data.cpp debug/moc_widget_sedimentation.cpp
+compiler_moc_header_make_all: debug/moc_nanotechpro.cpp debug/moc_doprogress.cpp debug/moc_widget_pages_list.cpp debug/moc_styleloader.cpp debug/moc_widget_stream_data.cpp debug/moc_widget_sedimentation.cpp debug/moc_widget_sys_stage.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) debug\moc_nanotechpro.cpp debug\moc_doprogress.cpp debug\moc_widget_pages_list.cpp debug\moc_styleloader.cpp debug\moc_widget_stream_data.cpp debug\moc_widget_sedimentation.cpp
+	-$(DEL_FILE) debug\moc_nanotechpro.cpp debug\moc_doprogress.cpp debug\moc_widget_pages_list.cpp debug\moc_styleloader.cpp debug\moc_widget_stream_data.cpp debug\moc_widget_sedimentation.cpp debug\moc_widget_sys_stage.cpp
 debug/moc_nanotechpro.cpp: ../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QtGui \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QtGuiDepends \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QtCore \
@@ -534,6 +538,9 @@ debug/moc_nanotechpro.cpp: ../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/i
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QState \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QSignalTransition \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QSettings \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QFontDatabase \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QFont \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QPainter \
 		../NanotechPRO/widget/pages_list/widget_pages_list.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QWidget \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QStackedWidget \
@@ -1113,11 +1120,114 @@ debug/moc_widget_sedimentation.cpp: ../../../../Qt_Installers/Qt5/5.3.1/5.3/ming
 		../NanotechPRO/widget/sedimentation/widget_sedimentation.h
 	C:\Mik\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/mkspecs/win32-g++ -IC:/Mik/Qt_programming/nano/Nanotex/NanotechPRO -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore -I. ..\NanotechPRO\widget\sedimentation\widget_sedimentation.h -o debug\moc_widget_sedimentation.cpp
 
+debug/moc_widget_sys_stage.cpp: ../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QWidget \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qwidget.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qwindowdefs.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qglobal.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qconfig.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qfeatures.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsystemdetection.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qprocessordetection.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qcompilerdetection.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qtypeinfo.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qtypetraits.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsysinfo.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qlogging.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qflags.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qbasicatomic.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_bootstrap.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qgenericatomic.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_msvc.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_armv7.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_armv6.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_armv5.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_ia64.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_mips.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_x86.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_cxx11.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_gcc.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_unix.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qglobalstatic.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qmutex.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qnumeric.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qobjectdefs.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qnamespace.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qwindowdefs_win.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qobject.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qstring.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qchar.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qbytearray.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qrefcount.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qarraydata.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qstringbuilder.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qlist.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qalgorithms.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qiterator.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qcoreevent.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qscopedpointer.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qmetatype.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qvarlengtharray.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qcontainerfwd.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qisenum.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qobject_impl.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qmargins.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpaintdevice.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qrect.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsize.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qpoint.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpalette.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qcolor.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qrgb.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qstringlist.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qdatastream.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qiodevice.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qpair.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qregexp.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qstringmatcher.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qbrush.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qvector.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qmatrix.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpolygon.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qregion.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qline.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qtransform.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpainterpath.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qimage.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpixmap.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsharedpointer.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qshareddata.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsharedpointer_impl.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qhash.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qfont.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qfontmetrics.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qfontinfo.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qsizepolicy.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qcursor.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qkeysequence.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qevent.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qvariant.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qmap.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qdebug.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qtextstream.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qlocale.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qset.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qcontiguouscache.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qurl.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qurlquery.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qfile.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qfiledevice.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qvector2d.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qtouchdevice.h \
+		../NanotechPRO/widget/sys_stage/widget_sys_stage.h
+	C:\Mik\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/mkspecs/win32-g++ -IC:/Mik/Qt_programming/nano/Nanotex/NanotechPRO -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui -IC:/Mik/Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore -I. ..\NanotechPRO\widget\sys_stage\widget_sys_stage.h -o debug\moc_widget_sys_stage.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_nanotechpro.h ui_widget_pages_list.h ui_widget_stream_data.h ui_widget_sedimentation.h
+compiler_uic_make_all: ui_nanotechpro.h ui_widget_pages_list.h ui_widget_stream_data.h ui_widget_sedimentation.h ui_widget_sys_stage.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_nanotechpro.h ui_widget_pages_list.h ui_widget_stream_data.h ui_widget_sedimentation.h
+	-$(DEL_FILE) ui_nanotechpro.h ui_widget_pages_list.h ui_widget_stream_data.h ui_widget_sedimentation.h ui_widget_sys_stage.h
 ui_nanotechpro.h: ../NanotechPRO/nanotechpro.ui
 	C:\Mik\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\bin\uic.exe ..\NanotechPRO\nanotechpro.ui -o ui_nanotechpro.h
 
@@ -1129,6 +1239,9 @@ ui_widget_stream_data.h: ../NanotechPRO/widget/stream_data/widget_stream_data.ui
 
 ui_widget_sedimentation.h: ../NanotechPRO/widget/sedimentation/widget_sedimentation.ui
 	C:\Mik\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\bin\uic.exe ..\NanotechPRO\widget\sedimentation\widget_sedimentation.ui -o ui_widget_sedimentation.h
+
+ui_widget_sys_stage.h: ../NanotechPRO/widget/sys_stage/widget_sys_stage.ui
+	C:\Mik\Qt_Installers\Qt5\5.3.1\5.3\mingw482_32\bin\uic.exe ..\NanotechPRO\widget\sys_stage\widget_sys_stage.ui -o ui_widget_sys_stage.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -1456,6 +1569,9 @@ debug/nanotechpro.o: ../NanotechPRO/nanotechpro.cpp ../NanotechPRO/nanotechpro.h
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QState \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QSignalTransition \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QSettings \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QFontDatabase \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QFont \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QPainter \
 		../NanotechPRO/widget/pages_list/widget_pages_list.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QWidget \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QStackedWidget \
@@ -1825,6 +1941,9 @@ debug/main.o: ../NanotechPRO/main.cpp ../../../../Qt_Installers/Qt5/5.3.1/5.3/mi
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QState \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QSignalTransition \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/QSettings \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QFontDatabase \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QFont \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QPainter \
 		../NanotechPRO/widget/pages_list/widget_pages_list.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QWidget \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QStackedWidget \
@@ -1850,7 +1969,22 @@ debug/main.o: ../NanotechPRO/main.cpp ../../../../Qt_Installers/Qt5/5.3.1/5.3/mi
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qgridlayout.h \
 		../NanotechPRO/style/styleloader.h \
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QKeySequence \
-		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QKeyEvent
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/QKeyEvent \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QTreeWidget \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qtreewidget.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qtreeview.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractitemview.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qstyleoption.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractspinbox.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qslider.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qstyle.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qtabbar.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qrubberband.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qtreewidgetitemiterator.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QTreeWidgetItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\NanotechPRO\main.cpp
 
 debug/doprogress.o: ../NanotechPRO/loading/doprogress.cpp ../NanotechPRO/loading/doprogress.h \
@@ -2567,6 +2701,110 @@ debug/widget_sedimentation.o: ../NanotechPRO/widget/sedimentation/widget_sedimen
 		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\widget_sedimentation.o ..\NanotechPRO\widget\sedimentation\widget_sedimentation.cpp
 
+debug/widget_sys_stage.o: ../NanotechPRO/widget/sys_stage/widget_sys_stage.cpp ../NanotechPRO/widget/sys_stage/widget_sys_stage.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/QWidget \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qwidget.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qwindowdefs.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qglobal.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qconfig.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qfeatures.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsystemdetection.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qprocessordetection.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qcompilerdetection.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qtypeinfo.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qtypetraits.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsysinfo.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qlogging.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qflags.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qbasicatomic.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_bootstrap.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qgenericatomic.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_msvc.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_armv7.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_armv6.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_armv5.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_ia64.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_mips.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_x86.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_cxx11.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_gcc.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qatomic_unix.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qglobalstatic.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qmutex.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qnumeric.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qobjectdefs.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qnamespace.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qwindowdefs_win.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qobject.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qstring.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qchar.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qbytearray.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qrefcount.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qarraydata.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qstringbuilder.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qlist.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qalgorithms.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qiterator.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qcoreevent.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qscopedpointer.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qmetatype.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qvarlengtharray.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qcontainerfwd.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qisenum.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qobject_impl.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qmargins.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpaintdevice.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qrect.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsize.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qpoint.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpalette.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qcolor.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qrgb.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qstringlist.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qdatastream.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qiodevice.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qpair.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qregexp.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qstringmatcher.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qbrush.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qvector.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qmatrix.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpolygon.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qregion.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qline.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qtransform.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpainterpath.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qimage.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qpixmap.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsharedpointer.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qshareddata.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qsharedpointer_impl.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qhash.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qfont.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qfontmetrics.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qfontinfo.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtWidgets/qsizepolicy.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qcursor.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qkeysequence.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qevent.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qvariant.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qmap.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qdebug.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qtextstream.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qlocale.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qset.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qcontiguouscache.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qurl.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qurlquery.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qfile.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtCore/qfiledevice.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qvector2d.h \
+		../../../../Qt_Installers/Qt5/5.3.1/5.3/mingw482_32/include/QtGui/qtouchdevice.h \
+		ui_widget_sys_stage.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\widget_sys_stage.o ..\NanotechPRO\widget\sys_stage\widget_sys_stage.cpp
+
 debug/qrc_img.o: debug/qrc_img.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\qrc_img.o debug\qrc_img.cpp
 
@@ -2593,6 +2831,9 @@ debug/moc_widget_stream_data.o: debug/moc_widget_stream_data.cpp
 
 debug/moc_widget_sedimentation.o: debug/moc_widget_sedimentation.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_widget_sedimentation.o debug\moc_widget_sedimentation.cpp
+
+debug/moc_widget_sys_stage.o: debug/moc_widget_sys_stage.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_widget_sys_stage.o debug\moc_widget_sys_stage.cpp
 
 ####### Install
 

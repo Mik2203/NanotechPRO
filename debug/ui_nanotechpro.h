@@ -138,6 +138,10 @@ public:
     QLabel *label_52;
     QWidget *page_7;
     QWidget *page_3;
+    QGridLayout *gridLayout_19;
+    QFrame *fr_sys_panel_1;
+    QGridLayout *gridLayout_20;
+    QFrame *fr_sys_panel_2;
     QLabel *label_12;
     QWidget *page_8;
     QLabel *label_11;
@@ -779,9 +783,37 @@ public:
         stackedW_0->addWidget(page_2);
         page_3 = new QWidget();
         page_3->setObjectName(QStringLiteral("page_3"));
-        label_12 = new QLabel(page_3);
+        gridLayout_19 = new QGridLayout(page_3);
+        gridLayout_19->setObjectName(QStringLiteral("gridLayout_19"));
+        gridLayout_19->setHorizontalSpacing(4);
+        gridLayout_19->setVerticalSpacing(1);
+        gridLayout_19->setContentsMargins(1, 1, 1, 1);
+        fr_sys_panel_1 = new QFrame(page_3);
+        fr_sys_panel_1->setObjectName(QStringLiteral("fr_sys_panel_1"));
+        sizePolicy2.setHeightForWidth(fr_sys_panel_1->sizePolicy().hasHeightForWidth());
+        fr_sys_panel_1->setSizePolicy(sizePolicy2);
+        fr_sys_panel_1->setMinimumSize(QSize(500, 0));
+        fr_sys_panel_1->setFrameShape(QFrame::Box);
+        fr_sys_panel_1->setFrameShadow(QFrame::Raised);
+        gridLayout_20 = new QGridLayout(fr_sys_panel_1);
+        gridLayout_20->setSpacing(2);
+        gridLayout_20->setObjectName(QStringLiteral("gridLayout_20"));
+        gridLayout_20->setContentsMargins(2, 2, 2, 2);
+
+        gridLayout_19->addWidget(fr_sys_panel_1, 0, 0, 1, 1);
+
+        fr_sys_panel_2 = new QFrame(page_3);
+        fr_sys_panel_2->setObjectName(QStringLiteral("fr_sys_panel_2"));
+        sizePolicy6.setHeightForWidth(fr_sys_panel_2->sizePolicy().hasHeightForWidth());
+        fr_sys_panel_2->setSizePolicy(sizePolicy6);
+        fr_sys_panel_2->setFrameShape(QFrame::Box);
+        fr_sys_panel_2->setFrameShadow(QFrame::Raised);
+        label_12 = new QLabel(fr_sys_panel_2);
         label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setGeometry(QRect(560, 270, 231, 16));
+        label_12->setGeometry(QRect(40, 30, 46, 13));
+
+        gridLayout_19->addWidget(fr_sys_panel_2, 0, 1, 1, 1);
+
         stackedW_0->addWidget(page_3);
         page_8 = new QWidget();
         page_8->setObjectName(QStringLiteral("page_8"));
@@ -1124,7 +1156,7 @@ public:
 
         retranslateUi(NanotechPRO);
 
-        stackedW_0->setCurrentIndex(1);
+        stackedW_0->setCurrentIndex(2);
         stackedW_page_0->setCurrentIndex(0);
         stackedW_sedimentation_0->setCurrentIndex(0);
         stackedW_panel_0->setCurrentIndex(0);
@@ -1197,7 +1229,7 @@ public:
         pushB_correction_0->setText(QApplication::translate("NanotechPRO", "\320\232\320\276\321\200\321\200\320\265\320\272\321\206\320\270\321\217 pH", 0));
         label_46->setText(QApplication::translate("NanotechPRO", "2", 0));
         label_52->setText(QApplication::translate("NanotechPRO", "3", 0));
-        label_12->setText(QApplication::translate("NanotechPRO", "\320\241\320\270\321\201\321\202\320\265\320\274\320\260", 0));
+        label_12->setText(QApplication::translate("NanotechPRO", "\320\241\321\205\320\265\320\274\321\213", 0));
         label_11->setText(QApplication::translate("NanotechPRO", "\320\237\321\200\320\265\320\264\321\203\320\277\321\200\320\265\320\266\320\264\320\265\320\275\320\270\320\265", 0));
         label_10->setText(QApplication::translate("NanotechPRO", "\320\240\320\260\321\201\321\207\320\265\321\202", 0));
         panel_menu_0->setText(QString());

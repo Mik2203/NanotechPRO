@@ -6,6 +6,7 @@ INPUT(
 ./release\styleloader.o
 ./release\widget_stream_data.o
 ./release\widget_sedimentation.o
+./release\widget_sys_stage.o
 ./release\qrc_img.o
 ./release\qrc_stylesheet.o
 ./release\qrc_font.o
@@ -15,4 +16,5 @@ INPUT(
 ./release\moc_styleloader.o
 ./release\moc_widget_stream_data.o
 ./release\moc_widget_sedimentation.o
+./release\moc_widget_sys_stage.o
 );

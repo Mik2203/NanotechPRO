@@ -6,7 +6,12 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     ui(new Ui::NanotechPRO)
 {
     ui->setupUi(this);
-loadFontFamilyFromTTF();
+    //-----------------------------------------------------------------//
+    //****** [Загрузка шрифта для программы]
+    //-----------------------------------------------------------------//
+    loadFontFamilyFromTTF();
+    //-----------------------------------------------------------------//
+
     //-----------------------------------------------------------------//
     //****** [Подключение классов]
     //-----------------------------------------------------------------//
@@ -26,6 +31,11 @@ loadFontFamilyFromTTF();
     ui->fr_sedimentation_0->layout()->addWidget(Widget_sedimentation);
     Widget_sedimentation->show();
     Widget_sedimentation->st_Widget_sedimentation_list()->setCurrentIndex(0);
+
+    Widget_sys_stage = new widget_sys_stage;
+    Widget_sys_stage->setParent(ui->fr_sys_panel_1);
+    ui->fr_sys_panel_1->layout()->addWidget(Widget_sys_stage);
+    Widget_sys_stage->show();
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//

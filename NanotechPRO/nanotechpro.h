@@ -28,6 +28,7 @@
 #include "widget/pages_list/widget_pages_list.h"
 #include "widget/stream_data/widget_stream_data.h"
 #include "widget/sedimentation/widget_sedimentation.h"
+#include "widget/sys_stage/widget_sys_stage.h"
 
 namespace Ui {
 class NanotechPRO;
@@ -74,6 +75,7 @@ public:
     widget_pages_list *Widget_pages_list;
     widget_stream_data *Widget_stream_data;
     widget_sedimentation *Widget_sedimentation;
+    widget_sys_stage *Widget_sys_stage;
     //*********************************************************//
 
 
