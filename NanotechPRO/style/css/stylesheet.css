@@ -322,4 +322,8 @@ background-image: url(:/menu/costs_0.png);
  padding: 0px 5px;
 }
 
-
+/*------------------------------------------------------- QProgressBar*/
+QProgressBar
+{
+	border-radius: 5px;
+}

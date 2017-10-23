@@ -212,7 +212,7 @@ void NanotechPRO::loadFontFamilyFromTTF()
 
             foreach (const QString &style, database.styles(str))
             {
-                if (style.contains("Italic")) // Cursive, Bold, Normal
+                if (style.contains("Normal")) // Cursive, Bold, Normal
                     result += style;
             }
         }
