@@ -1,6 +1,6 @@
 IDI_ICON1               ICON    DISCARDABLE     "nanotech.ico"
 
-#include <windows.h>
+/*#include <windows.h>
 #include <Version/version.h>
 
 VS_VERSION_INFO VERSIONINFO
@@ -28,4 +28,4 @@ BEGIN
     BEGIN
         VALUE "Translation", 0x409, 1252
     END
-END
+END*/

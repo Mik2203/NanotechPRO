@@ -29,6 +29,8 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -45,6 +47,30 @@ public:
     QAction *ac_reference;
     QWidget *centralwidget;
     QGridLayout *gridLayout_3;
+    QFrame *fr_menu_0;
+    QGridLayout *gridLayout_25;
+    QFrame *fr_menu_1;
+    QGridLayout *gridLayout_7;
+    QPushButton *panel_menu_0;
+    QPushButton *panel_menu_1;
+    QFrame *line_2;
+    QStackedWidget *stackedW_panel_0;
+    QWidget *page_4;
+    QGridLayout *gridLayout_14;
+    QFrame *line_5;
+    QSpacerItem *horizontalSpacer_7;
+    QPushButton *pushB_page_result;
+    QPushButton *pushB_page_system;
+    QPushButton *pushB_page_worning;
+    QPushButton *pushB_page_wother;
+    QPushButton *pushButton_7;
+    QWidget *page_5;
+    QPushButton *pushButton_3;
+    QFrame *fr_menu_2;
+    QGridLayout *gridLayout_26;
+    QComboBox *comboBox_5;
+    QFrame *line_4;
+    QLabel *label_2;
     QStackedWidget *stackedW_0;
     QWidget *page;
     QGridLayout *gridLayout;
@@ -85,7 +111,19 @@ public:
     QGridLayout *gridLayout_18;
     QGroupBox *groupBox;
     QGridLayout *gridLayout_39;
-    QFrame *line_3;
+    QFrame *fr_pages_list_0;
+    QGridLayout *gridLayout_15;
+    QFrame *frame_4;
+    QHBoxLayout *horizontalLayout_7;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *label_5;
+    QComboBox *coBox_water_0;
+    QFrame *frame_61;
+    QHBoxLayout *horizontalLayout_10;
+    QSpacerItem *horizontalSpacer_10;
+    QPushButton *pushButton_5;
+    QPushButton *pushButton_6;
+    QSpacerItem *horizontalSpacer_12;
     QFrame *frame_5;
     QGridLayout *gridLayout_17;
     QSpacerItem *horizontalSpacer_8;
@@ -101,26 +139,14 @@ public:
     QLabel *label_7;
     QComboBox *comboBox_4;
     QSpacerItem *verticalSpacer_6;
-    QFrame *frame_61;
-    QHBoxLayout *horizontalLayout_10;
-    QSpacerItem *horizontalSpacer_10;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_6;
-    QSpacerItem *horizontalSpacer_12;
-    QFrame *frame_4;
-    QHBoxLayout *horizontalLayout_7;
-    QHBoxLayout *horizontalLayout_4;
-    QLabel *label_5;
-    QComboBox *coBox_water_0;
     QStackedWidget *stackedW_page_0;
     QWidget *page_6;
     QGridLayout *gridLayout_8;
     QFrame *fr_stackedW_page_0;
     QGridLayout *gridLayout_9;
-    QFrame *fr_pages_list_0;
-    QGridLayout *gridLayout_15;
-    QSpacerItem *verticalSpacer_48;
     QSpacerItem *horizontalSpacer_9;
+    QFrame *line_3;
+    QSpacerItem *verticalSpacer_48;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_10;
     QFrame *frame_3;
@@ -142,31 +168,24 @@ public:
     QFrame *fr_sys_panel_1;
     QGridLayout *gridLayout_20;
     QFrame *fr_sys_panel_2;
+    QGridLayout *gridLayout_21;
+    QLabel *la_block_1_2_page_0;
     QLabel *label_12;
     QWidget *page_8;
+    QGridLayout *gridLayout_22;
+    QFrame *fr_worning_1;
+    QGridLayout *gridLayout_23;
+    QFrame *frame_6;
+    QVBoxLayout *verticalLayout;
     QLabel *label_11;
+    QLabel *label_13;
+    QLabel *label_14;
+    QSpacerItem *verticalSpacer_7;
+    QFrame *frame_7;
+    QGridLayout *gridLayout_24;
+    QTextBrowser *textBrowser;
     QWidget *page_9;
     QLabel *label_10;
-    QFrame *fr_menu_0;
-    QGridLayout *gridLayout_7;
-    QPushButton *panel_menu_0;
-    QStackedWidget *stackedW_panel_0;
-    QWidget *page_4;
-    QGridLayout *gridLayout_14;
-    QFrame *line_5;
-    QFrame *line_4;
-    QComboBox *comboBox_5;
-    QPushButton *pushB_page_result;
-    QSpacerItem *horizontalSpacer_7;
-    QLabel *label_2;
-    QPushButton *pushB_page_wother;
-    QPushButton *pushB_page_system;
-    QPushButton *pushB_page_worning;
-    QPushButton *pushButton_7;
-    QWidget *page_5;
-    QPushButton *pushButton_3;
-    QPushButton *panel_menu_1;
-    QFrame *line_2;
     QMenuBar *menubar;
     QMenu *global_menu_0;
     QMenu *menu;
@@ -207,6 +226,336 @@ public:
         gridLayout_3->setSpacing(1);
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
         gridLayout_3->setContentsMargins(1, 1, 1, 1);
+        fr_menu_0 = new QFrame(centralwidget);
+        fr_menu_0->setObjectName(QStringLiteral("fr_menu_0"));
+        fr_menu_0->setMinimumSize(QSize(600, 55));
+        fr_menu_0->setMaximumSize(QSize(16777215, 55));
+        fr_menu_0->setFrameShape(QFrame::StyledPanel);
+        fr_menu_0->setFrameShadow(QFrame::Raised);
+        gridLayout_25 = new QGridLayout(fr_menu_0);
+        gridLayout_25->setObjectName(QStringLiteral("gridLayout_25"));
+        gridLayout_25->setHorizontalSpacing(2);
+        gridLayout_25->setVerticalSpacing(0);
+        gridLayout_25->setContentsMargins(0, 0, 0, 0);
+        fr_menu_1 = new QFrame(fr_menu_0);
+        fr_menu_1->setObjectName(QStringLiteral("fr_menu_1"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(fr_menu_1->sizePolicy().hasHeightForWidth());
+        fr_menu_1->setSizePolicy(sizePolicy);
+        fr_menu_1->setMinimumSize(QSize(0, 0));
+        fr_menu_1->setFrameShape(QFrame::NoFrame);
+        fr_menu_1->setFrameShadow(QFrame::Sunken);
+        gridLayout_7 = new QGridLayout(fr_menu_1);
+        gridLayout_7->setObjectName(QStringLiteral("gridLayout_7"));
+        gridLayout_7->setHorizontalSpacing(2);
+        gridLayout_7->setVerticalSpacing(0);
+        gridLayout_7->setContentsMargins(0, 0, 0, 0);
+        panel_menu_0 = new QPushButton(fr_menu_1);
+        panel_menu_0->setObjectName(QStringLiteral("panel_menu_0"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(panel_menu_0->sizePolicy().hasHeightForWidth());
+        panel_menu_0->setSizePolicy(sizePolicy1);
+        panel_menu_0->setMinimumSize(QSize(24, 24));
+        panel_menu_0->setMaximumSize(QSize(24, 24));
+        panel_menu_0->setFont(font);
+        panel_menu_0->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+" background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
+" background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+" stop: 0 #dae2ec, stop: 0.4 #d6dde7,\n"
+" stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);\n"
+" border: 1px solid #cdc2bf;\n"
+" border-radius: 5px;\n"
+"	\n"
+"	image: url(:/menu/menu_0.png);\n"
+"/* padding-right: 0px;\n"
+" text-align: right;\n"
+" background-position: left center;\n"
+" background-repeat: no-repeat;\n"
+" padding: 0px 5px;*/\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"background-color: qlineargradient(spread:pad, x1:0.011, y1:1, x2:0, y2:0, stop:0 rgba(201,  204, 255, 113), stop:0.169031 rgba(111, 125, 255, 200), stop:0.42435 rgba(86, 124, 255,  208), stop:0.625296 rgba(86, 150, 255, 234), stop:0.861284 rgba(114, 114, 255, 198),  stop:1 rgba(193, 215, 255, 217));\n"
+" border: 1px solid #cdc2bf;\n"
+" border-radius: 5px;\n"
+"	image: url(:/menu/menu_0_1.png);\n"
+" }\n"
+"\n"
+"QPushButton:checked\n"
+"{\n"
+"background: qlineargradient(x1: 0, y1: "
+                        "0, x2: 0, y2: 1,\n"
+" stop: 0 #f39556, stop: 0.4 #f7be98,\n"
+" stop: 0.5 #f0ccb4, stop: 1.0 #eda16e);\n"
+" border: 1px solid #cdc2bf;\n"
+" border-radius: 5px;\n"
+"	image: url(:/menu/menu_0.png);\n"
+"\n"
+"}\n"
+" \n"
+"QPushButton:pressed \n"
+"{\n"
+"background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+" stop: 0 #afc1db, stop: 0.4 #a1b3cf,\n"
+" stop: 0.5 #639bee, stop: 1.0 #b3caec);\n"
+" border: 1px solid #cdc2bf;\n"
+" border-radius: 5px;\n"
+"	image: url(:/menu/menu_0_1.png);\n"
+"}\n"
+"\n"
+"/***** \320\242\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 \320\227\320\265\320\273\320\265\320\275\321\213\320\271(\320\227\320\265\320\273\320\265\320\275\321\213\320\271) *****/\n"
+"/*8BE1A1 - \321\201\320\262\320\265\321\202\320\273\320\276-\320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
+"/*2EAA4D - \320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
+"/*018E29 - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\267\320\265\320\273\320\265\320\275"
+                        "\321\213\320\271*/\n"
+"/*2DC95A - \321\201\320\262\320\265\321\202\320\273\320\276- \321\202\320\265\320\274\320\275\320\276 - \320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
+"\n"
+"/***** \320\242\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 \320\263\320\276\320\273\321\203\320\261\320\276\320\271(\321\201\320\270\320\275\320\270\320\271) *****/\n"
+"/*afc1db - \321\201\320\262\320\265\321\202\320\273\320\276-\320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*a1b3cf - \321\202\320\265\320\274\320\275\320\265\320\265 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*639bee - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*b3caec - \321\201\320\262\320\265\321\202\320\273\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"\n"
+"/***** \320\241\320\262\320\265\321\202\320\273\320\276 \320\263\320\276\320\273\321\203\320\261\320\276\320\271("
+                        "\320\263\320\276\320\273\321\203\320\261\320\276\320\271) *****/\n"
+"/*e4eaf3 - \321\201\320\262\320\265\321\202\320\273\320\276-\320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*a1b3cf - \321\202\320\265\320\274\320\275\320\265\320\265 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*639bee - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*e4eaf3 - \321\201\320\262\320\265\321\202\320\273\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/"));
+
+        gridLayout_7->addWidget(panel_menu_0, 0, 0, 1, 1);
+
+        panel_menu_1 = new QPushButton(fr_menu_1);
+        panel_menu_1->setObjectName(QStringLiteral("panel_menu_1"));
+        sizePolicy1.setHeightForWidth(panel_menu_1->sizePolicy().hasHeightForWidth());
+        panel_menu_1->setSizePolicy(sizePolicy1);
+        panel_menu_1->setMinimumSize(QSize(24, 24));
+        panel_menu_1->setMaximumSize(QSize(24, 24));
+        panel_menu_1->setFont(font);
+        panel_menu_1->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+" background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
+" background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+" stop: 0 #dae2ec, stop: 0.4 #d6dde7,\n"
+" stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);\n"
+" border: 1px solid #cdc2bf;\n"
+" border-radius: 5px;\n"
+"	\n"
+"	image: url(:/menu/menu_1.png);\n"
+"/* padding-right: 0px;\n"
+" text-align: right;\n"
+" background-position: left center;\n"
+" background-repeat: no-repeat;\n"
+" padding: 0px 5px;*/\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"background-color: qlineargradient(spread:pad, x1:0.011, y1:1, x2:0, y2:0, stop:0 rgba(201,  204, 255, 113), stop:0.169031 rgba(111, 125, 255, 200), stop:0.42435 rgba(86, 124, 255,  208), stop:0.625296 rgba(86, 150, 255, 234), stop:0.861284 rgba(114, 114, 255, 198),  stop:1 rgba(193, 215, 255, 217));\n"
+" border: 1px solid #cdc2bf;\n"
+" border-radius: 5px;\n"
+"	image: url(:/menu/menu_1_1.png);\n"
+" }\n"
+"\n"
+"QPushButton:checked\n"
+"{\n"
+"background: qlineargradient(x1: 0, y1: "
+                        "0, x2: 0, y2: 1,\n"
+" stop: 0 #f39556, stop: 0.4 #f7be98,\n"
+" stop: 0.5 #f0ccb4, stop: 1.0 #eda16e);\n"
+" border: 1px solid #cdc2bf;\n"
+" border-radius: 5px;\n"
+"	image: url(:/menu/menu_1.png);\n"
+"\n"
+"}\n"
+" \n"
+"QPushButton:pressed \n"
+"{\n"
+"background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+" stop: 0 #afc1db, stop: 0.4 #a1b3cf,\n"
+" stop: 0.5 #639bee, stop: 1.0 #b3caec);\n"
+" border: 1px solid #cdc2bf;\n"
+" border-radius: 5px;\n"
+"	image: url(:/menu/menu_1_1.png);\n"
+"}\n"
+"\n"
+"/***** \320\242\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 \320\227\320\265\320\273\320\265\320\275\321\213\320\271(\320\227\320\265\320\273\320\265\320\275\321\213\320\271) *****/\n"
+"/*8BE1A1 - \321\201\320\262\320\265\321\202\320\273\320\276-\320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
+"/*2EAA4D - \320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
+"/*018E29 - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\267\320\265\320\273\320\265\320\275"
+                        "\321\213\320\271*/\n"
+"/*2DC95A - \321\201\320\262\320\265\321\202\320\273\320\276- \321\202\320\265\320\274\320\275\320\276 - \320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
+"\n"
+"/***** \320\242\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 \320\263\320\276\320\273\321\203\320\261\320\276\320\271(\321\201\320\270\320\275\320\270\320\271) *****/\n"
+"/*afc1db - \321\201\320\262\320\265\321\202\320\273\320\276-\320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*a1b3cf - \321\202\320\265\320\274\320\275\320\265\320\265 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*639bee - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*b3caec - \321\201\320\262\320\265\321\202\320\273\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"\n"
+"/***** \320\241\320\262\320\265\321\202\320\273\320\276 \320\263\320\276\320\273\321\203\320\261\320\276\320\271("
+                        "\320\263\320\276\320\273\321\203\320\261\320\276\320\271) *****/\n"
+"/*e4eaf3 - \321\201\320\262\320\265\321\202\320\273\320\276-\320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*a1b3cf - \321\202\320\265\320\274\320\275\320\265\320\265 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*639bee - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
+"/*e4eaf3 - \321\201\320\262\320\265\321\202\320\273\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/"));
+
+        gridLayout_7->addWidget(panel_menu_1, 1, 0, 1, 1);
+
+        line_2 = new QFrame(fr_menu_1);
+        line_2->setObjectName(QStringLiteral("line_2"));
+        line_2->setMinimumSize(QSize(4, 20));
+        line_2->setFrameShape(QFrame::VLine);
+        line_2->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_7->addWidget(line_2, 0, 1, 2, 1);
+
+        stackedW_panel_0 = new QStackedWidget(fr_menu_1);
+        stackedW_panel_0->setObjectName(QStringLiteral("stackedW_panel_0"));
+        stackedW_panel_0->setFrameShape(QFrame::NoFrame);
+        page_4 = new QWidget();
+        page_4->setObjectName(QStringLiteral("page_4"));
+        gridLayout_14 = new QGridLayout(page_4);
+        gridLayout_14->setSpacing(1);
+        gridLayout_14->setObjectName(QStringLiteral("gridLayout_14"));
+        gridLayout_14->setContentsMargins(0, 0, 0, 0);
+        line_5 = new QFrame(page_4);
+        line_5->setObjectName(QStringLiteral("line_5"));
+        line_5->setMinimumSize(QSize(4, 0));
+        line_5->setFrameShape(QFrame::VLine);
+        line_5->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_14->addWidget(line_5, 0, 4, 1, 1);
+
+        horizontalSpacer_7 = new QSpacerItem(898, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_14->addItem(horizontalSpacer_7, 0, 6, 1, 1);
+
+        pushB_page_result = new QPushButton(page_4);
+        pushB_page_result->setObjectName(QStringLiteral("pushB_page_result"));
+        pushB_page_result->setMinimumSize(QSize(42, 42));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Arial"));
+        font1.setBold(false);
+        font1.setWeight(50);
+        pushB_page_result->setFont(font1);
+        pushB_page_result->setStyleSheet(QStringLiteral(""));
+        pushB_page_result->setIconSize(QSize(32, 32));
+        pushB_page_result->setCheckable(false);
+
+        gridLayout_14->addWidget(pushB_page_result, 0, 3, 1, 1);
+
+        pushB_page_system = new QPushButton(page_4);
+        pushB_page_system->setObjectName(QStringLiteral("pushB_page_system"));
+        pushB_page_system->setMinimumSize(QSize(42, 42));
+        pushB_page_system->setFont(font1);
+        pushB_page_system->setStyleSheet(QStringLiteral(""));
+        pushB_page_system->setCheckable(false);
+
+        gridLayout_14->addWidget(pushB_page_system, 0, 1, 1, 1);
+
+        pushB_page_worning = new QPushButton(page_4);
+        pushB_page_worning->setObjectName(QStringLiteral("pushB_page_worning"));
+        pushB_page_worning->setMinimumSize(QSize(42, 42));
+        pushB_page_worning->setFont(font1);
+        pushB_page_worning->setStyleSheet(QStringLiteral(""));
+        pushB_page_worning->setIconSize(QSize(32, 32));
+        pushB_page_worning->setCheckable(false);
+
+        gridLayout_14->addWidget(pushB_page_worning, 0, 2, 1, 1);
+
+        pushB_page_wother = new QPushButton(page_4);
+        pushB_page_wother->setObjectName(QStringLiteral("pushB_page_wother"));
+        sizePolicy1.setHeightForWidth(pushB_page_wother->sizePolicy().hasHeightForWidth());
+        pushB_page_wother->setSizePolicy(sizePolicy1);
+        pushB_page_wother->setMinimumSize(QSize(42, 42));
+        pushB_page_wother->setFont(font1);
+        pushB_page_wother->setStyleSheet(QStringLiteral(""));
+        pushB_page_wother->setIconSize(QSize(52, 52));
+        pushB_page_wother->setCheckable(false);
+
+        gridLayout_14->addWidget(pushB_page_wother, 0, 0, 1, 1);
+
+        pushButton_7 = new QPushButton(page_4);
+        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
+        sizePolicy1.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
+        pushButton_7->setSizePolicy(sizePolicy1);
+        pushButton_7->setMinimumSize(QSize(100, 42));
+        QFont font2;
+        font2.setPointSize(11);
+        font2.setBold(true);
+        font2.setWeight(75);
+        pushButton_7->setFont(font2);
+        pushButton_7->setStyleSheet(QStringLiteral(""));
+
+        gridLayout_14->addWidget(pushButton_7, 0, 5, 1, 1);
+
+        stackedW_panel_0->addWidget(page_4);
+        page_5 = new QWidget();
+        page_5->setObjectName(QStringLiteral("page_5"));
+        pushButton_3 = new QPushButton(page_5);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(10, 10, 75, 23));
+        stackedW_panel_0->addWidget(page_5);
+
+        gridLayout_7->addWidget(stackedW_panel_0, 0, 2, 2, 1);
+
+
+        gridLayout_25->addWidget(fr_menu_1, 0, 0, 1, 1);
+
+        fr_menu_2 = new QFrame(fr_menu_0);
+        fr_menu_2->setObjectName(QStringLiteral("fr_menu_2"));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(fr_menu_2->sizePolicy().hasHeightForWidth());
+        fr_menu_2->setSizePolicy(sizePolicy2);
+        fr_menu_2->setMinimumSize(QSize(0, 0));
+        fr_menu_2->setFrameShape(QFrame::StyledPanel);
+        fr_menu_2->setFrameShadow(QFrame::Raised);
+        gridLayout_26 = new QGridLayout(fr_menu_2);
+        gridLayout_26->setObjectName(QStringLiteral("gridLayout_26"));
+        gridLayout_26->setHorizontalSpacing(2);
+        gridLayout_26->setVerticalSpacing(0);
+        gridLayout_26->setContentsMargins(0, 0, 0, 0);
+        comboBox_5 = new QComboBox(fr_menu_2);
+        comboBox_5->setObjectName(QStringLiteral("comboBox_5"));
+        sizePolicy1.setHeightForWidth(comboBox_5->sizePolicy().hasHeightForWidth());
+        comboBox_5->setSizePolicy(sizePolicy1);
+
+        gridLayout_26->addWidget(comboBox_5, 0, 0, 1, 1);
+
+        line_4 = new QFrame(fr_menu_2);
+        line_4->setObjectName(QStringLiteral("line_4"));
+        line_4->setMinimumSize(QSize(4, 0));
+        line_4->setFrameShape(QFrame::VLine);
+        line_4->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_26->addWidget(line_4, 0, 1, 1, 1);
+
+        label_2 = new QLabel(fr_menu_2);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy3);
+        label_2->setMinimumSize(QSize(155, 46));
+        label_2->setStyleSheet(QStringLiteral("image: url(:/logotip/Membranium_logo_rus.png);"));
+
+        gridLayout_26->addWidget(label_2, 0, 2, 1, 1);
+
+
+        gridLayout_25->addWidget(fr_menu_2, 0, 1, 1, 1);
+
+
+        gridLayout_3->addWidget(fr_menu_0, 0, 1, 1, 1);
+
         stackedW_0 = new QStackedWidget(centralwidget);
         stackedW_0->setObjectName(QStringLiteral("stackedW_0"));
         stackedW_0->setFrameShape(QFrame::NoFrame);
@@ -228,11 +577,11 @@ public:
 
         frame = new QFrame(page);
         frame->setObjectName(QStringLiteral("frame"));
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
-        frame->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy4);
         frame->setMinimumSize(QSize(350, 350));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
@@ -242,9 +591,9 @@ public:
         gridLayout_6->setContentsMargins(1, 1, 1, 1);
         label = new QLabel(frame);
         label->setObjectName(QStringLiteral("label"));
-        QFont font1;
-        font1.setPointSize(18);
-        label->setFont(font1);
+        QFont font3;
+        font3.setPointSize(18);
+        label->setFont(font3);
         label->setFrameShape(QFrame::NoFrame);
         label->setAlignment(Qt::AlignCenter);
 
@@ -266,11 +615,11 @@ public:
 
         lab_logo_0 = new QLabel(frame);
         lab_logo_0->setObjectName(QStringLiteral("lab_logo_0"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(lab_logo_0->sizePolicy().hasHeightForWidth());
-        lab_logo_0->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(lab_logo_0->sizePolicy().hasHeightForWidth());
+        lab_logo_0->setSizePolicy(sizePolicy5);
         lab_logo_0->setMinimumSize(QSize(315, 98));
         lab_logo_0->setFont(font);
         lab_logo_0->setStyleSheet(QStringLiteral("image: url(:/logotip/Membranium_logo_rus.png);"));
@@ -335,11 +684,11 @@ public:
 
         label_3 = new QLabel(fr_new_pro_0);
         label_3->setObjectName(QStringLiteral("label_3"));
-        QFont font2;
-        font2.setPointSize(10);
-        font2.setBold(true);
-        font2.setWeight(75);
-        label_3->setFont(font2);
+        QFont font4;
+        font4.setPointSize(10);
+        font4.setBold(true);
+        font4.setWeight(75);
+        label_3->setFont(font4);
         label_3->setAlignment(Qt::AlignCenter);
 
         gridLayout_4->addWidget(label_3, 0, 0, 1, 1);
@@ -386,8 +735,8 @@ public:
         laLogo_1 = new QLabel(frame_2);
         laLogo_1->setObjectName(QStringLiteral("laLogo_1"));
         laLogo_1->setGeometry(QRect(0, 0, 48, 48));
-        sizePolicy.setHeightForWidth(laLogo_1->sizePolicy().hasHeightForWidth());
-        laLogo_1->setSizePolicy(sizePolicy);
+        sizePolicy4.setHeightForWidth(laLogo_1->sizePolicy().hasHeightForWidth());
+        laLogo_1->setSizePolicy(sizePolicy4);
         laLogo_1->setMinimumSize(QSize(0, 0));
         laLogo_1->setMaximumSize(QSize(48, 48));
         laLogo_1->setFont(font);
@@ -438,19 +787,96 @@ public:
         gridLayout_39->setSpacing(2);
         gridLayout_39->setObjectName(QStringLiteral("gridLayout_39"));
         gridLayout_39->setContentsMargins(1, 1, 1, 1);
-        line_3 = new QFrame(groupBox);
-        line_3->setObjectName(QStringLiteral("line_3"));
-        line_3->setMinimumSize(QSize(0, 0));
-        line_3->setFrameShape(QFrame::HLine);
-        line_3->setFrameShadow(QFrame::Sunken);
+        fr_pages_list_0 = new QFrame(groupBox);
+        fr_pages_list_0->setObjectName(QStringLiteral("fr_pages_list_0"));
+        sizePolicy4.setHeightForWidth(fr_pages_list_0->sizePolicy().hasHeightForWidth());
+        fr_pages_list_0->setSizePolicy(sizePolicy4);
+        fr_pages_list_0->setFrameShape(QFrame::StyledPanel);
+        fr_pages_list_0->setFrameShadow(QFrame::Raised);
+        gridLayout_15 = new QGridLayout(fr_pages_list_0);
+        gridLayout_15->setObjectName(QStringLiteral("gridLayout_15"));
 
-        gridLayout_39->addWidget(line_3, 1, 0, 1, 1);
+        gridLayout_39->addWidget(fr_pages_list_0, 2, 4, 2, 1);
+
+        frame_4 = new QFrame(groupBox);
+        frame_4->setObjectName(QStringLiteral("frame_4"));
+        sizePolicy2.setHeightForWidth(frame_4->sizePolicy().hasHeightForWidth());
+        frame_4->setSizePolicy(sizePolicy2);
+        frame_4->setMinimumSize(QSize(307, 25));
+        frame_4->setFrameShape(QFrame::StyledPanel);
+        frame_4->setFrameShadow(QFrame::Raised);
+        horizontalLayout_7 = new QHBoxLayout(frame_4);
+        horizontalLayout_7->setSpacing(2);
+        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
+        horizontalLayout_7->setContentsMargins(1, 1, 1, 1);
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setSpacing(2);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(1, 1, 1, 1);
+        label_5 = new QLabel(frame_4);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        sizePolicy2.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
+        label_5->setSizePolicy(sizePolicy2);
+
+        horizontalLayout_4->addWidget(label_5);
+
+        coBox_water_0 = new QComboBox(frame_4);
+        coBox_water_0->setObjectName(QStringLiteral("coBox_water_0"));
+        sizePolicy.setHeightForWidth(coBox_water_0->sizePolicy().hasHeightForWidth());
+        coBox_water_0->setSizePolicy(sizePolicy);
+
+        horizontalLayout_4->addWidget(coBox_water_0);
+
+
+        horizontalLayout_7->addLayout(horizontalLayout_4);
+
+
+        gridLayout_39->addWidget(frame_4, 0, 0, 1, 1);
+
+        frame_61 = new QFrame(groupBox);
+        frame_61->setObjectName(QStringLiteral("frame_61"));
+        QSizePolicy sizePolicy6(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(frame_61->sizePolicy().hasHeightForWidth());
+        frame_61->setSizePolicy(sizePolicy6);
+        frame_61->setMinimumSize(QSize(301, 24));
+        frame_61->setFrameShape(QFrame::StyledPanel);
+        frame_61->setFrameShadow(QFrame::Raised);
+        horizontalLayout_10 = new QHBoxLayout(frame_61);
+        horizontalLayout_10->setSpacing(2);
+        horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
+        horizontalLayout_10->setContentsMargins(1, 1, 1, 1);
+        horizontalSpacer_10 = new QSpacerItem(11, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_10);
+
+        pushButton_5 = new QPushButton(frame_61);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        sizePolicy1.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
+        pushButton_5->setSizePolicy(sizePolicy1);
+        pushButton_5->setMinimumSize(QSize(100, 20));
+
+        horizontalLayout_10->addWidget(pushButton_5);
+
+        pushButton_6 = new QPushButton(frame_61);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        sizePolicy1.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
+        pushButton_6->setSizePolicy(sizePolicy1);
+        pushButton_6->setMinimumSize(QSize(100, 20));
+        pushButton_6->setStyleSheet(QStringLiteral(""));
+
+        horizontalLayout_10->addWidget(pushButton_6);
+
+        horizontalSpacer_12 = new QSpacerItem(102, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_12);
+
+
+        gridLayout_39->addWidget(frame_61, 0, 4, 1, 1);
 
         frame_5 = new QFrame(groupBox);
         frame_5->setObjectName(QStringLiteral("frame_5"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(frame_5->sizePolicy().hasHeightForWidth());
         frame_5->setSizePolicy(sizePolicy2);
         frame_5->setMinimumSize(QSize(307, 80));
@@ -483,10 +909,10 @@ public:
         comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
         comboBox_2->setMinimumSize(QSize(50, 18));
         comboBox_2->setMaximumSize(QSize(60, 18));
-        QFont font3;
-        font3.setFamily(QStringLiteral("Times New Roman"));
-        font3.setPointSize(10);
-        comboBox_2->setFont(font3);
+        QFont font5;
+        font5.setFamily(QStringLiteral("Times New Roman"));
+        font5.setPointSize(10);
+        comboBox_2->setFont(font5);
 
         gridLayout_16->addWidget(comboBox_2, 0, 1, 1, 1);
 
@@ -500,19 +926,16 @@ public:
 
         comboBox = new QComboBox(frame_5);
         comboBox->setObjectName(QStringLiteral("comboBox"));
-        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
-        comboBox->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
+        comboBox->setSizePolicy(sizePolicy1);
         comboBox->setMinimumSize(QSize(50, 18));
         comboBox->setMaximumSize(QSize(60, 18));
-        QFont font4;
-        font4.setFamily(QStringLiteral("Times New Roman"));
-        font4.setPointSize(10);
-        font4.setBold(false);
-        font4.setWeight(50);
-        comboBox->setFont(font4);
+        QFont font6;
+        font6.setFamily(QStringLiteral("Times New Roman"));
+        font6.setPointSize(10);
+        font6.setBold(false);
+        font6.setWeight(50);
+        comboBox->setFont(font6);
 
         gridLayout_16->addWidget(comboBox, 1, 1, 1, 1);
 
@@ -532,11 +955,11 @@ public:
 
         comboBox_3 = new QComboBox(frame_5);
         comboBox_3->setObjectName(QStringLiteral("comboBox_3"));
-        sizePolicy3.setHeightForWidth(comboBox_3->sizePolicy().hasHeightForWidth());
-        comboBox_3->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(comboBox_3->sizePolicy().hasHeightForWidth());
+        comboBox_3->setSizePolicy(sizePolicy1);
         comboBox_3->setMinimumSize(QSize(50, 18));
         comboBox_3->setMaximumSize(QSize(60, 18));
-        comboBox_3->setFont(font3);
+        comboBox_3->setFont(font5);
 
         gridLayout_13->addWidget(comboBox_3, 0, 1, 1, 1);
 
@@ -550,11 +973,11 @@ public:
 
         comboBox_4 = new QComboBox(frame_5);
         comboBox_4->setObjectName(QStringLiteral("comboBox_4"));
-        sizePolicy3.setHeightForWidth(comboBox_4->sizePolicy().hasHeightForWidth());
-        comboBox_4->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(comboBox_4->sizePolicy().hasHeightForWidth());
+        comboBox_4->setSizePolicy(sizePolicy1);
         comboBox_4->setMinimumSize(QSize(50, 18));
         comboBox_4->setMaximumSize(QSize(60, 18));
-        comboBox_4->setFont(font3);
+        comboBox_4->setFont(font5);
 
         gridLayout_13->addWidget(comboBox_4, 1, 1, 1, 1);
 
@@ -567,86 +990,6 @@ public:
 
 
         gridLayout_39->addWidget(frame_5, 2, 0, 2, 1);
-
-        frame_61 = new QFrame(groupBox);
-        frame_61->setObjectName(QStringLiteral("frame_61"));
-        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(frame_61->sizePolicy().hasHeightForWidth());
-        frame_61->setSizePolicy(sizePolicy4);
-        frame_61->setMinimumSize(QSize(301, 24));
-        frame_61->setFrameShape(QFrame::StyledPanel);
-        frame_61->setFrameShadow(QFrame::Raised);
-        horizontalLayout_10 = new QHBoxLayout(frame_61);
-        horizontalLayout_10->setSpacing(2);
-        horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
-        horizontalLayout_10->setContentsMargins(1, 1, 1, 1);
-        horizontalSpacer_10 = new QSpacerItem(11, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout_10->addItem(horizontalSpacer_10);
-
-        pushButton_5 = new QPushButton(frame_61);
-        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        sizePolicy3.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
-        pushButton_5->setSizePolicy(sizePolicy3);
-        pushButton_5->setMinimumSize(QSize(100, 20));
-
-        horizontalLayout_10->addWidget(pushButton_5);
-
-        pushButton_6 = new QPushButton(frame_61);
-        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
-        sizePolicy3.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
-        pushButton_6->setSizePolicy(sizePolicy3);
-        pushButton_6->setMinimumSize(QSize(100, 20));
-        pushButton_6->setStyleSheet(QStringLiteral(""));
-
-        horizontalLayout_10->addWidget(pushButton_6);
-
-        horizontalSpacer_12 = new QSpacerItem(102, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_10->addItem(horizontalSpacer_12);
-
-
-        gridLayout_39->addWidget(frame_61, 0, 4, 1, 1);
-
-        frame_4 = new QFrame(groupBox);
-        frame_4->setObjectName(QStringLiteral("frame_4"));
-        sizePolicy2.setHeightForWidth(frame_4->sizePolicy().hasHeightForWidth());
-        frame_4->setSizePolicy(sizePolicy2);
-        frame_4->setMinimumSize(QSize(307, 25));
-        frame_4->setFrameShape(QFrame::StyledPanel);
-        frame_4->setFrameShadow(QFrame::Raised);
-        horizontalLayout_7 = new QHBoxLayout(frame_4);
-        horizontalLayout_7->setSpacing(2);
-        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        horizontalLayout_7->setContentsMargins(1, 1, 1, 1);
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setSpacing(2);
-        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        horizontalLayout_4->setContentsMargins(1, 1, 1, 1);
-        label_5 = new QLabel(frame_4);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        sizePolicy2.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
-        label_5->setSizePolicy(sizePolicy2);
-
-        horizontalLayout_4->addWidget(label_5);
-
-        coBox_water_0 = new QComboBox(frame_4);
-        coBox_water_0->setObjectName(QStringLiteral("coBox_water_0"));
-        QSizePolicy sizePolicy5(QSizePolicy::Expanding, QSizePolicy::Fixed);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(coBox_water_0->sizePolicy().hasHeightForWidth());
-        coBox_water_0->setSizePolicy(sizePolicy5);
-
-        horizontalLayout_4->addWidget(coBox_water_0);
-
-
-        horizontalLayout_7->addLayout(horizontalLayout_4);
-
-
-        gridLayout_39->addWidget(frame_4, 0, 0, 1, 1);
 
         stackedW_page_0 = new QStackedWidget(groupBox);
         stackedW_page_0->setObjectName(QStringLiteral("stackedW_page_0"));
@@ -673,35 +1016,32 @@ public:
 
         gridLayout_39->addWidget(stackedW_page_0, 6, 0, 1, 5);
 
-        fr_pages_list_0 = new QFrame(groupBox);
-        fr_pages_list_0->setObjectName(QStringLiteral("fr_pages_list_0"));
-        sizePolicy.setHeightForWidth(fr_pages_list_0->sizePolicy().hasHeightForWidth());
-        fr_pages_list_0->setSizePolicy(sizePolicy);
-        fr_pages_list_0->setFrameShape(QFrame::StyledPanel);
-        fr_pages_list_0->setFrameShadow(QFrame::Raised);
-        gridLayout_15 = new QGridLayout(fr_pages_list_0);
-        gridLayout_15->setObjectName(QStringLiteral("gridLayout_15"));
-
-        gridLayout_39->addWidget(fr_pages_list_0, 2, 4, 2, 1);
-
-        verticalSpacer_48 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout_39->addItem(verticalSpacer_48, 4, 0, 1, 5);
-
         horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         gridLayout_39->addItem(horizontalSpacer_9, 2, 2, 1, 1);
+
+        line_3 = new QFrame(groupBox);
+        line_3->setObjectName(QStringLiteral("line_3"));
+        line_3->setMinimumSize(QSize(0, 0));
+        line_3->setFrameShape(QFrame::HLine);
+        line_3->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_39->addWidget(line_3, 1, 0, 1, 1);
+
+        verticalSpacer_48 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_39->addItem(verticalSpacer_48, 7, 0, 1, 1);
 
 
         gridLayout_18->addWidget(groupBox, 0, 0, 1, 1);
 
         groupBox_2 = new QGroupBox(fr_page_1);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        QSizePolicy sizePolicy6(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
-        groupBox_2->setSizePolicy(sizePolicy6);
+        QSizePolicy sizePolicy7(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy7.setHorizontalStretch(0);
+        sizePolicy7.setVerticalStretch(0);
+        sizePolicy7.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
+        groupBox_2->setSizePolicy(sizePolicy7);
         gridLayout_10 = new QGridLayout(groupBox_2);
         gridLayout_10->setSpacing(1);
         gridLayout_10->setObjectName(QStringLiteral("gridLayout_10"));
@@ -715,22 +1055,22 @@ public:
         pushB_changes_0->setObjectName(QStringLiteral("pushB_changes_0"));
         pushB_changes_0->setGeometry(QRect(3, 0, 100, 23));
         pushB_changes_0->setMinimumSize(QSize(100, 0));
-        QFont font5;
-        font5.setBold(false);
-        font5.setWeight(50);
-        pushB_changes_0->setFont(font5);
+        QFont font7;
+        font7.setBold(false);
+        font7.setWeight(50);
+        pushB_changes_0->setFont(font7);
         pushB_changes_0->setCheckable(true);
         pushB_softener_0 = new QPushButton(frame_3);
         pushB_softener_0->setObjectName(QStringLiteral("pushB_softener_0"));
         pushB_softener_0->setGeometry(QRect(104, 0, 100, 23));
         pushB_softener_0->setMinimumSize(QSize(100, 0));
-        pushB_softener_0->setFont(font5);
+        pushB_softener_0->setFont(font7);
         pushB_softener_0->setCheckable(true);
         pushB_correction_0 = new QPushButton(frame_3);
         pushB_correction_0->setObjectName(QStringLiteral("pushB_correction_0"));
         pushB_correction_0->setGeometry(QRect(205, 0, 100, 23));
         pushB_correction_0->setMinimumSize(QSize(100, 0));
-        pushB_correction_0->setFont(font5);
+        pushB_correction_0->setFont(font7);
         pushB_correction_0->setCheckable(true);
 
         gridLayout_10->addWidget(frame_3, 0, 0, 1, 1);
@@ -804,22 +1144,115 @@ public:
 
         fr_sys_panel_2 = new QFrame(page_3);
         fr_sys_panel_2->setObjectName(QStringLiteral("fr_sys_panel_2"));
-        sizePolicy6.setHeightForWidth(fr_sys_panel_2->sizePolicy().hasHeightForWidth());
-        fr_sys_panel_2->setSizePolicy(sizePolicy6);
+        sizePolicy7.setHeightForWidth(fr_sys_panel_2->sizePolicy().hasHeightForWidth());
+        fr_sys_panel_2->setSizePolicy(sizePolicy7);
         fr_sys_panel_2->setFrameShape(QFrame::Box);
         fr_sys_panel_2->setFrameShadow(QFrame::Raised);
+        gridLayout_21 = new QGridLayout(fr_sys_panel_2);
+        gridLayout_21->setSpacing(1);
+        gridLayout_21->setObjectName(QStringLiteral("gridLayout_21"));
+        gridLayout_21->setContentsMargins(1, 1, 1, 1);
+        la_block_1_2_page_0 = new QLabel(fr_sys_panel_2);
+        la_block_1_2_page_0->setObjectName(QStringLiteral("la_block_1_2_page_0"));
+        sizePolicy.setHeightForWidth(la_block_1_2_page_0->sizePolicy().hasHeightForWidth());
+        la_block_1_2_page_0->setSizePolicy(sizePolicy);
+        QFont font8;
+        font8.setFamily(QStringLiteral("Arial"));
+        font8.setPointSize(10);
+        font8.setBold(true);
+        font8.setItalic(false);
+        font8.setWeight(75);
+        la_block_1_2_page_0->setFont(font8);
+        la_block_1_2_page_0->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 170, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
+
+        gridLayout_21->addWidget(la_block_1_2_page_0, 0, 0, 1, 1);
+
         label_12 = new QLabel(fr_sys_panel_2);
         label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setGeometry(QRect(40, 30, 46, 13));
+        label_12->setStyleSheet(QStringLiteral("image: url(:/forms/scheme_0.png);"));
+
+        gridLayout_21->addWidget(label_12, 1, 0, 1, 1);
+
 
         gridLayout_19->addWidget(fr_sys_panel_2, 0, 1, 1, 1);
 
         stackedW_0->addWidget(page_3);
         page_8 = new QWidget();
         page_8->setObjectName(QStringLiteral("page_8"));
-        label_11 = new QLabel(page_8);
+        gridLayout_22 = new QGridLayout(page_8);
+        gridLayout_22->setSpacing(1);
+        gridLayout_22->setObjectName(QStringLiteral("gridLayout_22"));
+        gridLayout_22->setContentsMargins(1, 1, 1, 1);
+        fr_worning_1 = new QFrame(page_8);
+        fr_worning_1->setObjectName(QStringLiteral("fr_worning_1"));
+        fr_worning_1->setFrameShape(QFrame::StyledPanel);
+        fr_worning_1->setFrameShadow(QFrame::Raised);
+        gridLayout_23 = new QGridLayout(fr_worning_1);
+        gridLayout_23->setSpacing(1);
+        gridLayout_23->setObjectName(QStringLiteral("gridLayout_23"));
+        gridLayout_23->setContentsMargins(1, 1, 1, 1);
+        frame_6 = new QFrame(fr_worning_1);
+        frame_6->setObjectName(QStringLiteral("frame_6"));
+        sizePolicy2.setHeightForWidth(frame_6->sizePolicy().hasHeightForWidth());
+        frame_6->setSizePolicy(sizePolicy2);
+        frame_6->setMinimumSize(QSize(100, 0));
+        frame_6->setMaximumSize(QSize(100, 16777215));
+        frame_6->setFrameShape(QFrame::StyledPanel);
+        frame_6->setFrameShadow(QFrame::Raised);
+        verticalLayout = new QVBoxLayout(frame_6);
+        verticalLayout->setSpacing(1);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(1, 1, 1, 1);
+        label_11 = new QLabel(frame_6);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(620, 260, 151, 16));
+        label_11->setMinimumSize(QSize(0, 100));
+        label_11->setMaximumSize(QSize(16777215, 100));
+        label_11->setStyleSheet(QStringLiteral("image: url(:/menu/warning_critical.png);"));
+
+        verticalLayout->addWidget(label_11);
+
+        label_13 = new QLabel(frame_6);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setMinimumSize(QSize(0, 100));
+        label_13->setMaximumSize(QSize(16777215, 100));
+        label_13->setStyleSheet(QStringLiteral("image: url(:/menu/warning_info.png);"));
+
+        verticalLayout->addWidget(label_13);
+
+        label_14 = new QLabel(frame_6);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setMinimumSize(QSize(0, 100));
+        label_14->setMaximumSize(QSize(16777215, 100));
+        label_14->setStyleSheet(QStringLiteral("image: url(:/menu/warning_caution.png);"));
+
+        verticalLayout->addWidget(label_14);
+
+        verticalSpacer_7 = new QSpacerItem(20, 365, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_7);
+
+
+        gridLayout_23->addWidget(frame_6, 0, 0, 1, 1);
+
+        frame_7 = new QFrame(fr_worning_1);
+        frame_7->setObjectName(QStringLiteral("frame_7"));
+        frame_7->setFrameShape(QFrame::StyledPanel);
+        frame_7->setFrameShadow(QFrame::Raised);
+        gridLayout_24 = new QGridLayout(frame_7);
+        gridLayout_24->setSpacing(1);
+        gridLayout_24->setObjectName(QStringLiteral("gridLayout_24"));
+        gridLayout_24->setContentsMargins(1, 1, 1, 1);
+        textBrowser = new QTextBrowser(frame_7);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+
+        gridLayout_24->addWidget(textBrowser, 0, 0, 1, 1);
+
+
+        gridLayout_23->addWidget(frame_7, 0, 1, 1, 1);
+
+
+        gridLayout_22->addWidget(fr_worning_1, 0, 0, 1, 1);
+
         stackedW_0->addWidget(page_8);
         page_9 = new QWidget();
         page_9->setObjectName(QStringLiteral("page_9"));
@@ -828,298 +1261,7 @@ public:
         label_10->setGeometry(QRect(630, 270, 46, 13));
         stackedW_0->addWidget(page_9);
 
-        gridLayout_3->addWidget(stackedW_0, 1, 0, 1, 1);
-
-        fr_menu_0 = new QFrame(centralwidget);
-        fr_menu_0->setObjectName(QStringLiteral("fr_menu_0"));
-        sizePolicy5.setHeightForWidth(fr_menu_0->sizePolicy().hasHeightForWidth());
-        fr_menu_0->setSizePolicy(sizePolicy5);
-        fr_menu_0->setMinimumSize(QSize(600, 50));
-        fr_menu_0->setFrameShape(QFrame::Box);
-        fr_menu_0->setFrameShadow(QFrame::Sunken);
-        gridLayout_7 = new QGridLayout(fr_menu_0);
-        gridLayout_7->setSpacing(2);
-        gridLayout_7->setObjectName(QStringLiteral("gridLayout_7"));
-        gridLayout_7->setContentsMargins(0, 0, 0, 0);
-        panel_menu_0 = new QPushButton(fr_menu_0);
-        panel_menu_0->setObjectName(QStringLiteral("panel_menu_0"));
-        sizePolicy3.setHeightForWidth(panel_menu_0->sizePolicy().hasHeightForWidth());
-        panel_menu_0->setSizePolicy(sizePolicy3);
-        panel_menu_0->setMinimumSize(QSize(24, 24));
-        panel_menu_0->setMaximumSize(QSize(24, 24));
-        panel_menu_0->setFont(font);
-        panel_menu_0->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-" background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
-" background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-" stop: 0 #dae2ec, stop: 0.4 #d6dde7,\n"
-" stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);\n"
-" border: 1px solid #cdc2bf;\n"
-" border-radius: 5px;\n"
-"	\n"
-"	image: url(:/menu/menu_0.png);\n"
-"/* padding-right: 0px;\n"
-" text-align: right;\n"
-" background-position: left center;\n"
-" background-repeat: no-repeat;\n"
-" padding: 0px 5px;*/\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"background-color: qlineargradient(spread:pad, x1:0.011, y1:1, x2:0, y2:0, stop:0 rgba(201,  204, 255, 113), stop:0.169031 rgba(111, 125, 255, 200), stop:0.42435 rgba(86, 124, 255,  208), stop:0.625296 rgba(86, 150, 255, 234), stop:0.861284 rgba(114, 114, 255, 198),  stop:1 rgba(193, 215, 255, 217));\n"
-" border: 1px solid #cdc2bf;\n"
-" border-radius: 5px;\n"
-"	image: url(:/menu/menu_0_1.png);\n"
-" }\n"
-"\n"
-"QPushButton:checked\n"
-"{\n"
-"background: qlineargradient(x1: 0, y1: "
-                        "0, x2: 0, y2: 1,\n"
-" stop: 0 #f39556, stop: 0.4 #f7be98,\n"
-" stop: 0.5 #f0ccb4, stop: 1.0 #eda16e);\n"
-" border: 1px solid #cdc2bf;\n"
-" border-radius: 5px;\n"
-"	image: url(:/menu/menu_0.png);\n"
-"\n"
-"}\n"
-" \n"
-"QPushButton:pressed \n"
-"{\n"
-"background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-" stop: 0 #afc1db, stop: 0.4 #a1b3cf,\n"
-" stop: 0.5 #639bee, stop: 1.0 #b3caec);\n"
-" border: 1px solid #cdc2bf;\n"
-" border-radius: 5px;\n"
-"	image: url(:/menu/menu_0_1.png);\n"
-"}\n"
-"\n"
-"/***** \320\242\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 \320\227\320\265\320\273\320\265\320\275\321\213\320\271(\320\227\320\265\320\273\320\265\320\275\321\213\320\271) *****/\n"
-"/*8BE1A1 - \321\201\320\262\320\265\321\202\320\273\320\276-\320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
-"/*2EAA4D - \320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
-"/*018E29 - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\267\320\265\320\273\320\265\320\275"
-                        "\321\213\320\271*/\n"
-"/*2DC95A - \321\201\320\262\320\265\321\202\320\273\320\276- \321\202\320\265\320\274\320\275\320\276 - \320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
-"\n"
-"/***** \320\242\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 \320\263\320\276\320\273\321\203\320\261\320\276\320\271(\321\201\320\270\320\275\320\270\320\271) *****/\n"
-"/*afc1db - \321\201\320\262\320\265\321\202\320\273\320\276-\320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*a1b3cf - \321\202\320\265\320\274\320\275\320\265\320\265 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*639bee - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*b3caec - \321\201\320\262\320\265\321\202\320\273\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"\n"
-"/***** \320\241\320\262\320\265\321\202\320\273\320\276 \320\263\320\276\320\273\321\203\320\261\320\276\320\271("
-                        "\320\263\320\276\320\273\321\203\320\261\320\276\320\271) *****/\n"
-"/*e4eaf3 - \321\201\320\262\320\265\321\202\320\273\320\276-\320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*a1b3cf - \321\202\320\265\320\274\320\275\320\265\320\265 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*639bee - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*e4eaf3 - \321\201\320\262\320\265\321\202\320\273\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/"));
-
-        gridLayout_7->addWidget(panel_menu_0, 0, 0, 1, 1);
-
-        stackedW_panel_0 = new QStackedWidget(fr_menu_0);
-        stackedW_panel_0->setObjectName(QStringLiteral("stackedW_panel_0"));
-        stackedW_panel_0->setFrameShape(QFrame::NoFrame);
-        page_4 = new QWidget();
-        page_4->setObjectName(QStringLiteral("page_4"));
-        gridLayout_14 = new QGridLayout(page_4);
-        gridLayout_14->setSpacing(2);
-        gridLayout_14->setObjectName(QStringLiteral("gridLayout_14"));
-        gridLayout_14->setContentsMargins(0, 0, 0, 0);
-        line_5 = new QFrame(page_4);
-        line_5->setObjectName(QStringLiteral("line_5"));
-        line_5->setMinimumSize(QSize(4, 0));
-        line_5->setFrameShape(QFrame::VLine);
-        line_5->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_14->addWidget(line_5, 0, 4, 1, 1);
-
-        line_4 = new QFrame(page_4);
-        line_4->setObjectName(QStringLiteral("line_4"));
-        line_4->setMinimumSize(QSize(4, 0));
-        line_4->setFrameShape(QFrame::VLine);
-        line_4->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_14->addWidget(line_4, 0, 8, 1, 1);
-
-        comboBox_5 = new QComboBox(page_4);
-        comboBox_5->setObjectName(QStringLiteral("comboBox_5"));
-        sizePolicy3.setHeightForWidth(comboBox_5->sizePolicy().hasHeightForWidth());
-        comboBox_5->setSizePolicy(sizePolicy3);
-
-        gridLayout_14->addWidget(comboBox_5, 0, 7, 1, 1);
-
-        pushB_page_result = new QPushButton(page_4);
-        pushB_page_result->setObjectName(QStringLiteral("pushB_page_result"));
-        pushB_page_result->setMinimumSize(QSize(42, 42));
-        QFont font6;
-        font6.setFamily(QStringLiteral("Arial"));
-        font6.setBold(false);
-        font6.setWeight(50);
-        pushB_page_result->setFont(font6);
-        pushB_page_result->setStyleSheet(QStringLiteral(""));
-        pushB_page_result->setIconSize(QSize(32, 32));
-        pushB_page_result->setCheckable(false);
-
-        gridLayout_14->addWidget(pushB_page_result, 0, 3, 1, 1);
-
-        horizontalSpacer_7 = new QSpacerItem(898, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_14->addItem(horizontalSpacer_7, 0, 6, 1, 1);
-
-        label_2 = new QLabel(page_4);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        QSizePolicy sizePolicy7(QSizePolicy::Fixed, QSizePolicy::Expanding);
-        sizePolicy7.setHorizontalStretch(0);
-        sizePolicy7.setVerticalStretch(0);
-        sizePolicy7.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
-        label_2->setSizePolicy(sizePolicy7);
-        label_2->setMinimumSize(QSize(155, 46));
-        label_2->setStyleSheet(QStringLiteral("image: url(:/logotip/Membranium_logo_rus.png);"));
-
-        gridLayout_14->addWidget(label_2, 0, 9, 1, 1);
-
-        pushB_page_wother = new QPushButton(page_4);
-        pushB_page_wother->setObjectName(QStringLiteral("pushB_page_wother"));
-        sizePolicy3.setHeightForWidth(pushB_page_wother->sizePolicy().hasHeightForWidth());
-        pushB_page_wother->setSizePolicy(sizePolicy3);
-        pushB_page_wother->setMinimumSize(QSize(42, 42));
-        pushB_page_wother->setFont(font6);
-        pushB_page_wother->setStyleSheet(QStringLiteral(""));
-        pushB_page_wother->setIconSize(QSize(52, 52));
-        pushB_page_wother->setCheckable(false);
-
-        gridLayout_14->addWidget(pushB_page_wother, 0, 0, 1, 1);
-
-        pushB_page_system = new QPushButton(page_4);
-        pushB_page_system->setObjectName(QStringLiteral("pushB_page_system"));
-        pushB_page_system->setMinimumSize(QSize(42, 42));
-        pushB_page_system->setFont(font6);
-        pushB_page_system->setStyleSheet(QStringLiteral(""));
-        pushB_page_system->setCheckable(false);
-
-        gridLayout_14->addWidget(pushB_page_system, 0, 1, 1, 1);
-
-        pushB_page_worning = new QPushButton(page_4);
-        pushB_page_worning->setObjectName(QStringLiteral("pushB_page_worning"));
-        pushB_page_worning->setMinimumSize(QSize(42, 42));
-        pushB_page_worning->setFont(font6);
-        pushB_page_worning->setStyleSheet(QStringLiteral(""));
-        pushB_page_worning->setIconSize(QSize(32, 32));
-        pushB_page_worning->setCheckable(false);
-
-        gridLayout_14->addWidget(pushB_page_worning, 0, 2, 1, 1);
-
-        pushButton_7 = new QPushButton(page_4);
-        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
-        sizePolicy3.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
-        pushButton_7->setSizePolicy(sizePolicy3);
-        pushButton_7->setMinimumSize(QSize(100, 42));
-        QFont font7;
-        font7.setPointSize(11);
-        font7.setBold(true);
-        font7.setWeight(75);
-        pushButton_7->setFont(font7);
-        pushButton_7->setStyleSheet(QStringLiteral(""));
-
-        gridLayout_14->addWidget(pushButton_7, 0, 5, 1, 1);
-
-        stackedW_panel_0->addWidget(page_4);
-        page_5 = new QWidget();
-        page_5->setObjectName(QStringLiteral("page_5"));
-        pushButton_3 = new QPushButton(page_5);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(10, 10, 75, 23));
-        stackedW_panel_0->addWidget(page_5);
-
-        gridLayout_7->addWidget(stackedW_panel_0, 0, 2, 2, 1);
-
-        panel_menu_1 = new QPushButton(fr_menu_0);
-        panel_menu_1->setObjectName(QStringLiteral("panel_menu_1"));
-        sizePolicy3.setHeightForWidth(panel_menu_1->sizePolicy().hasHeightForWidth());
-        panel_menu_1->setSizePolicy(sizePolicy3);
-        panel_menu_1->setMinimumSize(QSize(24, 24));
-        panel_menu_1->setMaximumSize(QSize(24, 24));
-        panel_menu_1->setFont(font);
-        panel_menu_1->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-" background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);\n"
-" background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-" stop: 0 #dae2ec, stop: 0.4 #d6dde7,\n"
-" stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);\n"
-" border: 1px solid #cdc2bf;\n"
-" border-radius: 5px;\n"
-"	\n"
-"	image: url(:/menu/menu_1.png);\n"
-"/* padding-right: 0px;\n"
-" text-align: right;\n"
-" background-position: left center;\n"
-" background-repeat: no-repeat;\n"
-" padding: 0px 5px;*/\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"background-color: qlineargradient(spread:pad, x1:0.011, y1:1, x2:0, y2:0, stop:0 rgba(201,  204, 255, 113), stop:0.169031 rgba(111, 125, 255, 200), stop:0.42435 rgba(86, 124, 255,  208), stop:0.625296 rgba(86, 150, 255, 234), stop:0.861284 rgba(114, 114, 255, 198),  stop:1 rgba(193, 215, 255, 217));\n"
-" border: 1px solid #cdc2bf;\n"
-" border-radius: 5px;\n"
-"	image: url(:/menu/menu_1_1.png);\n"
-" }\n"
-"\n"
-"QPushButton:checked\n"
-"{\n"
-"background: qlineargradient(x1: 0, y1: "
-                        "0, x2: 0, y2: 1,\n"
-" stop: 0 #f39556, stop: 0.4 #f7be98,\n"
-" stop: 0.5 #f0ccb4, stop: 1.0 #eda16e);\n"
-" border: 1px solid #cdc2bf;\n"
-" border-radius: 5px;\n"
-"	image: url(:/menu/menu_1.png);\n"
-"\n"
-"}\n"
-" \n"
-"QPushButton:pressed \n"
-"{\n"
-"background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-" stop: 0 #afc1db, stop: 0.4 #a1b3cf,\n"
-" stop: 0.5 #639bee, stop: 1.0 #b3caec);\n"
-" border: 1px solid #cdc2bf;\n"
-" border-radius: 5px;\n"
-"	image: url(:/menu/menu_1_1.png);\n"
-"}\n"
-"\n"
-"/***** \320\242\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 \320\227\320\265\320\273\320\265\320\275\321\213\320\271(\320\227\320\265\320\273\320\265\320\275\321\213\320\271) *****/\n"
-"/*8BE1A1 - \321\201\320\262\320\265\321\202\320\273\320\276-\320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
-"/*2EAA4D - \320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
-"/*018E29 - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\267\320\265\320\273\320\265\320\275"
-                        "\321\213\320\271*/\n"
-"/*2DC95A - \321\201\320\262\320\265\321\202\320\273\320\276- \321\202\320\265\320\274\320\275\320\276 - \320\267\320\265\320\273\320\265\320\275\321\213\320\271*/\n"
-"\n"
-"/***** \320\242\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 \320\263\320\276\320\273\321\203\320\261\320\276\320\271(\321\201\320\270\320\275\320\270\320\271) *****/\n"
-"/*afc1db - \321\201\320\262\320\265\321\202\320\273\320\276-\320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*a1b3cf - \321\202\320\265\320\274\320\275\320\265\320\265 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*639bee - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*b3caec - \321\201\320\262\320\265\321\202\320\273\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"\n"
-"/***** \320\241\320\262\320\265\321\202\320\273\320\276 \320\263\320\276\320\273\321\203\320\261\320\276\320\271("
-                        "\320\263\320\276\320\273\321\203\320\261\320\276\320\271) *****/\n"
-"/*e4eaf3 - \321\201\320\262\320\265\321\202\320\273\320\276-\320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*a1b3cf - \321\202\320\265\320\274\320\275\320\265\320\265 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*639bee - \321\202\320\265\320\274\320\275\320\276\320\262\320\260\321\202\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/\n"
-"/*e4eaf3 - \321\201\320\262\320\265\321\202\320\273\320\276 - \320\263\320\276\320\273\321\203\320\261\320\276\320\271*/"));
-
-        gridLayout_7->addWidget(panel_menu_1, 1, 0, 1, 1);
-
-        line_2 = new QFrame(fr_menu_0);
-        line_2->setObjectName(QStringLiteral("line_2"));
-        line_2->setMinimumSize(QSize(0, 20));
-        line_2->setFrameShape(QFrame::VLine);
-        line_2->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_7->addWidget(line_2, 0, 1, 2, 1);
-
-
-        gridLayout_3->addWidget(fr_menu_0, 0, 0, 1, 1);
+        gridLayout_3->addWidget(stackedW_0, 1, 0, 1, 2);
 
         NanotechPRO->setCentralWidget(centralwidget);
         menubar = new QMenuBar(NanotechPRO);
@@ -1156,10 +1298,10 @@ public:
 
         retranslateUi(NanotechPRO);
 
-        stackedW_0->setCurrentIndex(2);
+        stackedW_panel_0->setCurrentIndex(0);
+        stackedW_0->setCurrentIndex(3);
         stackedW_page_0->setCurrentIndex(0);
         stackedW_sedimentation_0->setCurrentIndex(0);
-        stackedW_panel_0->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(NanotechPRO);
@@ -1175,6 +1317,32 @@ public:
         ac_settings->setText(QApplication::translate("NanotechPRO", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", 0));
         ac_o_programme->setText(QApplication::translate("NanotechPRO", "\320\236 \320\277\321\200\320\276\320\263\321\200\320\260\320\274\320\274\320\265", 0));
         ac_reference->setText(QApplication::translate("NanotechPRO", "\320\241\320\277\321\200\320\260\320\262\320\272\320\260", 0));
+        panel_menu_0->setText(QString());
+        panel_menu_1->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushB_page_result->setToolTip(QApplication::translate("NanotechPRO", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202\321\213</span></p></body></html>", 0));
+#endif // QT_NO_TOOLTIP
+        pushB_page_result->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushB_page_system->setToolTip(QApplication::translate("NanotechPRO", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\320\241\320\270\321\201\321\202\320\265\320\274\320\260</span></p></body></html>", 0));
+#endif // QT_NO_TOOLTIP
+        pushB_page_system->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushB_page_worning->setToolTip(QApplication::translate("NanotechPRO", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202\321\213</span></p></body></html>", 0));
+#endif // QT_NO_TOOLTIP
+        pushB_page_worning->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushB_page_wother->setToolTip(QApplication::translate("NanotechPRO", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\320\222\321\205\320\276\320\264\320\275\320\260\321\217 \320\262\320\276\320\264\320\260</span></p></body></html>", 0));
+#endif // QT_NO_TOOLTIP
+        pushB_page_wother->setText(QString());
+        pushButton_7->setText(QApplication::translate("NanotechPRO", "\320\240\320\260\321\201\321\201\321\207\320\270\321\202\320\260\321\202\321\214", 0));
+        pushButton_3->setText(QApplication::translate("NanotechPRO", "\321\204\320\276\321\200\320\274\321\213", 0));
+        comboBox_5->clear();
+        comboBox_5->insertItems(0, QStringList()
+         << QApplication::translate("NanotechPRO", "RU", 0)
+         << QApplication::translate("NanotechPRO", "EN", 0)
+        );
+        label_2->setText(QString());
         label->setText(QApplication::translate("NanotechPRO", "\320\224\320\276\320\261\321\200\320\276 \320\277\320\276\320\266\320\260\320\273\320\276\320\262\320\260\321\202\321\214", 0));
         lab_logo_0->setText(QString());
         la_version_1->setText(QString());
@@ -1184,6 +1352,16 @@ public:
         pushB_1->setText(QString());
         laLogo_1->setText(QString());
         groupBox->setTitle(QApplication::translate("NanotechPRO", "\320\222\321\205. \320\277\320\276\321\202\320\276\320\272", 0));
+        label_5->setText(QApplication::translate("NanotechPRO", "\320\242\320\270\320\277 \320\262\320\276\320\264\321\213", 0));
+        coBox_water_0->clear();
+        coBox_water_0->insertItems(0, QStringList()
+         << QApplication::translate("NanotechPRO", "1", 0)
+         << QApplication::translate("NanotechPRO", "12", 0)
+         << QApplication::translate("NanotechPRO", "22", 0)
+         << QApplication::translate("NanotechPRO", "2", 0)
+        );
+        pushButton_5->setText(QApplication::translate("NanotechPRO", "\320\241\320\261\320\260\320\273\320\260\320\275\321\201\320\270\321\200\320\276\320\262\320\260\321\202\321\214", 0));
+        pushButton_6->setText(QApplication::translate("NanotechPRO", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214", 0));
         label_8->setText(QApplication::translate("NanotechPRO", "\320\242\320\265\320\277\320\274\320\265\321\200\320\260\321\202\321\203\321\200\320\260:", 0));
         comboBox_2->clear();
         comboBox_2->insertItems(0, QStringList()
@@ -1213,51 +1391,31 @@ public:
          << QApplication::translate("NanotechPRO", "\320\273\320\274\321\207", 0)
          << QApplication::translate("NanotechPRO", "GFD", 0)
         );
-        pushButton_5->setText(QApplication::translate("NanotechPRO", "\320\241\320\261\320\260\320\273\320\260\320\275\321\201\320\270\321\200\320\276\320\262\320\260\321\202\321\214", 0));
-        pushButton_6->setText(QApplication::translate("NanotechPRO", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214", 0));
-        label_5->setText(QApplication::translate("NanotechPRO", "\320\242\320\270\320\277 \320\262\320\276\320\264\321\213", 0));
-        coBox_water_0->clear();
-        coBox_water_0->insertItems(0, QStringList()
-         << QApplication::translate("NanotechPRO", "1", 0)
-         << QApplication::translate("NanotechPRO", "12", 0)
-         << QApplication::translate("NanotechPRO", "22", 0)
-         << QApplication::translate("NanotechPRO", "2", 0)
-        );
         groupBox_2->setTitle(QApplication::translate("NanotechPRO", "\320\236\321\201\320\260\320\264\320\272\320\276\320\276\320\261\321\200\320\260\320\267\320\276\320\262\320\260\320\275\320\270\320\265", 0));
         pushB_changes_0->setText(QApplication::translate("NanotechPRO", "\320\221\320\265\320\267 \320\270\320\267\320\274\320\265\320\275\320\265\320\275\320\270\320\265\320\271", 0));
         pushB_softener_0->setText(QApplication::translate("NanotechPRO", "\320\243\320\274\321\217\320\263\321\207\320\270\321\202\320\265\320\273\321\214", 0));
         pushB_correction_0->setText(QApplication::translate("NanotechPRO", "\320\232\320\276\321\200\321\200\320\265\320\272\321\206\320\270\321\217 pH", 0));
         label_46->setText(QApplication::translate("NanotechPRO", "2", 0));
         label_52->setText(QApplication::translate("NanotechPRO", "3", 0));
-        label_12->setText(QApplication::translate("NanotechPRO", "\320\241\321\205\320\265\320\274\321\213", 0));
-        label_11->setText(QApplication::translate("NanotechPRO", "\320\237\321\200\320\265\320\264\321\203\320\277\321\200\320\265\320\266\320\264\320\265\320\275\320\270\320\265", 0));
+        la_block_1_2_page_0->setText(QApplication::translate("NanotechPRO", "\320\241\321\205\320\265\320\274\321\213", 0));
+        label_12->setText(QString());
+        label_11->setText(QString());
+        label_13->setText(QString());
+        label_14->setText(QString());
+        textBrowser->setHtml(QApplication::translate("NanotechPRO", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">\320\241\320\230\320\241\320\242\320\225\320\234\320\220: </span><span style=\" font-size:10pt; font-weight:600; color:#ff0000;\">\320\235\320\265\320\276\320\261\321\205\320\260\320\264\320\270\320\274\320\276 \320\262\321\213\320\261\321\200\320\260\321\202\321\214 \321\202\320\270\320\277 \320\262\320\276\320\264\321\213!</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">\320\241\320\230\320\241\320\242\320\225"
+                        "\320\234\320\220: </span><span style=\" font-size:10pt; font-weight:600; color:#ff0000;\">\320\222\321\205. \320\277\320\276\321\202\320\276\320\272 1: \320\227\320\260\320\277\320\276\320\273\320\275\320\265\320\275\320\270\320\265 \320\267\320\275\320\260\321\207\320\265\320\275\320\270\320\265 \320\270\320\276\320\275\320\276\320\262!</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">\320\241\320\230\320\241\320\242\320\225\320\234\320\220: </span><span style=\" font-size:10pt; font-weight:600; color:#ff0000;\">\321\201\321\202\321\203\320\277\320\265\320\275\321\214 1: \320\241\320\230\320\237 \320\264\320\276\320\273\320\266\320\275\320\260 \320\261\321\213\321\202\321\214 \320\261\320\276\320\273\321\214\321\210\320\265 \321\207\320\265\320\274 1% \320\270 \320\274\320\265\320\275\321\214\321\210\320\265 \321\207\320\265\320\274 99%</span></p>\n"
+"<p style=\" margin-top:0px; margin-botto"
+                        "m:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">\320\241\320\230\320\241\320\242\320\225\320\234\320\220: </span><span style=\" font-size:10pt; font-weight:600; color:#ff0000;\">\321\201\321\202\321\203\320\277\320\265\320\275\321\214 1: \321\201\321\202\320\260\320\264\320\270\321\217 1: \320\234\320\265\320\274\320\261\321\200\320\260\320\275\320\275\321\213\320\271 \321\215\320\273\320\265\320\274\320\265\320\275\321\202 \320\275\320\265 \320\262\321\213\320\261\321\200\320\260\320\275</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">\320\241\320\230\320\241\320\242\320\225\320\234\320\220: </span><span style=\" font-size:10pt; font-weight:600; color:#ff0000;\">\321\201\321\202\321\203\320\277\320\265\320\275\321\214 1: \321\201\321\202\320\260\320\264\320\270\321\217 2: \320\234\320\265\320\274\320\261\321\200\320\260\320\275"
+                        "\320\275\321\213\320\271 \321\215\320\273\320\265\320\274\320\265\320\275\321\202 \320\275\320\265 \320\262\321\213\320\261\321\200\320\260\320\275</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p></body></html>", 0));
         label_10->setText(QApplication::translate("NanotechPRO", "\320\240\320\260\321\201\321\207\320\265\321\202", 0));
-        panel_menu_0->setText(QString());
-        comboBox_5->clear();
-        comboBox_5->insertItems(0, QStringList()
-         << QApplication::translate("NanotechPRO", "RU", 0)
-         << QApplication::translate("NanotechPRO", "EN", 0)
-        );
-#ifndef QT_NO_TOOLTIP
-        pushB_page_result->setToolTip(QApplication::translate("NanotechPRO", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202\321\213</span></p></body></html>", 0));
-#endif // QT_NO_TOOLTIP
-        pushB_page_result->setText(QString());
-        label_2->setText(QString());
-#ifndef QT_NO_TOOLTIP
-        pushB_page_wother->setToolTip(QApplication::translate("NanotechPRO", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\320\222\321\205\320\276\320\264\320\275\320\260\321\217 \320\262\320\276\320\264\320\260</span></p></body></html>", 0));
-#endif // QT_NO_TOOLTIP
-        pushB_page_wother->setText(QString());
-#ifndef QT_NO_TOOLTIP
-        pushB_page_system->setToolTip(QApplication::translate("NanotechPRO", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\320\241\320\270\321\201\321\202\320\265\320\274\320\260</span></p></body></html>", 0));
-#endif // QT_NO_TOOLTIP
-        pushB_page_system->setText(QString());
-#ifndef QT_NO_TOOLTIP
-        pushB_page_worning->setToolTip(QApplication::translate("NanotechPRO", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202\321\213</span></p></body></html>", 0));
-#endif // QT_NO_TOOLTIP
-        pushB_page_worning->setText(QString());
-        pushButton_7->setText(QApplication::translate("NanotechPRO", "\320\240\320\260\321\201\321\201\321\207\320\270\321\202\320\260\321\202\321\214", 0));
-        pushButton_3->setText(QApplication::translate("NanotechPRO", "\321\204\320\276\321\200\320\274\321\213", 0));
-        panel_menu_1->setText(QString());
         global_menu_0->setTitle(QApplication::translate("NanotechPRO", "\320\244\320\260\320\271\320\273", 0));
         menu->setTitle(QApplication::translate("NanotechPRO", "\320\237\320\260\321\200\320\260\320\274\320\265\321\202\321\200\321\213", 0));
         menu_2->setTitle(QApplication::translate("NanotechPRO", "\320\241\320\265\321\200\320\262\320\270\321\201", 0));

@@ -8,6 +8,21 @@ widget_sys_stage::widget_sys_stage(QWidget *parent) :
     ui->setupUi(this);
 
     //-----------------------------------------------------------------//
+    //****** [Подключение классов]
+    //-----------------------------------------------------------------//
+    Widget_pages_mini_list = new pages_mini_list;
+    Widget_pages_mini_list->setParent(ui->fr_sys_satage_2);
+    ui->fr_sys_satage_2->layout()->addWidget(Widget_pages_mini_list);
+    Widget_pages_mini_list->show();
+    //-----------------------------------------------------------------//
+
+    //-----------------------------------------------------------------//
+    //****** [Подключение для классов (СИГНАЛ/СЛОТ)]
+    //-----------------------------------------------------------------//
+    connect(Widget_pages_mini_list, SIGNAL(signal_CurrentIndex(int)), this, SLOT(slot_pushB_sys_page(int)));
+    //-----------------------------------------------------------------//
+
+    //-----------------------------------------------------------------//
     //****** [Слоты]
     //-----------------------------------------------------------------//
     // переключение страниц Блок 1
@@ -21,11 +36,7 @@ widget_sys_stage::widget_sys_stage(QWidget *parent) :
     connect(ui->pushB_del_page_0, SIGNAL(clicked()), this, SLOT(slot_pushB_del_page_0()));
     connect(ui->pushB_del_page_1, SIGNAL(clicked()), this, SLOT(slot_pushB_del_page_1()));
 
-    // переключение страниц Блок 2
-    connect(ui->pushB_sys_page_1, SIGNAL(clicked()), this, SLOT(slot_pushB_sys_page_1()));
-    connect(ui->pushB_sys_page_2, SIGNAL(clicked()), this, SLOT(slot_pushB_sys_page_2()));
-    connect(ui->pushB_sys_page_3, SIGNAL(clicked()), this, SLOT(slot_pushB_sys_page_3()));
-    connect(ui->pushB_sys_page_4, SIGNAL(clicked()), this, SLOT(slot_pushB_sys_page_4()));
+
 
     //-----------------------------------------------------------------//
 
@@ -34,18 +45,12 @@ widget_sys_stage::widget_sys_stage(QWidget *parent) :
     //-----------------------------------------------------------------//
     // Блок 1 (страницы)
     ui->fr_block_1_page_2->setVisible(false);
-
-    // Блок 2 (страницы)
-    ui->fr_block_2_page_2->setVisible(false);
-    ui->fr_block_2_page_3->setVisible(false);
-    ui->fr_block_2_page_4->setVisible(false);
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
     //****** [Приоритет запуска компонентов]
     //-----------------------------------------------------------------//
     slot_pushB_all(0);
-    slot_pushB_all(11);
     //-----------------------------------------------------------------//
 }
 
@@ -111,82 +116,6 @@ void widget_sys_stage::slot_pushB_all(int index)
             ui->pushB_page_1->setFont(QFont("Arial", 10, QFont::Bold));
         }
         break;
-
-    case 11:
-        ui->pushB_sys_page_1->setCheckable(true);
-        ui->pushB_sys_page_1->setChecked(true);
-        ui->pushB_sys_page_2->setChecked(false);
-        ui->pushB_sys_page_3->setChecked(false);
-        ui->pushB_sys_page_4->setChecked(false);
-
-        ui->pushB_add_sys_page_1->setVisible(true);
-        ui->pushB_del_sys_page_1->setVisible(true);
-        ui->pushB_add_sys_page_2->setVisible(false);
-        ui->pushB_del_sys_page_2->setVisible(false);
-        ui->pushB_add_sys_page_3->setVisible(false);
-        ui->pushB_del_sys_page_3->setVisible(false);
-        ui->pushB_add_sys_page_4->setVisible(false);
-        ui->pushB_del_sys_page_4->setVisible(false);
-
-        ui->stackedW_sys_2->setCurrentIndex(0);
-        break;
-
-    case 12:
-        ui->pushB_sys_page_2->setCheckable(true);
-        ui->pushB_sys_page_2->setChecked(true);
-        ui->pushB_sys_page_1->setChecked(false);
-        ui->pushB_sys_page_3->setChecked(false);
-        ui->pushB_sys_page_4->setChecked(false);
-
-        ui->pushB_add_sys_page_1->setVisible(false);
-        ui->pushB_del_sys_page_1->setVisible(false);
-        ui->pushB_add_sys_page_2->setVisible(true);
-        ui->pushB_del_sys_page_2->setVisible(true);
-        ui->pushB_add_sys_page_3->setVisible(false);
-        ui->pushB_del_sys_page_3->setVisible(false);
-        ui->pushB_add_sys_page_4->setVisible(false);
-        ui->pushB_del_sys_page_4->setVisible(false);
-
-        ui->stackedW_sys_2->setCurrentIndex(1);
-        break;
-
-    case 13:
-        ui->pushB_sys_page_3->setCheckable(true);
-        ui->pushB_sys_page_3->setChecked(true);
-        ui->pushB_sys_page_1->setChecked(false);
-        ui->pushB_sys_page_2->setChecked(false);
-        ui->pushB_sys_page_4->setChecked(false);
-
-        ui->pushB_add_sys_page_1->setVisible(false);
-        ui->pushB_del_sys_page_1->setVisible(false);
-        ui->pushB_add_sys_page_2->setVisible(false);
-        ui->pushB_del_sys_page_2->setVisible(false);
-        ui->pushB_add_sys_page_3->setVisible(true);
-        ui->pushB_del_sys_page_3->setVisible(true);
-        ui->pushB_add_sys_page_4->setVisible(false);
-        ui->pushB_del_sys_page_4->setVisible(false);
-
-        ui->stackedW_sys_2->setCurrentIndex(2);
-        break;
-
-    case 14:
-        ui->pushB_sys_page_4->setCheckable(true);
-        ui->pushB_sys_page_4->setChecked(true);
-        ui->pushB_sys_page_1->setChecked(false);
-        ui->pushB_sys_page_2->setChecked(false);
-        ui->pushB_sys_page_3->setChecked(false);
-
-        ui->pushB_add_sys_page_1->setVisible(false);
-        ui->pushB_del_sys_page_1->setVisible(false);
-        ui->pushB_add_sys_page_2->setVisible(false);
-        ui->pushB_del_sys_page_2->setVisible(false);
-        ui->pushB_add_sys_page_3->setVisible(false);
-        ui->pushB_del_sys_page_3->setVisible(false);
-        ui->pushB_add_sys_page_4->setVisible(true);
-        ui->pushB_del_sys_page_4->setVisible(true);
-
-        ui->stackedW_sys_2->setCurrentIndex(3);
-        break;
     default:
         qDebug() << "страницы с таким номеров не существует! ( " << index << " )";
         break;
@@ -240,24 +169,26 @@ void widget_sys_stage::slot_pushB_page_1()
 //-----------------------------------------------------------------//
 //****** [Блок 2 (преключение страниц)]
 //-----------------------------------------------------------------//
-void widget_sys_stage::slot_pushB_sys_page_1()
+void widget_sys_stage::slot_pushB_sys_page(int index)
 {
-    slot_pushB_all(11);
-}
-
-void widget_sys_stage::slot_pushB_sys_page_2()
-{
-    slot_pushB_all(12);
-}
-
-void widget_sys_stage::slot_pushB_sys_page_3()
-{
-    slot_pushB_all(13);
-}
-
-void widget_sys_stage::slot_pushB_sys_page_4()
-{
-    slot_pushB_all(14);
+    switch (index)
+    {
+    case 0:
+        ui->stackedW_sys_2->setCurrentIndex(index);
+        break;
+    case 1:
+        ui->stackedW_sys_2->setCurrentIndex(index);
+        break;
+    case 2:
+        ui->stackedW_sys_2->setCurrentIndex(index);
+        break;
+    case 3:
+        ui->stackedW_sys_2->setCurrentIndex(index);
+        break;
+    default:
+        qDebug() << "страницы с таким номеров не существует! ( " << index << " )";
+        break;
+    }
 }
 //-----------------------------------------------------------------//
 

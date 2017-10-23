@@ -4,7 +4,7 @@
 #include <QtGui>
 #include <QMainWindow>
 #include <QApplication>
-#include "Version/version.h"
+//#include "Version/version.h"
 #include "QDebug"
 #include "QFileInfo"
 #include "QTimer"

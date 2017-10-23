@@ -7,9 +7,11 @@ INPUT(
 ./debug\widget_stream_data.o
 ./debug\widget_sedimentation.o
 ./debug\widget_sys_stage.o
+./debug\pages_mini_list.o
 ./debug\qrc_img.o
 ./debug\qrc_stylesheet.o
 ./debug\qrc_font.o
+./debug\qrc_scheme.o
 ./debug\moc_nanotechpro.o
 ./debug\moc_doprogress.o
 ./debug\moc_widget_pages_list.o
@@ -17,4 +19,5 @@ INPUT(
 ./debug\moc_widget_stream_data.o
 ./debug\moc_widget_sedimentation.o
 ./debug\moc_widget_sys_stage.o
+./debug\moc_pages_mini_list.o
 );

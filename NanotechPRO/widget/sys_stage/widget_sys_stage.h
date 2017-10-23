@@ -6,6 +6,8 @@
 #include "QFile"
 #include "QDateTime"
 
+#include "widget/pages_mini_list/pages_mini_list.h"
+
 namespace Ui {
 class widget_sys_stage;
 }
@@ -17,6 +19,12 @@ class widget_sys_stage : public QWidget
 public:
     explicit widget_sys_stage(QWidget *parent = 0);
     ~widget_sys_stage();
+
+    // ========================================================//
+    // -- [ КЛАССЫ ]
+    // ========================================================//
+    pages_mini_list *Widget_pages_mini_list;
+    //*********************************************************//
 
 public slots:
 
@@ -39,11 +47,7 @@ public slots:
     void slot_pushB_del_page_0();
     void slot_pushB_del_page_1();
 
-    // переключение страниц Блок 2
-    void slot_pushB_sys_page_1();
-    void slot_pushB_sys_page_2();
-    void slot_pushB_sys_page_3();
-    void slot_pushB_sys_page_4();
+    void slot_pushB_sys_page(int index);
 
 
 

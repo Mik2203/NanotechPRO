@@ -1,0 +1,325 @@
+QLineEdit
+{
+	border: 1px solid #3873d9;
+	border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+	height: 20px;
+}
+
+QLineEdit:hover
+{
+	border: 1px solid #000000;
+}
+
+QLineEdit:focus
+{
+	/*background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, 
+	stop:0 rgba(80, 130, 245, 0), 
+	stop:0.0852273 rgba(80, 130, 245, 86), 
+	stop:0.323864 rgba(80, 130, 245, 0), 
+	stop:0.6875 rgba(80, 131, 245, 0), 
+	stop:0.926136 rgba(80, 132, 245, 86), 
+	stop:1 rgba(80, 132, 245, 0));*/
+	
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, 
+	stop:0 rgba(80, 130, 245, 0), 
+	stop:0.0852273 rgba(80, 130, 245, 28), 
+	stop:0.323864 rgba(80, 130, 245, 0), 
+	stop:0.6875 rgba(80, 131, 245, 0), 
+	stop:0.926136 rgba(80, 132, 245, 28), 
+	stop:1 rgba(80, 132, 245, 0));
+}
+
+QPushButton {
+    border: 1px solid #8f8f91;
+	border-top-left-radius: 4px;
+	/*background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);
+	
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+	stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+	stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);*/
+	
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+ 
+QPushButton:hover {
+	 color: #111;
+    border: 1px solid #3873d9;
+    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, 
+	stop:0 rgba(80, 130, 245, 0), 
+	stop:0.0852273 rgba(80, 130, 245, 28), 
+	stop:0.323864 rgba(80, 130, 245, 0), 
+	stop:0.6875 rgba(80, 131, 245, 0), 
+	stop:0.926136 rgba(80, 132, 245, 28), 
+	stop:1 rgba(80, 132, 245, 0));
+ }
+ 
+QPushButton:pressed {
+	 color: #5d4ee8;
+    /*border: 1px solid #3873d9;*/
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+	stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+	stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+ }
+
+QPushButton#pushB_new_pro_0 {
+    padding:0px 0px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 2px;
+    border: 1px solid #3873d9;
+    background-color: qlineargradient( x1: 0, y1: 0, x2: 0, y2: 1,
+                                        stop: 0 #4287ff, stop: 1 #356ccc);
+										
+	image: url(:/menu/page/push_geniral_0.png);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    
+    width: 75px;
+	height: 20px;
+/*padding-right: 100px;	*/
+ }
+ 
+ /*QPushButton#pushB_new_pro_0:hover,
+ QPushButton#pushB_page_general_0:hover*/
+QPushButton#pushB_new_pro_0:hover {
+    image: url(:/menu/page/push_geniral_1.png);
+}
+
+QPushButton#pushB_new_pro_0:pressed {
+    color: #111;
+    border: 1px solid #3873d9;
+    background: #fff;
+	
+	image: url(:/menu/page/push_geniral_1.png.png);
+}
+ 
+QPushButton#pushB_new_pro_0:checked {
+    image: url(:/menu/page/push_geniral_0.png.png);
+}
+
+/*------------------------------------------------------- Меню [Вода]*/
+QPushButton#pushB_page_wother
+{
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+ stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+	
+image: url(:/menu/feedwater_0.png);
+}
+
+QPushButton#pushB_page_wother:hover
+{
+ background-color: qlineargradient(spread:pad, x1:0.011, y1:1, x2:0, y2:0, stop:0 rgba(201,  204, 255, 113), stop:0.169031 rgba(111, 125, 255, 200), stop:0.42435 rgba(86, 124, 255,  208), stop:0.625296 rgba(86, 150, 255, 234), stop:0.861284 rgba(114, 114, 255, 198),  stop:1 rgba(193, 215, 255, 217));
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ image: url(:/menu/feedwater_1.png);
+}
+
+QPushButton#pushB_page_wother:checked
+{
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #f39556, stop: 0.4 #f7be98,
+ stop: 0.5 #f0ccb4, stop: 1.0 #eda16e);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ image: url(:/menu/feedwater_1.png);
+}
+ 
+QPushButton#pushB_page_wother:pressed 
+{
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #afc1db, stop: 0.4 #a1b3cf,
+ stop: 0.5 #639bee, stop: 1.0 #b3caec);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ image: url(:/menu/feedwater_0.png);
+}
+
+/*------------------------------------------------------- Меню [Система]*/
+QPushButton#pushB_page_system
+{
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+ stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ background-image: url(:/menu/system_0.png);
+ padding-right: 0px;
+ text-align: center;
+  background-position: center;
+ background-repeat: no-repeat;
+padding: 0px 5px;
+}
+
+QPushButton#pushB_page_system:hover
+{
+background-color: qlineargradient(spread:pad, x1:0.011, y1:1, x2:0, y2:0, stop:0 rgba(201,  204, 255, 113), stop:0.169031 rgba(111, 125, 255, 200), stop:0.42435 rgba(86, 124, 255,  208), stop:0.625296 rgba(86, 150, 255, 234), stop:0.861284 rgba(114, 114, 255, 198),  stop:1 rgba(193, 215, 255, 217));
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ background-image: url(:/menu/system_1.png);
+ padding-right: 0px;
+ text-align: right;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0px 5px;
+ }
+
+QPushButton#pushB_page_system:checked
+{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #f39556, stop: 0.4 #f7be98,
+ stop: 0.5 #f0ccb4, stop: 1.0 #eda16e);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ background-image: url(:/menu/system_1.png);
+ padding-right: 0px;
+ text-align: right;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0px 5px;
+}
+ 
+QPushButton#pushB_page_system:pressed 
+{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #afc1db, stop: 0.4 #a1b3cf,
+ stop: 0.5 #639bee, stop: 1.0 #b3caec);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ background-image: url(:/menu/system_0.png);
+ padding-right: 0px;
+ text-align: right;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0px 5px;
+}
+
+/*------------------------------------------------------- Меню [Предупреждение]*/
+QPushButton#pushB_page_worning
+{
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+ stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ 
+	background-image: url(:/menu/warning_0.png);
+ padding-right: 0px;
+ text-align: center;
+  background-position: center;
+ background-repeat: no-repeat;
+padding: 0px 5px;
+}
+
+QPushButton#pushB_page_worning:hover
+{
+background-color: qlineargradient(spread:pad, x1:0.011, y1:1, x2:0, y2:0, stop:0 rgba(201,  204, 255, 113), stop:0.169031 rgba(111, 125, 255, 200), stop:0.42435 rgba(86, 124, 255,  208), stop:0.625296 rgba(86, 150, 255, 234), stop:0.861284 rgba(114, 114, 255, 198),  stop:1 rgba(193, 215, 255, 217));
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+	background-image: url(:/menu/warning_1.png);
+ padding-right: 0px;
+ text-align: right;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0px 5px;
+ }
+
+QPushButton#pushB_page_worning:checked
+{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #f39556, stop: 0.4 #f7be98,
+ stop: 0.5 #f0ccb4, stop: 1.0 #eda16e);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ background-image: url(:/menu/warning_1.png);
+ padding-right: 0px;
+ text-align: right;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0px 5px;
+}
+ 
+QPushButton#pushB_page_worning:pressed 
+{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #afc1db, stop: 0.4 #a1b3cf,
+ stop: 0.5 #639bee, stop: 1.0 #b3caec);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ background-image: url(:/menu/warning_0.png);
+ padding-right: 0px;
+ text-align: right;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0px 5px;
+}
+
+/*------------------------------------------------------- Меню [Расчет]*/
+QPushButton#pushB_page_result
+{
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);
+ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+ stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ 
+	background-image: url(:/menu/costs_1.png);
+ padding-right: 0px;
+ text-align: center;
+  background-position: center;
+ background-repeat: no-repeat;
+padding: 0px 5px;
+}
+
+QPushButton#pushB_page_result:hover
+{
+background-color: qlineargradient(spread:pad, x1:0.011, y1:1, x2:0, y2:0, stop:0 rgba(201,  204, 255, 113), stop:0.169031 rgba(111, 125, 255, 200), stop:0.42435 rgba(86, 124, 255,  208), stop:0.625296 rgba(86, 150, 255, 234), stop:0.861284 rgba(114, 114, 255, 198),  stop:1 rgba(193, 215, 255, 217));
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+	background-image: url(:/menu/costs_1.png);
+ padding-right: 0px;
+ text-align: right;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0px 5px;
+ }
+
+QPushButton#pushB_page_result:checked
+{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #f39556, stop: 0.4 #f7be98,
+ stop: 0.5 #f0ccb4, stop: 1.0 #eda16e);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+ background-image: url(:/menu/costs_1.png);
+ padding-right: 0px;
+ text-align: right;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0px 5px;
+}
+ 
+QPushButton#pushB_page_result:pressed 
+{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ stop: 0 #afc1db, stop: 0.4 #a1b3cf,
+ stop: 0.5 #639bee, stop: 1.0 #b3caec);
+ border: 1px solid #cdc2bf;
+ border-radius: 5px;
+background-image: url(:/menu/costs_0.png);
+ padding-right: 0px;
+ text-align: right;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0px 5px;
+}
+
+

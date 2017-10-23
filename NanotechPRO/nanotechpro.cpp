@@ -6,6 +6,8 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     ui(new Ui::NanotechPRO)
 {
     ui->setupUi(this);
+
+    this->setWindowTitle("NanotechPRO");
     //-----------------------------------------------------------------//
     //****** [Загрузка шрифта для программы]
     //-----------------------------------------------------------------//
@@ -61,7 +63,7 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     sys_dss = fiSi.size();
     st_size = fileSize(sys_dss);
 
-    sett_nano = new QSettings(pathPro += "/NanotechPRO/core/settings/options.ntpt", QSettings::IniFormat);
+    sett_nano = new QSettings(pathPro + "/NanotechPRO/core/settings/options.ntpt", QSettings::IniFormat);
     qDebug() << "QSettings: " << pathPro;
     qDebug() << "Версия: " << sett_nano->value("Version/ver").toString();
     //sett_nano->setValue("Version/ver", 0);
