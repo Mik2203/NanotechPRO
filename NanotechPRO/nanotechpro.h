@@ -11,6 +11,8 @@
 #include "QTime"
 #include "QIcon"
 #include "QDate"
+#include "QAction"
+#include "QBoxLayout"
 
 #include "QStateMachine"
 #include "QPropertyAnimation"
@@ -23,12 +25,13 @@
 #include "QFontDatabase"
 #include "QFont"
 #include "QPainter"
-
+#include "QRegExp"
 
 #include "widget/pages_list/widget_pages_list.h"
 #include "widget/stream_data/widget_stream_data.h"
 #include "widget/sedimentation/widget_sedimentation.h"
 #include "widget/sys_stage/widget_sys_stage.h"
+#include "widget/rootAdmin/widget_rootadmin.h"
 
 namespace Ui {
 class NanotechPRO;
@@ -76,8 +79,10 @@ public:
     widget_stream_data *Widget_stream_data;
     widget_sedimentation *Widget_sedimentation;
     widget_sys_stage *Widget_sys_stage;
+    widget_rootAdmin *Widget_rootAdmin;
     //*********************************************************//
 
+    QAction *actionRoot; // Админка
 
 public slots:
 
@@ -104,9 +109,9 @@ public slots:
 //    void slotSignal_pushB_page_3();
 
     // осадкообразование
-    void slot_pushB_changes_0(bool pb1);
-    void slot_pushB_softener_0(bool pb2);
-    void slot_pushB_correction_0(bool pb3);
+    void slot_pushB_changes_0();
+    void slot_pushB_softener_0();
+    void slot_pushB_correction_0();
 
     // кнопки закладок страниц
     void slot_PushB_page_wother();
@@ -115,6 +120,10 @@ public slots:
     void slot_PushB_page_result();
 
     void slot_pushB_all(int pb);
+
+    // Админка
+    void slot_rankRoot();
+    void slot_rankRoot2(int check, bool check2);
 
 private slots:
     void on_pushB_new_pro_0_clicked();
@@ -125,6 +134,9 @@ private slots:
 
 
 
+
+
+    void on_lineE_new_pro_0_textEdited(const QString &arg1);
 
 
 private:

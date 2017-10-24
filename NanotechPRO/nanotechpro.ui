@@ -708,7 +708,7 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
          </spacer>
         </item>
         <item row="1" column="1" colspan="2">
-         <widget class="QFrame" name="frame">
+         <widget class="QFrame" name="fr_new_progect_0">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -890,23 +890,6 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
               <property name="verticalSpacing">
                <number>1</number>
               </property>
-              <item row="0" column="0" colspan="2">
-               <widget class="QLabel" name="label_3">
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Новый проект</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
               <item row="1" column="0" colspan="2">
                <layout class="QHBoxLayout" name="horizontalLayout_2">
                 <item>
@@ -931,125 +914,21 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                 </item>
                </layout>
               </item>
-              <item row="2" column="0">
-               <widget class="QFrame" name="fr_logo_0">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>50</height>
-                 </size>
+              <item row="0" column="0" colspan="2">
+               <widget class="QLabel" name="label_3">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
                 </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
+                <property name="text">
+                 <string>Новый проект</string>
                 </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_5">
-                 <property name="leftMargin">
-                  <number>1</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>1</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>1</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>1</number>
-                 </property>
-                 <property name="spacing">
-                  <number>2</number>
-                 </property>
-                 <item row="0" column="1">
-                  <spacer name="horizontalSpacer_6">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>352</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item row="0" column="0">
-                  <widget class="QFrame" name="frame_2">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>48</width>
-                     <height>48</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Arial</family>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">image: url(:/logotip/logo1.png);</string>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <widget class="QLabel" name="laLogo_1">
-                    <property name="geometry">
-                     <rect>
-                      <x>0</x>
-                      <y>0</y>
-                      <width>48</width>
-                      <height>48</height>
-                     </rect>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>48</width>
-                      <height>48</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Arial</family>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">image: url(:/logotip/logo.png);</string>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::NoFrame</enum>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                  </widget>
-                 </item>
-                </layout>
                </widget>
               </item>
               <item row="2" column="1">
@@ -1060,32 +939,18 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                 <property name="verticalSpacing">
                  <number>1</number>
                 </property>
-                <item row="0" column="1">
-                 <widget class="QPushButton" name="pushB_new_pro_0">
-                  <property name="text">
-                   <string>Создать</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="0" column="0">
-                 <widget class="QLineEdit" name="lineE_new_pro_0">
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QFrame" name="frame_8">
+                 <widget class="QFrame" name="fr_logo_0">
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
-                    <height>10</height>
+                    <width>34</width>
+                    <height>34</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>16777215</width>
-                    <height>10</height>
+                    <width>34</width>
+                    <height>34</height>
                    </size>
                   </property>
                   <property name="frameShape">
@@ -1094,7 +959,7 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_28">
+                  <layout class="QGridLayout" name="gridLayout_5">
                    <property name="leftMargin">
                     <number>1</number>
                    </property>
@@ -1108,32 +973,272 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                     <number>1</number>
                    </property>
                    <property name="spacing">
-                    <number>1</number>
+                    <number>2</number>
                    </property>
-                   <item row="0" column="0">
-                    <widget class="QProgressBar" name="pBar_1">
-                     <property name="maximumSize">
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_6">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
                       <size>
-                       <width>16777215</width>
-                       <height>4</height>
+                       <width>352</width>
+                       <height>20</height>
                       </size>
                      </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QFrame" name="frame_2">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>32</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>32</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                      </font>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">QProgressBar
-{
-
-}</string>
+                      <string notr="true">image: url(:/logotip/logo1.png);</string>
                      </property>
-                     <property name="value">
-                      <number>0</number>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="textVisible">
-                      <bool>false</bool>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
                      </property>
+                     <widget class="QLabel" name="laLogo_1">
+                      <property name="geometry">
+                       <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>32</width>
+                        <height>32</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>48</width>
+                        <height>48</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Arial</family>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">image: url(:/logotip/logo.png);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::NoFrame</enum>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
                     </widget>
                    </item>
                   </layout>
                  </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QFrame" name="fr_new_0">
+                  <property name="minimumSize">
+                   <size>
+                    <width>300</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <widget class="QFrame" name="fr_new_1">
+                   <property name="geometry">
+                    <rect>
+                     <x>2</x>
+                     <y>26</y>
+                     <width>296</width>
+                     <height>8</height>
+                    </rect>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>296</width>
+                     <height>8</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>8</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_28" rowstretch="0" columnstretch="0">
+                    <property name="leftMargin">
+                     <number>1</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>1</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>1</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>1</number>
+                    </property>
+                    <property name="spacing">
+                     <number>1</number>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QProgressBar" name="pBar_1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>4</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QProgressBar
+{
+
+}</string>
+                      </property>
+                      <property name="value">
+                       <number>0</number>
+                      </property>
+                      <property name="textVisible">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QLineEdit" name="lineE_new_pro_0">
+                   <property name="geometry">
+                    <rect>
+                     <x>2</x>
+                     <y>6</y>
+                     <width>296</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>296</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </widget>
+                </item>
+                <item row="0" column="2" colspan="2">
+                 <widget class="QFrame" name="frame">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>90</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <widget class="QPushButton" name="pushB_new_pro_0">
+                   <property name="geometry">
+                    <rect>
+                     <x>2</x>
+                     <y>5</y>
+                     <width>86</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>21</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>21</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Создать</string>
+                   </property>
+                  </widget>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="4">
+                 <spacer name="verticalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
                </layout>
               </item>
@@ -2015,11 +2120,14 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                    <bold>false</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
                  <property name="text">
                   <string>Без измененией</string>
                  </property>
                  <property name="checkable">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                 </widget>
                 <widget class="QPushButton" name="pushB_softener_0">
@@ -2047,7 +2155,7 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                   <string>Умягчитель</string>
                  </property>
                  <property name="checkable">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                 </widget>
                 <widget class="QPushButton" name="pushB_correction_0">
@@ -2075,7 +2183,7 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                   <string>Коррекция pH</string>
                  </property>
                  <property name="checkable">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                 </widget>
                </widget>

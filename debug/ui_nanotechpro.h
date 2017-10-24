@@ -77,7 +77,7 @@ public:
     QSpacerItem *horizontalSpacer;
     QSpacerItem *verticalSpacer;
     QSpacerItem *horizontalSpacer_2;
-    QFrame *frame;
+    QFrame *fr_new_progect_0;
     QGridLayout *gridLayout_6;
     QLabel *label;
     QFrame *line;
@@ -89,21 +89,24 @@ public:
     QSpacerItem *verticalSpacer_4;
     QFrame *fr_new_pro_0;
     QGridLayout *gridLayout_27;
-    QLabel *label_3;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_4;
     QSpacerItem *horizontalSpacer_5;
+    QLabel *label_3;
+    QGridLayout *gridLayout_4;
     QFrame *fr_logo_0;
     QGridLayout *gridLayout_5;
     QSpacerItem *horizontalSpacer_6;
     QFrame *frame_2;
     QLabel *laLogo_1;
-    QGridLayout *gridLayout_4;
-    QPushButton *pushB_new_pro_0;
-    QLineEdit *lineE_new_pro_0;
-    QFrame *frame_8;
+    QFrame *fr_new_0;
+    QFrame *fr_new_1;
     QGridLayout *gridLayout_28;
     QProgressBar *pBar_1;
+    QLineEdit *lineE_new_pro_0;
+    QFrame *frame;
+    QPushButton *pushB_new_pro_0;
+    QSpacerItem *verticalSpacer_8;
     QSpacerItem *verticalSpacer_5;
     QPushButton *pushB_1;
     QSpacerItem *verticalSpacer_2;
@@ -577,21 +580,21 @@ public:
 
         gridLayout->addItem(horizontalSpacer_2, 1, 3, 1, 1);
 
-        frame = new QFrame(page);
-        frame->setObjectName(QStringLiteral("frame"));
+        fr_new_progect_0 = new QFrame(page);
+        fr_new_progect_0->setObjectName(QStringLiteral("fr_new_progect_0"));
         QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
-        frame->setSizePolicy(sizePolicy4);
-        frame->setMinimumSize(QSize(350, 350));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        gridLayout_6 = new QGridLayout(frame);
+        sizePolicy4.setHeightForWidth(fr_new_progect_0->sizePolicy().hasHeightForWidth());
+        fr_new_progect_0->setSizePolicy(sizePolicy4);
+        fr_new_progect_0->setMinimumSize(QSize(350, 350));
+        fr_new_progect_0->setFrameShape(QFrame::StyledPanel);
+        fr_new_progect_0->setFrameShadow(QFrame::Raised);
+        gridLayout_6 = new QGridLayout(fr_new_progect_0);
         gridLayout_6->setSpacing(2);
         gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
         gridLayout_6->setContentsMargins(1, 1, 1, 1);
-        label = new QLabel(frame);
+        label = new QLabel(fr_new_progect_0);
         label->setObjectName(QStringLiteral("label"));
         QFont font3;
         font3.setPointSize(18);
@@ -601,7 +604,7 @@ public:
 
         gridLayout_6->addWidget(label, 0, 0, 1, 3);
 
-        line = new QFrame(frame);
+        line = new QFrame(fr_new_progect_0);
         line->setObjectName(QStringLiteral("line"));
         line->setMinimumSize(QSize(320, 10));
         line->setFrameShape(QFrame::HLine);
@@ -615,7 +618,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_3);
 
-        lab_logo_0 = new QLabel(frame);
+        lab_logo_0 = new QLabel(fr_new_progect_0);
         lab_logo_0->setObjectName(QStringLiteral("lab_logo_0"));
         QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy5.setHorizontalStretch(0);
@@ -636,7 +639,7 @@ public:
 
         gridLayout_6->addLayout(horizontalLayout, 2, 0, 1, 3);
 
-        la_version_1 = new QLabel(frame);
+        la_version_1 = new QLabel(fr_new_progect_0);
         la_version_1->setObjectName(QStringLiteral("la_version_1"));
         la_version_1->setFrameShape(QFrame::NoFrame);
 
@@ -646,7 +649,7 @@ public:
 
         gridLayout_6->addItem(verticalSpacer_4, 3, 2, 1, 1);
 
-        fr_new_pro_0 = new QFrame(frame);
+        fr_new_pro_0 = new QFrame(fr_new_progect_0);
         fr_new_pro_0->setObjectName(QStringLiteral("fr_new_pro_0"));
         fr_new_pro_0->setMaximumSize(QSize(16777215, 999));
         fr_new_pro_0->setFrameShape(QFrame::NoFrame);
@@ -656,17 +659,6 @@ public:
         gridLayout_27->setHorizontalSpacing(2);
         gridLayout_27->setVerticalSpacing(1);
         gridLayout_27->setContentsMargins(1, 1, 1, 1);
-        label_3 = new QLabel(fr_new_pro_0);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        QFont font4;
-        font4.setPointSize(10);
-        font4.setBold(true);
-        font4.setWeight(75);
-        label_3->setFont(font4);
-        label_3->setAlignment(Qt::AlignCenter);
-
-        gridLayout_27->addWidget(label_3, 0, 0, 1, 2);
-
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         label_4 = new QLabel(fr_new_pro_0);
@@ -681,10 +673,25 @@ public:
 
         gridLayout_27->addLayout(horizontalLayout_2, 1, 0, 1, 2);
 
+        label_3 = new QLabel(fr_new_pro_0);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        QFont font4;
+        font4.setPointSize(10);
+        font4.setBold(true);
+        font4.setWeight(75);
+        label_3->setFont(font4);
+        label_3->setAlignment(Qt::AlignCenter);
+
+        gridLayout_27->addWidget(label_3, 0, 0, 1, 2);
+
+        gridLayout_4 = new QGridLayout();
+        gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
+        gridLayout_4->setHorizontalSpacing(2);
+        gridLayout_4->setVerticalSpacing(1);
         fr_logo_0 = new QFrame(fr_new_pro_0);
         fr_logo_0->setObjectName(QStringLiteral("fr_logo_0"));
-        fr_logo_0->setMinimumSize(QSize(50, 50));
-        fr_logo_0->setMaximumSize(QSize(50, 16777215));
+        fr_logo_0->setMinimumSize(QSize(34, 34));
+        fr_logo_0->setMaximumSize(QSize(34, 34));
         fr_logo_0->setFrameShape(QFrame::StyledPanel);
         fr_logo_0->setFrameShadow(QFrame::Raised);
         gridLayout_5 = new QGridLayout(fr_logo_0);
@@ -698,14 +705,15 @@ public:
         frame_2 = new QFrame(fr_logo_0);
         frame_2->setObjectName(QStringLiteral("frame_2"));
         frame_2->setEnabled(true);
-        frame_2->setMinimumSize(QSize(48, 48));
+        frame_2->setMinimumSize(QSize(32, 32));
+        frame_2->setMaximumSize(QSize(32, 32));
         frame_2->setFont(font);
         frame_2->setStyleSheet(QStringLiteral("image: url(:/logotip/logo1.png);"));
         frame_2->setFrameShape(QFrame::NoFrame);
         frame_2->setFrameShadow(QFrame::Raised);
         laLogo_1 = new QLabel(frame_2);
         laLogo_1->setObjectName(QStringLiteral("laLogo_1"));
-        laLogo_1->setGeometry(QRect(0, 0, 48, 48));
+        laLogo_1->setGeometry(QRect(0, 0, 32, 32));
         sizePolicy4.setHeightForWidth(laLogo_1->sizePolicy().hasHeightForWidth());
         laLogo_1->setSizePolicy(sizePolicy4);
         laLogo_1->setMinimumSize(QSize(0, 0));
@@ -717,35 +725,27 @@ public:
         gridLayout_5->addWidget(frame_2, 0, 0, 1, 1);
 
 
-        gridLayout_27->addWidget(fr_logo_0, 2, 0, 1, 1);
+        gridLayout_4->addWidget(fr_logo_0, 0, 0, 1, 1);
 
-        gridLayout_4 = new QGridLayout();
-        gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
-        gridLayout_4->setHorizontalSpacing(2);
-        gridLayout_4->setVerticalSpacing(1);
-        pushB_new_pro_0 = new QPushButton(fr_new_pro_0);
-        pushB_new_pro_0->setObjectName(QStringLiteral("pushB_new_pro_0"));
-
-        gridLayout_4->addWidget(pushB_new_pro_0, 0, 1, 1, 1);
-
-        lineE_new_pro_0 = new QLineEdit(fr_new_pro_0);
-        lineE_new_pro_0->setObjectName(QStringLiteral("lineE_new_pro_0"));
-        lineE_new_pro_0->setStyleSheet(QStringLiteral(""));
-
-        gridLayout_4->addWidget(lineE_new_pro_0, 0, 0, 1, 1);
-
-        frame_8 = new QFrame(fr_new_pro_0);
-        frame_8->setObjectName(QStringLiteral("frame_8"));
-        frame_8->setMinimumSize(QSize(0, 10));
-        frame_8->setMaximumSize(QSize(16777215, 10));
-        frame_8->setFrameShape(QFrame::StyledPanel);
-        frame_8->setFrameShadow(QFrame::Raised);
-        gridLayout_28 = new QGridLayout(frame_8);
+        fr_new_0 = new QFrame(fr_new_pro_0);
+        fr_new_0->setObjectName(QStringLiteral("fr_new_0"));
+        fr_new_0->setMinimumSize(QSize(300, 0));
+        fr_new_0->setFrameShape(QFrame::StyledPanel);
+        fr_new_0->setFrameShadow(QFrame::Raised);
+        fr_new_1 = new QFrame(fr_new_0);
+        fr_new_1->setObjectName(QStringLiteral("fr_new_1"));
+        fr_new_1->setGeometry(QRect(2, 26, 296, 8));
+        fr_new_1->setMinimumSize(QSize(296, 8));
+        fr_new_1->setMaximumSize(QSize(16777215, 8));
+        fr_new_1->setFrameShape(QFrame::StyledPanel);
+        fr_new_1->setFrameShadow(QFrame::Raised);
+        gridLayout_28 = new QGridLayout(fr_new_1);
         gridLayout_28->setSpacing(1);
         gridLayout_28->setObjectName(QStringLiteral("gridLayout_28"));
         gridLayout_28->setContentsMargins(1, 1, 1, 1);
-        pBar_1 = new QProgressBar(frame_8);
+        pBar_1 = new QProgressBar(fr_new_1);
         pBar_1->setObjectName(QStringLiteral("pBar_1"));
+        pBar_1->setMinimumSize(QSize(0, 0));
         pBar_1->setMaximumSize(QSize(16777215, 4));
         pBar_1->setStyleSheet(QLatin1String("QProgressBar\n"
 "{\n"
@@ -756,8 +756,35 @@ public:
 
         gridLayout_28->addWidget(pBar_1, 0, 0, 1, 1);
 
+        lineE_new_pro_0 = new QLineEdit(fr_new_0);
+        lineE_new_pro_0->setObjectName(QStringLiteral("lineE_new_pro_0"));
+        lineE_new_pro_0->setGeometry(QRect(2, 6, 296, 20));
+        lineE_new_pro_0->setMinimumSize(QSize(296, 20));
+        lineE_new_pro_0->setMaximumSize(QSize(16777215, 20));
 
-        gridLayout_4->addWidget(frame_8, 1, 0, 1, 1);
+        gridLayout_4->addWidget(fr_new_0, 0, 1, 1, 1);
+
+        frame = new QFrame(fr_new_pro_0);
+        frame->setObjectName(QStringLiteral("frame"));
+        QSizePolicy sizePolicy6(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy6);
+        frame->setMinimumSize(QSize(90, 0));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        pushB_new_pro_0 = new QPushButton(frame);
+        pushB_new_pro_0->setObjectName(QStringLiteral("pushB_new_pro_0"));
+        pushB_new_pro_0->setGeometry(QRect(2, 5, 86, 21));
+        pushB_new_pro_0->setMinimumSize(QSize(0, 21));
+        pushB_new_pro_0->setMaximumSize(QSize(16777215, 21));
+
+        gridLayout_4->addWidget(frame, 0, 2, 1, 2);
+
+        verticalSpacer_8 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_4->addItem(verticalSpacer_8, 2, 0, 1, 4);
 
 
         gridLayout_27->addLayout(gridLayout_4, 2, 1, 1, 1);
@@ -769,7 +796,7 @@ public:
 
         gridLayout_6->addItem(verticalSpacer_5, 6, 1, 1, 1);
 
-        pushB_1 = new QPushButton(frame);
+        pushB_1 = new QPushButton(fr_new_progect_0);
         pushB_1->setObjectName(QStringLiteral("pushB_1"));
         pushB_1->setMinimumSize(QSize(0, 2));
         pushB_1->setMaximumSize(QSize(16777215, 2));
@@ -782,7 +809,7 @@ public:
         la_version_1->raise();
         pushB_1->raise();
 
-        gridLayout->addWidget(frame, 1, 1, 1, 2);
+        gridLayout->addWidget(fr_new_progect_0, 1, 1, 1, 2);
 
         verticalSpacer_2 = new QSpacerItem(20, 114, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -859,11 +886,11 @@ public:
 
         frame_61 = new QFrame(groupBox);
         frame_61->setObjectName(QStringLiteral("frame_61"));
-        QSizePolicy sizePolicy6(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(frame_61->sizePolicy().hasHeightForWidth());
-        frame_61->setSizePolicy(sizePolicy6);
+        QSizePolicy sizePolicy7(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy7.setHorizontalStretch(0);
+        sizePolicy7.setVerticalStretch(0);
+        sizePolicy7.setHeightForWidth(frame_61->sizePolicy().hasHeightForWidth());
+        frame_61->setSizePolicy(sizePolicy7);
         frame_61->setMinimumSize(QSize(301, 24));
         frame_61->setFrameShape(QFrame::StyledPanel);
         frame_61->setFrameShadow(QFrame::Raised);
@@ -1061,11 +1088,8 @@ public:
 
         groupBox_2 = new QGroupBox(fr_page_1);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        QSizePolicy sizePolicy7(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy7.setHorizontalStretch(0);
-        sizePolicy7.setVerticalStretch(0);
-        sizePolicy7.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
-        groupBox_2->setSizePolicy(sizePolicy7);
+        sizePolicy6.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
+        groupBox_2->setSizePolicy(sizePolicy6);
         gridLayout_10 = new QGridLayout(groupBox_2);
         gridLayout_10->setSpacing(1);
         gridLayout_10->setObjectName(QStringLiteral("gridLayout_10"));
@@ -1083,19 +1107,20 @@ public:
         font7.setBold(false);
         font7.setWeight(50);
         pushB_changes_0->setFont(font7);
-        pushB_changes_0->setCheckable(true);
+        pushB_changes_0->setStyleSheet(QStringLiteral(""));
+        pushB_changes_0->setCheckable(false);
         pushB_softener_0 = new QPushButton(frame_3);
         pushB_softener_0->setObjectName(QStringLiteral("pushB_softener_0"));
         pushB_softener_0->setGeometry(QRect(104, 0, 100, 23));
         pushB_softener_0->setMinimumSize(QSize(100, 0));
         pushB_softener_0->setFont(font7);
-        pushB_softener_0->setCheckable(true);
+        pushB_softener_0->setCheckable(false);
         pushB_correction_0 = new QPushButton(frame_3);
         pushB_correction_0->setObjectName(QStringLiteral("pushB_correction_0"));
         pushB_correction_0->setGeometry(QRect(205, 0, 100, 23));
         pushB_correction_0->setMinimumSize(QSize(100, 0));
         pushB_correction_0->setFont(font7);
-        pushB_correction_0->setCheckable(true);
+        pushB_correction_0->setCheckable(false);
 
         gridLayout_10->addWidget(frame_3, 0, 0, 1, 1);
 
@@ -1168,8 +1193,8 @@ public:
 
         fr_sys_panel_2 = new QFrame(page_3);
         fr_sys_panel_2->setObjectName(QStringLiteral("fr_sys_panel_2"));
-        sizePolicy7.setHeightForWidth(fr_sys_panel_2->sizePolicy().hasHeightForWidth());
-        fr_sys_panel_2->setSizePolicy(sizePolicy7);
+        sizePolicy6.setHeightForWidth(fr_sys_panel_2->sizePolicy().hasHeightForWidth());
+        fr_sys_panel_2->setSizePolicy(sizePolicy6);
         fr_sys_panel_2->setFrameShape(QFrame::Box);
         fr_sys_panel_2->setFrameShadow(QFrame::Raised);
         gridLayout_21 = new QGridLayout(fr_sys_panel_2);
@@ -1370,8 +1395,8 @@ public:
         label->setText(QApplication::translate("NanotechPRO", "\320\224\320\276\320\261\321\200\320\276 \320\277\320\276\320\266\320\260\320\273\320\276\320\262\320\260\321\202\321\214", 0));
         lab_logo_0->setText(QString());
         la_version_1->setText(QString());
-        label_3->setText(QApplication::translate("NanotechPRO", "\320\235\320\276\320\262\321\213\320\271 \320\277\321\200\320\276\320\265\320\272\321\202", 0));
         label_4->setText(QApplication::translate("NanotechPRO", "\320\235\320\260\320\267\320\262\320\260\320\275\320\270\320\265 \320\277\321\200\320\276\320\265\320\272\321\202\320\260:", 0));
+        label_3->setText(QApplication::translate("NanotechPRO", "\320\235\320\276\320\262\321\213\320\271 \320\277\321\200\320\276\320\265\320\272\321\202", 0));
         laLogo_1->setText(QString());
         pushB_new_pro_0->setText(QApplication::translate("NanotechPRO", "\320\241\320\276\320\267\320\264\320\260\321\202\321\214", 0));
         pushB_1->setText(QString());

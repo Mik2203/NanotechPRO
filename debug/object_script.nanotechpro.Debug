@@ -8,6 +8,7 @@ INPUT(
 ./debug\widget_sedimentation.o
 ./debug\widget_sys_stage.o
 ./debug\pages_mini_list.o
+./debug\widget_rootadmin.o
 ./debug\qrc_img.o
 ./debug\qrc_stylesheet.o
 ./debug\qrc_font.o
@@ -20,4 +21,5 @@ INPUT(
 ./debug\moc_widget_sedimentation.o
 ./debug\moc_widget_sys_stage.o
 ./debug\moc_pages_mini_list.o
+./debug\moc_widget_rootadmin.o
 );

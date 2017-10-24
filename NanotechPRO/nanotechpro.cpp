@@ -15,6 +15,13 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
+    //****** [ПРИОРИТЕТЫ]
+    //-----------------------------------------------------------------//
+    QRegExp add_res_1("[A-Za-zА-Яа-яЁё0-9]{1,50}"); // Используються символы ^[-+]?[0-9]*\\.?[0-9]+$
+    ui->lineE_new_pro_0->setValidator(new QRegExpValidator(add_res_1, ui->lineE_new_pro_0));
+    //-----------------------------------------------------------------//
+
+    //-----------------------------------------------------------------//
     //****** [Подключение классов]
     //-----------------------------------------------------------------//
     Widget_pages_list = new widget_pages_list;
@@ -38,6 +45,8 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     Widget_sys_stage->setParent(ui->fr_sys_panel_1);
     ui->fr_sys_panel_1->layout()->addWidget(Widget_sys_stage);
     Widget_sys_stage->show();
+
+    Widget_rootAdmin = new widget_rootAdmin;
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -47,6 +56,9 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     connect(Widget_pages_list, SIGNAL(signal_pushB_page_1(int)), this, SLOT(slotSignal_pushB_page_0(int)));
     connect(Widget_pages_list, SIGNAL(signal_pushB_page_2(int)), this, SLOT(slotSignal_pushB_page_0(int)));
     connect(Widget_pages_list, SIGNAL(signal_pushB_page_3(int)), this, SLOT(slotSignal_pushB_page_0(int)));
+
+    //админка
+    connect(Widget_rootAdmin, SIGNAL(signal_checkB_1(int, bool)), this, SLOT(slot_rankRoot2(int, bool)));
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -67,7 +79,18 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     qDebug() << "QSettings: " << pathPro;
     qDebug() << "Версия: " << sett_nano->value("Version/ver").toString();
     //sett_nano->setValue("Version/ver", 0);
+
+
     //-----------------------------------------------------------------//
+
+    //-----------------------------------------------------------//
+    //=== (Без привязки к меню)
+    //-----------------------------------------------------------//
+    actionRoot = new QAction(("&Админка"), this);
+    actionRoot->setShortcut(tr("Ctrl+Alt+A"));
+    connect(actionRoot, SIGNAL(triggered()), this, SLOT(slot_rankRoot()));
+    this->addAction(actionRoot); // Без меню дейсвие
+    //-----------------------------------------------------------//
 
     //-----------------------------------------------------------------//
     //****** [Меню]
@@ -92,7 +115,48 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //-----------------------------------------------------------------//
     //****** [Старт программы]
     //-----------------------------------------------------------------//
-    ui->stackedW_0->setCurrentIndex(0);
+    QStringList rankList;
+    rankList.clear();
+    rankList << "777" << "755" << "root" << "user";
+    if(sett_nano->value("Other/rank0").toInt() == rankList[0].toInt())
+    {
+        ui->stackedW_0->setCurrentIndex(1);
+        qDebug() << "rank: " << rankList[2] << "[" << rankList[0] << "]";
+
+        ui->menubar->setHidden(false);
+        ui->statusbar->setHidden(false);
+    }
+    else if(sett_nano->value("Other/rank0").toInt() == rankList[1].toInt())
+    {
+        ui->stackedW_0->setCurrentIndex(10);
+        qDebug() << "rank: " << rankList[3] << "[" << rankList[1] << "]";
+
+        ui->menubar->setHidden(true);
+        ui->statusbar->setHidden(true);
+
+        // показать панель меню
+        ui->menubar->setHidden(true);
+        ui->statusbar->setHidden(true);
+
+        // кнопка для анимации (постоянно скрыта - только для теста)
+        ui->pushB_1->setVisible(false);
+
+        // процесс создания проекта
+        ui->pBar_1->setVisible(false);
+
+        // Логотип
+        ui->laLogo_1->setVisible(false);
+
+        // Панель инструментов
+        ui->fr_menu_0->setVisible(false);
+
+        // Осадкоокисление
+        ui->stackedW_sedimentation_0->setCurrentIndex(0);
+
+        // Кнопка создания проекта
+        ui->pushB_new_pro_0->setVisible(false);
+    }
+
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -123,29 +187,16 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
-    //****** [Статус/положение окон]
+    //****** [QSettings - вкл/выкл приложение]
     //-----------------------------------------------------------------//
-    // показать панель меню
-    ui->menubar->setHidden(true);
-    ui->statusbar->setHidden(true);
-
-    // кнопка для анимации (постоянно скрыта - только для теста)
-    ui->pushB_1->setVisible(false);
-
-    // процесс создания проекта
-    ui->pBar_1->setVisible(false);
-
-    // Логотип
-    ui->laLogo_1->setVisible(false);
-
-    // Панель инструментов
-    ui->fr_menu_0->setVisible(false);
-
-    // Старт проекта
-    ui->stackedW_0->setCurrentIndex(0);
-
-    // Осадкоокисление
-    ui->stackedW_sedimentation_0->setCurrentIndex(0);
+    if(sett_nano->value("Other/status").toString() == "true")
+    {
+        Widget_rootAdmin->Class_checkB_1()->setChecked(true);
+    }
+    else
+    {
+        Widget_rootAdmin->Class_checkB_1()->setChecked(false);
+    }
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -158,9 +209,9 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //****** [Слоты]
     //-----------------------------------------------------------------//
     // осадкообразование
-    connect(ui->pushB_changes_0, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_changes_0(bool)));
-    connect(ui->pushB_softener_0, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_softener_0(bool)));
-    connect(ui->pushB_correction_0, SIGNAL(clicked(bool)), this, SLOT(slot_pushB_correction_0(bool)));
+    connect(ui->pushB_changes_0, SIGNAL(clicked()), this, SLOT(slot_pushB_changes_0()));
+    connect(ui->pushB_softener_0, SIGNAL(clicked()), this, SLOT(slot_pushB_softener_0()));
+    connect(ui->pushB_correction_0, SIGNAL(clicked()), this, SLOT(slot_pushB_correction_0()));
 
     // кнопки закладок страниц
     connect(ui->pushB_page_wother, SIGNAL(clicked()), this, SLOT(slot_PushB_page_wother()));
@@ -181,6 +232,7 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //****** [ Запуск переменных ]
     //-----------------------------------------------------------------//
     slot_pushB_all(01);
+    ui->lineE_new_pro_0->setPlaceholderText("Введите название проекта");
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -346,9 +398,9 @@ void NanotechPRO::on_pushB_new_pro_0_clicked()
     //-----------------------------------------------------------------//
     //*** [ МЕНЮ ]
     ui->laLogo_1->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-    ui->laLogo_1->setGeometry(0,0,48,0);
+    ui->laLogo_1->setGeometry(0,0,32,0);
     ui->laLogo_1->setMinimumSize(0,0);
-    ui->laLogo_1->setMaximumSize(48,48);
+    ui->laLogo_1->setMaximumSize(32,32);
 
     machine_01 = new QStateMachine(this);
     s_01 = new QState(machine_01);
@@ -357,8 +409,8 @@ void NanotechPRO::on_pushB_new_pro_0_clicked()
     animation_01 = new QPropertyAnimation(ui->laLogo_1, "size");
     animation_01->setDuration(3000);
 
-    s_01->assignProperty(ui->laLogo_1, "size", QSize(48,0));
-    s_02->assignProperty(ui->laLogo_1, "size", QSize(48,48));
+    s_01->assignProperty(ui->laLogo_1, "size", QSize(32,0));
+    s_02->assignProperty(ui->laLogo_1, "size", QSize(32,32));
 
     transition_01 = s_01->addTransition(ui->pushB_1, SIGNAL(clicked()), s_02);
     transition_01->addAnimation(animation_01);
@@ -419,14 +471,19 @@ void NanotechPRO::slotTimerLoading()
             qApp->processEvents();
         }
 
-        // Панель инструментов
-        ui->fr_menu_0->setVisible(true);
-
+        ui->fr_menu_0->setVisible(true);// Панель инструментов
+        // Панели меню
         ui->menubar->setHidden(false);
         ui->statusbar->setHidden(false);
-
+        // Процесс создание проекта
         ui->pBar_1->setValue(0);
+        ui->pBar_1->setVisible(false);
+
         slot_pushB_all(21); // Меню [Вода]
+
+        // кнопка новый проект
+        ui->pushB_new_pro_0->setVisible(false);
+        ui->lineE_new_pro_0->clear();
 
         ui->pushB_1->click();
     }
@@ -511,51 +568,27 @@ void NanotechPRO::slotSignal_pushB_page_0(int int_page)
 //-----------------------------------------------------------//
 //=== (осадкообразование [без изменений])
 //-----------------------------------------------------------//
-void NanotechPRO::slot_pushB_changes_0(bool pb1)
+void NanotechPRO::slot_pushB_changes_0()
 {
-    if(ui->pushB_changes_0->isCheckable() == pb1)
-    {
-        //qDebug() << "true pb1";
-        slot_pushB_all(01);
-    }
-    else
-    {
-        //qDebug() << "false pb1";
-    }
+    slot_pushB_all(01);
 }
 //-----------------------------------------------------------//
 
 //-----------------------------------------------------------//
 //=== (осадкообразование [умягчитель])
 //-----------------------------------------------------------//
-void NanotechPRO::slot_pushB_softener_0(bool pb2)
+void NanotechPRO::slot_pushB_softener_0()
 {
-    if(ui->pushB_softener_0->isCheckable() == pb2)
-    {
-        //qDebug() << "true pb2";
-        slot_pushB_all(02);
-    }
-    else
-    {
-        //qDebug() << "false pb2";
-    }
+    slot_pushB_all(02);
 }
 //-----------------------------------------------------------//
 
 //-----------------------------------------------------------//
 //=== (осадкообразование [коррекция pH])
 //-----------------------------------------------------------//
-void NanotechPRO::slot_pushB_correction_0(bool pb3)
+void NanotechPRO::slot_pushB_correction_0()
 {
-    if(ui->pushB_correction_0->isCheckable() == pb3)
-    {
-        //qDebug() << "true pb3";
-        slot_pushB_all(03);
-    }
-    else
-    {
-        //qDebug() << "false pb3";
-    }
+    slot_pushB_all(03);
 }
 //-----------------------------------------------------------//
 
@@ -564,22 +597,7 @@ void NanotechPRO::slot_pushB_correction_0(bool pb3)
 //-----------------------------------------------------------//
 void NanotechPRO::slot_PushB_page_wother()
 {
-    //if(ui->pushB_page_wother->isCheckable() == p1)
-    {
-        slot_pushB_all(21);
-    }
-    //else
-    {
-//        ui->pushB_page_wother->setChecked(false);
-//        ui->pushB_page_system->setChecked(true);
-//        ui->pushB_page_worning->setChecked(false);
-//        ui->pushB_page_result->setChecked(false);
-
-//        ui->pushB_page_wother->setChecked(false);
-//        ui->pushB_page_system->setChecked(true);
-//        ui->pushB_page_worning->setChecked(false);
-//        ui->pushB_page_result->setChecked(false);
-    }
+    slot_pushB_all(21);
 }
 //-----------------------------------------------------------//
 
@@ -588,22 +606,7 @@ void NanotechPRO::slot_PushB_page_wother()
 //-----------------------------------------------------------//
 void NanotechPRO::slot_PushB_page_system()
 {
-    //if(ui->pushB_page_system->isCheckable() == p2)
-    {
-        slot_pushB_all(22);
-    }
-    //else
-    {
-//        ui->pushB_page_wother->setChecked(false);
-//        ui->pushB_page_system->setChecked(false);
-//        ui->pushB_page_worning->setChecked(true);
-//        ui->pushB_page_result->setChecked(false);
-
-//        ui->pushB_page_wother->setChecked(false);
-//        ui->pushB_page_system->setChecked(false);
-//        ui->pushB_page_worning->setChecked(true);
-//        ui->pushB_page_result->setChecked(false);
-    }
+    slot_pushB_all(22);
 }
 //-----------------------------------------------------------//
 
@@ -612,22 +615,7 @@ void NanotechPRO::slot_PushB_page_system()
 //-----------------------------------------------------------//
 void NanotechPRO::slot_PushB_page_worning()
 {
-    //if(ui->pushB_page_worning->isCheckable() == p3)
-    {
-        slot_pushB_all(23);
-    }
-    //else
-    {
-//        ui->pushB_page_wother->setChecked(false);
-//        ui->pushB_page_system->setChecked(false);
-//        ui->pushB_page_worning->setChecked(false);
-//        ui->pushB_page_result->setChecked(true);
-
-//        ui->pushB_page_wother->setChecked(false);
-//        ui->pushB_page_system->setChecked(false);
-//        ui->pushB_page_worning->setChecked(false);
-//        ui->pushB_page_result->setChecked(true);
-    }
+    slot_pushB_all(23);
 }
 //-----------------------------------------------------------//
 
@@ -636,22 +624,7 @@ void NanotechPRO::slot_PushB_page_worning()
 //-----------------------------------------------------------//
 void NanotechPRO::slot_PushB_page_result()
 {
-    //if(ui->pushB_page_result->isCheckable() == p4)
-    {
-        slot_pushB_all(24);
-    }
-    //else
-    {
-//        ui->pushB_page_wother->setChecked(true);
-//        ui->pushB_page_system->setChecked(false);
-//        ui->pushB_page_worning->setChecked(false);
-//        ui->pushB_page_result->setChecked(false);
-
-//        ui->pushB_page_wother->setChecked(true);
-//        ui->pushB_page_system->setChecked(false);
-//        ui->pushB_page_worning->setChecked(false);
-//        ui->pushB_page_result->setChecked(false);
-    }
+    slot_pushB_all(24);
 }
 //-----------------------------------------------------------//
 
@@ -671,8 +644,9 @@ void NanotechPRO::slot_pushB_all(int pb)
         ui->pushB_correction_0->setFont(QFont("Arial", 8, QFont::Normal));
 
         ui->pushB_changes_0->setCheckable(true);
-        ui->pushB_softener_0->setCheckable(false);
-        ui->pushB_correction_0->setCheckable(false);
+        ui->pushB_changes_0->setChecked(true);
+        ui->pushB_softener_0->setChecked(false);
+        ui->pushB_correction_0->setChecked(false);
         break;
     case 02:
         Widget_sedimentation->st_Widget_sedimentation_list()->setCurrentIndex(1);
@@ -682,9 +656,10 @@ void NanotechPRO::slot_pushB_all(int pb)
         ui->pushB_softener_0->setFont(QFont("Arial", 9, QFont::Bold));
         ui->pushB_correction_0->setFont(QFont("Arial", 8, QFont::Normal));
 
-        ui->pushB_changes_0->setCheckable(false);
+        ui->pushB_changes_0->setChecked(false);
         ui->pushB_softener_0->setCheckable(true);
-        ui->pushB_correction_0->setCheckable(false);
+        ui->pushB_softener_0->setChecked(true);
+        ui->pushB_correction_0->setChecked(false);
         break;
     case 03:
         Widget_sedimentation->st_Widget_sedimentation_list()->setCurrentIndex(2);
@@ -694,9 +669,10 @@ void NanotechPRO::slot_pushB_all(int pb)
         ui->pushB_softener_0->setFont(QFont("Arial", 8, QFont::Normal));
         ui->pushB_correction_0->setFont(QFont("Arial", 9, QFont::Bold));
 
-        ui->pushB_changes_0->setCheckable(false);
-        ui->pushB_softener_0->setCheckable(false);
+        ui->pushB_changes_0->setChecked(false);
+        ui->pushB_softener_0->setChecked(false);
         ui->pushB_correction_0->setCheckable(true);
+        ui->pushB_correction_0->setChecked(true);
         break;
 
     case 21:
@@ -756,3 +732,114 @@ void NanotechPRO::slot_pushB_all(int pb)
     }
 }
 //-----------------------------------------------------------//
+
+//-----------------------------------------------------------//
+//=== (Событие - кнопка новый проект)
+//-----------------------------------------------------------//
+void NanotechPRO::on_lineE_new_pro_0_textEdited(const QString &arg1)
+{
+    int length = arg1.length();
+    //qDebug() << "Кол-во символов: " << length;
+
+    if(length >= 4)
+    {
+        ui->pushB_new_pro_0->setVisible(true);
+        ui->lineE_new_pro_0->setStyleSheet("color: rgb(85, 85, 255);");
+        ui->lineE_new_pro_0->setFont(QFont("Arial", 9, QFont::Normal));
+    }
+    else
+    {
+        ui->pushB_new_pro_0->setVisible(false);
+        ui->lineE_new_pro_0->setStyleSheet("color: rgb(255, 0, 0);");
+        ui->lineE_new_pro_0->setFont(QFont("Arial", 9, QFont::Bold));
+    }
+
+    if(length == 0)
+    {
+        ui->lineE_new_pro_0->setStyleSheet("color: rgb(0, 0, 0);");
+        ui->lineE_new_pro_0->setFont(QFont("Arial", 9, QFont::Normal));
+    }
+
+    //QString arg1 = ui->lineE_new_pro_0->toPlainText();;
+//    int i;
+//    QRegExp latin( "[a-z]|[A-Z]{1,50}" );
+//    QRegExp rus( "[А-Яа-яЁё0-9]{1,50}" );
+//    QRegExp number( "[0-9]{1,50}" );
+//    for (i=0; i <= arg1.length(); ++i)
+//    {
+//        if (arg1.mid(i,1).contains(latin))
+//        {
+//            QString tmp;
+//            tmp = ui->lineE_new_pro_0->text();
+
+//            ui->lineE_new_pro_0->setText(tmp);
+//            ui->lineE_new_pro_0->setStyleSheet("color: rgb(85, 85, 255);");
+//            qDebug() << "if";
+//            break;
+//        }
+
+//        if (arg1.mid(i,1).contains(rus))
+//        {
+//            QString tmp;
+//            tmp = ui->lineE_new_pro_0->text();
+//            //tmp.append( "<font color=darkgreen>" );
+//            //tmp.append( ui->lineE_new_pro_0->toPlainText().mid(i,1) );
+//            //tmp.append( "</font>" );
+
+//            ui->lineE_new_pro_0->setText(tr("<font color=red>1111</font>"));
+//            //ui->lineE_new_pro_0->setStyleSheet("color: rgb(0, 255, 0);");
+//            qDebug() << "else if";
+
+//            break;
+//        }
+
+//        if(arg1.mid(i,1).contains(number))
+//        {
+//            QString tmp;
+//            tmp = ui->lineE_new_pro_0->text();
+//            //tmp.append( "<font color=darkgreen>" );
+//            //tmp.append( ui->lineE_new_pro_0->toPlainText().mid(i,1) );
+//            //tmp.append( "</font>" );
+
+//            ui->lineE_new_pro_0->setText(tr("<font color=red>1111</font>"));
+//            //ui->lineE_new_pro_0->setStyleSheet("color: rgb(0, 255, 0);");
+//            qDebug() << "else";
+
+//            break;
+//        }
+//    }
+}
+//-----------------------------------------------------------//
+
+
+void NanotechPRO::slot_rankRoot()
+{
+    QWidget* Form = new QWidget;
+    QBoxLayout* pbxLayout = new QBoxLayout(QBoxLayout::LeftToRight);
+    pbxLayout->addWidget(Widget_rootAdmin);
+    Form->setLayout(pbxLayout);
+    Form->setWindowTitle("Права доступа!");
+    Form->setMaximumSize(400,350);
+    Form->setMinimumSize(400,350);
+    Form->show();
+}
+
+void NanotechPRO::slot_rankRoot2(int check, bool check2)
+{
+    switch (check)
+    {
+    case 777:
+        //qDebug() << "ранг0: " << check;
+        sett_nano->setValue("Other/rank0", check);
+        sett_nano->setValue("Other/status", check2);
+        break;
+    case 755:
+        //qDebug() << "ранг1: " << check;
+        sett_nano->setValue("Other/rank0", check);
+        sett_nano->setValue("Other/status", check2);
+        break;
+    default:
+        qDebug() << "[slot_rankRoot2] нет такого индекса";
+        break;
+    }
+}

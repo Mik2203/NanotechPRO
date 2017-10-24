@@ -59,6 +59,8 @@
         <file>page/push_korr_1.png</file>
         <file>ok_0.png</file>
         <file>ok_1.png</file>
+        <file>combo_box_0.png</file>
+        <file>combo_box_1.png</file>
     </qresource>
     <qresource prefix="/logotip">
         <file>logo.png</file>

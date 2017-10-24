@@ -26,7 +26,8 @@ SOURCES += \
     widget/stream_data/widget_stream_data.cpp \
     widget/sedimentation/widget_sedimentation.cpp \
     widget/sys_stage/widget_sys_stage.cpp \
-    widget/pages_mini_list/pages_mini_list.cpp
+    widget/pages_mini_list/pages_mini_list.cpp \
+    widget/rootAdmin/widget_rootadmin.cpp
 
 HEADERS += \
     nanotechpro.h \
@@ -36,7 +37,8 @@ HEADERS += \
     widget/stream_data/widget_stream_data.h \
     widget/sedimentation/widget_sedimentation.h \
     widget/sys_stage/widget_sys_stage.h \
-    widget/pages_mini_list/pages_mini_list.h
+    widget/pages_mini_list/pages_mini_list.h \
+    widget/rootAdmin/widget_rootadmin.h
 
 
 FORMS += \
@@ -45,7 +47,8 @@ FORMS += \
     widget/stream_data/widget_stream_data.ui \
     widget/sedimentation/widget_sedimentation.ui \
     widget/sys_stage/widget_sys_stage.ui \
-    widget/pages_mini_list/pages_mini_list.ui
+    widget/pages_mini_list/pages_mini_list.ui \
+    widget/rootAdmin/widget_rootadmin.ui
 
 
 

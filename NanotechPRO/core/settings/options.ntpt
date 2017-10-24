@@ -1,8 +1,12 @@
 [Sys_size]
-size=10.133 M
+size=10.567 M
 
 [Sys_date]
-date=23.10.2017
+date=24.10.2017
 
 [Version]
-ver=0.0.0.7
+ver=0.0.0.8
+
+[Other]
+rank0=755
+status=false
