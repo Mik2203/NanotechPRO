@@ -77,4 +77,10 @@
         <file>warning_critical.png</file>
         <file>warning_info.png</file>
     </qresource>
+    <qresource prefix="/admin">
+        <file>adm/adm_0.png</file>
+        <file>adm/adm_1.png</file>
+        <file>adm/adm_2.png</file>
+        <file>adm/not_photo_1.png</file>
+    </qresource>
 </RCC>

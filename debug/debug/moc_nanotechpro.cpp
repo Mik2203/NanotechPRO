@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_NanotechPRO_t {
-    QByteArrayData data[30];
-    char stringdata[505];
+    QByteArrayData data[35];
+    char stringdata[564];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -54,11 +54,16 @@ QT_MOC_LITERAL(21, 353, 13),
 QT_MOC_LITERAL(22, 367, 14),
 QT_MOC_LITERAL(23, 382, 5),
 QT_MOC_LITERAL(24, 388, 6),
-QT_MOC_LITERAL(25, 395, 26),
-QT_MOC_LITERAL(26, 422, 23),
-QT_MOC_LITERAL(27, 446, 23),
-QT_MOC_LITERAL(28, 470, 29),
-QT_MOC_LITERAL(29, 500, 4)
+QT_MOC_LITERAL(25, 395, 17),
+QT_MOC_LITERAL(26, 413, 14),
+QT_MOC_LITERAL(27, 428, 3),
+QT_MOC_LITERAL(28, 432, 4),
+QT_MOC_LITERAL(29, 437, 16),
+QT_MOC_LITERAL(30, 454, 26),
+QT_MOC_LITERAL(31, 481, 23),
+QT_MOC_LITERAL(32, 505, 23),
+QT_MOC_LITERAL(33, 529, 29),
+QT_MOC_LITERAL(34, 559, 4)
     },
     "NanotechPRO\0loadFontFamilyFromTTF\0\0"
     "slotVerSize\0slotVerReset\0slotTimerLoading\0"
@@ -70,7 +75,9 @@ QT_MOC_LITERAL(29, 500, 4)
     "slot_PushB_page_system\0slot_PushB_page_worning\0"
     "slot_PushB_page_result\0slot_pushB_all\0"
     "pb\0slot_rankRoot\0slot_rankRoot2\0check\0"
-    "check2\0on_pushB_new_pro_0_clicked\0"
+    "check2\0slot_rankPriority\0slot_Push_name\0"
+    "str\0rank\0slot_Logo_images\0"
+    "on_pushB_new_pro_0_clicked\0"
     "on_panel_menu_0_clicked\0on_panel_menu_1_clicked\0"
     "on_lineE_new_pro_0_textEdited\0arg1"
 };
@@ -82,7 +89,7 @@ static const uint qt_meta_data_NanotechPRO[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      23,   14, // methods
+      26,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -90,29 +97,32 @@ static const uint qt_meta_data_NanotechPRO[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  129,    2, 0x0a /* Public */,
-       3,    0,  130,    2, 0x0a /* Public */,
-       4,    0,  131,    2, 0x0a /* Public */,
-       5,    0,  132,    2, 0x0a /* Public */,
-       6,    0,  133,    2, 0x0a /* Public */,
-       7,    0,  134,    2, 0x0a /* Public */,
-       8,    0,  135,    2, 0x0a /* Public */,
-       9,    0,  136,    2, 0x0a /* Public */,
-      10,    1,  137,    2, 0x0a /* Public */,
-      12,    0,  140,    2, 0x0a /* Public */,
-      13,    0,  141,    2, 0x0a /* Public */,
-      14,    0,  142,    2, 0x0a /* Public */,
-      15,    0,  143,    2, 0x0a /* Public */,
-      16,    0,  144,    2, 0x0a /* Public */,
-      17,    0,  145,    2, 0x0a /* Public */,
-      18,    0,  146,    2, 0x0a /* Public */,
-      19,    1,  147,    2, 0x0a /* Public */,
-      21,    0,  150,    2, 0x0a /* Public */,
-      22,    2,  151,    2, 0x0a /* Public */,
-      25,    0,  156,    2, 0x08 /* Private */,
-      26,    0,  157,    2, 0x08 /* Private */,
-      27,    0,  158,    2, 0x08 /* Private */,
-      28,    1,  159,    2, 0x08 /* Private */,
+       1,    0,  144,    2, 0x0a /* Public */,
+       3,    0,  145,    2, 0x0a /* Public */,
+       4,    0,  146,    2, 0x0a /* Public */,
+       5,    0,  147,    2, 0x0a /* Public */,
+       6,    0,  148,    2, 0x0a /* Public */,
+       7,    0,  149,    2, 0x0a /* Public */,
+       8,    0,  150,    2, 0x0a /* Public */,
+       9,    0,  151,    2, 0x0a /* Public */,
+      10,    1,  152,    2, 0x0a /* Public */,
+      12,    0,  155,    2, 0x0a /* Public */,
+      13,    0,  156,    2, 0x0a /* Public */,
+      14,    0,  157,    2, 0x0a /* Public */,
+      15,    0,  158,    2, 0x0a /* Public */,
+      16,    0,  159,    2, 0x0a /* Public */,
+      17,    0,  160,    2, 0x0a /* Public */,
+      18,    0,  161,    2, 0x0a /* Public */,
+      19,    1,  162,    2, 0x0a /* Public */,
+      21,    0,  165,    2, 0x0a /* Public */,
+      22,    2,  166,    2, 0x0a /* Public */,
+      25,    1,  171,    2, 0x0a /* Public */,
+      26,    2,  174,    2, 0x0a /* Public */,
+      29,    1,  179,    2, 0x0a /* Public */,
+      30,    0,  182,    2, 0x08 /* Private */,
+      31,    0,  183,    2, 0x08 /* Private */,
+      32,    0,  184,    2, 0x08 /* Private */,
+      33,    1,  185,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -134,10 +144,13 @@ static const uint qt_meta_data_NanotechPRO[] = {
     QMetaType::Void, QMetaType::Int,   20,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int, QMetaType::Bool,   23,   24,
+    QMetaType::Void, QMetaType::Bool,   23,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int,   27,   28,
+    QMetaType::Void, QMetaType::QString,   27,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   29,
+    QMetaType::Void, QMetaType::QString,   34,
 
        0        // eod
 };
@@ -166,10 +179,13 @@ void NanotechPRO::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 16: _t->slot_pushB_all((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 17: _t->slot_rankRoot(); break;
         case 18: _t->slot_rankRoot2((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
-        case 19: _t->on_pushB_new_pro_0_clicked(); break;
-        case 20: _t->on_panel_menu_0_clicked(); break;
-        case 21: _t->on_panel_menu_1_clicked(); break;
-        case 22: _t->on_lineE_new_pro_0_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 19: _t->slot_rankPriority((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 20: _t->slot_Push_name((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 21: _t->slot_Logo_images((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 22: _t->on_pushB_new_pro_0_clicked(); break;
+        case 23: _t->on_panel_menu_0_clicked(); break;
+        case 24: _t->on_panel_menu_1_clicked(); break;
+        case 25: _t->on_lineE_new_pro_0_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -200,13 +216,13 @@ int NanotechPRO::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 23)
+        if (_id < 26)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 23;
+        _id -= 26;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 23)
+        if (_id < 26)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 23;
+        _id -= 26;
     }
     return _id;
 }

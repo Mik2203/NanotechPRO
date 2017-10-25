@@ -8,5 +8,8 @@ date=25.10.2017
 ver=0.0.0.9
 
 [Other]
-rank0=755
+img=adm_1.png
+rank0=777
 status=false
+priority=Mik
+edit_priority=false

@@ -60,6 +60,12 @@
        <height>0</height>
       </size>
      </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>16777215</height>
+      </size>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -82,7 +88,7 @@
       <property name="spacing">
        <number>1</number>
       </property>
-      <item row="3" column="0">
+      <item row="3" column="1">
        <spacer name="verticalSpacer_3">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -95,12 +101,12 @@
         </property>
        </spacer>
       </item>
-      <item row="0" column="0">
+      <item row="0" column="1">
        <widget class="QFrame" name="fr_block_4">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>80</height>
+          <height>110</height>
          </size>
         </property>
         <property name="frameShape">
@@ -128,7 +134,7 @@
          <item row="0" column="0">
           <widget class="QLabel" name="lab_foto_0">
            <property name="styleSheet">
-            <string notr="true">image: url(:/menu/warning_info.png);</string>
+            <string notr="true">image: url(:/admin/adm/not_photo_1.png);</string>
            </property>
            <property name="text">
             <string/>
@@ -138,7 +144,7 @@
         </layout>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item row="1" column="1">
        <widget class="QFrame" name="fr_block_5">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -165,7 +171,7 @@
         </layout>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="2" column="1">
        <widget class="QFrame" name="frame">
         <property name="minimumSize">
          <size>
@@ -195,8 +201,8 @@
          <property name="spacing">
           <number>1</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QStackedWidget" name="stackedWidget">
+         <item row="0" column="1">
+          <widget class="QStackedWidget" name="stackedW_list_0">
            <property name="currentIndex">
             <number>0</number>
            </property>
@@ -217,14 +223,72 @@
              <property name="spacing">
               <number>1</number>
              </property>
-             <item row="0" column="0">
-              <widget class="QLineEdit" name="lineE_0">
+             <item row="0" column="2">
+              <widget class="QPushButton" name="pushB_ok_0">
+               <property name="minimumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+ 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, #dadbde, stop: 1 #f6f7fa);
+ 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ 	stop: 0 #dae2ec, stop: 0.4 #d6dde7,
+ 	stop: 0.5 #bfd7fb, stop: 1.0 #dae3ef);
+
+ 	border: 1px solid #cdc2bf;
+ 	border-radius: 10px;
+		
+	image: url(:/menu/page/add_list_0.png);
+}
+
+QPushButton:hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, 
+	stop:0 rgba(255, 241, 241, 200), 
+	stop:0.181818 rgba(255, 255, 255, 135),
+	stop:	0.329545 rgba(200, 173, 173, 135), 
+	stop:0.681818 rgba(207, 181, 181, 129), 
+	stop:0.829545 rgba(255, 255, 255, 129), 
+	stop:1 rgba(255, 239, 239, 192));
+
+	image: url(:/menu/page/add_list_1.png);
+ }
+
+QPushButton:checked
+{
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ 	stop: 0 #f39556, stop: 0.4 #f7be98,
+	stop: 0.5 #f0ccb4, stop: 1.0 #eda16e);
+
+	image: url(:/menu/page/del_page_0.png);
+}
+ 
+QPushButton:pressed 
+{
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+ 	stop: 0 #afc1db, stop: 0.4 #a1b3cf,
+	stop: 0.5 #639bee, stop: 1.0 #b3caec);
+
+	image: url(:/menu/page/add_list_1.png);
+}
+</string>
+               </property>
                <property name="text">
-                <string>Имя пользователя</string>
+                <string/>
                </property>
               </widget>
              </item>
-             <item row="1" column="0">
+             <item row="4" column="1">
               <spacer name="verticalSpacer">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -237,22 +301,120 @@
                </property>
               </spacer>
              </item>
-             <item row="0" column="1">
-              <widget class="QPushButton" name="pushB_ok_0">
-               <property name="minimumSize">
-                <size>
-                 <width>23</width>
-                 <height>23</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>23</width>
-                 <height>23</height>
-                </size>
+             <item row="3" column="0">
+              <widget class="QLabel" name="la_iamages_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
                <property name="text">
-                <string>x</string>
+                <string>Фото:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="2">
+              <widget class="QLineEdit" name="lineE_0">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0" colspan="2">
+              <widget class="QFrame" name="frame_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_10">
+                <property name="leftMargin">
+                 <number>1</number>
+                </property>
+                <property name="topMargin">
+                 <number>1</number>
+                </property>
+                <property name="rightMargin">
+                 <number>1</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>1</number>
+                </property>
+                <property name="spacing">
+                 <number>1</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lab_ranks_0">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>23</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>23</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Задать права:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="lineE_rank_0">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>91</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>91</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="2" column="0" colspan="2">
+              <widget class="Line" name="line">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QComboBox" name="coBox_1">
+               <property name="currentIndex">
+                <number>-1</number>
+               </property>
+               <property name="minimumContentsLength">
+                <number>0</number>
                </property>
               </widget>
              </item>
@@ -275,8 +437,27 @@
              <property name="spacing">
               <number>1</number>
              </property>
-             <item row="1" column="0">
+             <item row="5" column="0">
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>23</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="0" colspan="2">
               <widget class="QLabel" name="lab_name_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -294,20 +475,7 @@
                </property>
               </widget>
              </item>
-             <item row="2" column="0">
-              <spacer name="verticalSpacer_4">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>23</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item row="0" column="0">
+             <item row="0" column="0" colspan="2">
               <widget class="QLabel" name="lab_name_title_0">
                <property name="minimumSize">
                 <size>
@@ -326,6 +494,44 @@
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="lab_rank_1">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>23</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>23</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Права доступа:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="lab_rank_0">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>23</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>23</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>[]</string>
                </property>
               </widget>
              </item>
@@ -369,6 +575,19 @@
       <property name="spacing">
        <number>1</number>
       </property>
+      <item row="3" column="0">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
       <item row="0" column="0">
        <widget class="QFrame" name="fr_block_3">
         <property name="minimumSize">
@@ -415,19 +634,6 @@
          </item>
         </layout>
        </widget>
-      </item>
-      <item row="1" column="0">
-       <spacer name="verticalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
       </item>
      </layout>
     </widget>

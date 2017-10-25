@@ -53,6 +53,8 @@ public:
     // Глобальные пути
     QString spthApp, pathPro, proSize;
 
+    QString str_rank, str_name, str_img; // QSettings (Админка)
+
     QTimer *TimerLoading;
     QTimer *TimerPause;
 
@@ -122,22 +124,17 @@ public slots:
     void slot_pushB_all(int pb);
 
     // Админка
-    void slot_rankRoot();
-    void slot_rankRoot2(int check, bool check2);
+    void slot_rankRoot(); // вызов окна
+    void slot_rankRoot2(int check, bool check2); // передать права доступа
+    void slot_rankPriority(bool check); // режим редактирования
+    void slot_Push_name(QString str, int rank); // Имя пользователя
+    void slot_Logo_images(QString str); // Фото пользователя
 
 private slots:
     void on_pushB_new_pro_0_clicked();
-
     void on_panel_menu_0_clicked();
     void on_panel_menu_1_clicked();
-
-
-
-
-
-
     void on_lineE_new_pro_0_textEdited(const QString &arg1);
-
 
 private:
     Ui::NanotechPRO *ui;

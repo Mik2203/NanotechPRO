@@ -199,21 +199,10 @@ void pages_mini_list::slot_vis_invis_list(int index)
 {
     switch (index)
     {
-    case 0: // добавить
-//        for (int i = 0; i <= int_add; ++i)
-//        {
-//            if(i == int_add)
-//            {
-//                ui->fr_block_2_page_2->setVisible(true);
-//            }
-//            else
-//            {
-//                ui->fr_block_2_page_3->setVisible(false);
-//                ui->fr_block_2_page_4->setVisible(false);
-//            }
-//        }
+    case 1: // добавить
+
         break;
-    case 1: // удалить
+    case 2: // удалить
 
         break;
     default:

@@ -664,7 +664,7 @@ background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
        <enum>QFrame::NoFrame</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout">

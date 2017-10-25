@@ -59,6 +59,9 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
 
     //админка
     connect(Widget_rootAdmin, SIGNAL(signal_checkB_1(int, bool)), this, SLOT(slot_rankRoot2(int, bool)));
+    connect(Widget_rootAdmin, SIGNAL(signal_checkB_2(bool)), this, SLOT(slot_rankPriority(bool)));
+    connect(Widget_rootAdmin, SIGNAL(signal_Push_name(QString, int)), this, SLOT(slot_Push_name(QString, int)));
+    connect(Widget_rootAdmin, SIGNAL(signal_Logo_images(QString)), this, SLOT(slot_Logo_images(QString)));
     //-----------------------------------------------------------------//
 
     //-----------------------------------------------------------------//
@@ -128,7 +131,7 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     }
     else if(sett_nano->value("Other/rank0").toInt() == rankList[1].toInt())
     {
-        ui->stackedW_0->setCurrentIndex(10);
+        ui->stackedW_0->setCurrentIndex(0);
         qDebug() << "rank: " << rankList[3] << "[" << rankList[1] << "]";
 
         ui->menubar->setHidden(true);
@@ -189,13 +192,79 @@ NanotechPRO::NanotechPRO(QWidget *parent) :
     //-----------------------------------------------------------------//
     //****** [QSettings - вкл/выкл приложение]
     //-----------------------------------------------------------------//
+    // глобал переменные
+    str_rank = sett_nano->value("Other/rank0").toString();
+    str_name = sett_nano->value("Other/priority").toString();
+    str_img = sett_nano->value("Other/img").toString();
+    int dlina = str_img.length();
+    if(dlina != 0)
+    {
+        //qDebug() << "PHOTO_glob: " << str_img << dlina;
+        Widget_rootAdmin->Lab_foto_0()->setStyleSheet("image: url(:/admin/adm/"+str_img+");");
+    }
+    else
+    {
+        str_img = "not_photo_1.png";
+        //qDebug() << "not PHOTO: " << str_img;
+        Widget_rootAdmin->Lab_foto_0()->setStyleSheet("image: url(:/admin/adm/"+str_img+");");
+    }
+
+    // Приоритет для разработчика
+    if(str_rank == "777")
+    {
+        Widget_rootAdmin->Class_checkB_1()->setEnabled(true);
+    }
+    else
+    {
+        Widget_rootAdmin->Class_checkB_1()->setEnabled(false);
+    }
+
+    // режим разработчика
     if(sett_nano->value("Other/status").toString() == "true")
     {
         Widget_rootAdmin->Class_checkB_1()->setChecked(true);
+        Widget_rootAdmin->on_checkB_1_clicked(true);
+        Widget_rootAdmin->Lab_rank_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:600;color:#5555ff;\">"+str_rank+"</span>");
     }
     else
     {
         Widget_rootAdmin->Class_checkB_1()->setChecked(false);
+        Widget_rootAdmin->on_checkB_1_clicked(false);
+        Widget_rootAdmin->Lab_rank_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:600;color:#ffaa7f;\">"+str_rank+"</span>");
+    }
+
+    // редактировать данные
+    if(sett_nano->value("Other/edit_priority").toString() == "true")
+    {
+        Widget_rootAdmin->Class_checkB_2()->setChecked(true);
+        Widget_rootAdmin->on_checkB_2_clicked(true);
+        Widget_rootAdmin->Lab_name_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:400;color:#000000;\">Имя: </span>\
+                                                <span style=\" font-size:9pt;\
+                                                font-weight:600;color:#5555ff;\">"+str_name+"</span>");
+
+        for(int i = 0; i < Widget_rootAdmin->listImage.count(); ++i)
+        {
+            if(Widget_rootAdmin->listImage.at(i)
+                    == str_img)
+            {
+               Widget_rootAdmin->on_coBox_1_activated(i);
+               Widget_rootAdmin->CoBox_1()->setCurrentIndex(i);
+               //qDebug() << "Что тут?" << str_comBox;
+               //qDebug() << "аааа" << Widget_rootAdmin->listImage.at(i) << str_img;
+            }
+        }
+    }
+    else
+    {
+        Widget_rootAdmin->Class_checkB_2()->setChecked(false);
+        Widget_rootAdmin->on_checkB_2_clicked(false);
+        Widget_rootAdmin->Lab_name_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:400;color:#000000;\">Имя: </span>\
+                                                <span style=\" font-size:9pt;\
+                                                font-weight:600;color:#5555ff;\">"+str_name+"</span>");
     }
     //-----------------------------------------------------------------//
 
@@ -826,20 +895,132 @@ void NanotechPRO::slot_rankRoot()
 
 void NanotechPRO::slot_rankRoot2(int check, bool check2)
 {
-    switch (check)
+    switch (check2)
     {
-    case 777:
-        //qDebug() << "ранг0: " << check;
-        sett_nano->setValue("Other/rank0", check);
+    case true:
+        //sett_nano->setValue("Other/priority", "root");
+        //sett_nano->setValue("Other/rank0", check);
         sett_nano->setValue("Other/status", check2);
+
+        str_name = sett_nano->value("Other/priority").toString();
+        str_rank = sett_nano->value("Other/rank0").toString();
+
+        Widget_rootAdmin->Lab_rank_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:600;color:#5555ff;\">"+str_rank+"</span>");
+
+        Widget_rootAdmin->Lab_name_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:400;color:#000000;\">Имя: </span>\
+                                                <span style=\" font-size:9pt;\
+                                                font-weight:600;color:#5555ff;\">"+str_name+"</span>");
         break;
-    case 755:
-        //qDebug() << "ранг1: " << check;
-        sett_nano->setValue("Other/rank0", check);
+    case false:
+        //sett_nano->setValue("Other/rank0", check);
         sett_nano->setValue("Other/status", check2);
+
+        str_rank = sett_nano->value("Other/rank0").toString();
+
+        Widget_rootAdmin->Lab_rank_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:600;color:#ffaa7f;\">"+str_rank+"</span>");
         break;
     default:
         qDebug() << "[slot_rankRoot2] нет такого индекса";
         break;
+    }
+}
+
+void NanotechPRO::slot_rankPriority(bool check)
+{
+    switch (check)
+    {
+    case false:
+        sett_nano->setValue("Other/edit_priority", check);
+        break;
+    case true:
+        sett_nano->setValue("Other/edit_priority", check);
+
+        str_img = sett_nano->value("Other/img").toString();
+
+        Widget_rootAdmin->LineE_0()->setText(sett_nano->value("Other/priority").toString());
+        Widget_rootAdmin->LineE_rank_0()->setText(sett_nano->value("Other/rank0").toString());
+
+        for(int i = 0; i < Widget_rootAdmin->listImage.count(); ++i)
+        {
+            if(Widget_rootAdmin->listImage.at(i)
+                    == str_img)
+            {
+               Widget_rootAdmin->on_coBox_1_activated(i);
+               Widget_rootAdmin->CoBox_1()->setCurrentIndex(i);
+               //qDebug() << "Что тут?" << str_comBox;
+               //qDebug() << "аааа" << Widget_rootAdmin->listImage.at(i) << str_img;
+            }
+
+
+        }
+
+        break;
+    default:
+        break;
+    }
+}
+
+void NanotechPRO::slot_Push_name(QString str, int rank)
+{
+    if(!str.isNull())
+    {
+        sett_nano->setValue("Other/priority", str);
+        sett_nano->setValue("Other/rank0", rank);
+
+
+        str_name = sett_nano->value("Other/priority").toString();
+        str_rank = sett_nano->value("Other/rank0").toString();
+
+
+        qDebug() << "if: " << str_name << "Что передаю:" << str;
+        Widget_rootAdmin->Lab_name_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:400;color:#000000;\">Имя: </span>\
+                                                <span style=\" font-size:9pt;\
+                                                font-weight:600;color:#5555ff;\">"+str_name+"</span>");
+
+        Widget_rootAdmin->Lab_rank_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:600;color:#5555ff;\">"+str_rank+"</span>");
+
+
+    }
+    else
+    {
+        sett_nano->setValue("Other/priority", "NULL");
+        sett_nano->setValue("Other/rank0", "NULL");
+
+        str_name = sett_nano->value("Other/priority").toString();
+        str_rank = sett_nano->value("Other/rank0").toString();
+
+
+        qDebug() << "else: " << str_name << "Что передаю:" << str;
+        Widget_rootAdmin->Lab_name_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:400;color:#000000;\">Имя: </span>\
+                                                <span style=\" font-size:9pt;\
+                                                font-weight:600;color:#ff0000;\">"+str_name+"</span>");
+
+        Widget_rootAdmin->Lab_rank_0()->setText("<span style=\" font-size:9pt;\
+                                                font-weight:600;color:#ff0000;\">"+str_rank+"</span>");
+
+    }
+}
+
+
+void NanotechPRO::slot_Logo_images(QString str)
+{
+    qDebug() << "slot_PHOTO: " << str;
+    if(!str.isNull())
+    {
+        sett_nano->setValue("Other/img", str);
+        str_img = sett_nano->value("Other/img").toString();
+        Widget_rootAdmin->Lab_foto_0()->setStyleSheet("image: url(:/admin/adm/"+str_img+");");
+    }
+    else
+    {
+        qDebug() << "slot_notPHOTO: " << str;
+        str_img = "not_photo_1.png";
+        Widget_rootAdmin->Lab_foto_0()->setStyleSheet("image: url(:/admin/adm/"+str_img+");");
     }
 }

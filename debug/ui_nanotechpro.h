@@ -174,8 +174,13 @@ public:
     QGridLayout *gridLayout_20;
     QFrame *fr_sys_panel_2;
     QGridLayout *gridLayout_21;
-    QLabel *la_block_1_2_page_0;
     QLabel *label_12;
+    QLabel *la_block_1_2_page_0;
+    QFrame *fr_schemes_0;
+    QGridLayout *gridLayout_29;
+    QPushButton *pushB_schemes_0;
+    QPushButton *pushB_schemes_reset_0;
+    QSpacerItem *horizontalSpacer_11;
     QWidget *page_8;
     QGridLayout *gridLayout_22;
     QFrame *fr_worning_1;
@@ -1201,6 +1206,12 @@ public:
         gridLayout_21->setSpacing(1);
         gridLayout_21->setObjectName(QStringLiteral("gridLayout_21"));
         gridLayout_21->setContentsMargins(1, 1, 1, 1);
+        label_12 = new QLabel(fr_sys_panel_2);
+        label_12->setObjectName(QStringLiteral("label_12"));
+        label_12->setStyleSheet(QStringLiteral("image: url(:/forms/scheme_0.png);"));
+
+        gridLayout_21->addWidget(label_12, 2, 0, 1, 1);
+
         la_block_1_2_page_0 = new QLabel(fr_sys_panel_2);
         la_block_1_2_page_0->setObjectName(QStringLiteral("la_block_1_2_page_0"));
         sizePolicy.setHeightForWidth(la_block_1_2_page_0->sizePolicy().hasHeightForWidth());
@@ -1216,11 +1227,32 @@ public:
 
         gridLayout_21->addWidget(la_block_1_2_page_0, 0, 0, 1, 1);
 
-        label_12 = new QLabel(fr_sys_panel_2);
-        label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setStyleSheet(QStringLiteral("image: url(:/forms/scheme_0.png);"));
+        fr_schemes_0 = new QFrame(fr_sys_panel_2);
+        fr_schemes_0->setObjectName(QStringLiteral("fr_schemes_0"));
+        sizePolicy7.setHeightForWidth(fr_schemes_0->sizePolicy().hasHeightForWidth());
+        fr_schemes_0->setSizePolicy(sizePolicy7);
+        fr_schemes_0->setFrameShape(QFrame::StyledPanel);
+        fr_schemes_0->setFrameShadow(QFrame::Raised);
+        gridLayout_29 = new QGridLayout(fr_schemes_0);
+        gridLayout_29->setSpacing(1);
+        gridLayout_29->setObjectName(QStringLiteral("gridLayout_29"));
+        gridLayout_29->setContentsMargins(1, 1, 1, 1);
+        pushB_schemes_0 = new QPushButton(fr_schemes_0);
+        pushB_schemes_0->setObjectName(QStringLiteral("pushB_schemes_0"));
 
-        gridLayout_21->addWidget(label_12, 1, 0, 1, 1);
+        gridLayout_29->addWidget(pushB_schemes_0, 0, 0, 1, 1);
+
+        pushB_schemes_reset_0 = new QPushButton(fr_schemes_0);
+        pushB_schemes_reset_0->setObjectName(QStringLiteral("pushB_schemes_reset_0"));
+
+        gridLayout_29->addWidget(pushB_schemes_reset_0, 0, 1, 1, 1);
+
+        horizontalSpacer_11 = new QSpacerItem(581, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_29->addItem(horizontalSpacer_11, 0, 2, 1, 1);
+
+
+        gridLayout_21->addWidget(fr_schemes_0, 1, 0, 1, 1);
 
 
         gridLayout_19->addWidget(fr_sys_panel_2, 0, 1, 1, 1);
@@ -1348,7 +1380,7 @@ public:
         retranslateUi(NanotechPRO);
 
         stackedW_panel_0->setCurrentIndex(0);
-        stackedW_0->setCurrentIndex(0);
+        stackedW_0->setCurrentIndex(1);
         stackedW_page_0->setCurrentIndex(0);
         stackedW_sedimentation_0->setCurrentIndex(0);
 
@@ -1446,8 +1478,10 @@ public:
         pushB_correction_0->setText(QApplication::translate("NanotechPRO", "\320\232\320\276\321\200\321\200\320\265\320\272\321\206\320\270\321\217 pH", 0));
         label_46->setText(QApplication::translate("NanotechPRO", "2", 0));
         label_52->setText(QApplication::translate("NanotechPRO", "3", 0));
-        la_block_1_2_page_0->setText(QApplication::translate("NanotechPRO", "\320\241\321\205\320\265\320\274\321\213", 0));
         label_12->setText(QString());
+        la_block_1_2_page_0->setText(QApplication::translate("NanotechPRO", "\320\241\321\205\320\265\320\274\321\213", 0));
+        pushB_schemes_0->setText(QApplication::translate("NanotechPRO", "\320\222\321\213\320\261\320\276\321\200 \321\201\321\205\320\265\320\274", 0));
+        pushB_schemes_reset_0->setText(QApplication::translate("NanotechPRO", "\320\241\320\261\321\200\320\276\321\201\320\270\321\202\321\214 \321\201\321\205\320\265\320\274\321\203", 0));
         label_11->setText(QString());
         label_13->setText(QString());
         label_14->setText(QString());
